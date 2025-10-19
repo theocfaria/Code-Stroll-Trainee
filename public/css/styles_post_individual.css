@@ -26,27 +26,58 @@ body{
     margin: auto;
     width: 100%;
     height: auto;
+    gap: 10px;
 
-    background-color: rgb(235, 20, 20);
-    border: 1px solid;
-    border-radius: 12px;
+    /*background-color: rgb(235, 20, 20);*/
     flex-direction: column;
 }
 
-.titulo{
+.titulo_post{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+
+    font-family: "Silkscreen", sans-serif;
+    font-size: 52px;
+    color: #C2A9EF;
+}
+
+.autor_datapub{
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 24px;
+    color: #F1F1F1;
+
+}
+
+.autor{
     display: flex;
 
 }
 
-.autor_datapub{
-
+.datapub{
+    display: flex;
 
 }
 
 .imagem{
     display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+
     border: 1px solid;
     border-radius: 12px;
+
+}
+
+#main_imagem{
+    width: fit-content;
+    height: 100%;
 
 }
 
@@ -54,8 +85,13 @@ body{
     display: flex;
     margin: auto;
     width: 100%;
-    height: 200px;
-    background-color: green;
+    height: auto;
+    /*background-color: green;*/
+    color (F1,F1,F1);
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    color: #F1F1F1;
 }
 
 .mais_recentes{
@@ -63,30 +99,38 @@ body{
     margin: auto;
     width: 100%;
     height: auto;
-    background-color: blue;
+    /*background-color: blue;*/
     flex-direction: column;
-    gap: 30px;
-    padding-right: 100px;
+    gap: 30px; 
+    padding-bottom: 20px;
 
 }
 
 .texto_maisrecentes{
     display: flex;
 
+    font-family: "JetBrains Mono", monospace;
+    font-size: 48px;
+    color: #C2A9EF;
 }
 
 .cards{
     display: flex;
-    width: 100%;
+    width: 80%;
     height: auto;
-    background-color: purple;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.25);
+
     border-radius: 8px;
-    padding: ;
 
 }
 
 .imagem_card{
     display: flex;
+    width: 300px;
+    height: 280px;
+    margin: auto;
 
 }
 
@@ -95,7 +139,36 @@ body{
     width: auto;
     height: auto;
     flex-direction: column;
+    gap: 12px;
+
+    font-family: "JetBrains Mono", monospace;
+    
+}
+
+.titulo_texto_card{
+    display: flex;
+    
+    font-size: 32px;
+    color: #F73B4E;
+}
+
+.autor_datapub_card{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    color: #F97583;
 
 }
 
-/*
+.descricao_card{
+    display: flex;
+
+    font-size: 20px;
+    color: #F1F1F1;
+
+}
+
+p{
+    margin: 0;
+}
