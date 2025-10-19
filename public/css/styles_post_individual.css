@@ -1,5 +1,4 @@
-
-body{
+body {
     background: url(../assets/PVI.png) no-repeat top center/cover;
     display: flex;
     margin: auto;
@@ -9,9 +8,8 @@ body{
     padding-bottom: 80px;
     gap: 20px;
 }
-    
-.conteudo
-{
+
+.conteudo {
     display: flex;
     width: 100%;
     height: 100%;
@@ -20,7 +18,7 @@ body{
     gap: 30px;
 }
 
-.hero_section{
+.hero_section {
 
     display: flex;
     margin: auto;
@@ -32,7 +30,7 @@ body{
     flex-direction: column;
 }
 
-.titulo_post{
+.titulo_post {
     display: flex;
     width: 100%;
     height: auto;
@@ -44,7 +42,7 @@ body{
     color: #C2A9EF;
 }
 
-.autor_datapub{
+.autor_datapub {
     display: flex;
     justify-content: space-between;
 
@@ -54,17 +52,17 @@ body{
 
 }
 
-.autor{
+.autor {
     display: flex;
 
 }
 
-.datapub{
+.datapub {
     display: flex;
 
 }
 
-.imagem{
+.imagem {
     display: flex;
     width: 100%;
     height: auto;
@@ -75,38 +73,36 @@ body{
 
 }
 
-#main_imagem{
+#main_imagem {
     width: fit-content;
     height: 100%;
 
 }
 
-.descricao{
+.descricao {
     display: flex;
     margin: auto;
     width: 100%;
     height: auto;
     /*background-color: green;*/
-    color (F1,F1,F1);
-
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     color: #F1F1F1;
 }
 
-.mais_recentes{
+.mais_recentes {
     display: flex;
     margin: auto;
     width: 100%;
     height: auto;
     /*background-color: blue;*/
     flex-direction: column;
-    gap: 30px; 
+    gap: 30px;
     padding-bottom: 20px;
 
 }
 
-.texto_maisrecentes{
+.texto_maisrecentes {
     display: flex;
 
     font-family: "JetBrains Mono", monospace;
@@ -114,7 +110,7 @@ body{
     color: #C2A9EF;
 }
 
-.cards{
+.cards {
     display: flex;
     width: 80%;
     height: auto;
@@ -126,7 +122,7 @@ body{
 
 }
 
-.imagem_card{
+.imagem_card {
     display: flex;
     width: 300px;
     height: 280px;
@@ -134,7 +130,7 @@ body{
 
 }
 
-.texto_card{
+.texto_card {
     display: flex;
     width: auto;
     height: auto;
@@ -142,17 +138,17 @@ body{
     gap: 12px;
 
     font-family: "JetBrains Mono", monospace;
-    
+
 }
 
-.titulo_texto_card{
+.titulo_texto_card {
     display: flex;
-    
+
     font-size: 32px;
     color: #F73B4E;
 }
 
-.autor_datapub_card{
+.autor_datapub_card {
     display: flex;
     flex-direction: column;
 
@@ -161,7 +157,7 @@ body{
 
 }
 
-.descricao_card{
+.descricao_card {
     display: flex;
 
     font-size: 20px;
@@ -169,6 +165,6 @@ body{
 
 }
 
-p{
+p {
     margin: 0;
 }
