@@ -1,17 +1,15 @@
-
-body{
+body {
     background: url(../assets/PVI.png) no-repeat top center/cover;
     display: flex;
     margin: auto;
-    padding-left: 120px;
+    /* padding-left: 120px;
     padding-right: 120px;
     padding-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 80px; */
     gap: 20px;
 }
-    
-.conteudo
-{
+
+.conteudo {
     display: flex;
     width: 100%;
     height: 100%;
@@ -20,7 +18,7 @@ body{
     gap: 30px;
 }
 
-.hero_section{
+.hero_section {
 
     display: flex;
     margin: auto;
@@ -32,7 +30,7 @@ body{
     flex-direction: column;
 }
 
-.titulo_post{
+.titulo_post {
     display: flex;
     width: 100%;
     height: auto;
@@ -44,79 +42,71 @@ body{
     color: #C2A9EF;
 }
 
-.autor_datapub{
+.autor_datapub {
     display: flex;
     justify-content: space-between;
+    padding-left: 10px;
 
     font-family: "JetBrains Mono", monospace;
     font-size: 24px;
     color: #F1F1F1;
-
 }
 
-.autor{
+.imagem {
     display: flex;
-
-}
-
-.datapub{
-    display: flex;
-
-}
-
-.imagem{
-    display: flex;
-    width: 100%;
+    width: fit-content;
     height: auto;
     justify-content: center;
+    align-self: center;
+}
+
+#main_imagem {
+    width: 1200px;
+    height: 600px;
 
     border: 1px solid;
     border-radius: 12px;
 
-}
-
-#main_imagem{
-    width: fit-content;
-    height: 100%;
+    object-fit: fill;
 
 }
 
-.descricao{
+.descricao {
     display: flex;
     margin: auto;
     width: 100%;
     height: auto;
     /*background-color: green;*/
-    color (F1,F1,F1);
 
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     color: #F1F1F1;
+    text-align: justify;
 }
 
-.mais_recentes{
+.mais_recentes {
     display: flex;
     margin: auto;
     width: 100%;
     height: auto;
     /*background-color: blue;*/
     flex-direction: column;
-    gap: 30px; 
+    gap: 30px;
     padding-bottom: 20px;
 
 }
 
-.texto_maisrecentes{
+.texto_maisrecentes {
     display: flex;
 
     font-family: "JetBrains Mono", monospace;
-    font-size: 48px;
+    font-size: 44px;
     color: #C2A9EF;
 }
 
-.cards{
+.cards {
     display: flex;
-    width: 80%;
+    width: 90%;
     height: auto;
 
     background-color: rgba(0, 0, 0, 0.4);
@@ -126,15 +116,19 @@ body{
 
 }
 
-.imagem_card{
+.imagem_card {
     display: flex;
-    width: 300px;
-    height: 280px;
-    margin: auto;
-
+    width: fit-content;
+    height: fit-content;
 }
 
-.texto_card{
+#second_imagem {
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.texto_card {
     display: flex;
     width: auto;
     height: auto;
@@ -142,33 +136,193 @@ body{
     gap: 12px;
 
     font-family: "JetBrains Mono", monospace;
-    
+
 }
 
-.titulo_texto_card{
+.titulo_texto_card {
     display: flex;
-    
+
     font-size: 32px;
     color: #F73B4E;
 }
 
-.autor_datapub_card{
+.juncao_texto {
+    display: flex;
+    font-size: 20px;
+}
+
+.autor_datapub_card {
     display: flex;
     flex-direction: column;
 
-    font-size: 20px;
     color: #F97583;
+    gap: 8px;
 
 }
 
-.descricao_card{
+.descricao_card {
     display: flex;
 
-    font-size: 20px;
     color: #F1F1F1;
+}
+
+p {
+    margin: 0;
+}
+
+@media(min-width: 320px) {
+    body {
+        padding: 10px 20px 20px 20px;
+        /* topo, esquerda, baixo, direita */
+    }
+
+    #main_imagem {
+        width: 280px;
+        height: 200px;
+    }
+
+    .autor_datapub {
+        font-size: 14px;
+    }
+
+    .titulo_post {
+        font-size: 32px;
+    }
+
+    .descricao {
+        font-size: 12px;
+    }
+
+    .texto_maisrecentes {
+        font-size: 24px;
+    }
+
+    .texto_card {
+        gap: 12px;
+    }
+
+    .titulo_texto_card {
+        font-size: 16px;
+    }
+
+    .juncao_texto {
+        font-size: 12px;
+    }
+
+    .imagem_card {
+        align-self: center;
+    }
+
+    #second_imagem {
+        width: 240px;
+        height: 200px;
+        object-fit: cover;
+        
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 8px;
+        width: fit-content;
+        padding: 10px
+    }
 
 }
 
-p{
-    margin: 0;
+@media(min-width: 425px) {
+    body {
+        padding: 40px 120px 80px 120px;
+        /* topo, esquerda, baixo, direita */
+    }
+
+}
+
+@media(min-width: 768px) {
+    body {
+        padding: 40px 120px 80px 120px;
+        /* topo, esquerda, baixo, direita */
+    }
+
+}
+
+@media(min-width: 1024px) {
+    body {
+        padding: 40px 120px 80px 120px;
+        /* topo, esquerda, baixo, direita */
+    }
+
+    .cards {
+        flex-direction: row;
+        width: 90%;
+    }
+
+}
+
+@media(min-width: 1440px) {
+    body {
+        padding: 40px 120px 80px 120px;
+        /* topo, esquerda, baixo, direita */
+    }
+
+    #main_imagem {
+        width: 1200px;
+        height: 600px;
+    }
+
+}
+
+@media(min-width: 1920px) {
+    body {
+        padding: 40px 120px 80px 120px;
+        /* topo, esquerda, baixo, direita */
+    }
+
+    #main_imagem {
+        width: 1680px;
+        height: 720px;
+    }
+
+    .autor_datapub {
+        font-size: 28px;
+    }
+
+    .titulo_post {
+        font-size: 56px;
+    }
+
+    .descricao {
+        font-size: 24px;
+    }
+
+    .texto_maisrecentes {
+        font-size: 48px;
+    }
+
+    .texto_card {
+        gap: 12px;
+        padding-right: 40px;
+    }
+
+    .titulo_texto_card {
+        font-size: 32px;
+    }
+
+    .juncao_texto {
+        font-size: 24px;
+    }
+
+    #second_imagem {
+        width: 300px;
+        height: 280px;
+        object-fit: cover;
+    }
+
+}
+
+@media(min-width: 2560px) {
+    body {
+        padding: 40px 120px 80px 120px;
+        /* topo, esquerda, baixo, direita */
+    }
+
 }
