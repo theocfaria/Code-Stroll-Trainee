@@ -92,6 +92,7 @@ body {
     /*background-color: blue;*/
     flex-direction: column;
     gap: 30px;
+    gap: 30px;
     padding-bottom: 20px;
 
 }
@@ -137,10 +138,12 @@ body {
 
     font-family: "JetBrains Mono", monospace;
 
+
 }
 
 .titulo_texto_card {
     display: flex;
+
 
     font-size: 32px;
     color: #F73B4E;
