@@ -2,9 +2,12 @@ body {
     background-image: url(../assets/fundo\ desktop.png);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
-    
-
-
-
+    background-size: cover;  
 }
+#Retangulo{
+    height: 500px;
+    width: 700px;
+    border: 1px solid red;
+    margin: auto;
+  
+}  
