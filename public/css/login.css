@@ -4,10 +4,14 @@ body {
     background-position: top center;
     background-size: cover;  
 }
-#Retangulo{
-    height: 500px;
+#Retangulo {
     width: 700px;
     border: 1px solid red;
     margin: auto;
-  
-}  
+} 
+#profile {
+    text-align: center;
+}
+#profile img {
+    width: 150px;
+} 
