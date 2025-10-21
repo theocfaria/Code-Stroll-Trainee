@@ -1,3 +1,7 @@
+/* 
+html {
+font-size: calc(70% + 0.8vmin);
+
 /* VERSÃO DESKTOP */
 
 /* PARTE SUPERIOR*/
@@ -73,8 +77,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 250px;
-  height: 460px;
+  width: 100%;
+  height: auto;
 }
 
 .post-imagem-placeholder {
@@ -109,14 +113,500 @@ body {
   font-weight: 700;
 }
 
-
-/* VERSÃO MOBILE */
+/*2°: VERSÃO MOBILE 320px, 375px e 425px */
 
 /* PARTE SUPERIOR*/
 
-@media (max-width: 768px) {
+@media (min-width: 320px) {
+  /* as 3 primeiras, 320px, 375 e 425px */
   .introducao-lp {
     padding: 20px 30px 50px;
+  }
+
+  .postTab,
+  .postDesk {
+    display: none;
+  }
+
+  #titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 12px;
+  }
+
+  .bot-ver-todos {
+    background-color: #f73b4e;
+    color: #ffffff;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+
+/* 3°: 425px a 768px */
+
+@media (min-width: 425px) {
+  /* as 3 primeiras, 320px a 425px */
+  .introducao-lp {
+    padding: 20px 30px 50px;
+  }
+
+  .postTab,
+  .postDesk {
+    display: none;
+  }
+
+  #titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 12px;
+  }
+
+  .bot-ver-todos {
+    background-color: #f73b4e;
+    color: #ffffff;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+/* 4°: 768 a 1024 */
+
+@media (min-width: 768px) {
+  .introducao-lp {
+    padding: 20px 30px 50px;
+  }
+
+  .postTab,
+  .postDesk {
+    display: flex;
+  }
+
+  #titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 12px;
+  }
+
+  .bot-ver-todos {
+    background-color: #f73b4e;
+    color: #ffffff;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+/* 5°: 1024 a 1440 */
+
+@media (min-width: 1024px) {
+  .introducao-lp {
+    padding: 20px 30px 50px;
+  }
+
+  .postTab,
+  .postDesk {
+    display: flex;
+  }
+
+  #titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 12px;
+  }
+
+  .bot-ver-todos {
+    background-color: #f73b4e;
+    color: #ffffff;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+/* 6°: 1440 a 1920*/
+
+@media (min-width: 1440px) {
+  .introducao-lp {
+    padding: 20px 30px 50px;
+  }
+
+  .postTab,
+  .postDesk {
+    display: flex;
+  }
+
+  #titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 12px;
+  }
+
+  .bot-ver-todos {
+    background-color: #f73b4e;
+    color: #ffffff;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+/* 7°: desktop 1920 a 2560 */
+
+@media (min-width: 1920px) {
+  .introducao-lp {
+    padding: 20px 30px 50px;
+  }
+
+  .postTab,
+  .postDesk {
+    display: flex;
+  }
+
+  #titulo-pagina {
+    font-size: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .posts-grid {
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 12px;
+  }
+
+  .bot-ver-todos {
+    background-color: #f73b4e;
+    color: #ffffff;
+    padding: 13px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+/* 8°: desktop > 2560 */
+
+@media (min-width: 2560px) {
+  .introducao-lp {
+    padding: 20px 30px 50px;
+  }
+  .postTab,
+  .postDesk {
+    display: flex;
   }
 
   #titulo-pagina {
@@ -151,7 +641,7 @@ body {
     gap: 30px;
   }
 
-  .post-card {
+  .post-card2 {
     width: 90%;
     max-width: 300px;
     height: auto;
@@ -181,3 +671,6 @@ body {
     font-weight: 700;
   }
 }
+
+
+
