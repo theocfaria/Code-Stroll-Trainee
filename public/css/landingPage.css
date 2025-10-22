@@ -113,6 +113,11 @@ body {
   font-weight: 700;
 }
 
+
+  article.postSeis {
+  display: none;
+}
+
 /*2°: VERSÃO MOBILE 320px e 375px */
 
 /* PARTE SUPERIOR*/
@@ -266,7 +271,14 @@ body {
   }
 }
 
+
 /* 4°: VERSÃO TABLET 768px a 1024px */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  article.postSeis {
+    display: flex; 
+  }
+}
 
 @media (min-width: 768px) {
   .introducao-lp {
@@ -299,7 +311,7 @@ body {
   }
 
   .titulo-secao {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     font-weight: 700;
   }
@@ -589,6 +601,12 @@ body {
 /* 8°: desktop 2560px+ */
 
 @media (min-width: 2560px) {
+  article.postSeis {
+    display: flex; 
+  }
+}
+
+@media (min-width: 2560px) {
 
   .introducao-lp {
     padding: 30px 50px 70px;
@@ -616,7 +634,7 @@ body {
   }
 
   .posts-grid {
-     grid-template-columns: repeat(5, 1fr);
+     grid-template-columns: repeat(6, 1fr);
      gap: 40px; 
   }
 
