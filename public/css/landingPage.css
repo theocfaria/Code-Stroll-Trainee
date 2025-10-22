@@ -118,7 +118,78 @@ body {
   display: none;
 }
 
-/*2°: VERSÃO MOBILE 320px e 375px */
+
+/*2°: tela abaixo de 320px */
+
+@media (max-width: 319px) {
+.introducao-lp {
+    padding: 20px 30px 50px;
+  }
+
+  #titulo-pagina {
+    font-size: 19px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #texto-introducao {
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /*  PARTE INFERIOR */
+
+  .posts-recentes {
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .titulo-secao {
+    font-size: 17px; 
+    text-align: center;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+
+  .post-card2 {
+  background-color: #1f1f1f;
+  border: 1px solid #ffffff; /* tirar quando mudar o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+}
+
+  .post-imagem-placeholder {
+    height: 150px;
+  }
+
+  .post-titulo {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .post-descricao,
+  .post-autor {
+    font-size: 11px;
+  }
+
+   .bot-ver-todos {
+    font-size: 13px;  
+    padding: 12px 6px;  
+  }
+}
+
+/*3°: VERSÃO MOBILE 320px e 375px */
 
 /* PARTE SUPERIOR*/
 
@@ -196,7 +267,7 @@ body {
 }
 
 
-/* 3°: VERSÃO MOBILE: 425px a 768px */
+/* 4°: VERSÃO MOBILE: 425px a 768px */
 
 @media (min-width: 425px) {
   .introducao-lp {
@@ -272,7 +343,7 @@ body {
 }
 
 
-/* 4°: VERSÃO TABLET 768px a 1024px */
+/* 5°: VERSÃO TABLET 768px a 1024px */
 
 @media (min-width: 768px) and (max-width: 1023px) {
   article.postSeis {
@@ -358,7 +429,7 @@ body {
   }
 }
 
-/* 5°: Laptop 1024 a 1440 */
+/* 6°: Laptop 1024 a 1440 */
 
 @media (min-width: 1024px) {
   .introducao-lp {
@@ -438,7 +509,7 @@ body {
   }
 }
 
-/* 6°: Laptop 1440 a 1920*/
+/* 7°: Laptop 1440 a 1920*/
 
 @media (min-width: 1440px) {
   .introducao-lp {
@@ -518,7 +589,7 @@ body {
   }
 }
 
-/* 7°: desktop 1920 a 2560 */
+/* 8°: desktop 1920 a 2560 */
 
 @media (min-width: 1920px) {
   .introducao-lp {
@@ -598,7 +669,7 @@ body {
   }
 }
 
-/* 8°: desktop 2560px+ */
+/* 9°: desktop 2560px+ */
 
 @media (min-width: 2560px) {
   article.postSeis {
