@@ -296,6 +296,52 @@ input::placeholder {
         padding: 0px 30px;
 }
 }
+@media (min-width: 1920px){
+    #Retangulo{
+        width: 1000px;
+        height: auto;
+        padding-bottom: 40px;
+        border-radius: 70px;
+    }
+    #profile img {
+        width: 230px;
+        margin-top: -130px;
+    }
+    #profile p {
+        font-size: 80px;
+    }
+    #email, #senha {
+        width: 80%;
+        height: 70px;
+        border-radius: 200px;
+        padding: 40px;
+    }
+    input::placeholder {
+    font-size: 38px;
+    }
+    #int {
+        height: 70px;
+    }
+    #entrar {
+        width: fit-content;        
+        height: fit-content;
+        border-radius: 50px;
+        padding: 10px 20px;
+    }
+    #entrar p {
+        font-size: 50px;
+    }
+    #senha img {
+    width: 40px;
+}
+    #x {
+        font-size: 35px;
+}
+    #empurra {
+        margin-top: -70px;
+        padding: 0px 40px;
+}
+}
 @media (min-width: 2560px){
     #Retangulo{
         width: 1350px;
