@@ -219,7 +219,7 @@ p {
     #second_imagem {
         width: 240px;
         height: 200px;
-        object-fit: cover;
+        object-fit: fill;
         
     }
 
@@ -234,29 +234,159 @@ p {
 
 @media(min-width: 425px) {
     body {
-        padding: 40px 120px 80px 120px;
+        padding: 10px 20px 20px 20px;
         /* topo, esquerda, baixo, direita */
+    }
+
+    #main_imagem {
+        width: 385.6px;
+        height: 300px;
+    }
+
+    .autor_datapub {
+        font-size: 14px;
+    }
+
+    .titulo_post {
+        font-size: 32px;
+    }
+
+    .descricao {
+        font-size: 12px;
+    }
+
+    .texto_maisrecentes {
+        font-size: 24px;
+    }
+
+    .texto_card {
+        gap: 12px;
+    }
+
+    .titulo_texto_card {
+        font-size: 16px;
+    }
+
+    .juncao_texto {
+        font-size: 12px;
+    }
+
+    .imagem_card {
+        align-self: center;
+    }
+
+    #second_imagem {
+        width: 365.6px;
+        height: 280px;
+        object-fit: fill;
+        
     }
 
 }
 
 @media(min-width: 768px) {
     body {
-        padding: 40px 120px 80px 120px;
+        padding: 20px 40px 40px 40px;
         /* topo, esquerda, baixo, direita */
+    }
+
+    #main_imagem {
+        width: 688px;
+        height: 440px;
+    }
+
+    .autor_datapub {
+        font-size: 18px;
+    }
+
+    .titulo_post {
+        font-size: 38px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .texto_maisrecentes {
+        font-size: 28px;
+    }
+
+    .texto_card {
+        gap: 12px;
+    }
+
+    .titulo_texto_card {
+        font-size: 20px;
+    }
+
+    .juncao_texto {
+        font-size: 14px;
+    }
+
+    .imagem_card {
+        align-self: center;
+    }
+
+    #second_imagem {
+        width: 220px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .cards {
+        flex-direction: row;
+        width: 90%;
     }
 
 }
 
 @media(min-width: 1024px) {
     body {
-        padding: 40px 120px 80px 120px;
+        padding: 20px 50px 40px 50px;
         /* topo, esquerda, baixo, direita */
     }
 
-    .cards {
-        flex-direction: row;
-        width: 90%;
+    #main_imagem {
+        width: 924px;
+        height: 500px;
+    }
+
+    .autor_datapub {
+        font-size: 18px;
+    }
+
+    .titulo_post {
+        font-size: 38px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .texto_maisrecentes {
+        font-size: 28px;
+    }
+
+    .texto_card {
+        gap: 12px;
+    }
+
+    .titulo_texto_card {
+        font-size: 20px;
+    }
+
+    .juncao_texto {
+        font-size: 14px;
+    }
+
+    .imagem_card {
+        align-self: center;
+    }
+
+    #second_imagem {
+        width: 220px;
+        height: 200px;
+        object-fit: cover;
     }
 
 }
