@@ -2,7 +2,7 @@
 html {
 font-size: calc(70% + 0.8vmin);
 
-/* VERSÃO DESKTOP */
+/*1°: versão base -> VERSÃO DESKTOP */
 
 /* PARTE SUPERIOR*/
 
@@ -113,19 +113,13 @@ body {
   font-weight: 700;
 }
 
-/*2°: VERSÃO MOBILE 320px, 375px e 425px */
+/*2°: VERSÃO MOBILE 320px e 375px */
 
 /* PARTE SUPERIOR*/
 
 @media (min-width: 320px) {
-  /* as 3 primeiras, 320px, 375 e 425px */
   .introducao-lp {
     padding: 20px 30px 50px;
-  }
-
-  .postTab,
-  .postDesk {
-    display: none;
   }
 
   #titulo-pagina {
@@ -197,28 +191,22 @@ body {
 }
 
 
-/* 3°: 425px a 768px */
+/* 3°: VERSÃO MOBILE: 425px a 768px */
 
 @media (min-width: 425px) {
-  /* as 3 primeiras, 320px a 425px */
   .introducao-lp {
     padding: 20px 30px 50px;
   }
 
-  .postTab,
-  .postDesk {
-    display: none;
-  }
-
   #titulo-pagina {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 60px;
     text-align: center;
     font-weight: 800;
   }
 
   #texto-introducao {
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     font-weight: 500;
   }
@@ -231,7 +219,7 @@ body {
   }
 
   .titulo-secao {
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     font-weight: 700;
   }
@@ -259,13 +247,13 @@ body {
   }
 
   .post-titulo {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
   }
 
   .post-descricao,
   .post-autor {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .bot-ver-todos {
@@ -273,12 +261,12 @@ body {
     color: #ffffff;
     padding: 13px 8px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
   }
 }
 
-/* 4°: 768 a 1024 */
+/* 4°: VERSÃO TABLET 768px a 1024px */
 
 @media (min-width: 768px) {
   .introducao-lp {
@@ -291,14 +279,14 @@ body {
   }
 
   #titulo-pagina {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 60px;
     text-align: center;
     font-weight: 800;
   }
 
   #texto-introducao {
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     font-weight: 500;
   }
@@ -311,7 +299,7 @@ body {
   }
 
   .titulo-secao {
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     font-weight: 700;
   }
@@ -339,13 +327,13 @@ body {
   }
 
   .post-titulo {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
   }
 
   .post-descricao,
   .post-autor {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .bot-ver-todos {
@@ -353,12 +341,12 @@ body {
     color: #ffffff;
     padding: 13px 8px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
   }
 }
 
-/* 5°: 1024 a 1440 */
+/* 5°: Laptop 1024 a 1440 */
 
 @media (min-width: 1024px) {
   .introducao-lp {
@@ -371,14 +359,14 @@ body {
   }
 
   #titulo-pagina {
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 60px;
     text-align: center;
     font-weight: 800;
   }
 
   #texto-introducao {
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;
     font-weight: 500;
   }
@@ -391,7 +379,7 @@ body {
   }
 
   .titulo-secao {
-    font-size: 18px;
+    font-size: 25px;
     text-align: center;
     font-weight: 700;
   }
@@ -419,13 +407,13 @@ body {
   }
 
   .post-titulo {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
   }
 
   .post-descricao,
   .post-autor {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .bot-ver-todos {
@@ -433,12 +421,12 @@ body {
     color: #ffffff;
     padding: 13px 8px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
   }
 }
 
-/* 6°: 1440 a 1920*/
+/* 6°: Laptop 1440 a 1920*/
 
 @media (min-width: 1440px) {
   .introducao-lp {
@@ -451,14 +439,14 @@ body {
   }
 
   #titulo-pagina {
-    font-size: 20px;
+    font-size: 32px;
     margin-bottom: 60px;
     text-align: center;
     font-weight: 800;
   }
 
   #texto-introducao {
-    font-size: 14px;
+    font-size: 25px;
     text-align: center;
     font-weight: 500;
   }
@@ -471,7 +459,7 @@ body {
   }
 
   .titulo-secao {
-    font-size: 18px;
+    font-size: 30px;
     text-align: center;
     font-weight: 700;
   }
@@ -499,13 +487,13 @@ body {
   }
 
   .post-titulo {
-    font-size: 15px;
+    font-size: 24px;
     font-weight: 700;
   }
 
   .post-descricao,
   .post-autor {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .bot-ver-todos {
@@ -513,7 +501,7 @@ body {
     color: #ffffff;
     padding: 13px 8px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 23px;
     font-weight: 700;
   }
 }
@@ -531,14 +519,14 @@ body {
   }
 
   #titulo-pagina {
-    font-size: 20px;
+    font-size: 34px;
     margin-bottom: 60px;
     text-align: center;
     font-weight: 800;
   }
 
   #texto-introducao {
-    font-size: 14px;
+    font-size: 27px;
     text-align: center;
     font-weight: 500;
   }
@@ -551,7 +539,7 @@ body {
   }
 
   .titulo-secao {
-    font-size: 18px;
+    font-size: 32px;
     text-align: center;
     font-weight: 700;
   }
@@ -579,13 +567,13 @@ body {
   }
 
   .post-titulo {
-    font-size: 15px;
+    font-size: 26px;
     font-weight: 700;
   }
 
   .post-descricao,
   .post-autor {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .bot-ver-todos {
@@ -593,82 +581,67 @@ body {
     color: #ffffff;
     padding: 13px 8px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
   }
 }
 
-/* 8°: desktop > 2560 */
+/* 8°: desktop 2560px+ */
 
 @media (min-width: 2560px) {
+
   .introducao-lp {
-    padding: 20px 30px 50px;
-  }
-  .postTab,
-  .postDesk {
-    display: flex;
+    padding: 30px 50px 70px;
   }
 
   #titulo-pagina {
-    font-size: 20px;
-    margin-bottom: 60px;
-    text-align: center;
-    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 80px;
   }
 
   #texto-introducao {
-    font-size: 14px;
-    text-align: center;
-    font-weight: 500;
+    font-size: 38px; 
   }
 
-  /*  PARTE INFERIOR */
+
+  /* PARTE INFERIOR */
 
   .posts-recentes {
-    padding: 40px 20px;
-    gap: 40px;
+    padding: 60px 50px; 
+    gap: 60px;
   }
 
   .titulo-secao {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 700;
+    font-size: 46px; 
   }
 
   .posts-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 30px;
+     grid-template-columns: repeat(5, 1fr);
+     gap: 40px; 
   }
 
+
+  .post-card,
   .post-card2 {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
-    gap: 10px;
+    gap: 30px; 
   }
 
   .post-imagem-placeholder {
-    height: 150px;
+    height: 200px; 
   }
 
   .post-titulo {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 35px; 
   }
 
   .post-descricao,
   .post-autor {
-    font-size: 12px;
+    font-size: 26px; 
   }
 
   .bot-ver-todos {
-    background-color: #f73b4e;
-    color: #ffffff;
-    padding: 13px 8px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
+    padding: 20px 30px;
+    font-size: 32px; 
   }
 }
 
