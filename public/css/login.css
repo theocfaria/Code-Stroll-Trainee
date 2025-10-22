@@ -19,17 +19,50 @@ body {
     height: 500px;
     border: 1px solid red;
     margin: auto;
+
 } 
 #profile {
     text-align: center;
 }
 #profile img {
     width: 150px;
-    margin-top: 187px;
+    margin-top: 180px;
 
 } 
 #profile p {
     font-weight: 635px;
     font-kerning: 415px;
     font-size: 50px;
+}
+#email {
+    width: 420px;
+    height: 50px;
+    background-color: black;
+    margin: 0 auto;
+    border-radius: 30px;
+    display: flex;            
+    align-items: center;   
+    padding-left: 10px;
+    margin-top: 28px; 
+}
+#email p {
+    font-family: 'Mono JetBrains', monospace;
+    font-size: 20px;
+    color: #5b5853;
+}
+#senha {
+    width: 420px;
+    height: 50px;
+    background-color: black;
+    margin: 0 auto;
+    border-radius: 30px;
+    display: flex;            
+    align-items: center;   
+    padding-left: 10px; 
+    margin-top: 28px;
+}
+#senha p {
+    font-family: 'Mono JetBrains', monospace;
+    font-size: 20px;
+    color: #5b5853;
 }
