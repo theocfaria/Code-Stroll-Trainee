@@ -313,7 +313,7 @@ input::placeholder {
     #email, #senha {
         width: 80%;
         height: 130px;
-        border-radius: 80px;
+        border-radius: 200px;
         padding: 40px;
     }
     input::placeholder {
