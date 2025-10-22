@@ -1,0 +1,127 @@
+/* ...existing code... */
+/* Navbar inspirado na imagem: fundo escuro, logo à esquerda, pesquisa no centro, botões em "pill" à direita */
+
+:root{
+  --bg:#1f1f21;
+  --pill:#ff6b81;
+  --pill-contrast:#fff;
+  --search-bg:#ffffff;
+  --muted:#e96b7d;
+}
+
+body {
+  margin:0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: #fff;
+}
+
+.site-navbar {
+  background: var(--bg);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 14px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:24px;
+  justify-content:space-between;
+}
+
+/* Left: logo */
+.brand-logo{
+  height:100px;
+  display:block;
+  object-fit:contain;
+}
+
+/* Center: search */
+.search-form{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:0 12px;
+  background: transparent;
+}
+
+.search-form input[type="search"]{
+  width:300px;
+  max-width:60vw;
+  height:40px;
+  padding:10px 16px;
+  border-radius:24px;
+  border: none;
+  outline: none;
+  background: var(--search-bg);
+  color:#333;
+  font-size:14px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06) inset;
+}
+
+.search-form input::placeholder{
+  color: var(--muted);
+  font-weight:600;
+}
+
+.search-btn{
+  margin-left:-44px; /* sobrepõe no canto direito do input */
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+}
+
+/* Right: nav links as pills */
+.nav-links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.nav-links a.pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  color:var(--pill-contrast);
+  background: linear-gradient(180deg, var(--pill), #ff5572);
+  font-weight:700;
+  letter-spacing:0.4px;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.18);
+  border: 2px solid rgba(255,255,255,0.08);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.nav-links a.pill:hover,
+.nav-links a.pill:focus{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.35);
+  opacity:0.98;
+}
+
+/* Responsividade simples */
+@media (max-width:880px){
+  .container{ padding:0 12px; gap:12px; }
+  .search-form input[type="search"]{ width:220px; }
+  .nav-links a.pill{ padding:6px 12px; font-size:13px; }
+}
+
+@media (max-width:640px){
+  .nav-center{ display:none; } /* esconde pesquisa em telas pequenas */
+  .nav-links{ gap:8px; }
+  .brand-logo{ height:46px; }
+}
+/* ...existing code... */
