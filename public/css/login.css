@@ -152,7 +152,7 @@ input::placeholder {
 }
 @media (min-width: 425px){
     #Retangulo{
-        width: 280px;
+        width: 380px;
         height: auto;
         padding-bottom: 20px;
     }
@@ -218,7 +218,7 @@ input::placeholder {
 }
 @media (min-width: 1024px){
     #Retangulo{
-        width: 700px;
+        width: 650px;
         height: auto;
         padding-bottom: 20px;
     }
