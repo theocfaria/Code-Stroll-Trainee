@@ -1,8 +1,37 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: beige;
 }
 #barra {
+    display: flex;
+    align-items: center;
     background-color: #1f1f1f;
     width: 100%;
+    height: 100px;
+    padding: 10pxs 10px;
+}
+#logotipo img {
+    height: 100px;
+    width: 250px;
+}
+#barra-pesquisa {
+    border: 1px solid #F73B4E;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    width: 600px;
+    padding: 10px 15px;
     height: fit-content;
+}
+input::placeholder {
+    font-family: 'jetbrains mono', monospace;
+    color: #F73B4E;
+    font-size: 18px;
+    padding-left: 10px;
 }
