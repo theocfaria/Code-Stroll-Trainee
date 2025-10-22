@@ -1,11 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-image: url(../assets/fundo\ desktop.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;  
 }
+body {
+    font-family: 'silkscreen', sans-serif;
+    color: black;
+
+}
 #Retangulo {
     width: 700px;
+    height: 500px;
     border: 1px solid red;
     margin: auto;
 } 
@@ -14,4 +25,11 @@ body {
 }
 #profile img {
     width: 150px;
+    margin-top: 187px;
+
 } 
+#profile p {
+    font-weight: 635px;
+    font-kerning: 415px;
+    font-size: 50px;
+}
