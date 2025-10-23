@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-color: #edebee;
+  font-family: "Poppins", sans-serif;
+}
+
+main 
+{
+    padding: 3rem;
+}
+
+.sidebar {
+  background-color: #F73B4E;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0.8rem;
+  border-radius: 0 8px 8px 0;
+  color: #edebee;
+}
+
+.top-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#perfil-sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  min-height: 3.5rem;
+}
+
+#perfil-sidebar img {
+  border-radius: 40%;
+  object-fit: cover;
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+.toggle-sidebar {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.toggle-sidebar:hover {
+  scale: 1.2;
+}
+
+.content-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+.item-sidebar {
+  list-style: none;
+  transition: all 0.2s ease;
+}
+
+.item-sidebar:hover {
+  scale: 1.05;
+}
+
+.item-sidebar a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+.item-description {
+  transition: opacity 0.5s ease;
+  white-space: nowrap;
+}
+
+/*
+.active {
+  border-bottom: 2px solid #edebee;  /* tirar depois 
+*/
+
+#button-logout {
+  background-color: #1f1f1f;
+  color: #f97583;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#button-logout:hover {
+  background-color: #d3cfd6;
+}
+
+.closed-sidebar .item-description {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.closed-sidebar #perfil-sidebar img {
+  display: none;
+}
+
+.closed-sidebar #perfil-sidebar {
+  justify-content: center;
+}
+
+.closed-sidebar .item-sidebar a {
+  display: flex;
+  justify-content: center;
+}
+
+.closed-sidebar #button-logout .item-description {
+  display: none;
+}
+
+.closed-sidebar .toggle-sidebar {
+  transform: rotate(180deg);
+}
