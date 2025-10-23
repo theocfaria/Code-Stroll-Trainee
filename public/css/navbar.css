@@ -48,9 +48,16 @@ body {
     font-size: 18px;
 }
 #login {
-    height: fit-content;
     width: fit-content;
+    height: fit-content;
     background-color: #F73B4E;
     border-radius: 50px;
     border: 2px solid #F73B4E;
+    padding: 2px 10px;
+    font-family: 'jetbrains mono', monospace;
+    font-size: 18px;
+}
+#login::placeholder {
+    color: whitesmoke;
+    font-size: 20px;
 }
