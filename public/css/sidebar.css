@@ -23,7 +23,7 @@ main
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 1.5rem 0.8rem;
   border-radius: 0 8px 8px 0;
   color: #edebee;
@@ -62,7 +62,7 @@ main
 .content-sidebar ul {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 2.3rem;
 
   margin: 0;
   padding: 0;
@@ -85,11 +85,12 @@ main
 .item-description {
   transition: opacity 0.5s ease;
   white-space: nowrap;
+  font-size: 1rem;
 }
 
 /*
 .active {
-  border-bottom: 2px solid #edebee;  /* tirar depois 
+  border-bottom: 2px solid #edebee;  /* opcional
 */
 
 #button-logout {
@@ -106,6 +107,7 @@ main
   gap: 0.7rem;
   cursor: pointer;
   transition: all 0.3s;
+  font-size: 0.9rem;
 }
 
 #button-logout:hover {
@@ -139,3 +141,59 @@ main
 .closed-sidebar .toggle-sidebar {
   transform: rotate(180deg);
 }
+
+/* RESPONSIVIDADE */
+
+/* 1°: Base Mobile (0px - 424px) */
+html {
+  font-size: 13px; 
+}
+
+/* 2° Mobile maior (425px a 767px) */
+@media (min-width: 425px) {
+  html {
+    font-size: 14px; 
+  }
+}
+
+/* 3°: Tablets (768px - 1023px) */
+@media (min-width: 768px) {
+  html {
+    font-size: 15px; 
+  }
+}
+
+/* 4°: Notebook (1024px a 1439px) */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; 
+  }
+  .content-sidebar ul {
+    gap: 1.8rem; 
+  }
+}
+
+/* 5°: Desktop (1440px a 2559px) */
+@media (min-width: 1440px) {
+  html {
+    font-size: 18px; 
+  }
+}
+
+
+/* 6°: Telas enormes (2560px e acima) */
+@media (min-width: 2560px) {
+  html {
+    font-size: 30px; 
+  }
+}
+
+
+/* esconder ícones em telas de até 767px quando a sidebar tiver aberta 
+@media (max-width: 767px) {
+  .sidebar:not(.closed-sidebar) .item-sidebar a i {
+    display: none;
+  }
+}
+
+*/
