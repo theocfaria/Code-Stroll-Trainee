@@ -46,7 +46,7 @@ main
 }
 
 #perfil-sidebar img {
-  border-radius: 40%;
+  border-radius: 50%;
   object-fit: cover;
   height: 5.5rem;
   width: 5.5rem;
