@@ -54,6 +54,7 @@ body {
     align-items: center;   
     padding: 0px 20px;
     margin-top: 28px; 
+    transition: transform 0.2s;
 }
 #senha {
     border: 1.75px solid;
@@ -68,6 +69,10 @@ body {
     margin-top: 28px;
     justify-content: space-between;
     padding: 10px 20px;
+    transition: transform 0.2s;
+}
+#email:hover, #senha:hover {
+    transform: scale(1.05);
 }
 #int {
     height: 36px;
@@ -91,6 +96,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    transition: transform 0.2s;
+}
+#entrar:hover {
+    transform: scale(1.05);
 }
 #entrar p {
     font-family: 'Mono JetBrains', monospace;
@@ -104,6 +113,10 @@ body {
     width: fit-content;
     color:inherit;
     font-family: 'jetbrains mono', monospace;
+    transition: transform 0.2s;
+}
+#x:hover {
+    transform: scale(1.05);
 }
 #empurra {
     margin-top: -35px;
