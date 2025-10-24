@@ -15,13 +15,20 @@ body {
     height: fit-content;
     padding: 10px 10px;
 }
-#logotipo {
+.logotipo {
     padding: 10px 10px;
     margin-left: 0px ;
 }
-#logotipo img {
+.logotipo img:nth-child(1) {
+    height: 80px;
+    width: 250x;
+}
+.logotipo img:nth-child(2) {
     height: 70px;
-    width: 200x;
+    width: 200px;
+    object-fit: cover;
+    display: none;
+   
 }
 #pesquisa {
     display: flex;
@@ -30,6 +37,7 @@ body {
 }
 #barra-pesquisa {
     height: fit-content;
+    width: 100%;
     border: 2px solid #F73B4E;
     border-radius: 20px;
     padding: 2px 15px;
@@ -123,4 +131,17 @@ body {
     color: #F73B4E;
     transform: scale(1.15) ;
     cursor: pointer;
+}
+@media (min-width: 320px){
+    #barra {
+        width: 100%;
+        height: fit-content;
+    }
+    #barra-pesquisa {
+
+        margin-bottom: 10px;
+    }
+    #link {
+        gap: 15px;
+    }
 }
