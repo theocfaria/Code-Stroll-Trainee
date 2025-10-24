@@ -1,12 +1,13 @@
 body{
     background-color: black;
     display: flex;
-    margin: auto;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .redes_sociais{
     display: flex;
+    flex-direction: column;
 
 }
 
@@ -16,12 +17,14 @@ body{
 }
 
 .logos{
-
-
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .logo_blog{
-
+    width: 200px;
+    height: 200px;
 
 }
 
