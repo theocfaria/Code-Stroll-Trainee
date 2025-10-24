@@ -43,7 +43,6 @@ body {
     border-radius: 20px;
     font-family: 'jetbrains mono', monospace;
     font-size: 22px;
-    margin: 10px 10px;
     gap: 500px;
 
     background-image: url(../assets/Search.png);
@@ -67,7 +66,8 @@ body {
     display: flex;
     align-items: center;
     font-weight: 700;
-    margin: 0px 20px;
+    margin: 20px;
+    gap: 20px;
 }
 #home, #publicacoes, #sobre-nos, #login {
     display: inline-block;
@@ -81,7 +81,6 @@ body {
     text-decoration: none;
     color: whitesmoke;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    margin-left: 10px;
  }       
 #home:hover, #publicacoes:hover, #sobre-nos:hover, #login:hover {
     background-color: whitesmoke;
@@ -95,10 +94,9 @@ body {
         height: fit-content;
     }
     #barra-pesquisa {
-
-        margin-bottom: 10px;
     }
     #link {
-        gap: 15px;
+
     }
+    
 }
