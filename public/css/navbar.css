@@ -66,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     font-weight: 700;
-    margin: 20px;
+    margin: 0px 30px;
     gap: 20px;
 }
 #home, #publicacoes, #sobre-nos, #login {
@@ -88,15 +88,4 @@ body {
     transform: scale(1.15) ;
     cursor: pointer;
 }
-@media (min-width: 320px){
-    #barra {
-        width: 100%;
-        height: fit-content;
-    }
-    #barra-pesquisa {
-    }
-    #link {
 
-    }
-    
-}
