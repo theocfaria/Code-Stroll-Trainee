@@ -16,6 +16,8 @@ body {
     padding: 10px 10px;
 }
 .logotipo {
+    width: fit-content;
+    margin: 0px 0px;
     padding: 10px 10px;
     margin-left: 0px ;
 }
@@ -30,21 +32,19 @@ body {
     display: none;
    
 }
-#pesquisa {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: fit-content;
-    width: 100%;
+    width: fit-content;
+    padding: 2px 10px;
     border: 2px solid #F73B4E;
     border-radius: 20px;
-    padding: 2px 15px;
     font-family: 'jetbrains mono', monospace;
     font-size: 22px;
-    margin-left: 0px;
-    gap: 10px;
+    margin: 10px 10px;
+    gap: 500px;
 
     background-image: url(../assets/Search.png);
     background-repeat: no-repeat;
@@ -63,14 +63,13 @@ body {
     font-size: 18px;
 }
 #link {
+    font-family: 'jetbrains mono', monospace;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 25px;
-    margin-right: 30px;
     font-weight: 700;
+    margin: 0px 20px;
 }
-#home {
+#home, #publicacoes, #sobre-nos, #login {
     display: inline-block;
     width: fit-content;
     height: fit-content;
@@ -78,54 +77,12 @@ body {
     border-radius: 50px;
     border: 2px solid #F73B4E;
     padding: 2px 10px;
-    font-family: 'jetbrains mono', monospace;
     font-size: 22px;
     text-decoration: none;
     color: whitesmoke;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-#publicacoes {
-    display: inline-block;
-    width: fit-content;
-    height: fit-content;
-    background-color: #F73B4E;
-    border-radius: 50px;
-    border: 2px solid #F73B4E;
-    padding: 2px 10px;
-    font-family: 'jetbrains mono', monospace;
-    font-size: 22px;
-    text-decoration: none;
-    color: whitesmoke;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-#sobre-nos {
-    display: inline-block;
-    width: fit-content;
-    height: fit-content;
-    background-color: #F73B4E;
-    border-radius: 50px;
-    border: 2px solid #F73B4E;
-    padding: 2px 10px;
-    font-family: 'jetbrains mono', monospace;
-    font-size: 22px;
-    text-decoration: none;
-    color: whitesmoke;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-#login{
-    display: inline-block;
-    width: fit-content;
-    height: fit-content;
-    background-color: #F73B4E;
-    border-radius: 50px;
-    border: 2px solid #F73B4E;
-    padding: 2px 10px;
-    font-family: 'jetbrains mono', monospace;
-    font-size: 22px;
-    text-decoration: none;
-    color: whitesmoke;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
+    margin-left: 10px;
+ }       
 #home:hover, #publicacoes:hover, #sobre-nos:hover, #login:hover {
     background-color: whitesmoke;
     color: #F73B4E;
