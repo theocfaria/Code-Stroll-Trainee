@@ -72,7 +72,7 @@ body {
     transition: transform 0.2s;
 }
 #email:hover, #senha:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 #int {
     height: 36px;
@@ -218,6 +218,7 @@ input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 18px;
     }
+    
     #entrar {
         width: fit-content;        
         height: fit-content;
