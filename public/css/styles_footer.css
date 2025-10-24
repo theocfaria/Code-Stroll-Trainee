@@ -1,0 +1,56 @@
+body{
+    background-color: black;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.redes_sociais{
+    display: flex;
+
+}
+
+.texto_redes{
+
+
+}
+
+.logos{
+
+
+}
+
+.logo_blog{
+
+
+}
+
+.contato_assinatura{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.contato{
+
+
+}
+
+.telefone{
+
+
+}
+
+.email{
+
+
+}
+
+.assinatura{
+
+
+}
+
+p{
+    color: white;
+}
