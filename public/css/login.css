@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../assets/fundo\ desktop.png);
+    background-image: url(../assets/fundo.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover; 
