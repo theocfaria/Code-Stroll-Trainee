@@ -1,59 +1,154 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+
+    height: 100vh;
+    align-items: end;
+}
+
+.conteudo {
     background-color: black;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding: 20px;
 }
 
-.redes_sociais{
+.redes_sociais {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.texto_redes {
+    font-size: 24px;
+    text-align: center;
 
 }
 
-.texto_redes{
-
-
-}
-
-.logos{
+.logos {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
 }
 
-.logo_blog{
+.logo_blog {
     width: 200px;
     height: 200px;
 
 }
 
-.contato_assinatura{
+.main_imagem {
+    width: 200px;
+    height: 200px;
+
+}
+
+.contato_assinatura {
     display: flex;
     flex-direction: row;
     gap: 4px;
 }
 
-.contato{
-
-
-}
-
-.telefone{
-
+.contato {
+    display: flex;
+    flex-direction: column;
 
 }
 
-.email{
-
-
-}
-
-.assinatura{
-
+.telefone {
+    display: flex;
 
 }
 
-p{
+.email {
+    display: flex;
+
+}
+
+.second_imagem {
+    width: 200px;
+    height: 200px;
+
+}
+
+p {
     color: white;
+}
+
+@media(min-width: 320px) {
+    body {
+        display: flex;
+
+        height: 100vh;
+        width: 100%;
+        align-items: end;
+    }
+
+    .conteudo {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .redes_sociais {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .texto_redes {
+        font-size: 12px;
+        text-align: center;
+
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo_blog {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .main_imagem {
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .contato_assinatura {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .contato {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .second_imagem {
+        width: 200px;
+        height: 200px;
+
+    }
+
 }
