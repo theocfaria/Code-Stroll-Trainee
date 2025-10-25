@@ -147,3 +147,110 @@ body {
     }
 
 }
+@media (min-width: 425px){
+    #barra-pesquisa {
+        width: 60%;
+    }
+    .links-telefone {
+        margin: 10px 20px 10px 120px;
+    }
+    #icon {
+        margin: 0px 0px 120px 30px;
+    }
+}
+@media (min-width: 768px){
+    #barra-pesquisa {
+        width: 60%;
+    }
+    .logotipo img:nth-child(2) {
+        height: 75px;
+        width: 100px;
+    }
+    #hamburguericon {
+        margin-right: 35px;
+        font-size: 35px;
+    }
+    .links-telefone {
+        margin: 10px 20px 10px 220px;
+    }
+    #icon {
+        margin: 0px 0px 140px 100px;
+        font-size: 40px;
+    }
+}
+@media (min-width: 1024px){
+    #barra-pesquisa {
+        width: 20%;
+    }
+    #barra-pesquisa::placeholder {
+        font-size: 18px;
+    }
+    .logotipo img:nth-child(1) {
+        display: block;
+        width: 180px;
+    }
+    .logotipo img:nth-child(2) {
+            display: none;
+    }
+    #hamburguericon {
+        display: none;
+    }
+    #link{
+        display: flex;
+        margin: 0px 0px 0px 0px;
+    }   
+}
+@media (min-width: 1440px){
+    #barra-pesquisa {
+        width: 30%;
+        padding: 10px 15px;
+        border-radius: 25px;
+        background-size: 25px 25px;
+    }
+    #barra-pesquisa::placeholder {
+        font-size: 26px;
+    }
+    
+    #home, #publicacoes, #sobre-nos, #login {
+        font-size: 26px;
+        padding: 8px 15px;
+    }
+}
+@media (min-width: 1920px){
+    #barra-pesquisa {
+        width: 40%;
+        padding: 15px 20px;
+        border-radius: 30px;
+        background-size: 30px 30px;
+    }
+    #barra-pesquisa::placeholder {
+        font-size: 32px;
+    }
+    
+    #home, #publicacoes, #sobre-nos, #login {
+        font-size: 32px;
+        padding: 10px 20px;
+    }
+}
+@media (min-width: 2560px){
+    #barra-pesquisa {
+        width: 30%;
+        padding: 30px 25px;
+        border-radius: 70px;
+        font-size: 40px;
+        background-size: 45px 45px;
+        background-position: right 25px center;
+    }
+    #barra-pesquisa::placeholder {
+        font-size: 40px;
+    }
+    .logotipo img:nth-child(1) {
+        height: 200px;
+        width: 350px;
+    }
+    
+    #home, #publicacoes, #sobre-nos, #login {
+        font-size: 50px;
+        padding: 15px 25px;
+    }
+} 
