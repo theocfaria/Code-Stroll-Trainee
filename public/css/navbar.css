@@ -6,6 +6,16 @@
 body {
     background-color: beige;
 }
+#abre-botoes {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 #botoes-telefone {
     display: flex;
     width: 100%;
