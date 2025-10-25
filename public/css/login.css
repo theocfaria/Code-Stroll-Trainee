@@ -43,7 +43,8 @@ body {
     font-kerning: 415px;
     font-size: 50px;
 }
-#email {
+#email, #senha {
+    justify-content: space-between;
     border: 1.75px solid;
     width: 420px;
     height: 50px;
@@ -55,26 +56,14 @@ body {
     padding: 0px 20px;
     margin-top: 28px; 
     transition: transform 0.2s;
-}
-#senha {
-    border: 1.75px solid;
-    width: 420px;
-    height: 50px;
-    background-color: whitesmoke;
-    margin: 0 auto;
-    border-radius: 30px;
-    display: flex;            
-    align-items: center;   
-    padding-left: 10px; 
-    margin-top: 28px;
-    justify-content: space-between;
-    padding: 10px 20px;
-    transition: transform 0.2s;
+    border: none;
 }
 #email:hover, #senha:hover {
     transform: scale(1.01);
 }
-#senhaInput {
+#senhaInput, #email {
+    font-size: 22px;
+    font-family: 'jetbrains mono', monospace;
     height: 36px;
     border: none;
     outline: none;
@@ -147,6 +136,9 @@ input::placeholder {
         width: 80%;
         height: 40px;
     }
+    #senhaInput, #email {
+        font-size: 12px;
+    }
     input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 16px;
@@ -185,6 +177,9 @@ input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 16px;
     }
+      #senhaInput, #email {
+        font-size: 15px;
+    }
     #entrar {
         width: fit-content;        
         height: fit-content;
@@ -218,7 +213,9 @@ input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 18px;
     }
-    
+      #senhaInput, #email {
+        font-size: 16px;
+    }
     #entrar {
         width: fit-content;        
         height: fit-content;
@@ -251,6 +248,12 @@ input::placeholder {
     input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 22px;
+    }
+      #senhaInput, #email {
+        font-size: 22px;
+    }
+    #olhoIcon {
+        font-size: 22px;
     }
     #entrar {
         width: fit-content;        
@@ -291,6 +294,12 @@ input::placeholder {
     input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 24px;
+    }
+      #senhaInput, #email {
+        font-size: 26px;
+    }
+    #olhoIcon {
+        font-size: 26px;
     }
     #entrar {
         width: fit-content;        
@@ -335,6 +344,12 @@ input::placeholder {
     }
     #int {
         height: 70px;
+    }
+      #senhaInput, #email {
+        font-size: 50px;
+    }
+    #olhoIcon {
+        font-size: 50px;
     }
     #entrar {
         width: fit-content;        
