@@ -20,12 +20,26 @@
 body{
     font-family: 'JetBrains Mono', monospace;
     background-color: #1f1f1f;
-    background-image: url('../../../public/assets/img_de_fundo_code_stroll_horizontal.jpg');
+    z-index: -1;
+    background: none;
+    overflow-x: hidden;
+    background-image: url('../../public/assets/img_de_fundo_code_stroll_escura.jpg');
+    opacity: 0.8;
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
-    opacity: 0.75;
-    color: #ffffff;
     padding: 0px;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../public/assets/img_de_fundo_code_stroll_escura.jpg') center/cover no-repeat;
+    opacity: 1; /* controla só a opacidade do fundo */
+    background-color: #1f1f1f; /* cor de fundo para quando a imagem não carregar */
+    z-index: -1; /* fica atrás de todo o conteúdo */
 }
 
 .conteudo{
@@ -42,6 +56,7 @@ body{
 
 .conteudo .search i {
     position: absolute;
+    z-index: 1;
     top: 50%; /* Centraliza verticalmente */
     right: 10px; /* Espaçamento à direita */
     transform: translateY(-50%); /* Ajusta o alinhamento vertical */
@@ -58,9 +73,10 @@ body{
     margin-bottom: 10px;
     display: block;
     border-radius: 100px;
+    font-size: 16px;
+    font-weight: 400;
     overflow: hidden;
     color: #F5F5F5;
-    color: #1f1f1f; /* Define a cor do texto */
     
 }
 
@@ -74,7 +90,7 @@ body{
     padding: 10px 10px 10px 40px; /* Espaço interno para o ícone */
     border-radius: 100px;
     border: none;
-    color: #F73B4E; /* Cor do texto */
+    color: #1f1f1f; /* Cor do texto */
     background-color: #F5F5F5;
     opacity: 0.90;
 }
@@ -86,16 +102,17 @@ body{
     margin-bottom: 30px;
     font-size: 75px;
     color: #F73B4E;
-    text-shadow: 2px 2px 4px #f5f5f57a;
+    text-shadow: 2px 2px 4px #F95062;
 }
 
 .post{
     max-width: 1400px;
     max-height: 325px;
-    background-color: #333333;
+    background-color: #1f1f1f;
     margin-bottom: 30px;
     display: flex;
     border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.596);
 }
 
 .post .info{
@@ -123,22 +140,27 @@ body{
     border-radius: 10px;
 }
 
-.post .info h1 strong {
+.post .info .titulo_post{
     font-family: 'JetBrains Mono', monospace;
     font-weight: 900;
     font-size: 34px; /* um pouco maior */
     color: #F73B4E; /* branco para contraste */
-    text-shadow: 2px 2px 4px #f5f5f571; /* leve sombra para destaque */
+    text-shadow: 2px 2px 4px #F95062; /* leve sombra para destaque */
+    margin-bottom: 20px;
 }
-.post h2{
+.post .info .autor{
     text-align: left;
+    font-weight: bold;
     margin-bottom: 10px;
+    color: #F97583;
 }
 
-.post h3{
+.post .info .publicacao{
+    font-weight: bold;
     text-align: left;
+    color: #F97583;
 }
-.post p{
+.post .resumo{
     width: 100%;
     height: 300px;
     margin: 10px;
@@ -147,13 +169,14 @@ body{
     text-align: left;
     padding-left: 15px; 
     line-height: 1.6;
+    color: #F5F5F5;
 }
 
 .paginacao {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1px;
+    gap: 2px;
     margin-top: 20px;
     padding-bottom: 20px;
 }
@@ -181,12 +204,9 @@ body{
     transform: scale(1.05);
 }
 
-.paginacao .current-page{
-    font-weight: bold;
-    color: #ffffff;
-}
-.paginacao a#atual {
+.paginacao #atual {
     color: #f5f5f5;
+    background-color: #F73B4E;
     pointer-events: none;
 }
 
