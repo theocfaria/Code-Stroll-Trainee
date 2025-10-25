@@ -42,12 +42,12 @@ body {
 }
 
 .logo_blog {
-    width: 200px;
-    height: 200px;
+    width: fit-content;
+    height: fit-content;
 
 }
 
-.main_imagem {
+#main_imagem {
     width: 200px;
     height: 200px;
 
@@ -91,76 +91,53 @@ body {
 
 @media(min-width: 320px) {
     body {
-        display: flex;
-
-        height: 100vh;
         width: 100vw;
-        align-items: end;
     }
 
     .conteudo {
-        background-color: black;
-        display: flex;
-        justify-content: space-between;
-        width: 100vw;
-        height: auto;
         padding: 20px 30px;
     }
 
     .redes_sociais {
-        display: flex;
-        flex-direction: column;
         gap: 0px;
-        justify-content: center;
         align-items: center;
         height: fit-content;
     }
 
     .texto_redes p {
-        color: white;
-        font-size: 30px;
-        text-align: center;
         display: none;
     }
 
     .logos {
-        display: flex;
         flex-direction: column;
         gap: 20px;
         width: fit-content;
         height: fit-content;
     }
 
-    .logos1{
+    .logos1 {
         display: flex;
         flex-direction: row;
         gap: 20px;
     }
 
-    .logos1 img{
+    .logos1 img {
         width: 30px;
         height: 30px;
     }
 
-    .logo_blog {
-        width: fit-content;
-        height: fit-content;
-
-    }
-
-    .main_imagem {
+    #main_imagem {
         width: 100px;
         height: 80px;
 
     }
 
     .contato_assinatura {
-        display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .second_imagem {
+    #second_imagem {
         width: 100px;
         height: 100px;
 
@@ -172,15 +149,276 @@ body {
         gap: 30px;
     }
 
-    .contato{
+    .contato {
         gap: 20px;
     }
 
-    .titulo_contato{
+    .titulo_contato {
         font-size: 14px;
     }
 
-    .texto_contato{
+    .texto_contato {
         font-size: 12px;
     }
+}
+
+@media(min-width: 425px) {
+    .conteudo {
+        padding: 40px 50px;
+    }
+
+    .redes_sociais {
+        gap: 0px;
+    }
+
+    .logos {
+        gap: 20px;
+    }
+
+    .logos1 {
+        gap: 30px;
+    }
+
+    .logos1 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #main_imagem {
+        width: 120px;
+        height: 100px;
+    }
+
+    .contato_assinatura {
+        gap: 30px;
+    }
+
+    #second_imagem {
+        width: 120px;
+        height: 120px;
+    }
+
+    .redes_logo {
+        gap: 30px;
+    }
+
+    .contato {
+        gap: 20px;
+    }
+
+    .titulo_contato {
+        font-size: 16px;
+    }
+
+    .texto_contato {
+        font-size: 14px;
+    }
+
+}
+
+@media(min-width: 768px) {
+    body {
+        display: flex;
+
+        height: 100vh;
+        align-items: end;
+    }
+
+    .conteudo {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .redes_sociais {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        width: fit-content;
+        padding-right: 40px;
+    }
+
+    .texto_redes p {
+        display: flex;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .logo_blog {
+        width: fit-content;
+        height: fit-content;
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    .logos1 {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .logos1 img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #main_imagem {
+        width: 140px;
+        height: 100px;
+    }
+
+    .contato_assinatura {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .contato {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .titulo_contato {
+        font-size: 20px;
+    }
+
+    .texto_contato {
+        font-size: 16px;
+    }
+
+    #second_imagem {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contato {
+        gap: 20px;
+    }
+
+    .redes_logo {
+        display: flex;
+        width: 50vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+@media(min-width: 2560px) {
+    body {
+        display: flex;
+
+        height: 100vh;
+        align-items: end;
+    }
+
+    .conteudo {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .redes_sociais {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        justify-content: center;
+        width: fit-content;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 600px;
+    }
+
+    .texto_redes p {
+        font-size: 60px;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .logo_blog {
+        width: fit-content;
+        height: fit-content;
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    .logos1 {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .logos1 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #main_imagem {
+        width: 260px;
+        height: 200px;
+    }
+
+    .contato_assinatura {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .contato {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .titulo_contato {
+        font-size: 42px;
+    }
+
+    .texto_contato {
+        font-size: 32px;
+    }
+
+    #second_imagem {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contato {
+        gap: 40px;
+    }
+
+    .redes_logo {
+        display: flex;
+        width: 50vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
 }
