@@ -6,18 +6,8 @@
 body {
     background-color: beige;
 }
-#abre-botoes {
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-    display: flex;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    cursor: pointer;
-}
 #botoes-telefone {
-    display: flex;
+    display: none;
     width: 100%;
     height: fit-content;
     justify-content: center;
@@ -29,7 +19,7 @@ body {
     background-color: #1f1f1f;
 }
 .links-telefone {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -59,6 +49,12 @@ body {
     object-fit: cover;
     display: none;
    
+}
+#hamburguericon {
+    margin-left: 20px;
+    font-size: 30px;
+    color: whitesmoke;
+    cursor: pointer;
 }
 #barra-pesquisa {
     height: 40px;
@@ -119,7 +115,7 @@ body {
     }
     .logotipo img:nth-child(2) {
         display: block;
-        height: 50px;
+        height: 70px;
     }
     #barra-pesquisa {
         width: 40%;;
