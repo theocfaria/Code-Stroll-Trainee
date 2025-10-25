@@ -74,7 +74,7 @@ body {
 #email:hover, #senha:hover {
     transform: scale(1.01);
 }
-#int {
+#senhaInput {
     height: 36px;
     border: none;
     outline: none;
