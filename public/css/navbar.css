@@ -11,6 +11,7 @@ body {
     width: 100%;
     height: fit-content;
     justify-content: center;
+    padding: 10px 15px 10px 15px;
 
     font-family: 'jetbrains mono', monospace;
     font-size: 22px;
@@ -23,8 +24,17 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin: 15px;
+    margin: 10px 20px 10px 70px;
     font-weight: 700;
+}
+#icon {
+    display: flex;
+    margin: 20px 20px 0px 0px;
+    font-size: 30px;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 11px 15px;
+    margin: 0px 0px 120px 0px;
 }
 #barra {
     display: flex;
@@ -33,7 +43,7 @@ body {
     background-color: #1f1f1f;
     width: 100%;
     height: fit-content;
-    padding: 10px 10px;
+    padding: 10px 20px 10px 10px;
 }
 .logotipo {
     width: fit-content;
@@ -57,8 +67,8 @@ body {
     cursor: pointer;
 }
 #barra-pesquisa {
-    height: 40px;
-    line-height: 40px;
+    display: flex;
+    height: fit-content;
     width: fit-content;
     padding: 2px 10px;
     border: 2px solid #F73B4E;
@@ -78,6 +88,8 @@ body {
     color: #F73B4E;
 }
 #barra-pesquisa::placeholder {
+    display: flex;
+    justify-content: center;
     font-family: 'jetbrains mono', monospace;
     color: #F73B4E;
     font-size: 18px;
@@ -118,13 +130,14 @@ body {
         height: 70px;
     }
     #barra-pesquisa {
-        width: 40%;;
-        height: 30px;
-        line-height: 30px;
-        background-size: 10px 10px;
-        padding: 1px 10px;
+        width: 45%;;
+        height: fit-content;
+        background-size: 15px 15px;
+        padding: 0px 10px 4px;
         background-position: right 10px center;
-        margin-left: 10px;
+    }
+    #input barra-pesquisa {
+        font-size: 10px;
     }
     #barra-pesquisa::placeholder {
         font-size: 14px;
