@@ -73,8 +73,14 @@ body{
 
     transition: transform 0.3s ease;
 } 
-#logout:hover {
-    transform: scale(1.2);
+#logout:hover { 
+        transform: scale(1.2);
+}
+#logotipoD img{
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 300px;
 }
 @media (min-width: 320px)
 {
