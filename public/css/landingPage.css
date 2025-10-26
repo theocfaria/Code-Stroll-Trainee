@@ -45,7 +45,6 @@ body {
 /*  PARTE INFERIOR */
 
 .posts-recentes {
-  /* background-color: #1e1e1e; */
   width: 100%;
   padding: 80px 60px;
   display: flex;
@@ -84,10 +83,13 @@ body {
 }
 
 .post-imagem-placeholder {
-  background-color: #d9d9d9;
   border-radius: 16px;
   width: 100%;
-  height: 230px;
+  height: 230px; 
+  background-image: url(/public/assets/fundo1.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .post-titulo {
@@ -368,7 +370,7 @@ body {
   }
 
   .post-imagem-placeholder {
-    height: 220px;
+    height: 250px;
   }
 
   .post-titulo {
@@ -561,3 +563,6 @@ body {
     font-size: 36px;
   }
 }
+
+
+
