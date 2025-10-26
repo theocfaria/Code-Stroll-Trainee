@@ -76,28 +76,85 @@ body{
 #logout:hover { 
         transform: scale(1.2);
 }
-#logotipoD img{
-    display: flex;
-    align-items: center;
-    height: 300px;
-    width: 300px;
-}
 @media (min-width: 320px)
 {
     #container {
-        gap: 50px;
+        gap: 40px;
     }
     #links {
-        gap: 50px
+        gap: 40px
     }
     #links a{
         display: flex;
         font-size: 30px;
-        padding: 15px 10px;
+        padding: 10px 10px;
     }
     #logout {
         display: flex;
         font-size: 30px;
-        padding: 15px 10px;
+        padding: 10px 10px;
     }
+}
+@media (min-width: 425px) {
+    #links a {
+        padding: 15px 25px;
+    }
+    #logout {
+        padding: 15px 25px;
+    }
+}
+@media (min-width: 768px){
+    #links a {
+        padding: 15px 25px;
+        font-size: 40px;
+    }
+        #logout {
+        padding: 15px 25px;
+        font-size: 40px;
+    }
+}
+@media (min-width: 1024px){
+    #links a {
+        padding: 15px 40px;
+        font-size: 50px;
+    }
+        #logout {
+        padding: 15px 40px;
+        font-size: 50px;
+    }
+}
+@media (min-width: 1440px){
+    #container{
+        gap: 80px;
+    }
+    #links{
+        gap: 80px;
+    }
+    #links a {
+        padding: 20px 50px;
+        font-size: 70px;
+    }
+        #logout {
+        padding: 20px 50px;
+        font-size: 70px;
+        border-radius: 100px;
+}
+}
+@media (min-width: 2560px){
+    #container{
+        gap: 140px;
+    }
+    #links{
+        gap: 140px;
+    }
+    #links a {
+        border-radius: 200px;
+        padding: 20px 70px;
+        font-size: 120px;
+    }
+        #logout {
+        padding: 20px 70px;
+        font-size: 120px;
+        border-radius: 200px;
+}
 }
