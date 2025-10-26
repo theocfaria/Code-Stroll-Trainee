@@ -37,6 +37,7 @@
 
     text-decoration: none;
     color: whitesmoke;
+    cursor: pointer;
 
     font-size: 50px;
     font-family: 'JetBrains Mono', monospace;
@@ -45,16 +46,19 @@
     background-image: linear-gradient(#8E5DE9 20%, #722FEE 100%);
     opacity: 0.6;
 
-    transition: trasnform 0.3s ease;
+    transition: transform 0.3s ease;
 } 
-#links a:focus {
-    transform: escale(1.2);
+#links a:hover {
+    transform: scale(1.2);
 }
 #logout {
     box-shadow: none;
     border: none;
     border-radius: 50px;
 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 20px 15px;
 
     font-size: 50px;
@@ -62,4 +66,9 @@
 
     background-image: linear-gradient(#8E5DE9 20%, #722FEE 100%);
     opacity: 0.6;
+
+    transition: transform 0.3s ease;
+} 
+#logout:hover {
+    transform: scale(1.2);
 }
