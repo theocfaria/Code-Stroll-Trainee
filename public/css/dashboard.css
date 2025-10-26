@@ -19,24 +19,47 @@
     rgba(204, 122, 0, 0.7) 100%);
 }
 #links{
-    gap: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
 }
 #links a{
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    border-radius: 50px;
+    border-radius: 100px;
     width: fit-content;
     height: fit-content;
+    padding: 20px 15px;
 
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
 
-    font-size: 64px;
+    font-size: 50px;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 700;
 
     background-image: linear-gradient(#8E5DE9 20%, #722FEE 100%);
     opacity: 0.6;
+
+    transition: trasnform 0.3s ease;
 } 
+#links a:focus {
+    transform: escale(1.2);
+}
+#logout {
+    box-shadow: none;
+    border: none;
+    border-radius: 50px;
+
+    padding: 20px 15px;
+
+    font-size: 50px;
+    color: whitesmoke;
+
+    background-image: linear-gradient(#8E5DE9 20%, #722FEE 100%);
+    opacity: 0.6;
+}
