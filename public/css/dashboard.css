@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow: hidden;
+}    
 #container{
     opacity: 0.8;
     width: 100vw;
@@ -38,7 +41,6 @@
     text-decoration: none;
     color: whitesmoke;
     cursor: pointer;
-
     font-size: 50px;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 700;
@@ -62,6 +64,8 @@
     padding: 20px 15px;
 
     font-size: 50px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
     color: whitesmoke;
 
     background-image: linear-gradient(#8E5DE9 20%, #722FEE 100%);
@@ -71,4 +75,23 @@
 } 
 #logout:hover {
     transform: scale(1.2);
+}
+@media (min-width: 320px)
+{
+    #container {
+        gap: 50px;
+    }
+    #links {
+        gap: 50px
+    }
+    #links a{
+        display: flex;
+        font-size: 30px;
+        padding: 15px 10px;
+    }
+    #logout {
+        display: flex;
+        font-size: 30px;
+        padding: 15px 10px;
+    }
 }
