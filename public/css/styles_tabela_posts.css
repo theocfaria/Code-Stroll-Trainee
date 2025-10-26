@@ -1,23 +1,58 @@
-body{
+body {
+    
+}
+
+.navbar {
+    background: linear-gradient(90deg, #FF980080, #B392F099);
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+    align-items: center;
+}
+
+#imagem_logo {
+    width: auto;
+    height: 100px;
+    display: flex;
+    padding: 20px;
+}
+
+#texto_post {
+    display: flex;
+    font-size: 24px;
+}
+
+#criar {
+    width: auto;
+    height: 20%;
+    display: flex;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #B392F0;
+}
+
+.bi {
+    font-size: 30px;
+}
+
+.conteudo {
 
 }
 
-.navbar{
-
+.barra_pesquisa {
+    display: flex;
+    flex-direction: column;
 }
 
-.conteudo{
-
-
+#pesquisa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
 }
 
-.barra_pesquisa{
-
-
-}
-
-.tabela{
-    background: linear-gradient(135deg, #fbbf24, #a78bfa);
+.tabela {
+    background: linear-gradient(90deg, #FF980080, #B392F099);
     border-radius: 10px;
     padding: 20px;
     margin: auto;
@@ -25,49 +60,47 @@ body{
     overflow-x: auto;
 }
 
-table{
+table {
     width: 100%;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0 10px;
 }
 
-thead tr{
-    background: linear-gradient(135deg, #fbbf24, #a78bfa);
+thead tr {
+    background: linear-gradient(90deg, #CC7A0099, #8E5DE999);
     color: #000;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     border-radius: 8px;
+    /* pq nao ta pegando?*/
 }
 
-thead th{
+thead th {
     padding: 12px;
 }
 
-tbody tr{
+tbody tr {
     background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
 td {
-  padding: 12px;
-  vertical-align: middle;
+    text-align: center;
 }
 
 
 .acoes {
-  display: flex;
-  gap: 8px;
-  justify-content: flex-start;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
 }
 
 .btn-primary {
-  border: none;
-  border-radius: 8px;
-  padding: 8px;
-  font-size: 16px;
-  background-color: #a78bfa;
-  color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #8E5DE9;
+    color: #fff;
 }
-

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,19 @@
     <link rel="stylesheet" href="../../../public/css/styles_tabela_posts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <div class="navbar">
-        <img src="../../../public/assets/logo sem fundo.png" alt="">
-        <p>TABELA DE POSTS</p>
-        <button><i class="bi bi-plus-lg"></i></button>
+        <img src="../../../public/assets/logo sem fundo.png" alt="" id="imagem_logo">
+        <p id="texto_post">TABELA DE POSTS</p>
+        <button id="criar"><i class="bi bi-plus-lg"></i></button>
     </div>
     <div class="conteudo">
         <div class="barra_pequisa">
-            <p>PESQUISAR</p>
-            <button><i class="bi bi-search"></i></button>
+            <button id="pesquisa">
+                <p>PESQUISAR</p>
+                <i class="bi bi-search"></i>
+            </button>
         </div>
         <div class="tabela">
             <table>
@@ -101,6 +105,7 @@
             </table>
         </div>
     </div>
-    
+
 </body>
+
 </html>
