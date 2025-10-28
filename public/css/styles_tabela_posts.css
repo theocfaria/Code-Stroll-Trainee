@@ -1,14 +1,21 @@
+*{
+    font-family: "JetBrains Mono", monospace;
+    
+}
 body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 100px;
+    gap: 50px;
     flex-direction: column;
 }
 #modal-delete {
+    display: none;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 40vh;
-    right: 30%;
+    right: 25%;
 
     width: fit-content;
     height: 15hv;
@@ -17,11 +24,34 @@ body {
    
     font-family: "JetBrains Mono", monospace;
     font-size: 30px; 
+    font-weight: 500;
 
-    background: linear-gradient(90deg, #FF980080, #B392F099);
+
+    background: linear-gradient(90deg, #FF9800, #B392F0);
 }
 .botoes-s-n {
-    
+    display: flex;
+    justify-content: space-between;
+}
+.botoes-s-n button {
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+
+    margin: 20px 120px;
+    padding: 5px 15px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 25px; 
+    font-weight: 500;
+
+
+    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+}
+.botoes-s-n button:hover{
+    transform: scale(1.2);
+    color: #390101;
 }
 .navbar {
     background: linear-gradient(90deg, #FF980080, #B392F099);
@@ -29,6 +59,7 @@ body {
     justify-content: space-between;
     padding: 0px 124px;
     align-items: center;
+    font-weight: 700;
 }
 
 #imagem_logo {
@@ -133,7 +164,7 @@ table {
     width: 100%;
     margin: 0 auto;
     border-collapse: separate;
-    border-spacing: 0 10px;
+    border-spacing: 0 15px;
 }
 
 thead tr {
@@ -182,12 +213,14 @@ tbody tr {
 
 td {
     text-align: center;
+    padding: 10px;
 }
 
 .foot{
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
     gap: 4px;
 }
 
