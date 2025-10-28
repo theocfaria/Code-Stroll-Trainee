@@ -60,6 +60,7 @@ body {
   text-align: center;
 }
 
+/*
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -68,6 +69,7 @@ body {
   max-width: 1440px;
   justify-items: center;
 }
+  */
 
 .post-card {
   background-color: #1f1f1f;
@@ -77,19 +79,21 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  /* width: 100%; */
+  width: 30vw;
+  flex-shrink: 0;
+  margin: 0 10px;
   height: auto;
-  
 }
 
 .post-imagem-placeholder {
   border-radius: 16px;
   width: 100%;
-  height: 230px; 
+  height: 230px;
   background-image: url(/public/assets/fundo1.jpg);
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .post-titulo {
@@ -366,7 +370,7 @@ body {
   }
 
   .post-card:nth-child(n + 4) {
-    display: none; 
+    display: none;
   }
 
   .post-imagem-placeholder {
@@ -424,7 +428,7 @@ body {
   }
 
   .post-card:nth-child(n + 4) {
-    display: none; 
+    display: none;
   }
 
   .post-imagem-placeholder {
@@ -564,7 +568,6 @@ body {
   }
 }
 
-
 /* CARROSSEL */
 
 .carrossel {
@@ -572,7 +575,6 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 1.5vw;
-  background-color: #fff;
 }
 
 .titulo-do-carrossel {
@@ -584,28 +586,31 @@ body {
 }
 
 .slider {
-   max-width: 100vw;
+  max-width: 100vw;
 }
 
 .slider-conteudo {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
+  padding: 20px 0;
 }
 
+/*
 .slider-item {
-  /* mexe com a div */
-  min-width: 30vw; /* espaçamento entre as imgs */
+   mexe com a div 
+  min-width: 30vw;  espaçamento entre as imgs 
 }
 
 .slider-item img {
-  /* mexe com a imagem */
+   mexe com a imagem 
   width: 25vw;
   height: 35vh;
   object-fit: cover;
   border-radius: 1.5vw;
   transition: transform 0.3s;
 }
+*/
 
 .nav-arrow {
   position: absolute;
