@@ -5,7 +5,24 @@ body {
     gap: 100px;
     flex-direction: column;
 }
+#modal-delete {
+    position: absolute;
+    top: 40vh;
+    right: 30%;
 
+    width: fit-content;
+    height: 15hv;
+    padding: 0px 20px;
+    border-radius: 30px;
+   
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px; 
+
+    background: linear-gradient(90deg, #FF980080, #B392F099);
+}
+.botoes-s-n {
+    
+}
 .navbar {
     background: linear-gradient(90deg, #FF980080, #B392F099);
     display: flex;
