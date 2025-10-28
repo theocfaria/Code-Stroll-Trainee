@@ -94,11 +94,44 @@ main {
   border-radius: 16px;
   width: 100%;
   height: 230px;
-  background-image: url(/public/assets/fundo1.jpg);
+  /*background-image: url(/public/assets/fundo1.jpg);*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.post-img1 {
+  background-image: url(/public/assets/comp1.jpeg)
+}
+
+.post-img2 {
+  background-image: url(/public/assets/comp2.jpeg)
+}
+
+.post-img3 {
+  background-image: url(/public/assets/comp3.jpeg)
+}
+
+.post-img4 {
+  background-image: url(/public/assets/comp4.jpeg)
+}
+
+.post-img5 {
+  background-image: url(/public/assets/comp5.jpeg)
+}
+
+.post-img6 {
+  background-image: url(/public/assets/comp6.jpeg)
+}
+
+.post-img7 {
+  background-image: url(/public/assets/comp7.jpeg)
+}
+
+.post-img8 {
+  background-image: url(/public/assets/comp8.jpeg)
+}
+
 
 .post-titulo {
   color: #f73b46;
