@@ -616,21 +616,22 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #f97583;  
   color: #000000;
   width: 3vw;
   height: 8vh;
   border-radius: 2vw;
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 35px;
   transition: 0.3s;
   z-index: 10;
 }
 
 .nav-arrow:hover {
-  background-color: red;
+  background-color: #f73b4e;
   color: white;
 }
 
