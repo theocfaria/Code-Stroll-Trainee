@@ -88,7 +88,7 @@ function moveRight() {
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     moveRight();
-  }, 4000);
+  }, 2200);
 }
 
 function resetAutoSlide() {
