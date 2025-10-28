@@ -430,7 +430,7 @@ opacity: 0.9;
   }
 }
 
-/* 6°: 1024px a 1439px */
+/* 6°: VERSÃO NOTEBOOK 1024px a 1439px */
 @media (min-width: 1024px) {
   /* início regras do carrossel */
   .carrossel {
@@ -536,7 +536,7 @@ opacity: 0.9;
   }
 }
 
-/* 7°: 1440px a 1919px */
+/* 7°: VERSÃO DESKTOP 1440px a 1919px */
 @media (min-width: 1440px) {
   .introducao-lp {
     padding: 20px 30px 50px;
@@ -570,7 +570,7 @@ opacity: 0.9;
   }
 }
 
-/* 8°: 1920px a 2559px */
+/* 8°: VERSÃO DESKTOP 1920px a 2559px */
 @media (min-width: 1920px) {
   .introducao-lp {
     padding: 20px 30px 50px;
@@ -607,7 +607,7 @@ opacity: 0.9;
   }
 }
 
-/* 9°: 2560px+ */
+/* 9°: TELAS ENORMES 2560px+ */
 @media (min-width: 2560px) {
   .introducao-lp {
     padding: 30px 50px 70px;
