@@ -123,6 +123,13 @@ main {
   text-decoration: none;
   font-size: 32px;
   font-weight: 700;
+  transition: 0.3s; 
+  cursor: pointer;
+}
+
+.bot-ver-todos:hover {
+  background-color: #f97583; 
+  color: white;
 }
  
 
