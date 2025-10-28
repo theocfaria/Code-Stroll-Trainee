@@ -13,7 +13,7 @@ let autoSlideInterval;
 
 // Criação/Organização do Carrossel
 function updateCarrossel() {
-  const sliderWidth = slider.offsetWidth;
+  const sliderWidth = sliderContent.offsetWidth;
   const itemWidth = sliderContent.children[0].getBoundingClientRect().width;
 
   itemsPerView = sliderWidth / itemWidth;
@@ -52,7 +52,7 @@ function updateRadioLabel() {
 
 // MOVIMENTAÇÃO
 function scrollToPage() {
-  const newPosition = slider.offsetWidth * currentPage;
+  const newPosition = sliderContent.offsetWidth * currentPage;
   sliderContent.scrollTo({ left: newPosition, behavior: "smooth" });
   updateRadioLabel();
   resetAutoSlide();
