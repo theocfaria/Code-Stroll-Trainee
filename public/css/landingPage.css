@@ -92,10 +92,14 @@ transform: translateY(-5px);
 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-
 .post-card:hover .post-titulo {
   color: #f97583; 
+  font-weight: 800;
+}
+
+.post-card:active {
+transform: scale(1.01); 
+opacity: 0.9; 
 }
 
 .post-imagem-placeholder {
@@ -170,7 +174,15 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 .bot-ver-todos:hover {
   background-color: white;
   color: #f97583;
+  transform: translateY(-5px); 
+
 }
+
+.bot-ver-todos:active {
+  transform: scale(0.98); 
+  background-color: #d8303a; 
+}
+
 .nav-arrow {
   display: none;
 }
@@ -467,7 +479,7 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     background-color: #f97583;
     color: #000000;
     width: 3.3vw;
-    height: 7vh;
+    height: 8vh;
     border-radius: 2vw;
     align-items: center;
     justify-content: center;
@@ -480,6 +492,7 @@ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   .nav-arrow:hover {
     background-color: #f73b4e;
     color: white;
+
   }
 
   .arrow-left {
