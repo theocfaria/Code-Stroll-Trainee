@@ -84,6 +84,18 @@ main {
   flex-direction: column;
   gap: 20px;
   height: auto;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+transform: translateY(-5px); 
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.post-card:hover .post-titulo {
+  color: #f97583; 
 }
 
 .post-imagem-placeholder {
@@ -416,7 +428,7 @@ main {
   }
 
   .slider {
-    width: 86vw; 
+    width: 86vw;
     margin: 0 auto;
     position: relative;
   }
@@ -436,7 +448,7 @@ main {
   .slider-conteudo::-webkit-scrollbar {
     display: none;
   }
-  
+
   .post-card {
     width: 28vw;
     flex-shrink: 0;
@@ -471,11 +483,11 @@ main {
   }
 
   .arrow-left {
-    left: -3vw;
+    left: -3.5vw;
   }
 
   .arrow-right {
-    right: -3.5vw;
+    right: -4vw;
   }
   /* término das regras do carrossel */
 
