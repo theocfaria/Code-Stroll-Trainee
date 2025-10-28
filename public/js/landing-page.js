@@ -6,37 +6,45 @@ const leftArrow = document.getElementById("seta-esquerda");
 const rightArrow = document.getElementById("seta-direita");
 
 // Declarar variaveis globais
-let currentPage = 0;
-let itemsPerView = 1;
-let totalPages = 1;
+let currentItemIndex = 0; // Mudamos de 'currentPage' para 'currentItemIndex'
+let totalItems = 0;
+let itemsInView = 0;
+let totalScrollPositions = 0; 
+let singleScrollWidth = 0; 
 let autoSlideInterval;
 
 // Criação/Organização do Carrossel
 function updateCarrossel() {
-  const sliderWidth = sliderContent.offsetWidth;
-  const itemWidth = sliderContent.children[0].getBoundingClientRect().width;
+  totalItems = sliderContent.children.length;
+  if (totalItems === 0) return; 
 
-  itemsPerView = sliderWidth / itemWidth;
-  totalPages = Math.ceil(
-    sliderContent.children.length / itemsPerView -
-      2 * (sliderWidth / itemWidth / 100)
-  );
+  const sliderWidth = sliderContent.offsetWidth;
+  const firstItem = sliderContent.children[0]; 
+
+  const itemStyle = window.getComputedStyle(firstItem);
+  const itemMargin =
+    parseFloat(itemStyle.marginLeft) + parseFloat(itemStyle.marginRight);
+  singleScrollWidth = firstItem.offsetWidth + itemMargin; 
+
+  itemsInView = Math.round(sliderWidth / singleScrollWidth); 
+
+  totalScrollPositions = totalItems - itemsInView + 1;
 
   createRadioLabel();
   updateRadioLabel();
 }
 
-// RADIO LABEL
+// Radio label
 function createRadioLabel() {
   radioAuto.innerHTML = "";
-  for (let i = 0; i < totalPages; i++) {
+  for (let i = 0; i < totalScrollPositions; i++) {
     const label = document.createElement("div");
     label.classList.add("radio-label");
     if (i === 0) {
       label.classList.add("active");
     }
     label.addEventListener("click", () => {
-      currentPage = i;
+      currentItemIndex = i;
       scrollToPage();
     });
     radioAuto.appendChild(label);
@@ -46,37 +54,37 @@ function createRadioLabel() {
 function updateRadioLabel() {
   const labels = document.querySelectorAll(".radio-label");
   labels.forEach((l, i) => {
-    l.classList.toggle("active", i === currentPage);
+    l.classList.toggle("active", i === currentItemIndex);
   });
 }
 
-// MOVIMENTAÇÃO
+// Movimentação
 function scrollToPage() {
-  const newPosition = sliderContent.offsetWidth * currentPage;
+  const newPosition = singleScrollWidth * currentItemIndex;
   sliderContent.scrollTo({ left: newPosition, behavior: "smooth" });
   updateRadioLabel();
   resetAutoSlide();
 }
 
 function moveleft() {
-  currentPage--;
-  if (currentPage < 0) {
-    currentPage = totalPages - 1;
+  currentItemIndex--;
+  if (currentItemIndex < 0) {
+    currentItemIndex = totalScrollPositions - 1;
   }
   scrollToPage();
   resetAutoSlide();
 }
 
 function moveRight() {
-  currentPage++;
-  if (currentPage >= totalPages) {
-    currentPage = 0;
+  currentItemIndex++;
+  if (currentItemIndex >= totalScrollPositions) {
+    currentItemIndex = 0;
   }
   scrollToPage();
   resetAutoSlide();
 }
 
-// SLIDE AUTOMATICO
+// Slide automático
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     moveRight();
@@ -88,11 +96,11 @@ function resetAutoSlide() {
   startAutoSlide();
 }
 
-// EVENTOS
+// Eventos
 leftArrow.addEventListener("click", moveleft);
 rightArrow.addEventListener("click", moveRight);
 window.addEventListener("resize", updateCarrossel);
 
-// CHAMA INÍCIO DAS FUNÇÕES
+// Chama início das funções
 updateCarrossel();
 startAutoSlide();
