@@ -508,17 +508,17 @@ opacity: 0.9;
     padding: 20px 30px 50px;
   }
   #titulo-pagina {
-    font-size: 28px;
+    font-size: 32px;
   }
   #texto-introducao {
     font-size: 20px;
   }
   .posts-recentes {
     padding: 40px 20px;
-    gap: 40px;
+    gap: 30px;
   }
   .titulo-secao {
-    font-size: 25px;
+    font-size: 30px;
   }
   .post-imagem-placeholder {
     height: 250px;
