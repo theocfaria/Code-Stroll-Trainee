@@ -19,14 +19,14 @@ function setupCarousel() {
   const sliderContent = document.querySelector(".slider-conteudo");
   const radioAuto = document.querySelector(".radio-auto");
   const leftArrow = document.getElementById("seta-esquerda");
-  const rightArrow = document.getElementById("seta-direita"); 
+  const rightArrow = document.getElementById("seta-direita");
 
   let currentItemIndex = 0;
   let totalItems = 0;
   let itemsInView = 0;
   let totalScrollPositions = 0;
   let singleScrollWidth = 0;
-  let autoSlideInterval; 
+  let autoSlideInterval;
 
   function updateCarrossel() {
     totalItems = sliderContent.children.length;
@@ -41,8 +41,8 @@ function setupCarousel() {
     totalScrollPositions = totalItems - itemsInView + 1;
     createRadioLabel();
     updateRadioLabel();
-  } 
-  
+  }
+
   // Radio label
   function createRadioLabel() {
     radioAuto.innerHTML = "";
@@ -65,8 +65,8 @@ function setupCarousel() {
     labels.forEach((l, i) => {
       l.classList.toggle("active", i === currentItemIndex);
     });
-  } 
-  
+  }
+
   // Movimentação
   function scrollToPage() {
     const newPosition = singleScrollWidth * currentItemIndex;
@@ -91,21 +91,21 @@ function setupCarousel() {
     }
     scrollToPage();
     resetAutoSlide();
-  } 
-  
+  }
+
   // Slide automático
   function startAutoSlide() {
-    clearInterval(autoSlideInterval); 
+    clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(() => {
       moveRight();
-    }, 2500); 
+    }, 2500);
   }
 
   function resetAutoSlide() {
     clearInterval(autoSlideInterval);
     startAutoSlide();
-  } 
-  
+  }
+
   // Eventos
   leftArrow.addEventListener("click", moveleft);
   rightArrow.addEventListener("click", moveRight);
