@@ -12,3 +12,8 @@ function fecharModal(idModal) {
     document.getElementById(idModal).style.display = "none";
     tela.style.display = "none";
 }
+
+function definirDataAtual(idCampo) {
+    const hoje = new Date();
+    const campo = document.getElementById(idCampo);
+}

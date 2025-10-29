@@ -64,7 +64,7 @@ body {
     color: #390101;
 }
 #modal-visualizar{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
@@ -120,6 +120,26 @@ body {
     transform: scale(1.2);
     color: #390101;
 }
+#modal-editar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25vh;
+    right: 45%;
+
+    width: fit-content;
+    height: 15hv;
+    border-radius: 30px;
+    padding: 10px;
+   
+    font-family: "JetBrains Mono", monospace;
+
+
+    background: linear-gradient(90deg, #FF9800, #B392F0);
+}
+
+
 .navbar {
     background: linear-gradient(90deg, #FF980080, #B392F099);
     display: flex;
