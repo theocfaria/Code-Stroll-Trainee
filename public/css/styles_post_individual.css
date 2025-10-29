@@ -172,6 +172,20 @@ p {
     margin: 0;
 }
 
+.voltar_posts {
+    display: flex;
+    justify-content: center;
+}
+
+.botao {
+    width: 10vw;
+    height: 60px;
+    background: #F73B4E;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
 @media(min-width: 320px) {
     body {
         padding: 10px 20px 20px 20px;
@@ -225,6 +239,15 @@ p {
         gap: 8px;
         width: fit-content;
         padding: 10px
+    }
+
+    .botao {
+        width: 40vw;
+        height: 50px;
+        background: #F73B4E;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
     }
 
 }
@@ -283,6 +306,7 @@ p {
         width: fit-content;
         padding: 10px
     }
+
 }
 
 @media(min-width: 425px) {
@@ -331,6 +355,15 @@ p {
         height: 220px;
         object-fit: fill;
 
+    }
+
+    .botao {
+        width: 30vw;
+        height: 60px;
+        background: #F73B4E;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
     }
 
 }
@@ -387,6 +420,15 @@ p {
         flex-direction: row;
     }
 
+    .botao {
+        width: 20vw;
+        height: 50px;
+        background: #F73B4E;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+    }
+
 }
 
 @media(min-width: 1024px) {
@@ -435,6 +477,15 @@ p {
         width: 220px;
         height: 200px;
         object-fit: cover;
+    }
+
+    .botao {
+        width: 15vw;
+        height: 60px;
+        background: #F73B4E;
+        font-size: 20px;
+        border: none;
+        border-radius: 8px;
     }
 
 }
@@ -487,6 +538,15 @@ p {
         object-fit: cover;
     }
 
+    .botao {
+        width: 12vw;
+        height: 60px;
+        background: #F73B4E;
+        font-size: 20px;
+        border: none;
+        border-radius: 8px;
+    }
+
 }
 
 @media(min-width: 1920px) {
@@ -495,7 +555,7 @@ p {
         /* topo, esquerda, baixo, direita */
     }
 
-    .hero_section{
+    .hero_section {
         gap: 20px;
     }
 
@@ -538,6 +598,15 @@ p {
         object-fit: cover;
     }
 
+    .botao {
+        width: 12vw;
+        height: 60px;
+        background: #F73B4E;
+        font-size: 24px;
+        border: none;
+        border-radius: 8px;
+    }
+
 }
 
 @media(min-width: 2560px) {
@@ -546,7 +615,7 @@ p {
         /* topo, esquerda, baixo, direita */
     }
 
-    .hero_section{
+    .hero_section {
         gap: 30px;
     }
 
@@ -587,6 +656,15 @@ p {
         width: 500px;
         height: 460px;
         object-fit: cover;
+    }
+
+    .botao {
+        width: 12vw;
+        height: 100px;
+        background: #F73B4E;
+        font-size: 32px;
+        border: none;
+        border-radius: 8px;
     }
 
 }
