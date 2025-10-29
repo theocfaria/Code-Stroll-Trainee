@@ -121,8 +121,8 @@ body {
     color: #390101;
 }
 #modal-editar{
-    display: flex;
-    flex-direction: column;
+    display: none;
+    flex-direction: line;
     align-items: center;
     position: absolute;
     top: 25vh;
@@ -131,13 +131,110 @@ body {
     width: fit-content;
     height: 15hv;
     border-radius: 30px;
-    padding: 10px;
+    padding: 20px;
    
     font-family: "JetBrains Mono", monospace;
 
 
     background: linear-gradient(90deg, #FF9800, #B392F0);
 }
+#tex{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#tex p{
+    margin: 0px 10px 18px 0px;
+}
+#in{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#in input{
+    margin: 0px 10px 15px 0px;
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    width: 300px;
+    transition: transform 0.2s ease;
+
+}
+#in input:hover{
+    transform: scale(1.1);
+}
+#sa{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    transition: transform 0.2s ease, color 0.2s ease;
+    
+}
+#sa:hover{
+    transform: scale(1.2);
+    color: #390101;
+}
+#modal-criar{
+    display: none;
+    flex-direction: line;
+    align-items: center;
+    position: absolute;
+    top: 25vh;
+    right: 45%;
+
+    width: fit-content;
+    height: 15hv;
+    border-radius: 30px;
+    padding: 20px;
+   
+    font-family: "JetBrains Mono", monospace;
+
+
+    background: linear-gradient(90deg, #FF9800, #B392F0);
+}
+#tex2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#tex2 p{
+    margin: 0px 10px 18px 0px;
+}
+#in2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#in2 input{
+    margin: 0px 10px 15px 0px;
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    width: 300px;
+    transition: transform 0.2s ease;
+
+}
+#in2 input:hover{
+    transform: scale(1.1);
+}
+#sa2{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    transition: transform 0.2s ease, color 0.2s ease;
+    
+}
+#sa2:hover{
+    transform: scale(1.2);
+    color: #390101;
+}
+
 
 
 .navbar {
@@ -169,6 +266,10 @@ body {
     border-radius: 8px;
     cursor: pointer;
     background: #B392F0;
+    transition: transform 0.2s ease;
+}
+#criar:hover {
+    transform: scale(1.15);
 }
 
 /* Icons importados do bootstrap */

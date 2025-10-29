@@ -15,7 +15,7 @@
 <body>
     <div class="navbar">
         <p id="texto_post">TABELA DE POSTS</p>
-        <button id="criar"><i class="bi bi-plus-lg"></i></button>
+        <button id="criar" onclick="abrirModal('modal-criar')"><i class="bi bi-plus-lg" ></i></button>
     </div>
     <div class="conteudo">
         <div class="barra_pesquisa">
@@ -43,7 +43,7 @@
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-editar')"><i class="bi bi-pencil"></i></button>
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
@@ -54,7 +54,7 @@
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-editar')"><i class="bi bi-pencil"></i></button>
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
@@ -65,7 +65,7 @@
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-editar')"><i class="bi bi-pencil"></i></button>
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
@@ -76,7 +76,7 @@
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-editar')"><i class="bi bi-pencil"></i></button>
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
@@ -87,7 +87,7 @@
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-editar')"><i class="bi bi-pencil"></i></button>
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
@@ -124,11 +124,38 @@
     </div> 
     <div id="modal-editar">
         <div id="tex">
+            <p>ID:</p>
             <p id="imga">Imagem:</p>
             <p id="tit">Título:</p>
-            <p id="des">Descrição:</p>
+            <p id="des">Texto:</p>
             <p id="au">Autor:</p>
             <p id="da">Data:</p>
+        </div>
+        <div id="in">
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" required>
+            <button id="sa" onclick="fecharModal('modal-editar')">Sair</button>
+        </div>
+    </div>
+    <div id="modal-criar">
+        <div id="tex2">
+            <p id="imga2">Imagem:</p>
+            <p id="tit2">Título:</p>
+            <p id="des2">Texto:</p>
+            <p id="au2">Autor:</p>
+            <p id="da2">Data:</p>
+        </div>
+        <div id="in2">
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" required>
+            <input type="text" id="auto" required>
+            <button id="sa2" onclick="fecharModal('modal-criar')" onclick="definirDataAtual('auto')">Sair</button>
         </div>
     </div>
 </body>
