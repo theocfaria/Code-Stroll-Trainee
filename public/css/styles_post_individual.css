@@ -49,6 +49,7 @@ body {
     font-family: "JetBrains Mono", monospace;
     font-size: 24px;
     color: #F1F1F1;
+    text-shadow: 2px 2px 4px#FFD970;
 }
 
 .imagem {
@@ -102,6 +103,7 @@ body {
     font-family: "JetBrains Mono", monospace;
     font-size: 44px;
     color: #C2A9EF;
+    text-shadow: 2px 2px 4px #C0B4C6;
 }
 
 .cards {
@@ -136,16 +138,14 @@ body {
     gap: 12px;
 
     font-family: "JetBrains Mono", monospace;
-
-
 }
 
 .titulo_texto_card {
     display: flex;
 
-
     font-size: 32px;
     color: #F73B4E;
+    text-shadow: 2px 2px 4px #F95062;
 }
 
 .juncao_texto {
@@ -184,6 +184,8 @@ p {
     font-size: 20px;
     border: none;
     border-radius: 8px;
+    color: black;
+    font-family: "JetBrains Mono", monospace;
 }
 
 @media(min-width: 320px) {
@@ -242,14 +244,13 @@ p {
     }
 
     .botao {
-        width: 40vw;
-        height: 50px;
+        width: 50vw;
+        height: 60px;
         background: #F73B4E;
         font-size: 16px;
         border: none;
         border-radius: 8px;
     }
-
 }
 
 @media(min-width: 375px) {
@@ -358,7 +359,7 @@ p {
     }
 
     .botao {
-        width: 30vw;
+        width: 40vw;
         height: 60px;
         background: #F73B4E;
         font-size: 16px;
@@ -422,7 +423,7 @@ p {
 
     .botao {
         width: 20vw;
-        height: 50px;
+        height: 60px;
         background: #F73B4E;
         font-size: 16px;
         border: none;
@@ -480,8 +481,8 @@ p {
     }
 
     .botao {
-        width: 15vw;
-        height: 60px;
+        width: 20vw;
+        height: 70px;
         background: #F73B4E;
         font-size: 20px;
         border: none;
@@ -539,8 +540,8 @@ p {
     }
 
     .botao {
-        width: 12vw;
-        height: 60px;
+        width: 14vw;
+        height: 80px;
         background: #F73B4E;
         font-size: 20px;
         border: none;
@@ -600,7 +601,7 @@ p {
 
     .botao {
         width: 12vw;
-        height: 60px;
+        height: 100px;
         background: #F73B4E;
         font-size: 24px;
         border: none;
@@ -660,7 +661,7 @@ p {
 
     .botao {
         width: 12vw;
-        height: 100px;
+        height: 120px;
         background: #F73B4E;
         font-size: 32px;
         border: none;
