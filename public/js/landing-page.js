@@ -93,13 +93,14 @@ function setupCarousel() {
     resetAutoSlide();
   }
 
-  // Slide automático
+  /* Slide automático
   function startAutoSlide() {
     clearInterval(autoSlideInterval);
     autoSlideInterval = setInterval(() => {
       moveRight();
     }, 2500);
   }
+    */
 
   function resetAutoSlide() {
     clearInterval(autoSlideInterval);
