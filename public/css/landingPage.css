@@ -29,21 +29,24 @@ main {
   background-color: #f73b46;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: 20px 60px 50px;
+  padding: 60px 60px 30px 60px;
+  min-height: 50vh;
+  gap: 40px;
 }
 
 #titulo-pagina {
   font-size: 48px;
   font-weight: 800;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 #texto-introducao {
   font-size: 32px;
   font-weight: 500;
-  text-align: justify;
+  text-align: left;
+  line-height: 1.4;
 }
 
 /*  PARTE INFERIOR */
@@ -88,18 +91,18 @@ main {
 }
 
 .post-card:hover {
-transform: translateY(-5px); 
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .post-card:hover .post-titulo {
-  color: #f97583; 
+  color: #f97583;
   font-weight: 800;
 }
 
 .post-card:active {
-transform: scale(1.01); 
-opacity: 0.9; 
+  transform: scale(1.01);
+  opacity: 0.9;
 }
 
 .post-imagem-placeholder {
@@ -174,13 +177,12 @@ opacity: 0.9;
 .bot-ver-todos:hover {
   background-color: white;
   color: #f97583;
-  transform: translateY(-5px); 
-
+  transform: translateY(-5px);
 }
 
 .bot-ver-todos:active {
-  transform: scale(0.98); 
-  background-color: #d8303a; 
+  transform: scale(0.98);
+  background-color: #d8303a;
 }
 
 .nav-arrow {
@@ -492,7 +494,6 @@ opacity: 0.9;
   .nav-arrow:hover {
     background-color: #f73b4e;
     color: white;
-
   }
 
   .arrow-left {
@@ -643,4 +644,70 @@ opacity: 0.9;
     padding: 20px 30px;
     font-size: 36px;
   }
+}
+
+.intro-esquerda {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: -40px;
+}
+
+.intro-direita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateY(20px);
+}
+
+.bloco-pequeno {
+  background-color: #1f1f1fe1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  max-width: 80%;
+  margin-left: 8%;
+  transition: all 0.3s ease;
+}
+
+.bloco-icone {
+  font-size: 40px;
+  width: 60px; 
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.bloco-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloco-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f73b46;
+}
+
+.bloco-descricao {
+  font-size: 16px;
+  font-weight: 400;
+  color: #e0e0e0;
+}
+
+/* efeitos no 3° card */
+@media (hover: hover) {
+.intro-direita .bloco-pequeno:nth-child(3):hover {
+ cursor: pointer;
+ transform: scale(1.03); 
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+}
+
+.intro-direita .bloco-pequeno:nth-child(3):active {
+transform: scale(0.99); 
+opacity: 0.9; 
 }
