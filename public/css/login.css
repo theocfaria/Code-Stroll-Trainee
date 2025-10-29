@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -10,40 +11,47 @@ body {
     background-image: url(../assets/fundo\ desktop.png);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover; 
+    background-size: cover;
     font-family: 'silkscreen', sans-serif;
     color: black;
     height: 100vh;
 
 }
+
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+
 #Retangulo {
     width: 700px;
     height: 450px;
     background-color: #D6D5D5;
     border-radius: 50px;
-} 
+}
+
 #profile {
     text-align: center;
     font-family: 'silkscreen', sans-serif;
 }
+
 #profile img {
     width: 150px;
     margin-top: -170px;
 
-} 
+}
+
 #profile p {
     margin-top: 15px;
     font-weight: 635px;
     font-kerning: 415px;
     font-size: 50px;
 }
-#email, #senha {
+
+#email,
+#senha {
     justify-content: space-between;
     border: 1.75px solid;
     width: 420px;
@@ -51,17 +59,21 @@ body {
     background-color: whitesmoke;
     margin: 0 auto;
     border-radius: 30px;
-    display: flex;            
-    align-items: center;   
+    display: flex;
+    align-items: center;
     padding: 0px 20px;
-    margin-top: 28px; 
+    margin-top: 28px;
     transition: transform 0.2s;
     border: none;
 }
-#email:hover, #senha:hover {
+
+#email:hover,
+#senha:hover {
     transform: scale(1.01);
 }
-#senhaInput, #email {
+
+#senhaInput,
+#email {
     font-size: 22px;
     font-family: 'jetbrains mono', monospace;
     height: 36px;
@@ -69,14 +81,17 @@ body {
     outline: none;
     background-color: whitesmoke;
 }
+
 #olho {
     background-color: whitesmoke;
     border: none;
     cursor: pointer;
 }
+
 #entrar {
     margin: 0 auto;
-    width: fit-content;        
+    border: none;
+    width: fit-content;
     height: fit-content;
     background-color: rgba(202, 23, 42, 0.85);
     border-radius: 30px;
@@ -86,28 +101,30 @@ body {
     justify-content: center;
     padding: 10px;
     transition: transform 0.2s;
-}
-#entrar:hover {
-    transform: scale(1.05);
-}
-#entrar p {
     font-family: 'Mono JetBrains', monospace;
     font-size: 30px;
     color: #FFFFFF;
 }
+
+#entrar:hover {
+    transform: scale(1.05);
+}
+
 #x {
-    background-color:  #D6D5D5 ;
+    background-color: #D6D5D5;
     height: fit-content;
     text-decoration: none;
     width: fit-content;
-    color:inherit;
+    color: inherit;
     font-family: 'jetbrains mono', monospace;
     transition: transform 0.2s ease, color 0.2 ease;
 }
+
 #x:hover {
     transform: scale(1.05);
     color: #6a085a;
 }
+
 #empurra {
     margin-top: -35px;
     width: 100%;
@@ -115,306 +132,395 @@ body {
     align-items: start;
     padding: 0px 25px;
 }
+
 input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 18px;
 }
-@media (min-width: 320px){
-    #Retangulo{
+
+@media (min-width: 320px) {
+    #Retangulo {
         width: 280px;
         height: auto;
         padding-bottom: 20px;
     }
+
     #profile img {
         width: 100px;
         margin-top: -50px;
 
     }
+
     #profile p {
         font-size: 30px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 40px;
     }
-    #senhaInput, #email {
+
+    #senhaInput,
+    #email {
         font-size: 12px;
     }
+
     input::placeholder {
-    font-family: 'jetbrains mono', monospace;
-    font-size: 16px;
+        font-family: 'jetbrains mono', monospace;
+        font-size: 16px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
     }
+
     #entrar p {
         font-size: 18px;
     }
+
     #senha img {
-    width: 15px;
-}
+        width: 15px;
+    }
 
 }
-@media (min-width: 425px){
-    #Retangulo{
+
+@media (min-width: 425px) {
+    #Retangulo {
         width: 380px;
         height: auto;
         padding-bottom: 20px;
     }
+
     #profile img {
         width: 100px;
         margin-top: -50px;
 
     }
+
     #profile p {
         font-size: 30px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 40px;
     }
+
     input::placeholder {
-    font-family: 'jetbrains mono', monospace;
-    font-size: 16px;
+        font-family: 'jetbrains mono', monospace;
+        font-size: 16px;
     }
-      #senhaInput, #email {
+
+    #senhaInput,
+    #email {
         font-size: 15px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
     }
+
     #entrar p {
         font-size: 20px;
     }
+
     #senha img {
-    width: 15px;
+        width: 15px;
+    }
 }
-}
-@media (min-width: 768px){
-    #Retangulo{
+
+@media (min-width: 768px) {
+    #Retangulo {
         width: 450px;
         height: auto;
         padding-bottom: 20px;
     }
+
     #profile img {
         width: 100px;
         margin-top: -50px;
 
     }
+
     #profile p {
         font-size: 40px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 40px;
     }
+
     input::placeholder {
-    font-family: 'jetbrains mono', monospace;
-    font-size: 18px;
+        font-family: 'jetbrains mono', monospace;
+        font-size: 18px;
     }
-      #senhaInput, #email {
+
+    #senhaInput,
+    #email {
         font-size: 16px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
     }
+
     #entrar p {
         font-size: 22px;
     }
+
     #senha img {
-    width: 15px;
+        width: 15px;
+    }
 }
-}
-@media (min-width: 1024px){
-    #Retangulo{
+
+@media (min-width: 1024px) {
+    #Retangulo {
         width: 650px;
         height: auto;
         padding-bottom: 20px;
     }
+
     #profile img {
         width: 120px;
         margin-top: -50px;
 
     }
+
     #profile p {
         font-size: 50px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 50px;
     }
+
     input::placeholder {
-    font-family: 'jetbrains mono', monospace;
-    font-size: 22px;
-    }
-      #senhaInput, #email {
+        font-family: 'jetbrains mono', monospace;
         font-size: 22px;
     }
+
+    #senhaInput,
+    #email {
+        font-size: 22px;
+    }
+
     #olhoIcon {
         font-size: 22px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
     }
+
     #entrar p {
         font-size: 28px;
     }
+
     #senha img {
-    width: 20px;
-}
+        width: 20px;
+    }
+
     #x {
         font-size: 22px;
-}
+    }
+
     #empurra {
         margin-top: -50px;
         padding: 0px 30px;
+    }
 }
-}
-@media (min-width: 1440px){
-    #Retangulo{
+
+@media (min-width: 1440px) {
+    #Retangulo {
         width: 800px;
         height: auto;
         padding-bottom: 20px;
     }
+
     #profile img {
         width: 150px;
         margin-top: -75px;
 
     }
+
     #profile p {
         font-size: 50px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 65px;
     }
+
     input::placeholder {
-    font-family: 'jetbrains mono', monospace;
-    font-size: 24px;
+        font-family: 'jetbrains mono', monospace;
+        font-size: 24px;
     }
-      #senhaInput, #email {
+
+    #senhaInput,
+    #email {
         font-size: 26px;
     }
+
     #olhoIcon {
         font-size: 26px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
     }
+
     #entrar p {
         font-size: 32px;
     }
+
     #senha img {
-    width: 20px;
-}
+        width: 20px;
+    }
+
     #x {
         font-size: 26px;
-}
+    }
+
     #empurra {
         margin-top: -50px;
         padding: 0px 30px;
+    }
 }
-}
-@media (min-width: 1920px){
-    #Retangulo{
+
+@media (min-width: 1920px) {
+    #Retangulo {
         width: 1000px;
         height: auto;
         padding-bottom: 40px;
         border-radius: 70px;
     }
+
     #profile img {
         width: 230px;
         margin-top: -130px;
     }
+
     #profile p {
         font-size: 80px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 70px;
         border-radius: 200px;
         padding: 40px;
     }
+
     input::placeholder {
-    font-size: 38px;
+        font-size: 38px;
     }
+
     #int {
         height: 70px;
     }
-      #senhaInput, #email {
+
+    #senhaInput,
+    #email {
         font-size: 50px;
     }
+
     #olhoIcon {
         font-size: 50px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
         border-radius: 50px;
         padding: 10px 20px;
     }
+
     #entrar p {
         font-size: 50px;
     }
+
     #senha img {
-    width: 40px;
-}
+        width: 40px;
+    }
+
     #x {
         font-size: 35px;
-}
+    }
+
     #empurra {
         margin-top: -70px;
         padding: 0px 40px;
+    }
 }
-}
-@media (min-width: 2560px){
-    #Retangulo{
+
+@media (min-width: 2560px) {
+    #Retangulo {
         width: 1350px;
         height: auto;
         padding-bottom: 40px;
         border-radius: 70px;
     }
+
     #profile img {
         width: 250px;
         margin-top: -130px;
     }
+
     #profile p {
         font-size: 100px;
     }
-    #email, #senha {
+
+    #email,
+    #senha {
         width: 80%;
         height: 130px;
         border-radius: 200px;
         padding: 40px;
     }
+
     input::placeholder {
-    font-size: 44px;
+        font-size: 44px;
     }
+
     #int {
         height: 70px;
     }
+
     #entrar {
-        width: fit-content;        
+        width: fit-content;
         height: fit-content;
         border-radius: 50px;
         padding: 10px 20px;
     }
+
     #entrar p {
         font-size: 60px;
     }
+
     #senha img {
-    width: 40px;
-}
+        width: 40px;
+    }
+
     #x {
         font-size: 40px;
-}
+    }
+
     #empurra {
         margin-top: -90px;
         padding: 0px 40px;
-}
+    }
 }
