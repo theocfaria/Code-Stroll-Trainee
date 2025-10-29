@@ -102,10 +102,11 @@ body {
     width: fit-content;
     color:inherit;
     font-family: 'jetbrains mono', monospace;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease, color 0.2 ease;
 }
 #x:hover {
     transform: scale(1.05);
+    color: #6a085a;
 }
 #empurra {
     margin-top: -35px;
