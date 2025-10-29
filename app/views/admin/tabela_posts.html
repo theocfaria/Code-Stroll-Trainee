@@ -44,7 +44,7 @@
                         <td class="acoes">
                             <button type="button" class="btn-primary"><i class="bi bi-eye"></i></button>
                             <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-trash"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -107,9 +107,10 @@
         <p> Tem certeza que deseja deletar esse post?</p>
          <div class="botoes-s-n">
                 <button>Confirmar</button>
-                <button>Cancelar</button>
+                <button onclick="fecharModal('modal-delete')">Cancelar</button>
         </div>
-    </div> 
+    </div>
+    <div id="mo"></div> 
 
 </body>
     <script src="../../../public/js/tabela_post.js"></script>
