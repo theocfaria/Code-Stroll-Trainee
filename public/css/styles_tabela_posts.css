@@ -63,6 +63,47 @@ body {
     transform: scale(1.2);
     color: #390101;
 }
+#modal-visualizar{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25vh;
+    right: 45%;
+
+    width: fit-content;
+    height: 15hv;
+    padding: 10px;
+    border-radius: 30px;
+   
+    font-family: "JetBrains Mono", monospace;
+
+
+    background: linear-gradient(90deg, #FF9800, #B392F0);
+}
+#imagem{
+    background-color: #fff;
+    width: 150px;
+    height: 200px;
+    margin: 15px 15px;
+}
+#titulo {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0px 0px 15px 0px;
+}
+#desen {
+    display: flex;
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+    width: 180px;
+}
+#autor{
+    margin: 10px 30px;
+    font-size: 12px;
+    width: 180px;
+}
 .navbar {
     background: linear-gradient(90deg, #FF980080, #B392F099);
     display: flex;

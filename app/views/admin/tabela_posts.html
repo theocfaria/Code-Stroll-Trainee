@@ -42,7 +42,7 @@
                         <td class="teste4">Marcos</td>
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
-                            <button type="button" class="btn-primary"><i class="bi bi-eye"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
                             <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
                             <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
@@ -53,9 +53,9 @@
                         <td class="teste4">Marcos</td>
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
-                            <button type="button" class="btn-primary"><i class="bi bi-eye"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
                             <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-trash"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -64,9 +64,9 @@
                         <td class="teste4">Marcos</td>
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
-                            <button type="button" class="btn-primary"><i class="bi bi-eye"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
                             <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-trash"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -75,9 +75,9 @@
                         <td class="teste4">Marcos</td>
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
-                            <button type="button" class="btn-primary"><i class="bi bi-eye"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
                             <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-trash"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -86,9 +86,9 @@
                         <td class="teste4">Marcos</td>
                         <td class="teste4">22/03/2025</td>
                         <td class="acoes">
-                            <button type="button" class="btn-primary"><i class="bi bi-eye"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-visualizar')"><i class="bi bi-eye"></i></button>
                             <button type="button" class="btn-primary"><i class="bi bi-pencil"></i></button>
-                            <button type="button" class="btn-primary"><i class="bi bi-trash"></i></button>
+                            <button type="button" class="btn-primary" onclick="abrirModal('modal-delete')"><i class="bi bi-trash"></i></button>
                         </td>
                     </tr>
                 </tbody>
@@ -110,8 +110,19 @@
                 <button onclick="fecharModal('modal-delete')">Cancelar</button>
         </div>
     </div>
-    <div id="mo"></div> 
+    <div id="modal-visualizar">
+            <div id="imagem"> 
 
+            </div>   
+             <p id="titulo">Título</p>
+            <p id="desen">
+                Many desktop publishing packages and web page editors
+                now use Lorem Ipsum as their default model text...
+            </p>
+        <p id="autor">
+            Jane joe, 5 dias atrás
+        </p>
+    </div> 
 </body>
     <script src="../../../public/js/tabela_post.js"></script>
 </html>

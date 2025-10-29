@@ -11,5 +11,4 @@ function fecharModal(idModal) {
 
     document.getElementById(idModal).style.display = "none";
     tela.style.display = "none";
-
 }
