@@ -254,6 +254,7 @@ main {
 }
 
 @media (hover: hover) {
+  .intro-direita .bloco-pequeno:nth-child(1):hover,
   .intro-direita .bloco-pequeno:nth-child(3):hover {
     cursor: pointer;
     transform: scale(1.03);
@@ -261,6 +262,7 @@ main {
   }
 }
 
+.intro-direita .bloco-pequeno:nth-child(1):active,
 .intro-direita .bloco-pequeno:nth-child(3):active {
   transform: scale(0.99);
   opacity: 0.9;
