@@ -69,10 +69,11 @@ main {
 }
 
 .titulo-secao {
-  color: #f97583;
-  font-size: 40px;
-  font-weight: 800;
-  text-align: center;
+color: #f97583;
+font-size: 40px;
+font-weight: 800;
+text-align: center;
+animation: pulse-color 3s ease-in-out infinite; /* <-- ADICIONE ESTA LINHA */
 }
 
 .post-card {
@@ -273,6 +274,18 @@ main {
 .intro-direita .bloco-pequeno:nth-child(1):active {
   transform: scale(0.99);
   opacity: 0.9;
+}
+
+@keyframes pulse-color {
+ 0% {
+ color: #f97583; 
+ }
+ 25% {
+ color: #f73b46; 
+ }
+ 100% {
+ color: #f97583; 
+ }
 }
 
 /* RESPONSIVIDADE */
