@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url(/public/assets/fundo.jpg) no-repeat top center/cover; 
+  /* background: url(/public/assets/fundo.jpg) no-repeat top center/cover; */
   display: flex;
   background-color: #edebee;
   font-family: "Poppins", sans-serif;
@@ -20,7 +20,7 @@ main
 }
 
 .sidebar {
-  background-color: #F73B4E;
+  background: linear-gradient(90deg, #FF9800, #B392F0);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -81,13 +81,12 @@ main
 
 .item-sidebar a {
   text-decoration: none;
-  color: #1f1f1f;
+  color: whitesmoke;
   transition: all 0.3s;
 }
 
 .item-sidebar a:hover {
-background-color: #d3cfd6; 
-color: #1f1f1f;           
+background-color: #B392F0;        
 }
 
 .item-description {
@@ -102,8 +101,8 @@ color: #1f1f1f;
 */
 
 #button-logout {
-  background-color: #1f1f1f;
-  color: #f97583;
+  background-color: #B392F0;
+  color: whitesmoke;
   border-radius: 8px;
   padding: 0.8rem;
   border: none;
@@ -119,8 +118,7 @@ color: #1f1f1f;
 }
 
 #button-logout:hover {
-  background-color: #d3cfd6;
-  color: #1f1f1f;
+  background-color: #FF9800;
 }
 
 .closed-sidebar .item-description {
