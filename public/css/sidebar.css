@@ -29,6 +29,7 @@ main
   padding: 1.5rem 0.8rem;
   border-radius: 0 8px 8px 0;
   color: #edebee;
+  width: 11rem;
 }
 
 .top-sidebar {
@@ -121,6 +122,10 @@ background-color: #B392F0;
   background-color: #FF9800;
 }
 
+.closed-sidebar {
+  width: 4rem; 
+}
+
 .closed-sidebar .item-description {
   width: 0;
   overflow: hidden;
@@ -153,27 +158,27 @@ background-color: #B392F0;
 
 /* 1°: Base Mobile (0px - 424px) */
 html {
-  font-size: 13px; 
+  font-size: 15px; 
 }
 
 /* 2° Mobile maior (425px a 767px) */
 @media (min-width: 425px) {
   html {
-    font-size: 14px; 
+    font-size: 16px; 
   }
 }
 
 /* 3°: Tablets (768px - 1023px) */
 @media (min-width: 768px) {
   html {
-    font-size: 15px; 
+    font-size: 17px; 
   }
 }
 
 /* 4°: Notebook (1024px a 1439px) */
 @media (min-width: 1024px) {
   html {
-    font-size: 16px; 
+    font-size: 17px; 
   }
   .content-sidebar ul {
     gap: 1.9rem; 
@@ -183,7 +188,7 @@ html {
 /* 5°: Desktop (1440px a 2559px) */
 @media (min-width: 1440px) {
   html {
-    font-size: 18px; 
+    font-size: 19px; 
   }
 }
 
