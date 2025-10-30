@@ -22,10 +22,11 @@ main {
 
 /*1°: versão base -> VERSÃO MOBILE */
 
-/* PARTE SUPERIOR (MOBILE) */
+/* Parte superior */
 
 .introducao-lp {
-  background-color: #f73b46;
+  /* background-color: #f73b46; */
+  background: linear-gradient(to bottom, #f73b46, #832424); /* #812e2e    #881b1b   */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -48,7 +49,7 @@ main {
   line-height: 1.4;
 }
 
-/*  PARTE INFERIOR (MOBILE) */
+/*  Parte inferior */
 
 .posts-recentes {
   width: 100%;
