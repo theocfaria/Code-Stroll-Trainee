@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: url(/public/assets/fundo.jpg) no-repeat top center/cover;
   color: white;
@@ -53,11 +57,15 @@ main {
 
 .posts-recentes {
   width: 100%;
-  padding: 80px 60px;
+  padding: 80px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 70px;
+}
+
+#secao-posts {
+  scroll-margin-top: -20px; 
 }
 
 .titulo-secao {
@@ -217,7 +225,7 @@ main {
 }
 
 .bloco-pequeno {
-  background-color: #1f1f1fbd;
+  background-color: #1f1f1f93;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -227,6 +235,7 @@ main {
   max-width: 100%;
   margin-left: 0;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .bloco-icone {
@@ -429,6 +438,7 @@ main {
 }
 
 /* 6°: VERSÃO NOTEBOOK 1024px a 1439px */
+
 @media (min-width: 1024px) {
   /* início regras do carrossel */
   .carrossel {
@@ -496,7 +506,6 @@ main {
   }
   /* término das regras do carrossel */
 
-  /* início regras introdução desktop */
   .introducao-lp {
     flex-direction: row;
     align-items: center;
@@ -523,7 +532,6 @@ main {
     max-width: 80%;
     margin-left: 8%;
   }
-  /* fim regras introdução desktop */
 
   /* regras de fonte desktop */
   #titulo-pagina {
@@ -534,7 +542,7 @@ main {
   }
   .posts-recentes {
     padding: 40px 20px;
-    gap: 30px;
+    gap: 25px;
   }
   .titulo-secao {
     font-size: 30px;
