@@ -82,6 +82,12 @@ main
 .item-sidebar a {
   text-decoration: none;
   color: #1f1f1f;
+  transition: all 0.3s;
+}
+
+.item-sidebar a:hover {
+background-color: #d3cfd6; 
+color: #1f1f1f;           
 }
 
 .item-description {
@@ -114,6 +120,7 @@ main
 
 #button-logout:hover {
   background-color: #d3cfd6;
+  color: #1f1f1f;
 }
 
 .closed-sidebar .item-description {
@@ -171,7 +178,7 @@ html {
     font-size: 16px; 
   }
   .content-sidebar ul {
-    gap: 1.8rem; 
+    gap: 1.9rem; 
   }
 }
 
