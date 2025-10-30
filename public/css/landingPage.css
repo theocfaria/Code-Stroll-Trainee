@@ -263,16 +263,14 @@ main {
 }
 
 @media (hover: hover) {
-  .intro-direita .bloco-pequeno:nth-child(1):hover,
-  .intro-direita .bloco-pequeno:nth-child(3):hover {
+  .intro-direita .bloco-pequeno:nth-child(1):hover {
     cursor: pointer;
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   }
 }
 
-.intro-direita .bloco-pequeno:nth-child(1):active,
-.intro-direita .bloco-pequeno:nth-child(3):active {
+.intro-direita .bloco-pequeno:nth-child(1):active {
   transform: scale(0.99);
   opacity: 0.9;
 }
