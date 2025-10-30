@@ -23,19 +23,19 @@ body{
 }
 #links{
     display: flex;
-    flex-direction: column;
+    height: 70%;
+    flex-direction: line;
     justify-content: center;
     align-items: center;
     gap: 100px;
 }
-#links a{
+a#usuarios, a#posts{
     display: flex;
     align-items: center;
-    flex-direction: column;
 
     border-radius: 100px;
     width: fit-content;
-    height: fit-content;
+    height: 80%;
     padding: 20px 15px;
 
     text-decoration: none;
