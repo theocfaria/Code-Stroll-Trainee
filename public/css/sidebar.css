@@ -20,7 +20,7 @@ main
 }
 
 .sidebar {
-  background: linear-gradient(90deg, #FF9800, #B392F0);
+  background: linear-gradient(90deg, #ff9800,#B392F0);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ main
 }
 
 .item-sidebar a:hover {
-background-color: #B392F0;        
+background-color: #8e5de9;        
 }
 
 .item-description {
@@ -102,7 +102,7 @@ background-color: #B392F0;
 */
 
 #button-logout {
-  background-color: #B392F0;
+  background-color: #8e5de9;
   color: whitesmoke;
   border-radius: 8px;
   padding: 0.8rem;
@@ -119,7 +119,8 @@ background-color: #B392F0;
 }
 
 #button-logout:hover {
-  background-color: #FF9800;
+  background-color: #ffd970;
+  color: #8e5de9;
 }
 
 .closed-sidebar {
