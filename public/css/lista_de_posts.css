@@ -251,7 +251,7 @@ body::before {
 }
 
 /*Responsividade 320, 425, 768, 1024, 1440, 1920, 2560*/
-
+/**/
 @media (max-width:320px) {
     .post {
         flex-direction: column;
