@@ -1,126 +1,89 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
 }
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
     background-image: url(../assets/fundo\ desktop.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     font-family: 'silkscreen', sans-serif;
     color: black;
-    height: 100vh;
 
 }
-
 #container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
+    width: 100vw;
 }
 
 #Retangulo {
-    width: 800px;
-    height: 50%;
+    width: 40%;
+    height: fit-content;
+    max-width: 700px;
+    min-width: 150px;
+    aspect-ratio: 2/1;
     background-color: #D6D5D5;
     border-radius: 50px;
 }
 
-#profile {
-    position:absolute;
-    margin: 0px;
-    top: 28%;
-}
-#profile img{
-    margin: 0px;
-    width: 180px;
-}
-p#l{
+#login{
     display: flex;
     justify-content: center;
+    font-size: 50px;
+    margin: 20px 0px;
 }
-#l{
-    padding-top: 50px;
-    font-weight: 635px;
-    font-kerning: 415px;
-    font-family: 'silkscreen', sans-serif;
-    font-size: 60px;
-}
-#email {
-    justify-content: space-between;
-    border: 1.75px solid;
-    width: 80%;
-    height: 300px;
-    background-color: whitesmoke;
-    margin: 0 auto;
-    border-radius: 30px;
+.container-input{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 0px 20px;
-    margin-top: 28px;
-    transition: transform 0.2s;
-    border: none;
+    font-family: "JetBrains Mono", monospace;
+    width: 100%;
+    height: 60%;
+    gap: 40px;
 }
-#senha{
-        justify-content: space-between;
-    border: 1.75px solid;
-    width: 80%;
+.container-senha {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#senha, #email {
+    height: fit-content;
     height: 50px;
-    background-color: whitesmoke;
-    margin: 0 auto;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0px 20px;
-    margin-top: 28px;
-    transition: transform 0.2s;
+    width: 70%;
+    border-radius: 50px;
     border: none;
-}
-#email input{
-    border:none;
-    height: 36px;
-    background-color: #f5f5f5;
+    padding: 10px 15px;
 }
 #email:hover,
 #senha:hover {
     transform: scale(1.01);
 }
-
-#senhaInput,
-input#email {
-    font-size: 22px;
-    font-family: 'jetbrains mono', monospace;
-    height: 36px;
-    border: none;
-    outline: none;
-    background-color: whitesmoke;
+#olhoIcon {
+    position: absolute;
+    right: 110px;
 }
-
-#olho {
-    background-color: whitesmoke;
-    border: none;
-    cursor: pointer;
+.container-entrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 20px 0px;
 }
 
 #entrar {
-    margin: 0 auto;
     border: none;
     width: fit-content;
     height: fit-content;
     background-color: rgba(202, 23, 42, 0.85);
     border-radius: 30px;
-    display: flex;
-    margin-top: 28px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    transition: transform 0.2s;
     font-family: 'Mono JetBrains', monospace;
     font-size: 30px;
     color: #FFFFFF;
@@ -150,391 +113,4 @@ input#email {
 input::placeholder {
     font-family: 'jetbrains mono', monospace;
     font-size: 18px;
-}
-
-@media (min-width: 320px) {
-    #Retangulo {
-        width: 280px;
-        height: auto;
-        padding-bottom: 20px;
-    }
-    #profile{
-        top: 10%;
-        height: 50px;
-
-    }
-
-
-    #profile p {
-        font-size: 30px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 40px;
-    }
-
-    #senhaInput,
-    #email {
-        font-size: 12px;
-    }
-
-    input::placeholder {
-        font-family: 'jetbrains mono', monospace;
-        font-size: 16px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-    }
-
-    #entrar p {
-        font-size: 18px;
-    }
-
-    #senha img {
-        width: 15px;
-    }
-
-}
-
-@media (min-width: 425px) {
-    #Retangulo {
-        width: 380px;
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #profile img {
-        width: 100px;
-        margin-top: -50px;
-
-    }
-
-    #profile p {
-        font-size: 30px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 40px;
-    }
-
-    input::placeholder {
-        font-family: 'jetbrains mono', monospace;
-        font-size: 16px;
-    }
-
-    #senhaInput,
-    #email {
-        font-size: 15px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-    }
-
-    #entrar p {
-        font-size: 20px;
-    }
-
-    #senha img {
-        width: 15px;
-    }
-}
-
-@media (min-width: 768px) {
-    #Retangulo {
-        width: 450px;
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #profile img {
-        width: 100px;
-        margin-top: -50px;
-
-    }
-
-    #profile p {
-        font-size: 40px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 40px;
-    }
-
-    input::placeholder {
-        font-family: 'jetbrains mono', monospace;
-        font-size: 18px;
-    }
-
-    #senhaInput,
-    #email {
-        font-size: 16px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-    }
-
-    #entrar p {
-        font-size: 22px;
-    }
-
-    #senha img {
-        width: 15px;
-    }
-}
-
-@media (min-width: 1024px) {
-    #Retangulo {
-        width: 650px;
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #profile img {
-        width: 120px;
-        margin-top: -50px;
-
-    }
-
-    #profile p {
-        font-size: 50px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 50px;
-    }
-
-    input::placeholder {
-        font-family: 'jetbrains mono', monospace;
-        font-size: 22px;
-    }
-
-    #senhaInput,
-    #email {
-        font-size: 22px;
-    }
-
-    #olhoIcon {
-        font-size: 22px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-    }
-
-    #entrar p {
-        font-size: 28px;
-    }
-
-    #senha img {
-        width: 20px;
-    }
-
-    #x {
-        font-size: 22px;
-    }
-
-    #empurra {
-        margin-top: -50px;
-        padding: 0px 30px;
-    }
-}
-
-@media (min-width: 1440px) {
-    #Retangulo {
-        width: 800px;
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    #profile img {
-        width: 150px;
-        margin-top: -75px;
-
-    }
-
-    #profile p {
-        font-size: 50px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 65px;
-    }
-
-    input::placeholder {
-        font-family: 'jetbrains mono', monospace;
-        font-size: 24px;
-    }
-
-    #senhaInput,
-    #email {
-        font-size: 26px;
-    }
-
-    #olhoIcon {
-        font-size: 26px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-    }
-
-    #entrar p {
-        font-size: 32px;
-    }
-
-    #senha img {
-        width: 20px;
-    }
-
-    #x {
-        font-size: 26px;
-    }
-
-    #empurra {
-        margin-top: -50px;
-        padding: 0px 30px;
-    }
-}
-
-@media (min-width: 1920px) {
-    #Retangulo {
-        width: 1000px;
-        height: auto;
-        padding-bottom: 40px;
-        border-radius: 70px;
-    }
-
-    #profile img {
-        width: 230px;
-        margin-top: -130px;
-    }
-
-    #profile p {
-        font-size: 80px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 70px;
-        border-radius: 200px;
-        padding: 40px;
-    }
-
-    input::placeholder {
-        font-size: 38px;
-    }
-
-    #int {
-        height: 70px;
-    }
-
-    #senhaInput,
-    #email {
-        font-size: 50px;
-    }
-
-    #olhoIcon {
-        font-size: 50px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-        border-radius: 50px;
-        padding: 10px 20px;
-    }
-
-    #entrar p {
-        font-size: 50px;
-    }
-
-    #senha img {
-        width: 40px;
-    }
-
-    #x {
-        font-size: 35px;
-    }
-
-    #empurra {
-        margin-top: -70px;
-        padding: 0px 40px;
-    }
-}
-
-@media (min-width: 2560px) {
-    #Retangulo {
-        width: 1350px;
-        height: auto;
-        padding-bottom: 40px;
-        border-radius: 70px;
-    }
-
-    #profile img {
-        width: 250px;
-        margin-top: -130px;
-    }
-
-    #profile p {
-        font-size: 100px;
-    }
-
-    #email,
-    #senha {
-        width: 80%;
-        height: 130px;
-        border-radius: 200px;
-        padding: 40px;
-    }
-
-    input::placeholder {
-        font-size: 44px;
-    }
-
-    #int {
-        height: 70px;
-    }
-
-    #entrar {
-        width: fit-content;
-        height: fit-content;
-        border-radius: 50px;
-        padding: 10px 20px;
-    }
-
-    #entrar p {
-        font-size: 60px;
-    }
-
-    #senha img {
-        width: 40px;
-    }
-
-    #x {
-        font-size: 40px;
-    }
-
-    #empurra {
-        margin-top: -90px;
-        padding: 0px 40px;
-    }
 }

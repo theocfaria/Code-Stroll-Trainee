@@ -19,25 +19,20 @@
 <body>
     <div id="container">
         <div id="Retangulo">
-
             <div id="xis">
                 <a id="x" href="navbar.html"><i class="bi bi-x"></i></a>
             </div>
-            <p id="l">Login</p>
-
-            <div id="email" >
-            <input type="text" placeholder="e-mail">
+            <p id="login">Login</p>
+            <div class="container-input">
+                <input type="text" placeholder="e-mail" id="email">
+                <div class="container-senha">
+                    <input type="password" placeholder="senha" id="senha">
+                    <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
+                </div>
             </div>
-
-    
-            <div id="senha">
-                <input type="password" id="senhaInput" placeholder="senha">
-                <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
-            </div>
+            <div class="container-entrar">
             <button id="entrar">Entrar</button>
-        </div>
-        <div id="profile">
-            <img src="../../../public/assets/logotipo.png" alt="Logotipo da Empresa Code Junior">
+            </div>
         </div>
     </div>
 </body>

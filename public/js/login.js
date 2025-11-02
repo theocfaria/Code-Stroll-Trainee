@@ -1,5 +1,5 @@
 function alternaOlho() {
-    const senhaInput = document.getElementById('senhaInput');
+    const senhaInput = document.getElementById('senha');
     const olhoIcon = document.getElementById('olhoIcon');
 
     if (!senhaInput) return;
