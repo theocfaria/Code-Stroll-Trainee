@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     background-image: url(../assets/fundo\ desktop.png);
@@ -11,6 +12,7 @@ body {
     color: black;
 
 }
+
 #container {
     display: flex;
     align-items: center;
@@ -20,7 +22,7 @@ body {
 }
 
 #Retangulo {
-    width: 40%;
+    width: 60%;
     height: fit-content;
     max-width: 700px;
     min-width: 150px;
@@ -30,13 +32,14 @@ body {
     position: relative;
 }
 
-#login{
+#login {
     display: flex;
     justify-content: center;
     font-size: 50px;
     margin: 20px 0px;
 }
-.container-input{
+
+.container-input {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,6 +49,7 @@ body {
     height: 60%;
     gap: 40px;
 }
+
 .container-senha {
     display: flex;
     position: relative;
@@ -54,7 +58,9 @@ body {
     align-items: center;
     width: 100%;
 }
-#senha, #email {
+
+input#senha,
+input#email {
     height: fit-content;
     height: 50px;
     width: 70%;
@@ -62,16 +68,19 @@ body {
     border: none;
     padding: 10px 15px;
 }
+
 #email:hover,
 #senha:hover {
     transform: scale(1.01);
 }
+
 #olhoIcon {
     position: absolute;
     right: 110px;
     font-size: 20px;
 }
-.container-entrar{
+
+.container-entrar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,10 +113,12 @@ body {
     margin: 20px 20px;
     transition: transform 0.2s ease, color 0.2 ease;
 }
-.bi-x{
+
+.bi-x {
     font-size: 35px;
 }
-img#logo{
+
+img#logo {
     width: 150px;
     position: absolute;
     left: 35%;
@@ -119,4 +130,47 @@ img#logo{
     color: #6a085a;
 }
 
-@media (width-min)
+@media (min-width: 320px) {
+    #Retangulo {
+        width: 90%;
+    }
+
+    img#logo {
+        width: 100px;
+        position: absolute;
+        left: 32%;
+        top: -50px;
+    }
+
+    .bi-x {
+        font-size: 25px;
+    }
+
+    #login {
+        font-size: 35px;
+        margin: 20px 0px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 20px;
+    }
+
+    input#senha,
+    input#email {
+        height: 30px;
+        font-size: 16px;
+    }
+
+    #olhoIcon {
+        right: 55px;
+        font-size: 12px;
+    }
+    button#entrar{
+        padding: 5px 15px;
+    }
+    #entrar{
+        font-size: 16px;
+    }
+
+}
