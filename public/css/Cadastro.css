@@ -23,7 +23,7 @@ body {
 
 #Retangulo {
     width: 60%;
-    height: 70%;
+    height: fit-contentç;
     max-width: 2000px;
     min-width: 150px;
     aspect-ratio: 2/1;
@@ -113,7 +113,7 @@ input#data {
     text-decoration: none;
     width: fit-content;
     color: inherit;
-    margin: 20px 20px;
+    margin: 20px 20px 0px 20px;
     transition: transform 0.2s ease, color 0.2 ease;
 }
 
