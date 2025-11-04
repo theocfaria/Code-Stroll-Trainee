@@ -1,7 +1,8 @@
-*{
+* {
     font-family: "JetBrains Mono", monospace;
-    
+
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     gap: 50px;
     flex-direction: column;
 }
+
 .tela {
     width: 100%;
     height: 100%;
@@ -19,6 +21,7 @@ body {
     z-index: 2;
 
 }
+
 #modal-delete {
     display: none;
     flex-direction: column;
@@ -31,18 +34,20 @@ body {
     height: 15hv;
     padding: 0px 20px;
     border-radius: 30px;
-   
+
     font-family: "JetBrains Mono", monospace;
-    font-size: 30px; 
+    font-size: 30px;
     font-weight: 500;
 
 
     background: linear-gradient(90deg, #FF9800, #B392F0);
 }
+
 .botoes-s-n {
     display: flex;
     justify-content: space-between;
 }
+
 .botoes-s-n button {
     border: none;
     border-radius: 50px;
@@ -53,17 +58,19 @@ body {
     padding: 5px 15px;
 
     font-family: "JetBrains Mono", monospace;
-    font-size: 25px; 
+    font-size: 25px;
     font-weight: 500;
 
 
-    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    background: linear-gradient(180deg, #cc7a00, #FF9800, #ffd970, #ffd970);
 }
-.botoes-s-n button:hover{
+
+.botoes-s-n button:hover {
     transform: scale(1.2);
     color: #390101;
 }
-#modal-visualizar{
+
+#modal-visualizar {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -74,24 +81,33 @@ body {
     width: fit-content;
     height: 15hv;
     border-radius: 30px;
-   
+
     font-family: "JetBrains Mono", monospace;
 
 
     background: linear-gradient(90deg, #FF9800, #B392F0);
 }
-#imagem{
+
+p#id {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 10px 0px 0px 0px;
+}
+
+#imagem {
     background-color: #fff;
     width: 150px;
     height: 200px;
     margin: 15px 15px;
     border-radius: 10px;
 }
+
 #titulo {
     font-size: 30px;
     font-weight: 800;
     margin: 0px 0px 15px 0px;
 }
+
 #desen {
     display: flex;
     text-align: center;
@@ -99,28 +115,32 @@ body {
     font-size: 12px;
     width: 180px;
 }
-#autor{
+
+#autor {
     margin: 10px 30px;
     font-size: 12px;
     width: 180px;
 }
-#sair{
+
+#sair {
     border: none;
     border-radius: 50px;
     transition: transform 0.2s ease, color 0.2s ease;
     cursor: pointer;
     margin-bottom: 15px;
 
-    font-size: 20px; 
+    font-size: 20px;
     font-weight: 500;
 
-    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    background: linear-gradient(180deg, #cc7a00, #FF9800, #ffd970, #ffd970);
 }
-#sair:hover{
+
+#sair:hover {
     transform: scale(1.2);
     color: #390101;
 }
-#modal-editar{
+
+#modal-editar {
     display: none;
     flex-direction: line;
     align-items: center;
@@ -132,26 +152,30 @@ body {
     height: 15hv;
     border-radius: 30px;
     padding: 20px;
-   
+
     font-family: "JetBrains Mono", monospace;
 
 
     background: linear-gradient(90deg, #FF9800, #B392F0);
 }
-#tex{
+
+#tex {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 30px;
 }
-#tex p{
+
+#tex p {
     margin: 0px 10px 18px 0px;
 }
-#in{
+
+#in {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-#in input{
+
+#in input {
     margin: 0px 10px 15px 0px;
     border: none;
     border-radius: 20px;
@@ -160,38 +184,44 @@ body {
     transition: transform 0.2s ease;
 
 }
-#in input:hover{
+
+#in input:hover {
     transform: scale(1.1);
 }
-#sa{
+
+#sa {
     width: 100px;
     height: 30px;
     border: none;
     border-radius: 50px;
     font-size: 16px;
-    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    background: linear-gradient(180deg, #cc7a00, #FF9800, #ffd970, #ffd970);
     transition: transform 0.2s ease, color 0.2s ease;
-    
+
 }
-#co{
+
+#co {
     width: 100px;
     height: 30px;
     border: none;
     border-radius: 50px;
     font-size: 16px;
-    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    background: linear-gradient(180deg, #cc7a00, #FF9800, #ffd970, #ffd970);
     transition: transform 0.2s ease, color 0.2s ease;
-    
+
 }
-#sa:hover{
+
+#sa:hover {
     transform: scale(1.2);
     color: #390101;
 }
-#co:hover{
+
+#co:hover {
     transform: scale(1.2);
     color: #390101;
 }
-#modal-criar{
+
+#modal-criar {
     display: none;
     flex-direction: line;
     align-items: center;
@@ -203,26 +233,30 @@ body {
     height: 15hv;
     border-radius: 30px;
     padding: 20px;
-   
+
     font-family: "JetBrains Mono", monospace;
 
 
     background: linear-gradient(90deg, #FF9800, #B392F0);
 }
-#tex2{
+
+#tex2 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 30px;
 }
-#tex2 p{
+
+#tex2 p {
     margin: 0px 10px 18px 0px;
 }
-#in2{
+
+#in2 {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-#in2 input{
+
+#in2 input {
     margin: 0px 10px 15px 0px;
     border: none;
     border-radius: 20px;
@@ -231,20 +265,39 @@ body {
     transition: transform 0.2s ease;
 
 }
-#in2 input:hover{
+
+#in2 input:hover {
     transform: scale(1.1);
 }
-#sa2{
+
+#sa2 {
     width: 100px;
     height: 30px;
     border: none;
     border-radius: 50px;
     font-size: 16px;
-    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    background: linear-gradient(180deg, #cc7a00, #FF9800, #ffd970, #ffd970);
     transition: transform 0.2s ease, color 0.2s ease;
-    
+
 }
-#sa2:hover{
+
+#co2 {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background: linear-gradient(180deg, #cc7a00, #FF9800, #ffd970, #ffd970);
+    transition: transform 0.2s ease, color 0.2s ease;
+
+}
+
+#co2:hover {
+    transform: scale(1.2);
+    color: #390101;
+}
+
+#sa2:hover {
     transform: scale(1.2);
     color: #390101;
 }
@@ -282,6 +335,7 @@ body {
     background: #B392F0;
     transition: transform 0.2s ease;
 }
+
 #criar:hover {
     transform: scale(1.15);
 }
@@ -419,7 +473,7 @@ td {
     padding: 10px;
 }
 
-.foot{
+.foot {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -427,7 +481,7 @@ td {
     gap: 4px;
 }
 
-.botao_foot{
+.botao_foot {
     width: 24px;
     height: 24px;
     display: flex;
@@ -439,11 +493,11 @@ td {
     transition: transform 0.2s ease;
 }
 
-.botao_foot:hover{
+.botao_foot:hover {
     transform: scale(1.15);
 }
 
-.botao_foot1{
+.botao_foot1 {
     background: transparent;
     display: flex;
     flex-direction: column;
@@ -454,6 +508,6 @@ td {
     transition: transform 0.2s ease;
 }
 
-.botao_foot1:hover{
+.botao_foot1:hover {
     transform: scale(1.15);
 }
