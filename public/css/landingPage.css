@@ -33,8 +33,9 @@ main {
   background: linear-gradient(
     to bottom,
     #f73b46,
-    #832424
-  ); /* #812e2e    #881b1b   */
+    #832424  /* #812e2e    #881b1b   */
+  ); 
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -77,7 +78,7 @@ main {
   font-size: 40px;
   font-weight: 800;
   text-align: center;
-  animation: pulse-color 3s ease-in-out infinite; /* <-- ADICIONE ESTA LINHA */
+  animation: pulse-color 3s ease-in-out infinite; 
 }
 
 .post-card {
@@ -302,7 +303,7 @@ main {
 /*2°: tela abaixo de 320px */
 @media (max-width: 319px) {
   .introducao-lp {
-    padding: 20px 30px 50px;
+    padding: 25px 30px 50px;
   }
   #titulo-pagina {
     font-size: 19px;
@@ -328,7 +329,7 @@ main {
   .titulo-secao {
     font-size: 17px;
   }
-  .post-card:nth-child(n + 5) {
+  .post-card:nth-child(n + 6) {
     display: none;
   }
   .post-imagem-placeholder {
@@ -350,7 +351,7 @@ main {
 /*3°: VERSÃO MOBILE 320px a 424px */
 @media (min-width: 320px) {
   .introducao-lp {
-    padding: 20px 30px 50px;
+    padding: 23px 30px 50px;
   }
   #titulo-pagina {
     font-size: 20px;
@@ -377,7 +378,7 @@ main {
     font-size: 20px;
     font-weight: 700;
   }
-  .post-card:nth-child(n + 5) {
+  .post-card:nth-child(n + 6) {
     display: none;
   }
   .post-imagem-placeholder {
@@ -400,7 +401,7 @@ main {
 /* 4°: VERSÃO MOBILE: 425px a 767px */
 @media (min-width: 425px) {
   .introducao-lp {
-    padding: 20px 30px 50px;
+    padding: 23px 30px 50px;
   }
   #titulo-pagina {
     font-size: 22px;
@@ -410,7 +411,7 @@ main {
   }
 
   .bloco-titulo {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .bloco-descricao {
@@ -425,9 +426,7 @@ main {
     font-size: 22px;
     font-weight: 700;
   }
-  .post-card:nth-child(n + 5) {
-    display: none;
-  }
+  
   .post-imagem-placeholder {
     height: 190px;
   }
@@ -448,13 +447,20 @@ main {
 /* 5°: VERSÃO TABLET 768px a 1023px */
 @media (min-width: 768px) {
   .introducao-lp {
-    padding: 20px 30px 50px;
+    padding: 30px 30px 50px;
   }
+
+  .intro-esquerda,
+  .intro-direita {
+    width: 70%;
+  }
+
   #titulo-pagina {
-    font-size: 25px;
+    font-size: 28px;
   }
   #texto-introducao {
     font-size: 18px;
+    text-align: justify;
   }
 
   .bloco-titulo {
@@ -477,9 +483,11 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .post-card:nth-child(n + 5) {
-    display: none;
+
+  .post-card:nth-child(6) {
+    display: flex;
   }
+
   .post-imagem-placeholder {
     height: 220px;
   }
@@ -580,19 +588,19 @@ main {
   }
   #texto-introducao {
     text-align: left;
+    font-size: 20px;
   }
+
+  #titulo-pagina {
+    font-size: 32px;
+    text-align: left;
+  }
+
   .bloco-pequeno {
     max-width: 80%;
     margin-left: 8%;
   }
 
-  /* regras de fonte desktop */
-  #titulo-pagina {
-    font-size: 32px;
-  }
-  #texto-introducao {
-    font-size: 20px;
-  }
   .posts-recentes {
     padding: 40px 20px;
     gap: 25px;
