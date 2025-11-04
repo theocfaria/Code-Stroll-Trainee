@@ -23,7 +23,7 @@ body {
 
 #Retangulo {
     width: 60%;
-    height: fit-content;
+    height: 70%;
     max-width: 2000px;
     min-width: 150px;
     aspect-ratio: 2/1;
@@ -60,7 +60,10 @@ p#cadastro {
 }
 
 input#senha,
-input#email, input#nome, input#sobrenome, input#data{
+input#email,
+input#nome,
+input#sobrenome,
+input#data {
     height: fit-content;
     height: 50px;
     width: 70%;
@@ -124,7 +127,7 @@ input#email, input#nome, input#sobrenome, input#data{
     color: #6a085a;
 }
 
-@media (min-width: 320px) {
+/*@media (min-width: 320px) {
     #Retangulo {
         width: 90%;
     }
@@ -406,4 +409,4 @@ input#email, input#nome, input#sobrenome, input#data{
         font-size: 50px;
     }
 
-}
+}*/
