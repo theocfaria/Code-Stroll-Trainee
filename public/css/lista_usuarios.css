@@ -1,0 +1,366 @@
+*{
+    font-family: "JetBrains Mono", monospace;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.tela {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+    z-index: 2;
+
+}
+#modal-delete {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40vh;
+    right: 25%;
+
+    width: fit-content;
+    height: 15hv;
+    padding: 0px 20px;
+    border-radius: 30px;
+   
+    font-family: "JetBrains Mono", monospace;
+    font-size: 30px; 
+    font-weight: 500;
+
+
+    background: linear-gradient(90deg, #B392F0, #FF9800);
+}
+.botoes-s-n {
+    display: flex;
+    justify-content: space-between;
+}
+.botoes-s-n button {
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+
+    margin: 20px 120px;
+    padding: 5px 15px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 25px; 
+    font-weight: 500;
+
+
+    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+}
+.botoes-s-n button:hover{
+    transform: scale(1.2);
+    color: #390101;
+}
+#modal-visualizar{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25vh;
+    right: 45%;
+
+    width: fit-content;
+    height: 15hv;
+    border-radius: 30px;
+   
+    font-family: "JetBrains Mono", monospace;
+
+
+    background: linear-gradient(90deg, #FF9800, #B392F0);
+}
+#imagem{
+    background-color: #fff;
+    width: 150px;
+    height: 200px;
+    margin: 15px 15px;
+    border-radius: 10px;
+}
+#titulo {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0px 0px 15px 0px;
+}
+#desen {
+    display: flex;
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+    width: 180px;
+}
+#autor{
+    margin: 10px 30px;
+    font-size: 12px;
+    width: 180px;
+}
+#sair{
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 15px;
+
+    font-size: 20px; 
+    font-weight: 500;
+
+    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+}
+#sair:hover{
+    transform: scale(1.2);
+    color: #390101;
+}
+#modal-editar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25vh;
+    right: 45%;
+
+    width: fit-content;
+    height: 15hv;
+    border-radius: 30px;
+    padding: 10px;
+   
+    font-family: "JetBrains Mono", monospace;
+
+
+    background: linear-gradient(90deg, #FF9800, #B392F0);
+}
+
+
+.navbar {
+    background: linear-gradient(90deg, #B392F099, #FF980080);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px;
+    align-items: center;
+    font-weight: 700;
+}
+
+#imagem_logo {
+    width: auto;
+    height: 100px;
+    display: flex;
+    padding: 20px;
+}
+
+#texto_post {
+    display: flex;
+    font-size: 24px;
+}
+
+#criar {
+    width: auto;
+    height: 20%;
+    display: flex;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #B392F0;
+}
+
+/* Icons importados do bootstrap */
+.bi-plus-lg {
+    font-size: 40px;
+}
+
+.bi-search {
+    font-size: 30px;
+}
+
+.bi-eye {
+    font-size: 20px;
+}
+
+.bi-pencil {
+    font-size: 20px;
+}
+
+.bi-trash {
+    font-size: 20px;
+}
+
+.bi-arrow-left-circle {
+    font-size: 20px;
+}
+
+.bi-arrow-right-circle {
+    font-size: 20px;
+}
+
+/* Icons importados do bootstrap */
+
+.btn-primary {
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #8E5DE9;
+    color: #fff;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: scale(1.15);
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.barra_pesquisa {
+    display: flex;
+    justify-content: center;
+    /*padding-right: 124px;*/
+}
+
+#pesquisa {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    font-weight: 600;
+}
+
+.tabela {
+    background: linear-gradient(90deg, #B392F099, #FF980080 );
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+    width: 80%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0  10px;
+    padding-bottom: 10px;
+}
+
+thead tr {
+    background: linear-gradient(90deg, #CC7A0099, #8E5DE999);
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+
+.tabela tr{
+    padding: 10px;
+}
+
+#teste1 {
+    border-radius: 8px 0 0 8px;
+}
+
+#teste2 {
+    border-radius: 0 8px 8px 0;
+}
+
+.teste3 {
+    border-radius: 8px 0 0 8px;
+}
+
+.teste4 {
+    background: #fff;
+}
+
+.acoes {
+    background-color: #fff;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    border-radius: 0 8px 8px 0;
+}
+
+
+thead th {
+    padding: 12px;
+}
+
+tbody tr {
+    background: none;
+    border-radius: 8px;
+}
+
+
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+.foot{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.botao_foot{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.botao_foot:hover{
+    transform: scale(1.15);
+}
+
+.botao_foot1{
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.botao_foot1:hover{
+    transform: scale(1.15);
+}
+
+@media(max-width: 768px) {
+    .navbar {
+        align-items: end;
+        padding: 10px;
+    }
+
+    .tabela {
+        overflow-x: scroll;
+    }
+}
+
+@media(min-width: 1440px) {
+    *{
+        font-size: 18px;
+    }
+}
