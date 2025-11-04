@@ -173,7 +173,21 @@ body {
     transition: transform 0.2s ease, color 0.2s ease;
     
 }
+#co{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    background: linear-gradient(180deg,#cc7a00, #FF9800, #ffd970, #ffd970);
+    transition: transform 0.2s ease, color 0.2s ease;
+    
+}
 #sa:hover{
+    transform: scale(1.2);
+    color: #390101;
+}
+#co:hover{
     transform: scale(1.2);
     color: #390101;
 }
