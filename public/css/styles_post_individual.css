@@ -54,7 +54,7 @@ body {
 
 .imagem {
     display: flex;
-    width: 100%;
+    width: auto;
     height: auto;
     justify-content: center;
     align-self: center;
@@ -62,13 +62,12 @@ body {
 
 #main_imagem {
     width: 100%;
-    height: 600px;
+    height: 100%;
 
     border: 1px solid;
     border-radius: 12px;
 
-    object-fit: fill;
-
+    object-fit: contain;
 }
 
 .descricao {
@@ -186,16 +185,16 @@ p {
     border-radius: 8px;
     color: black;
     font-family: "JetBrains Mono", monospace;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
+
 
 @media(min-width: 320px) {
     body {
         padding: 10px 20px 20px 20px;
         /* topo, esquerda, baixo, direita */
-    }
-
-    #main_imagem {
-        height: 200px;
     }
 
     .autor_datapub {
@@ -244,12 +243,14 @@ p {
     }
 
     .botao {
-        width: 50vw;
-        height: 60px;
+        width: 100vw;
+        height: 40px;
         background: #F73B4E;
         font-size: 16px;
         border: none;
         border-radius: 8px;
+        gap: 20px;
+        padding: 10px;
     }
 }
 
@@ -257,10 +258,6 @@ p {
     body {
         padding: 12px 24px 24px 24px;
         /* topo, esquerda, baixo, direita */
-    }
-
-    #main_imagem {
-        height: 240px;
     }
 
     .autor_datapub {
@@ -308,16 +305,20 @@ p {
         padding: 10px
     }
 
+    .botao {
+        gap: 30px;
+    }
+
+    .bi-arrow-left{
+        font-size: 20px;
+    }
+
 }
 
 @media(min-width: 425px) {
     body {
         padding: 16px 30px 30px 30px;
         /* topo, esquerda, baixo, direita */
-    }
-
-    #main_imagem {
-        height: 300px;
     }
 
     .autor_datapub {
@@ -359,8 +360,8 @@ p {
     }
 
     .botao {
-        width: 40vw;
-        height: 60px;
+        width: 75vw;
+        height: 40px;
         background: #F73B4E;
         font-size: 16px;
         border: none;
@@ -376,7 +377,7 @@ p {
     }
 
     #main_imagem {
-        height: 520px;
+        width: 80vw;
     }
 
     .autor_datapub {
@@ -422,12 +423,13 @@ p {
     }
 
     .botao {
-        width: 20vw;
-        height: 60px;
+        width: 40vw;
+        height: 40px;
         background: #F73B4E;
         font-size: 16px;
         border: none;
         border-radius: 8px;
+        gap: 30px;
     }
 
 }
@@ -439,11 +441,12 @@ p {
     }
 
     #main_imagem {
-        height: 560px;
+        width: 60vw;
     }
 
     .autor_datapub {
         font-size: 18px;
+        padding-bottom: 20px;
     }
 
     .titulo_post {
@@ -481,14 +484,18 @@ p {
     }
 
     .botao {
-        width: 20vw;
-        height: 70px;
+        width: 40vw;
+        height: 50px;
         background: #F73B4E;
         font-size: 20px;
         border: none;
         border-radius: 8px;
+        gap: 34px;
     }
 
+    .bi-arrow-left{
+        font-size: 24px;
+    }
 }
 
 @media(min-width: 1440px) {
@@ -498,11 +505,12 @@ p {
     }
 
     #main_imagem {
-        height: 680px;
+        width: 60vw;
     }
 
     .autor_datapub {
         font-size: 20px;
+        padding-bottom: 20px;
     }
 
     .titulo_post {
@@ -540,12 +548,13 @@ p {
     }
 
     .botao {
-        width: 14vw;
-        height: 80px;
+        width: 30vw;
+        height: 60px;
         background: #F73B4E;
         font-size: 20px;
         border: none;
         border-radius: 8px;
+        gap: 40px;
     }
 
 }
@@ -561,11 +570,12 @@ p {
     }
 
     #main_imagem {
-        height: 860px;
+        width: 50vw;
     }
 
     .autor_datapub {
         font-size: 28px;
+        padding-bottom: 20px;
     }
 
     .titulo_post {
@@ -600,12 +610,17 @@ p {
     }
 
     .botao {
-        width: 12vw;
-        height: 100px;
+        width: 30vw;
+        height: 60px;
         background: #F73B4E;
         font-size: 24px;
         border: none;
         border-radius: 8px;
+        gap: 80px;
+    }
+
+    .bi-arrow-left{
+        font-size: 30px;
     }
 
 }
@@ -621,11 +636,12 @@ p {
     }
 
     #main_imagem {
-        height: 1200px;
+        width: 50vw;
     }
 
     .autor_datapub {
         font-size: 36px;
+        padding-bottom: 20px;
     }
 
     .titulo_post {
@@ -660,12 +676,16 @@ p {
     }
 
     .botao {
-        width: 12vw;
-        height: 120px;
+        width: 25vw;
+        height: 80px;
         background: #F73B4E;
         font-size: 32px;
         border: none;
         border-radius: 8px;
+    }
+
+    .bi-arrow-left{
+        font-size: 40px;
     }
 
 }
