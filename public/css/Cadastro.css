@@ -22,8 +22,8 @@ body {
 }
 
 #Retangulo {
-    width: 60%;
-    height: fit-contentç;
+    width: 50%;
+    height: fit-content;
     max-width: 2000px;
     min-width: 150px;
     aspect-ratio: 2/1;
@@ -46,8 +46,10 @@ p#cadastro {
     align-items: center;
     font-family: "JetBrains Mono", monospace;
     width: 100%;
-    height: 60%;
-    gap: 40px;
+    height: fit-content;
+    gap: 30px;
+    margin: 25px 0px;
+    font-size: 22px;
 }
 
 .container-senha {
@@ -73,13 +75,20 @@ input#data {
 }
 
 #email:hover,
-#senha:hover {
+#senha:hover,
+input#nome:hover,
+input#sobrenome:hover,
+input#data:hover {
     transform: scale(1.01);
+}
+
+input#data::placeholder {
+    color: #333;
 }
 
 #olhoIcon {
     position: absolute;
-    right: 110px;
+    right: 130px;
     font-size: 20px;
 }
 
@@ -89,10 +98,10 @@ input#data {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 10px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
 }
 
-#entrar {
+button#entrar {
     border: none;
     width: fit-content;
     height: fit-content;
@@ -101,6 +110,7 @@ input#data {
     font-family: 'Mono JetBrains', monospace;
     font-size: 30px;
     color: #FFFFFF;
+    padding: 10px;
 }
 
 #entrar:hover {
@@ -127,7 +137,7 @@ input#data {
     color: #6a085a;
 }
 
-/*@media (min-width: 320px) {
+@media (min-width: 320px) {
     #Retangulo {
         width: 90%;
     }
@@ -143,7 +153,7 @@ input#data {
         font-size: 25px;
     }
 
-    p#login {
+    p#cadastro {
         font-size: 35px;
     }
 
@@ -153,7 +163,10 @@ input#data {
     }
 
     input#senha,
-    input#email {
+    input#email,
+    input#nome,
+    input#sobrenome,
+    input#data {
         width: 85%;
         height: 30px;
         font-size: 16px;
@@ -164,15 +177,14 @@ input#data {
         right: 35px;
         font-size: 12px;
     }
-    button#entrar{
-        height: 30px;
-        padding: 5px 15px;
-    }
-    #entrar{
-        font-size: 16px;
-    }
 
-}@media (min-width: 425px) {
+    button#entrar {
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 425px) {
     #Retangulo {
         width: 80%;
     }
@@ -188,7 +200,7 @@ input#data {
         font-size: 25px;
     }
 
-    p#login {
+    p#cadastro {
         font-size: 35px;
     }
 
@@ -198,7 +210,10 @@ input#data {
     }
 
     input#senha,
-    input#email {
+    input#email,
+    input#nome,
+    input#sobrenome,
+    input#data {
         height: 40px;
         font-size: 16px;
         padding: 10px 10px;
@@ -208,15 +223,15 @@ input#data {
         right: 45px;
         font-size: 14px;
     }
-    button#entrar{
+
+    button#entrar {
         height: 40px;
         padding: 5px 15px;
-    }
-    #entrar{
         font-size: 16px;
     }
 
 }
+
 @media (min-width: 768px) {
     #Retangulo {
         width: 60%;
@@ -233,7 +248,7 @@ input#data {
         font-size: 30px;
     }
 
-    p#login {
+    p#cadastro  {
         font-size: 40px;
     }
 
@@ -243,7 +258,10 @@ input#data {
     }
 
     input#senha,
-    input#email {
+    input#email,
+    input#nome,
+    input#sobrenome,
+    input#data {
         width: 75%;
         height: 40px;
         font-size: 18px;
@@ -254,15 +272,17 @@ input#data {
         right: 73px;
         font-size: 16px;
     }
-    button#entrar{
+
+    button#entrar {
         height: 40px;
         padding: 5px 15px;
-    }
-    #entrar{
-        font-size: 18px;
+          font-size: 18px;
     }
 
+
+
 }
+
 @media (min-width: 1024px) {
     #Retangulo {
         width: 60%;
@@ -279,7 +299,7 @@ input#data {
         font-size: 30px;
     }
 
-    p#login {
+    p#cadastro  {
         font-size: 50px;
     }
 
@@ -289,7 +309,10 @@ input#data {
     }
 
     input#senha,
-    input#email {
+    input#email,
+    input#nome,
+    input#sobrenome,
+    input#data {
         width: 75%;
         height: 50px;
         font-size: 18px;
@@ -300,18 +323,21 @@ input#data {
         right: 93px;
         font-size: 18px;
     }
-    .container-input{
+
+    .container-input {
         font-size: 20px;
     }
-    button#entrar{
+
+    button#entrar {
         height: 50px;
         padding: 5px 15px;
-    }
-    #entrar{
-        font-size: 22px;
+         font-size: 22px;
     }
 
+
+
 }
+
 @media (min-width: 1440px) {
     #Retangulo {
         width: 60%;
@@ -328,7 +354,7 @@ input#data {
         font-size: 35px;
     }
 
-    p#login {
+     p#cadastro {
         font-size: 60px;
     }
 
@@ -338,7 +364,10 @@ input#data {
     }
 
     input#senha,
-    input#email {
+    input#email,
+    input#nome,
+    input#sobrenome,
+    input#data {
         width: 75%;
         height: 60px;
         font-size: 22px;
@@ -349,18 +378,21 @@ input#data {
         right: 130px;
         font-size: 22px;
     }
-    .container-input{
+
+    .container-input {
         font-size: 24px;
     }
-    button#entrar{
+
+    button#entrar {
         height: 60px;
         padding: 5px 20px;
-    }
-    #entrar{
         font-size: 30px;
     }
 
+
+
 }
+
 @media (min-width: 2560px) {
     #Retangulo {
         width: 50%;
@@ -377,7 +409,7 @@ input#data {
         font-size: 60px;
     }
 
-    p#login {
+     p#cadastro{
         margin-top: 70px;
         font-size: 100px;
     }
@@ -388,7 +420,10 @@ input#data {
     }
 
     input#senha,
-    input#email {
+    input#email,
+    input#nome,
+    input#sobrenome,
+    input#data {
         width: 75%;
         height: 100px;
         font-size: 44px;
@@ -399,14 +434,17 @@ input#data {
         right: 200px;
         font-size: 44px;
     }
-    button#entrar{
+
+    button#entrar {
         height: 100px;
         padding: 0px 15px;
         border-radius: 100px;
         margin-bottom: 50px;
-    }
-    #entrar{
-        font-size: 50px;
+        font-size: 70px;
+        margin-top: 20px;
     }
 
-}*/
+
+
+}
+
