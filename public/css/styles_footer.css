@@ -21,7 +21,6 @@ body {
 .redes_sociais {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;
     width: fit-content;
 }
@@ -92,7 +91,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
 
     .redes_sociais {
