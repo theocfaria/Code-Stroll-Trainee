@@ -30,7 +30,7 @@ body {
     display: flex;
     height: 70%;
     width: 100%;
-    flex-direction: line;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 100px;
@@ -180,7 +180,7 @@ i.bi.bi-table::before {
 
     #links {
         height: 50%;
-        flex-direction: line;
+        flex-direction: row;
         width: 90%;
         gap: 50px
     }
