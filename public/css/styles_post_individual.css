@@ -548,13 +548,13 @@ p {
     }
 
     .botao {
-        width: 30vw;
-        height: 60px;
+        width: 25vw;
+        height: 50px;
         background: #F73B4E;
         font-size: 20px;
         border: none;
         border-radius: 8px;
-        gap: 40px;
+        gap: 30px;
     }
 
 }
@@ -610,13 +610,13 @@ p {
     }
 
     .botao {
-        width: 30vw;
+        width: 25vw;
         height: 60px;
         background: #F73B4E;
         font-size: 24px;
         border: none;
         border-radius: 8px;
-        gap: 80px;
+        gap: 50px;
     }
 
     .bi-arrow-left{
