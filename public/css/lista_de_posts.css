@@ -50,7 +50,7 @@ body::before {
 
 .conteudo .search {
     /*position: relative; /* Necessário para posicionar o ícone */
-    max-width: 400px;
+    width: 400px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -89,8 +89,8 @@ body::before {
 }
 
 .search input{
-    max-width: 400px;
-    max-height: 45px;
+    width: 400px;
+    height: 45px;
     text-align: left; 
     margin: 0; 
     margin-bottom: 10px;
@@ -128,7 +128,7 @@ body::before {
     font-size:xx-large;
     color: #F73B4E;
     text-shadow: 2px 2px 4px #F95062;
-    max-width: 100%;
+    -width: 100%;
     max-height: 50%;
 }
 
@@ -168,7 +168,7 @@ body::before {
 
 .post .imagem{
     max-width: 100%;
-    max-height: 300px; 
+    height: 300px; 
     margin: 10px;
     border-radius: 10px;
 }
@@ -273,9 +273,14 @@ body::before {
 }
 
 @media (max-width:425px) {
+
+    .search input{
+        width: 200px;
+    }
     .post {
         flex-direction: column;
         align-items: center;
+        width: auto;
     }
 
     .post .info, .post .imagem {
@@ -352,9 +357,84 @@ body::before {
     }
 }
 
-@media (max-width: 2560px) {
-    .post .info, .post .imagem {
-        width: auto;
-        height: auto;
+@media (min-width: 2560px) {
+    .conteudo h1{
+        font-size: 80px;
     }
+
+    .search input{
+       font-size: xx-large;
+       padding: auto;
+    }
+
+    .search i{
+        font-size: 35px;
+    }
+
+    .search input::-webkit-search-cancel-button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .search input::placeholder {
+        font-size: xx-large;
+        padding: 25px;
+    }
+
+    .post{
+        width: 2440px;
+        height: 300px;
+    }
+
+    .post .info {
+        width: auto;
+        height: 300px;
+        font-size: xx-large;
+    }
+
+    .post .resumo{
+        width: 80%;
+        height: 300px;
+        font-size: xx-large;
+    }
+
+    .post .info .titulo_post{
+        font-size: 60px;
+    }
+
+    .post .info .autor {
+        font-size: xx-large;
+    }
+
+    .post .imagem{
+        width: 500px;
+        height: 300px;
+    }
+
+    .paginacao a {
+        width: 75px;
+        height: 75px;
+        border-radius: 15px;
+        font-size: xx-large;
+        padding: auto;
+        margin: 15px;
+    }
+
+    .paginacao .passa_pag p{
+        font-size: 45px;
+    }
+
+    .paginacao #atual {
+        font-size: xx-large;
+    }
+    
+    .paginacao p{
+        font-size: xx-large;
+    }
+
+    .paginacao .passa_pag .material-icons{
+        font-size: 50px;
+    }
+
+
 }
