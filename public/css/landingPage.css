@@ -561,9 +561,13 @@ main {
 
   .arrow-left {
     left: -3.5vw;
+    padding-right: 3px;
+    padding-bottom: 2px;
   }
   .arrow-right {
-    right: -4vw;
+    right: -3.8vw;
+    padding-bottom: 2px;
+     padding-left: 2px;
   }
   /* término das regras do carrossel */
 
