@@ -49,8 +49,8 @@ main
 #perfil-sidebar img {
   border-radius: 50%;
   object-fit: contain;
-  height: 5.5rem;
-  width: 5.5rem;
+  height: 6.5rem;
+  width: 6.5rem;
 }
 
 .toggle-sidebar {
@@ -159,6 +159,7 @@ transform: scale(1.05);
 .closed-sidebar .item-sidebar a {
   display: flex;
   justify-content: center;
+  padding: 0.3rem 0.35rem;
 }
 
 .closed-sidebar #button-logout .item-description {
