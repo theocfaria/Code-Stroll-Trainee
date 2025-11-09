@@ -141,6 +141,10 @@ transform: scale(1.05);
   width: 4rem; 
 }
 
+.closed-sidebar .top-sidebar {
+  gap: 6rem;
+}
+
 .closed-sidebar .item-description {
   width: 0;
   overflow: hidden;
