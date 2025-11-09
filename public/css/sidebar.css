@@ -20,7 +20,10 @@ main
 }
 
 .sidebar {
-  background: linear-gradient(90deg, #ff9800,#B392F0);
+  /* background-color: color-mix(in srgb, #ff9800 60%, #B392F0 40%); */
+  /* background-color: color-mix(in srgb, #ff9800 40%, #B392F0 60%); */
+   background-color: color-mix(in srgb, #ff9800, #B392F0); 
+  /* background: linear-gradient(90deg, #ff9800,#B392F0); */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
