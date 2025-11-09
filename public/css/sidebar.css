@@ -9,7 +9,8 @@
 body {
   /* background: url(/public/assets/fundo.jpg) no-repeat top center/cover; */
   display: flex;
-  background-color: #edebee;
+  background-color: #1f1f1f;
+  /*background-color: #edebee;*/
   font-family: "Poppins", sans-serif;
 }
 
@@ -20,11 +21,12 @@ main
 }
 
 .sidebar {
+  background-color: color-mix(in srgb, #ff9800, #B392F0); 
   /* background-color: color-mix(in srgb, #ff9800 60%, #B392F0 40%); */
   /* background-color: color-mix(in srgb, #ff9800 40%, #B392F0 60%); */
-   background-color: color-mix(in srgb, #ff9800, #B392F0); 
   /* background: linear-gradient(90deg, #ff9800,#B392F0); */
   min-height: 100svh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,27 +40,34 @@ main
 .top-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 #perfil-sidebar {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  width: 100%;
   align-items: center;
   font-size: 1.7rem;
   min-height: 3.5rem;
+  justify-content: center;
 }
 
 #perfil-sidebar img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   object-fit: contain;
-  height: 6.5rem;
-  width: 6.5rem;
+  height: 7rem;
+  width: 7rem;
 }
 
 .toggle-sidebar {
-  cursor: pointer;
-  transition: all 0.5s ease;
+ cursor: pointer;
+ transition: all 0.5s ease;
+ position: absolute;
+ top: 3.15rem; 
+ left: 100%; 
+ color: #edebee;
+ font-size: 1.7rem;
 }
 
 .toggle-sidebar:hover {
@@ -113,8 +122,8 @@ transform: scale(1.05);
 */
 
 #button-logout {
-  background-color: #8e5de9;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: #8e5de9;
   border-radius: 8px;
   padding: 0.8rem;
   border: none;
@@ -136,8 +145,8 @@ transform: scale(1.05);
 }
 
 #button-logout:hover {
-  background-color: whitesmoke;
-  color: #8e5de9;
+  background-color: #8e5de9; 
+  color: whitesmoke;   
 }
 
 .closed-sidebar {
@@ -175,6 +184,7 @@ transform: scale(1.05);
 
 .closed-sidebar .toggle-sidebar {
   transform: rotate(180deg);
+  position: static; 
 }
 
 /* RESPONSIVIDADE */
