@@ -65,10 +65,11 @@ main
 .content-sidebar ul {
   display: flex;
   flex-direction: column;
-  gap: 2.3rem;
+  gap: 1rem;
 
   margin: 0;
   padding: 0;
+  align-items: flex-start;
 }
 
 .item-sidebar {
@@ -76,18 +77,25 @@ main
   transition: all 0.2s ease;
 }
 
-.item-sidebar:hover {
+/*.item-sidebar:hover {
   scale: 1.05;
 }
+*/
 
 .item-sidebar a {
   text-decoration: none;
   color: whitesmoke;
   transition: all 0.3s;
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  padding: 0.3rem 0.8rem 0.3rem 0; 
+  border-radius: 8px; 
 }
 
 .item-sidebar a:hover {
-background-color: #8e5de9;        
+background-color: #8e5de95d;   
+transform: scale(1.05);     
 }
 
 .item-description {
@@ -116,6 +124,12 @@ background-color: #8e5de9;
   cursor: pointer;
   transition: all 0.3s;
   font-size: 0.9rem;
+}
+
+.logout-sidebar {
+ width: 92%; 
+ display: flex;
+ justify-content: center;
 }
 
 #button-logout:hover {
@@ -182,7 +196,7 @@ html {
     font-size: 17px; 
   }
   .content-sidebar ul {
-    gap: 1.9rem; 
+    gap: 1.2rem; 
   }
 }
 
