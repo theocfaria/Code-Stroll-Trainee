@@ -523,7 +523,6 @@ td {
 }
 
 .foot {
-<<<<<<< HEAD
   display: flex;
   width: 100%;
   justify-content: center;
@@ -663,42 +662,4 @@ td {
     overflow-x: scroll;
     width: 95%;
   }
-=======
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-}
-
-.botao_foot {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.botao_foot:hover {
-    transform: scale(1.15);
-}
-
-.botao_foot1 {
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.botao_foot1:hover {
-    transform: scale(1.15);
->>>>>>> 1d7615c2d68508c40c0c8c07b95a6f09e2a02897
 }
