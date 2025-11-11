@@ -1,4 +1,5 @@
 const tela = document.getElementById('tela');
+let originalImagem, originalTitulo, originalDescricao, originalAutor, originalData;
 
 function abrirModal(idModal) {
   if (idModal === 'modal-criar') {
@@ -71,12 +72,19 @@ function abrirModalVisualizar(id, titulo, autor, data, imagemUrl, descricao) {
 }
 
 function abrirModalEditar(id, titulo, autor, data, imagem, descricao) {
+    originalImagem = imagem;
+    originalTitulo = titulo;
+    originalDescricao = descricao;
+    originalAutor = autor;
+    originalData = data;
+
     document.getElementById('editar-id').value = id;
     document.getElementById('editar-titulo').value = titulo;
     document.getElementById('editar-autor').value = autor;
     document.getElementById('editar-data').value = data;
     document.getElementById('editar-imagem').value = imagem;
     document.getElementById('editar-descricao').value = descricao;
+    
     abrirModal('modal-editar');
 }
 
@@ -128,9 +136,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const btnConfirmarEditar = document.getElementById('btn-submit-editar');
+   const btnConfirmarEditar = document.getElementById('btn-submit-editar');
     if (btnConfirmarEditar) {
         btnConfirmarEditar.addEventListener('click', () => {
+            
+            const id = document.getElementById('editar-id').value;
+            const imagemAtual = document.getElementById('editar-imagem').value;
+            const tituloAtual = document.getElementById('editar-titulo').value;
+            const descricaoAtual = document.getElementById('editar-descricao').value;
+            const autorAtual = document.getElementById('editar-autor').value;
+            const dataAtual = document.getElementById('editar-data').value;
+
+            if (
+                imagemAtual === originalImagem &&
+                tituloAtual === originalTitulo &&
+                descricaoAtual === originalDescricao &&
+                autorAtual === originalAutor &&
+                dataAtual === originalData
+            ) {
+                exibirErro('modal-editar-erro', "Nenhuma alteração foi feita, clique no botão Cancelar");
+                return;
+            }
+
             const camposParaValidar = [
                 'editar-imagem',
                 'editar-titulo', 
@@ -140,10 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ];
             
             if (validarFormulario(camposParaValidar, 'modal-editar-erro')) {
-                const id = document.getElementById('editar-id').value;
+               
+                
                 console.log(`Formulário de EDITAR é válido. Enviando dados para o ID: ${id}`);
                 fecharModal('modal-editar');
+                mostrarMensagem('Post editado com sucesso!');
             } else {
+            
                 console.log('Formulário de EDITAR inválido.');
             }
         });
