@@ -407,11 +407,11 @@ p#id {
 }
 
 .bi-arrow-left-circle {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .bi-arrow-right-circle {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* Icons importados do bootstrap */
@@ -560,6 +560,18 @@ td {
 .botao_foot1:hover {
   transform: scale(1.1);
 }
+
+.pagina-ativa {
+  background: linear-gradient(180deg, #ffd370, #ff9800);
+  color: #000;
+  font-weight: 700;
+}
+
+.pagina-ativa:hover {
+  transform: none;
+  cursor: default;
+}
+
 
 /* Telas desktop grandes (1920px a 2559px) */
 @media (max-width: 2559px) {
