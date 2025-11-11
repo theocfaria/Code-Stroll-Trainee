@@ -143,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const id = document.getElementById('editar-id').value;
                 console.log(`Formulário de EDITAR é válido. Enviando dados para o ID: ${id}`);
                 fecharModal('modal-editar');
-                mostrarMensagem('Post editado com sucesso!');
             } else {
                 console.log('Formulário de EDITAR inválido.');
             }
@@ -157,7 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const id = modal.dataset.id;
             console.log(`Enviando solicitação para EXCLUIR o ID: ${id}`);
             fecharModal('modal-delete');
-            mostrarMensagem('Post excluído com sucesso!');
         });
     }
 
