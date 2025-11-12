@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: end;
+}
+
+.footer{
+    background-color: black;
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;  
+    height: auto;
+}
+
+.assinatura{
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    text-align: center;
+}
+
+.redes_sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+}
+
+.texto_redes p {
+    display: flex;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.bi{
+    color: white;
+    font-size: 30px;
+}
+
+.logo_blog {
+    width: fit-content;
+    height: fit-content;
+}
+
+#main_imagem {
+    width: 200px;
+    height: 200px;
+}
+
+.contato {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "JetBrains Mono", monospace;
+    width: auto;
+}
+
+.titulo_contato{
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width: 320px) {
+    body {
+        width: 100vw;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 0px 0px 30px 0px;
+    }
+
+    .redes_sociais {
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .texto_redes p {
+        display: none;
+    }
+
+    .logos {
+        flex-direction: row;
+        width: 80%;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    #main_imagem {
+        width: 120px;
+        height: 80px;
+    }
+
+    .redes_logo {
+        flex-direction: column;
+        width: fit-content;
+        gap: 30px;
+    }
+
+    .contato {
+        gap: 20px;
+    }
+
+    .titulo_contato {
+        font-size: 14px;
+    }
+
+    .texto_contato {
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 425px) {
+    .conteudo {
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .titulo_contato{
+        font-size: 16px;
+    }
+
+    .texto_contato{
+        font-size: 14px;
+    }
+
+    .logos {
+        gap: 30px;
+    }
+
+    .bi{
+        font-size: 36px;
+    }
+
+    #main_imagem {
+        width: 140px;
+        height: 100px;
+    } 
+}
+
+@media(min-width: 768px) {
+    .conteudo {
+        flex-direction: row;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .assinatura_final{
+        padding-left: 30px;
+    }
+
+    .redes_sociais {
+        width: auto;
+        gap: 20px;
+    }
+
+    .bi{
+        font-size: 30px;
+    }
+
+    .texto_redes p {
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .logos {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    #main_imagem {
+        width: 120px;
+        height: 80px;
+    }
+
+    .contato{
+        width: 180px;
+        text-align: end;
+    }
+
+    .titulo_contato {
+        font-size: 20px;
+    }
+
+    .texto_contato {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media(min-width: 1024px) {
+    .redes_sociais {
+        gap: 20px;
+    }
+
+    .redes_logo {
+        gap: 200px;
+    }
+
+     .logos {
+        gap: 20px;
+    }
+
+     .logos1 {
+        gap: 20px;
+    }
+
+    .logos1 img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .texto_redes p {
+        font-size: 24px;
+    }
+
+    #main_imagem {
+        width: 140px;
+        height: 100px;
+    }
+
+    .contato_assinatura {
+        gap: 50px;
+    }
+
+    .titulo_contato {
+        font-size: 24px;
+    }
+
+    .texto_contato {
+        font-size: 14px;
+    }
+
+    #second_imagem {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contato {
+        gap: 20px;
+    }
+}
+
+@media(min-width: 1440px){
+    .conteudo {
+        padding: 30px;
+    }
+
+    .redes_sociais {
+        gap: 20px;
+    }
+
+    .redes_logo {
+        gap: 340px;
+    }
+
+     .logos {
+        gap: 20px;
+    }
+
+    .bi{
+        font-size: 40px;
+    }
+
+    .texto_redes p {
+        font-size: 32px;
+    }
+
+    .assinatura{
+        font-size: 12px;
+    }
+
+    #main_imagem {
+        width: 160px;
+        height: 120px;
+    }
+
+    .titulo_contato {
+        font-size: 32px;
+    }
+
+    .texto_contato {
+        font-size: 16px;
+    }
+
+    #second_imagem {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media(min-width: 1920px) {
+    .conteudo {
+        padding: 30px;
+    }
+
+    .redes_sociais {
+        gap: 30px;
+    }
+
+    .contato{
+        width: 330px;
+    }
+
+     .logos {
+        gap: 30px;
+    }
+
+   .bi{
+        font-size: 52px;
+    }
+
+    .assinatura{
+        font-size: 16px;
+    }
+
+    .texto_redes p {
+        font-size: 42px;
+    }
+
+    #main_imagem {
+        width: 200px;
+        height: 160px;
+    }
+
+    .titulo_contato {
+        font-size: 42px;
+    }
+
+    .texto_contato {
+        font-size: 24px;
+    }
+
+    #second_imagem {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media(min-width: 2560px) {
+    .conteudo {
+        padding: 50px;
+
+    }
+
+    .redes_sociais {
+        gap: 40px;
+    }
+
+    .redes_logo {
+        gap: 700px;
+    }
+
+     .logos {
+        gap: 40px;
+    }
+
+    .bi{
+        font-size: 60px;
+    }
+
+    .assinatura{
+        font-size: 20px;
+    }
+
+    .contato{
+        width: 406px;
+        gap: 30px;
+    }
+
+    .texto_redes p {
+        font-size: 52px;
+    }
+
+    #main_imagem {
+        width: 320px;
+        height: 200px;
+    }
+
+    .titulo_contato {
+        font-size: 52px;
+    }
+
+    .texto_contato {
+        font-size: 32px;
+    }
+
+    #second_imagem {
+        width: 200px;
+        height: 200px;
+    }
+}
