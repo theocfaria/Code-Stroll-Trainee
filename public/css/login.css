@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url(../assets/fundo\ desktop.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    font-family: 'silkscreen', sans-serif;
+    color: black;
+
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#Retangulo {
+    width: 60%;
+    height: fit-content;
+    max-width: 2000px;
+    min-width: 150px;
+    aspect-ratio: 2/1;
+    background-color: #D6D5D5;
+    border-radius: 50px;
+    position: relative;
+}
+
+p#login {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin: 0px 0px 15px 0px;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    width: 100%;
+    height: 60%;
+    gap: 40px;
+}
+
+.container-senha {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+input#senha,
+input#email {
+    height: fit-content;
+    height: 50px;
+    width: 70%;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 15px;
+}
+
+#email:hover,
+#senha:hover {
+    transform: scale(1.01);
+}
+
+#olhoIcon {
+    position: absolute;
+    right: 110px;
+    font-size: 20px;
+}
+
+.container-entrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+}
+
+#entrar {
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(202, 23, 42, 0.85);
+    border-radius: 30px;
+    font-family: 'Mono JetBrains', monospace;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+#entrar:hover {
+    transform: scale(1.05);
+}
+
+#xis {
+    background-color: #D6D5D5;
+    height: fit-content;
+    text-decoration: none;
+    width: fit-content;
+    color: inherit;
+    margin: 20px 20px;
+    transition: transform 0.2s ease, color 0.2 ease;
+}
+
+.bi-x {
+    font-size: 35px;
+}
+
+img#logo {
+    width: 150px;
+    position: absolute;
+    left: 35%;
+    top: -75px;
+}
+
+#x:hover {
+    transform: scale(1.05);
+    color: #6a085a;
+}
+
+@media (min-width: 320px) {
+    #Retangulo {
+        width: 90%;
+    }
+
+    img#logo {
+        width: 90px;
+        position: absolute;
+        left: 34%;
+        top: -35px;
+    }
+
+    .bi-x {
+        font-size: 25px;
+    }
+
+    p#login {
+        font-size: 35px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 20px;
+    }
+
+    input#senha,
+    input#email {
+        width: 85%;
+        height: 30px;
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+
+    #olhoIcon {
+        right: 35px;
+        font-size: 12px;
+    }
+    button#entrar{
+        height: 30px;
+        padding: 5px 15px;
+    }
+    #entrar{
+        font-size: 16px;
+    }
+
+}@media (min-width: 425px) {
+    #Retangulo {
+        width: 80%;
+    }
+
+    img#logo {
+        width: 100px;
+        position: absolute;
+        left: 35%;
+        top: -50px;
+    }
+
+    .bi-x {
+        font-size: 25px;
+    }
+
+    p#login {
+        font-size: 35px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 20px;
+    }
+
+    input#senha,
+    input#email {
+        height: 40px;
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+
+    #olhoIcon {
+        right: 45px;
+        font-size: 14px;
+    }
+    button#entrar{
+        height: 40px;
+        padding: 5px 15px;
+    }
+    #entrar{
+        font-size: 16px;
+    }
+
+}
+@media (min-width: 768px) {
+    #Retangulo {
+        width: 60%;
+    }
+
+    img#logo {
+        width: 100px;
+        position: absolute;
+        left: 39%;
+        top: -50px;
+    }
+
+    .bi-x {
+        font-size: 30px;
+    }
+
+    p#login {
+        font-size: 40px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 20px;
+    }
+
+    input#senha,
+    input#email {
+        width: 75%;
+        height: 40px;
+        font-size: 18px;
+        padding: 20px 10px;
+    }
+
+    #olhoIcon {
+        right: 73px;
+        font-size: 16px;
+    }
+    button#entrar{
+        height: 40px;
+        padding: 5px 15px;
+    }
+    #entrar{
+        font-size: 18px;
+    }
+
+}
+@media (min-width: 1024px) {
+    #Retangulo {
+        width: 60%;
+    }
+
+    img#logo {
+        width: 130px;
+        position: absolute;
+        right: 80%;
+        top: -65px;
+    }
+
+    .bi-x {
+        font-size: 30px;
+    }
+
+    p#login {
+        font-size: 50px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 30px;
+    }
+
+    input#senha,
+    input#email {
+        width: 75%;
+        height: 50px;
+        font-size: 18px;
+        padding: 20px 10px;
+    }
+
+    #olhoIcon {
+        right: 93px;
+        font-size: 18px;
+    }
+    .container-input{
+        font-size: 20px;
+    }
+    button#entrar{
+        height: 50px;
+        padding: 5px 15px;
+    }
+    #entrar{
+        font-size: 22px;
+    }
+
+}
+@media (min-width: 1440px) {
+    #Retangulo {
+        width: 60%;
+    }
+
+    img#logo {
+        width: 150px;
+        position: absolute;
+        left: 43%;
+        top: -75px;
+    }
+
+    .bi-x {
+        font-size: 35px;
+    }
+
+    p#login {
+        font-size: 60px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 35px;
+    }
+
+    input#senha,
+    input#email {
+        width: 75%;
+        height: 60px;
+        font-size: 22px;
+        padding: 20px 10px;
+    }
+
+    #olhoIcon {
+        right: 130px;
+        font-size: 22px;
+    }
+    .container-input{
+        font-size: 24px;
+    }
+    button#entrar{
+        height: 60px;
+        padding: 5px 20px;
+    }
+    #entrar{
+        font-size: 30px;
+    }
+
+}
+@media (min-width: 2560px) {
+    #Retangulo {
+        width: 50%;
+    }
+
+    img#logo {
+        width: 250px;
+        position: absolute;
+        left: 41%;
+        top: -125px;
+    }
+
+    .bi-x {
+        font-size: 60px;
+    }
+
+    p#login {
+        margin-top: 70px;
+        font-size: 100px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 50px;
+    }
+
+    input#senha,
+    input#email {
+        width: 75%;
+        height: 100px;
+        font-size: 44px;
+        padding: 20px 30px;
+    }
+
+    #olhoIcon {
+        right: 200px;
+        font-size: 44px;
+    }
+    button#entrar{
+        height: 100px;
+        padding: 0px 15px;
+        border-radius: 100px;
+        margin-bottom: 50px;
+    }
+    #entrar{
+        font-size: 50px;
+    }
+
+}
