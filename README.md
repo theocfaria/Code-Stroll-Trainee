@@ -13,15 +13,14 @@
 
 #### Desenvolvedores:
 
-* [Trainee 1](coloque o link do github)
-* [Trainee 2](coloque o link do github)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
+* [Daniel](https://github.com/danielqueiroz11)
+* [Marcos](https://github.com/marcosmvf22)
+* [Lucas](https://github.com/lucasfn09)
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github).
+* [Theo](https://github.com/theocfaria).
 
 #### Links Úteis:
 
