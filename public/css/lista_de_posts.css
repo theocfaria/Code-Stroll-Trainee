@@ -56,6 +56,10 @@ body::before {
     align-items: center;
 }
 
+.search input {
+    width: 100%;
+}
+
 .conteudo .search .pesquisar {
     border: none;
     background: none;
@@ -89,8 +93,8 @@ body::before {
 }
 
 .search input{
-    width: 400px;
-    height: 45px;
+    width: 100%;
+    height: 100%;
     text-align: left; 
     margin: 0; 
     margin-bottom: 10px;
@@ -125,7 +129,7 @@ body::before {
     font-weight: 400;
     text-align: center;
     margin-bottom: 30px;
-    font-size:xx-large;
+    font-size: 60px;
     color: #F73B4E;
     text-shadow: 2px 2px 4px #F95062;
     -width: 100%;
@@ -253,6 +257,7 @@ body::before {
 /*Responsividade 320, 425, 768, 1024, 1440, 1920, 2560*/
 /**/
 @media (max-width:320px) {
+
     .post {
         flex-direction: column;
         align-items: center;
@@ -274,6 +279,10 @@ body::before {
 
 @media (max-width:425px) {
 
+    .conteudo h1{
+        font-size: 45px;
+    }
+    
     .search input{
         width: 200px;
     }
@@ -362,9 +371,16 @@ body::before {
         font-size: 80px;
     }
 
+    .conteudo .search{
+        width: 800px;
+        height: 75px;
+    }
+
     .search input{
        font-size: xx-large;
        padding: auto;
+       width: 100%;
+       height: 100%;
     }
 
     .search i{
@@ -379,6 +395,7 @@ body::before {
     .search input::placeholder {
         font-size: xx-large;
         padding: 25px;
+        margin-top: 2px;
     }
 
     .post{
