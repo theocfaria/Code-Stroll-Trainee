@@ -20,7 +20,7 @@
 
 #### Scrum Master:
 
-* [Theo](https://github.com/theocfaria).
+* [Theo](https://github.com/theocfaria)
 
 #### Links Úteis:
 
