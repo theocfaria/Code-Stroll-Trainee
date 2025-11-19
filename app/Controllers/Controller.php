@@ -21,8 +21,18 @@ class Controller
     public function efetuarLogin(): void
     {
         $email = $_POST['email'];
-        $senha = $_POST['senha']; 
+        $senha = $_POST['senha'];
 
         $user = App::get('database')->verificaLogin($email, $senha);
+
+        if ($user != false) {
+            session_start();
+            $_SESSION['id'] = $user->id;
+            header('Location: /dashboard');
+        } else {
+            session_start();
+            $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
+            header('Location: /login');
+        }
     }
 }

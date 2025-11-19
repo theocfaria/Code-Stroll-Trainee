@@ -25,6 +25,20 @@
             <img src="../../../public/assets/logotipo.png" alt="Logotipo" id="logo">
             <p id="login">Login</p>
             <form action="/login" method="POST">
+                <div class="mensagem-erro">
+        <p>
+            <?php
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
+
+                if(isset($_SESSION['mensagem-erro'])){
+                    echo $_SESSION['mensagem-erro'];
+                    unset($_SESSION['mensagem-erro']);
+                }
+            ?>
+        </p>
+    </div>
                 <div class="container-input">
                     <input type="text" name="email" placeholder="E-mail:" id="email" required>
                     <div class="container-senha">
