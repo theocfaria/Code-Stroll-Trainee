@@ -52,7 +52,16 @@
                                 <i class="bi bi-eye"></i>
                             </button>
                             <button type="button" class="btn-primary"
-                                onclick="abrirModalEditar('<?= $post->id ?>')">
+                                type="button"
+                                class="btn-primary"
+                                data-id="<?= $post->id ?>"
+                                data-title="<?= htmlspecialchars($post->title, ENT_QUOTES) ?>"
+                                data-author="<?= htmlspecialchars($post->author, ENT_QUOTES) ?>"
+                                data-date="<?= $post->created_at ?>"
+                                data-image="<?= htmlspecialchars($post->image, ENT_QUOTES) ?>"
+                                data-content="<?= htmlspecialchars($post->content, ENT_QUOTES) ?>"
+                                onclick="abrirModalEditarComData(this)"
+                                >
                                 <i class="bi bi-pencil"></i>
                             </button>
                             <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $post->id ?>', <?= $post->id ?>)" >
@@ -81,7 +90,7 @@
                 <div class="modal-buttons">
                     <form action="/crudPosts/delete" method="POST">
                         <input type="hidden" value= <?= $post->id ?> name="id">
-                        <button type="button" id="btn-submit-excluir" class="btn-excluir">Excluir</button>
+                        <button type="submit" id="btn-submit-excluir" class="btn-excluir">Excluir</button>
                         <button type="button" class="btn-cancelar" onclick="fecharModal('modal-delete')">Cancelar</button>
                     </form>
                 </div>
@@ -106,37 +115,36 @@
 
         <div id="modal-editar">
             <h3>Editar Post</h3>
-            <form class="modal-form">
-                <input type="hidden" id="editar-id">
-                
-                <div class="form-group">
-                    <label for="editar-imagem">URL da Imagem:</label>
-                    <input type="text" id="editar-imagem" required />
-                </div>
+            <form class="modal-form" method="POST" action="/crudPosts/update">
+                <input type="hidden" id="editar-id" name="id" value=<?= $post->id ?>>
                 <div class="form-group">
                     <label for="editar-titulo">Título:</label>
-                    <input type="text" id="editar-titulo" required />
+                    <input type="text" id="editar-titulo" name="title" value=<?= $post->title ?> required />
                 </div>
 
                 <div class="form-group">
                     <label for="editar-descricao">Descrição:</label>
-                    <textarea id="editar-descricao" rows="4" required></textarea>
+                    <textarea id="editar-descricao" rows="4" name="content" required> <?= $post->content ?></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="editar-autor">Autor:</label>
-                    <input type="text" id="editar-autor" required />
+                    <input type="text" id="editar-autor" name="author" value=<?= $post->author ?> required readonly />
                 </div>
                 <div class="form-group">
                     <label for="editar-data">Data:</label>
-                    <input type="date" id="editar-data" required />
+                    <input type="date" id="editar-data" name="created_at" value=<?= $post->created_at ?> required />
+                </div>
+                <div class="form-group">
+                    <label for="editar-imagem">Imagem:</label>
+                    <input type="text" id="editar-imagem" name="image" value=<?= $post->image ?> required />
+                </div>
+                <p id="modal-editar-erro" class="modal-erro"></p>
+                <div class="modal-buttons">
+                    <button type="submit" id="btn-submit-editar" class="btn-salvar">Salvar</button>
+                    <button type="button" class="btn-cancelar" onclick="fecharModal('modal-editar')">Cancelar</button>
                 </div>
             </form>
-            <p id="modal-editar-erro" class="modal-erro"></p>
-            <div class="modal-buttons">
-                <button type="button" id="btn-submit-editar" class="btn-salvar">Salvar</button>
-                <button type="button" class="btn-cancelar" onclick="fecharModal('modal-editar')">Cancelar</button>
-            </div>
         </div>
     <?php endforeach ?>
 

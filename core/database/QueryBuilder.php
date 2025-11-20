@@ -87,7 +87,7 @@ class QueryBuilder
 
      public function selectOne($table, $id)
     {
-        $sql = printf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table);
+        $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table);
 
         try {
             $stmt = $this->pdo->prepare($sql);

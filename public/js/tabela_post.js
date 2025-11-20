@@ -88,6 +88,17 @@ function abrirModalEditar(id, titulo, autor, data, imagem, descricao) {
     abrirModal('modal-editar');
 }
 
+function abrirModalEditarComData(btn) {
+    abrirModalEditar(
+        btn.dataset.id,
+        btn.dataset.title,
+        btn.dataset.author,
+        btn.dataset.date,
+        btn.dataset.image,
+        btn.dataset.content
+    );
+}
+
 function abrirModalExcluir(id, titulo) {
     const modal = document.getElementById('modal-delete');
     if (!modal) return;

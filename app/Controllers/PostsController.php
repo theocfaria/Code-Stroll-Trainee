@@ -39,10 +39,8 @@ class PostsController
     public function edit()
     {
         $id = $_POST['id'];
-        //conferir aqui se der erro nomes de variaveis //
         $post = App::get('database')->selectOne('posts', $id);
         $caminho_da_imagem = $post->image;
-        //conferir aqui se der erro //
 
         if(isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK)
         {
