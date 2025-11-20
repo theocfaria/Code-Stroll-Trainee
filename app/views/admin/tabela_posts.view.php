@@ -48,7 +48,7 @@
                         <td class="teste4"><?= $post->created_at ?></td>
                         <td class="acoes">
                             <button type="button" class="btn-primary"
-                                onclick="abrirModalVisualizar('<?= $post->id ?>')">
+                                onclick="abrirModalVisualizar('<?= $post->id ?>', '<?= $post->title ?>', '<?= $post->author ?>', '<?= $post->created_at ?>', '<?= $post->image ?>', '<?= $post->content ?>')">
                                 <i class="bi bi-eye"></i>
                             </button>
                             <button type="button" class="btn-primary"
@@ -96,26 +96,30 @@
                 </div>
         </div>
 
-        <div id="modal-visualizar" <?= $post->id ?>>
-            <h3 id="visualizar-titulo">Detalhes do Post</h3>
-            <p><strong>ID:</strong> <?= $post->id ?> <span id="view-id"></span></p>
-            
-            <p><strong>Imagem:</strong> <?= $post->image ?></p>
-        <img id="view-imagem" src="" alt="Imagem do Post" style="max-width: 100%; border-radius: 10px; margin-bottom: 10px; min-height: 200px; background-color: #f0f0f0;">
-            
-            <p><strong>Título:</strong> <?= $post->title ?> <span id="view-titulo"></span></p>
-            
-            <p><strong>Descrição:</strong> <?= $post->content ?> <span id="view-descricao" style="word-break: break-word;"></span></p>
-            
-            <p><strong>Autor:</strong> <?= $post->author ?> <span id="view-autor"></span></p>
-            <p><strong>Data:</strong> <?= $post->created_at ?> <span id="view-data"></span></p>
-            
+        <div id="modal-visualizar" class="modal">
+            <h3>Detalhes do Post</h3>
+
+            <p><strong>ID:</strong> <span id="view-id"></span></p>
+
+            <p><strong>Imagem:</strong></p>
+            <img id="view-imagem" src="" alt="Imagem do Post"
+                style="max-width: 100%; border-radius: 10px; margin-bottom: 10px; min-height: 200px; background-color: #f0f0f0;">
+
+            <p><strong>Título:</strong> <span id="view-titulo"></span></p>
+
+            <p><strong>Descrição:</strong></p>
+            <p id="view-descricao" style="word-break: break-word;"></p>
+
+            <p><strong>Autor:</strong> <span id="view-autor"></span></p>
+
+            <p><strong>Data:</strong> <span id="view-data"></span></p>
+
             <button id="sair" onclick="fecharModal('modal-visualizar')">Fechar</button>
         </div>
 
         <div id="modal-editar">
             <h3>Editar Post</h3>
-            <form class="modal-form" method="POST" action="/crudPosts/update">
+            <form class="modal-form" method="POST" action="/crudPosts/edit" enctype="multipart/form-data">
                 <input type="hidden" id="editar-id" name="id" value=<?= $post->id ?>>
                 <div class="form-group">
                     <label for="editar-titulo">Título:</label>
@@ -136,8 +140,14 @@
                     <input type="date" id="editar-data" name="created_at" value=<?= $post->created_at ?> required />
                 </div>
                 <div class="form-group">
-                    <label for="editar-imagem">Imagem:</label>
-                    <input type="text" id="editar-imagem" name="image" value=<?= $post->image ?> required />
+                    <label>Imagem atual:</label>
+                    <img id="preview-imagem" src="<?= $post->image ?>" 
+                    style="max-width:100%; height: auto;">
+                    
+                    <label for="editar-imagem-nova">Escolher nova imagem:</label>
+                    <input type="file" id="editar-imagem-nova" accept="image/*" name="image">
+
+                    <input type="hidden" id="editar-imagem-atual" name="imagem_atual" value="<?= $post->image ?>">
                 </div>
                 <p id="modal-editar-erro" class="modal-erro"></p>
                 <div class="modal-buttons">

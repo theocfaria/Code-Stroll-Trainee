@@ -67,7 +67,9 @@ function abrirModalVisualizar(id, titulo, autor, data, imagemUrl, descricao) {
     document.getElementById('view-autor').textContent = autor;
     document.getElementById('view-data').textContent = data;
     document.getElementById('view-descricao').textContent = descricao;
-    document.getElementById('view-imagem').src = imagemUrl;
+
+    document.getElementById('view-imagem').src = imagemUrl && imagemUrl !== "" ? imagemUrl : "public/assets/default.png";
+
     abrirModal('modal-visualizar');
 }
 
@@ -82,9 +84,14 @@ function abrirModalEditar(id, titulo, autor, data, imagem, descricao) {
     document.getElementById('editar-titulo').value = titulo;
     document.getElementById('editar-autor').value = autor;
     document.getElementById('editar-data').value = data;
-    document.getElementById('editar-imagem').value = imagem;
     document.getElementById('editar-descricao').value = descricao;
-    
+
+    document.getElementById('preview-imagem').src = imagem;
+
+    document.getElementById('editar-imagem-atual').value = imagem;
+
+    document.getElementById('editar-imagem-nova').value = "";
+
     abrirModal('modal-editar');
 }
 
