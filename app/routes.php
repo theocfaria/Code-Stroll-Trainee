@@ -6,4 +6,5 @@ use App\Core\Router;
 
 $router->get('login', 'Controller@exibirLogin');
 $router->get('dashboard', 'Controller@exibirDashboard');
-$router->get('login', 'Controller@efetuaLogin');
+$router->post('login', 'Controller@efetuaLogin');
+$router->post('logout', 'Controller@logout');

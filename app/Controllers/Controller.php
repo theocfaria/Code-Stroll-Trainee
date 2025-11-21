@@ -7,15 +7,15 @@ use Exception;
 
 class Controller
 {
-
-    public function exibirLogin(): mixed
+    public function exibirLogin()
     {
-        return view(name: 'admin/login');
-    }
+        session_start();
 
-    public function exibirDashboard(): mixed
-    {
-        return view(name: 'admin/dashboard');
+        if(isset($_SESSION['id'])){
+            header('Location: /dashboard');
+        }
+
+        return view('admin/login');
     }
 
     public function efetuarLogin(): void
@@ -35,4 +35,12 @@ class Controller
             header('Location: /login');
         }
     }
+
+    public function logout(): void
+{
+    session_start();
+    session_unset();
+    session_destroy();
+    header('Location: /login');
+}
 }
