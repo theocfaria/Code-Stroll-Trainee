@@ -110,7 +110,7 @@ function abrirModalExcluir(id, titulo) {
     const modal = document.getElementById('modal-delete');
     if (!modal) return;
     
-    modal.dataset.id = id; 
+    document.getElementById('delete-id').value = id;
 
     const texto = document.getElementById('delete-modal-text');
     if (texto) {

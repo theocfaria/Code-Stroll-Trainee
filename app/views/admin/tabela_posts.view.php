@@ -64,7 +64,7 @@
                                 >
                                 <i class="bi bi-pencil"></i>
                             </button>
-                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $post->id ?>', <?= $post->id ?>)" >
+                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $post->id ?>')" >
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -88,10 +88,11 @@
     <?php foreach($posts as $post): ?>
         <div id="modal-delete">
             <h3 id="delete-modal-title">Excluir Post</h3>
-            <p id="delete-modal-text">Tem certeza que deseja excluir este post?</p><strong> <?= $post->id ?> </strong>
+            <p id="delete-modal-text">Tem certeza que deseja excluir este post?</p>
+            <strong id="delete-id-view"></strong>
                 <div class="modal-buttons">
                     <form action="/crudPosts/delete" method="POST">
-                        <input type="hidden" value= <?= $post->id ?> name="id">
+                        <input type="hidden" id="delete-id" name="id">
                         <button type="submit" id="btn-submit-excluir" class="btn-excluir">Excluir</button>
                         <button type="button" class="btn-cancelar" onclick="fecharModal('modal-delete')">Cancelar</button>
                     </form>
