@@ -74,10 +74,12 @@
             </table>
             <div class="foot">
                 <button class="botao_foot1"><i class="bi bi-arrow-left-circle"></i></button>
+
                 <button class="botao_foot pagina-ativa">1</button>
                 <button class="botao_foot">2</button>
                 <button class="botao_foot">3</button>
                 <button class="botao_foot">4</button>
+
                 <button class="botao_foot1"><i class="bi bi-arrow-right-circle"></i></button>
             </div>
         </div>
@@ -160,7 +162,7 @@
 
     <div id="modal-criar">
         <h3>Criar Novo Post</h3>
-        <form class="modal-form" method="POST" action="/crudPosts/create">
+        <form class="modal-form" method="POST" enctype="multipart/form-data" action="/crudPosts/create">
             <div class="form-group">
                 <label for="criar-titulo">Título:</label>
                 <input type="text" id="criar-titulo" name="title" required />
