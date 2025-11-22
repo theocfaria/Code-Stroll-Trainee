@@ -18,6 +18,12 @@ class Controller
         return view('site/login');
     }
 
+    public function exibirDashboard()
+    {
+    
+        return view('admin/dashboard');
+    }
+
     public function efetuarLogin(): void
     {
         $email = $_POST['email'];
@@ -28,11 +34,12 @@ class Controller
         if ($user != false) {
             session_start();
             $_SESSION['id'] = $user->id;
-            header('Location: /dashboard');
+            header(header:'Location: /dashboard');
+            exit;
         } else {
             session_start();
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
-            header('Location: /login');
+            header(header: 'Location: /login');
         }
     }
 
