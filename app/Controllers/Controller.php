@@ -15,7 +15,7 @@ class Controller
             header('Location: /dashboard');
         }
 
-        return view('admin/login');
+        return view('site/login');
     }
 
     public function efetuarLogin(): void
