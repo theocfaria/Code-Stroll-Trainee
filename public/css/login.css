@@ -169,9 +169,14 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 35px;
-        font-size: 12px;
-    }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%; 
+    font-size: 16px;
+    cursor: pointer; 
+    z-index: 10; 
+}
     button#entrar{
         height: 30px;
         padding: 5px 15px;
@@ -259,9 +264,10 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 73px;
-        font-size: 16px;
+        right: 14%;
+        font-size: 20px;
     }
+    
     button#entrar{
         height: 40px;
         padding: 5px 15px;
