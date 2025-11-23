@@ -26,8 +26,8 @@
 <body>
     <div id="container">
         <div id="links">
-            <a href="link-lista-de-usuarios" id="usuarios"><i class="bi bi-table"> Tabela de usuários </i></a>
-            <a href="link-lista-de-posts" id="posts"><i class="bi bi-person-fill-gear"> Tabela de posts </i></a>
+            <a href="link-lista-de-usuarios" id="usuarios"><i class="bi bi-table"> Tabela de Usuários </i></a>
+            <a href="link-lista-de-posts" id="posts"><i class="bi bi-person-fill-gear"> Tabela de Posts </i></a>
         </div>
         
         <div id="contem-logout">
