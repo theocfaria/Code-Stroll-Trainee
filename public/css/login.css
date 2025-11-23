@@ -76,8 +76,12 @@ input#email {
 
 #olhoIcon {
     position: absolute;
-    left: 690px; 
+    top: 50%;                 
+    transform: translateY(-50%); 
+    right: 20%;              
     font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .container-entrar {
@@ -169,14 +173,10 @@ img#logo {
     }
 
     #olhoIcon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10%; 
-    font-size: 16px;
-    cursor: pointer; 
-    z-index: 10; 
-}
+        right: 10%;     
+        font-size: 16px;
+    }
+    
     button#entrar{
         height: 30px;
         padding: 5px 15px;
@@ -218,8 +218,8 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 45px;
-        font-size: 14px;
+        right: 10%;
+        font-size: 16px;
     }
     button#entrar{
         height: 40px;
@@ -265,7 +265,7 @@ img#logo {
 
     #olhoIcon {
         right: 14%;
-        font-size: 20px;
+        font-size: 18px;
     }
     
     button#entrar{
@@ -311,8 +311,8 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 93px;
-        font-size: 18px;
+        right: 14%;
+        font-size: 20px;
     }
     .container-input{
         font-size: 20px;
@@ -360,7 +360,6 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 130px;
         font-size: 22px;
     }
     .container-input{
@@ -410,7 +409,6 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 200px;
         font-size: 44px;
     }
     button#entrar{
