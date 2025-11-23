@@ -118,6 +118,11 @@ input#email {
     font-size: 35px;
 }
 
+#x {
+    color: #555555; 
+    text-decoration: none; 
+}
+
 img#logo {
     width: 150px;
     position: absolute;
