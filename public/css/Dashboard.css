@@ -89,7 +89,7 @@ i.bi.bi-table::before {
 }
 
 #links a:hover {
-    transform: scale(1.005);
+    transform: scale(1.05);
 }
 
 #contem-logout {
@@ -124,7 +124,7 @@ i.bi.bi-table::before {
 }
 
 #logout:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
