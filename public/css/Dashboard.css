@@ -147,7 +147,7 @@ i.bi.bi-table::before {
 
     i.bi.bi-person-fill-gear::before,
     i.bi.bi-table::before {
-        font-size: 90px; 
+        font-size: 80px; 
     }
 
     #logout{
@@ -207,44 +207,48 @@ i.bi.bi-table::before {
     }
 }
 
+/* --- TABLET (Ipads e similares) --- */
 @media(min-width: 768px) and (max-width: 1023px) {
     #container {
-        gap: 20px;
-        padding: 0px;
+        gap: 60px;
+        padding: 50px 0px;
     }
 
     #links {
-        height: 50%;
-        flex-direction: row;
-        width: 90%;
-        gap: 50px
+        height: auto; 
+        flex-direction: row; 
+        width: 95%; 
+        gap: 30px; 
     }
 
     a#usuarios,
     a#posts {
-        font-size: 22px;
+        font-size: 25px;
+        width: 45%; 
+        height: 250px; 
+        padding-top: 40px; 
     }
 
-    i.bi.bi-person-fill-gear {
-        height: 100%;
-        padding: 0px;
-        gap: 40px
-    }
-
+    i.bi.bi-person-fill-gear,
     i.bi.bi-table {
         height: 100%;
-        padding: 30px 0px;
-        gap: 30px;
+        padding: 0px;
+        gap: 40px; 
+        justify-content: center; 
+        align-items: center;
     }
 
-    i.bi.bi-person-fill-gear::before {
-        font-size: 100px;
-    }
-
+    i.bi.bi-person-fill-gear::before,
     i.bi.bi-table::before {
-        font-size: 100px;
+        font-size: 110px; 
+    }
+    
+    #logout {
+        font-size: 35px;
+        padding: 15px 40px;
     }
 }
+
 @media(min-width: 1024px) and (max-width: 1439px) {
     #container{
         padding: 0px;
