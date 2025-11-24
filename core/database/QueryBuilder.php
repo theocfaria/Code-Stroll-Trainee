@@ -105,7 +105,7 @@ class QueryBuilder
 
     public function countAll($table)
     {
-        $sql = "SELECT COUNT(*) FROM{$table}";
+        $sql = "SELECT COUNT(*) FROM {$table} ";
 
         try {
             $stmt = $this->pdo->prepare($sql);
