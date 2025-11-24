@@ -64,7 +64,7 @@
                                 >
                                 <i class="bi bi-pencil"></i>
                             </button>
-                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $post->id ?>')" >
+                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $post->id ?>', '<?= $post->title ?>')" >
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
@@ -72,16 +72,58 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
-            <div class="foot">
+            <!--<div class="foot">
                 <button class="botao_foot1"><i class="bi bi-arrow-left-circle"></i></button>
 
                 <button class="botao_foot pagina-ativa">1</button>
                 <button class="botao_foot">2</button>
                 <button class="botao_foot">3</button>
-                <button class="botao_foot">4</button>
+                <button class="botao_foot">4</button> aqqqqqqqqq
 
                 <button class="botao_foot1"><i class="bi bi-arrow-right-circle"></i></button>
-            </div>
+            </div>!-->
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item <?= $page == 1 ?'disabled' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= max(1,$page-1) ?>"><i class="bi bi-arrow-left-circle"></i></a>
+                    </li>
+
+                    <li class="page-item <?= $page == 1 ?'active' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= 1 ?>">1</a>
+                    </li>
+
+                    <?php 
+                        $maxBotoes = 5;
+
+                        $inicio = max(1, $page - (int)floor($maxBotoes/2));
+
+                        $fim = min($total, $inicio + $maxBotoes - 1);
+
+                        if($fim - $inicio + 1 < $maxBotoes)
+                        {
+                            $inicio = max(1, $fim-$maxBotoes+1);
+                        }
+
+                    ?>
+
+                    <?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
+
+                        <li class="page-item <?= $i ==$page ? 'active' : '' ?>">
+                            <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?></a>
+                        </li>
+
+                    <?php endfor; ?>
+
+                    <li class="page-item <?= $page == $total ?'active' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= $total ?>"><?= $total ?></a>
+                    </li>
+
+                    <li class="page-item <?= $page == $total ?'disabled' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?>"><i class="bi bi-arrow-right-circle"></i></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 

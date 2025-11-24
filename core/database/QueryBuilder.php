@@ -14,9 +14,14 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table, $begin = null, $rows = null)
     {
         $sql = "select * from {$table}";
+
+        if($begin >= 0 && $rows >0)
+        {
+            $sql .=" LIMIT {$begin} , {$rows} ";
+        }
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -96,5 +101,42 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+
+    public function countAll($table)
+    {
+        $sql = "SELECT COUNT(*) FROM{$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([]);
+
+            return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function populaBanco($table,$size)
+    {
+        /* <td class="teste3 teste4"><?= $post->id ?></td>
+                        <td class="teste4"><?= $post->title ?></td>
+                        <td class="teste4"><?= $post->author ?></td>
+                        <td class="teste4"><?= $post->created_at ?></td>*/
+        for($i = 0; $i<=$size; $i++)
+            {
+                $title = "Titulo {$i}";
+                $content = "Descrição {$i}";
+                $author = 1;
+                $created_at = "23-11-2025";
+                
+                $this->insert($table, [
+                    'title' => $title,
+                    'content' => $content,
+                    'author' => $author,
+                    'created_at' => $created_at,
+                ]);
+            }
     }
 }

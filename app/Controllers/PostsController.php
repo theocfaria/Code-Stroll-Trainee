@@ -7,13 +7,39 @@ use Exception;
 
 class PostsController
 {
-
     public function index()
     {
 
-        $posts = App::get('database') -> selectAll('posts');
+        //App::get('database')->populaBanco('posts', 100);
 
-        return view('admin/tabela_posts', compact('posts'));
+        $page = 1;
+
+        if(isset($_GET['pagina']) && !empty($_GET['pagina']))
+        {
+            $page = intval($_GET['pagina']);
+
+            if($page <=0)
+            {
+                $page = 1;
+            }
+        }
+
+        $itemsPagina = 5;
+
+        $inicio = $itemsPagina * $page - $itemsPagina;
+
+        $linhas = App::get('database')->countAll('posts');
+
+        if($inicio > $linhas)
+        {
+            $page = 1;
+        }
+
+        $total = ceil($linhas/$itemsPagina);
+
+        $posts = App::get('database') -> selectAll('posts', $inicio, $itemsPagina);
+
+        return view('admin/tabela_posts', compact('posts', 'page', 'total')); // pode dar merda aqui na passagem de mais variaveis
     }
 
     public function store()
@@ -26,7 +52,7 @@ class PostsController
         $parameters = [
         'title' => $_POST['title'],
         'content' => $_POST['content'],
-        'author' => 1,
+        'author' => 1, // arrumar
         'created_at' => $_POST['created_at'],
         'image' => $caminho_da_imagem,
         ];

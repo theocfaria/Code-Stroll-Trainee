@@ -473,6 +473,21 @@ td {
     cursor: default;
 }
 
+.pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.page-link{
+    background: white;
+}
+
+.pagination li {
+    list-style: none;
+}
+
+
 /* Responsividade */
 
 /* Telas enormes (2560px+) */
