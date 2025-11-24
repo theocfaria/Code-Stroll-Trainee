@@ -207,7 +207,6 @@ i.bi.bi-table::before {
     }
 }
 
-/* --- TABLET (Ipads e similares) --- */
 @media(min-width: 768px) and (max-width: 1023px) {
     #container {
         gap: 60px;
@@ -276,6 +275,7 @@ i.bi.bi-table::before {
 
     #logout {
         font-size: 40px;
+        padding: 16px 35px;
     }
 }
 
