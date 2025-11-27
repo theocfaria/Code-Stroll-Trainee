@@ -85,7 +85,7 @@
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    <li class="page-item <?= $page == 1 ?'disabled' : '' ?>">
+                    <li class="page-item setas<?= $page == 1 ?'disabled' : '' ?>" id="setas">
                         <a class="page-link" href="?pagina=<?= max(1,$page-1) ?>"><i class="bi bi-arrow-left-circle"></i></a>
                     </li>
 
@@ -109,7 +109,7 @@
 
                     <?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
 
-                        <li class="page-item <?= $i ==$page ? 'active' : '' ?>">
+                        <li class="page-item pagina-ativa<?= $i ==$page ? 'active' : '' ?>">
                             <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?></a>
                         </li>
 
@@ -119,7 +119,7 @@
                         <a class="page-link" href="?pagina=<?= $total ?>"><?= $total ?></a>
                     </li>
 
-                    <li class="page-item <?= $page == $total ?'disabled' : '' ?>">
+                    <li class="page-item setas<?= $page == $total ?'disabled' : '' ?>" id="setas">
                         <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?>"><i class="bi bi-arrow-right-circle"></i></a>
                     </li>
                 </ul>

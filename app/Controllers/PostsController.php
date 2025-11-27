@@ -24,7 +24,7 @@ class PostsController
             }
         }
 
-        $itemsPagina = 10;
+        $itemsPagina = 6;
 
         $inicio = $itemsPagina * $page - $itemsPagina;
 
