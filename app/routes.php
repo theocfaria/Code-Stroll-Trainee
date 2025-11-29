@@ -5,3 +5,8 @@ use App\Controllers\ExampleController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
+
+$router->get('crudUsers', 'UsersController@index');
+$router->post('crudUsers/create', 'UsersController@store');
+$router->post('crudUsers/edit', 'UsersController@edit');
+$router->post('crudUsers/delete', 'UsersController@delete');
