@@ -9,7 +9,7 @@
 body {
   /* background: url(/public/assets/fundo.jpg) no-repeat top center/cover; */
   display: flex;
-  background-color: #1f1f1f;
+  background-color: whitesmoke;
   /*background-color: #edebee;*/
   font-family: "Poppins", sans-serif;
 }
@@ -66,8 +66,9 @@ main
  position: absolute;
  top: 3.15rem; 
  left: 100%; 
- color: #edebee;
+ color: color-mix(in srgb, #ff9800 40%, #B392F0 60%);
  font-size: 1.7rem;
+ margin-left: 0.5rem;
 }
 
 .toggle-sidebar:hover {
@@ -185,6 +186,8 @@ transform: scale(1.05);
 .closed-sidebar .toggle-sidebar {
   transform: rotate(180deg);
   position: static; 
+  color: #edebee;
+  margin-left: 0;
 }
 
 /* RESPONSIVIDADE */
