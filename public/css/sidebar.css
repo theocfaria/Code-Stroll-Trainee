@@ -97,7 +97,8 @@ main
 
 .item-sidebar a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #7134e4;
+  font-weight: 600;
   transition: all 0.3s;
   display: flex; 
   align-items: center; 
@@ -107,7 +108,7 @@ main
 }
 
 .item-sidebar a:hover {
-background-color: #8e5de95d;   
+background-color: rgba(245, 245, 245, 0.699);  
 transform: scale(1.05);     
 }
 
@@ -129,7 +130,7 @@ transform: scale(1.05);
   padding: 0.8rem;
   border: none;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
