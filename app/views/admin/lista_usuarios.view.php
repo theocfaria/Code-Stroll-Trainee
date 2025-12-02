@@ -90,7 +90,7 @@
         </div>
       </div>
     </div>
-
+    <?php foreach ($users as $user): ?>
     <div id="modal-delete">
       <h3 id="delete-modal-title">Excluir Usuário</h3>
       <p id="delete-modal-text">Tem certeza que deseja excluir este usuário?</p>
@@ -180,7 +180,7 @@
           <input
             type="text"
             id="editar-nome"
-            value="Nome do Usuário"
+            value= <?= $users->name ?>
             required
           />
         </div>
@@ -190,7 +190,7 @@
           <input
             type="email"
             id="editar-email"
-            value="email@exemplo.com"
+            value=<?= $users->email ?>
             required
           />
         </div>
@@ -218,7 +218,7 @@
           </div>
         </div>
       </form>
-
+      <?php endforeach; ?>
       <p id="modal-editar-erro" class="modal-erro"></p>
       <div class="modal-buttons">
         <button type="button" id="btn-submit-editar" class="btn-salvar">

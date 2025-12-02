@@ -30,7 +30,6 @@ class UsersControler{
     public function edit()
     {
         $id = $_POST['id'];
-        $post = App::get('database')->selectOne('users', $id);
        $parameters = [
         'id' => 1,
         'name' => $_POST['name'],
@@ -38,15 +37,13 @@ class UsersControler{
         'senha' => $_POST['password'],
         ];
         App::get('database') -> update('users', $id, $parameters);
-        header('Location: /crudPosts');
+        header('Location: /crudUsers');
     
     }
 
     public function delete()
     {
         $id = $_POST['id'];
-        $users = App::get('database')->selectOne('users', $id);
-
         App::get('database') -> delete('users', $id);
         header('Location: /crudUsers');
     }
