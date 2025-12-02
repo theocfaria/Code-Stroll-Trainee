@@ -97,7 +97,7 @@ main
 
 .item-sidebar a {
   text-decoration: none;
-  color: #7134e4;
+  color: whitesmoke;
   font-weight: 600;
   transition: all 0.3s;
   display: flex; 
@@ -108,7 +108,7 @@ main
 }
 
 .item-sidebar a:hover {
-background-color: rgba(245, 245, 245, 0.699);  
+background-color: #8e5de95d; 
 transform: scale(1.05);     
 }
 
