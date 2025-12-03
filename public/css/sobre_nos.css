@@ -1,7 +1,6 @@
 body{
     margin: 0;
-    background: grey;
-    padding: 20px;
+    background: white;
 }
 
 .pagina{
@@ -9,7 +8,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: auto;
-    height: 100vh;
+    width: 100%;
 }
 
 .introducao{
@@ -21,74 +20,146 @@ body{
 
 
 #primary_img{
-    width: 80vw;
-    height: 40vh;
+    width: 100vw;
+    height: 50vh;
     display: flex;
-    border: 1px solid;
-    border-radius: 12px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .sobre_nos{
-    width: auto;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background: white;
+    padding: 30px;
+}
+
+.txt_sn{
+    padding: 10px 100px;
+}
+
+.txt{
+    padding: 0px 40px;
 }
 
 .texto{
     margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    text-align: center;
 }
 
 .mvv{
-    width: 90vw;
+    width: 100vw;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
-    background: green;
-    padding: 20px;
+    gap: 30px;
+    background: rgb(129, 68, 185);
+    padding: 20px 0px;
 }
 
 .missao{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    background: greenyellow;
+    gap: 30px;
+    background: white;
     border: 1px;
     border-radius: 8px;
-    padding: 10px;
 }
 
 .visao{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    background: greenyellow;
+    gap: 30px;
+    background: white;
     border: 1px;
     border-radius: 8px;
-    padding: 10px;
 }
 
 .valores{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    background: greenyellow;
+    gap: 30px;
+    background: white;
     border: 1px;
     border-radius: 8px;
-    padding: 10px;
 }
 
 .bi{
     font-size: 24px;
+    color: white;
 }
 
+.title{
+    font-size: 24px;
+}
+
+.cards{
+    display: flex;
+    width: 30vw;
+    height: 60vh;
+    padding: 30px 0px;
+    justify-content: space-between;
+}
+
+.cards:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.botao{
+    background: rgb(129, 68, 185);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+}
+
+.juncao_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+@media(min-width: 320px) {
+  
+}
+
+@media(min-width: 375px) {
+   
+}
+
+@media(min-width: 425px) {
+
+}
+
+@media(min-width: 768px) {
+
+}
+
+@media(min-width: 1024px) {
+
+}
+
+@media(min-width: 1440px) {
+
+}
+
+@media(min-width: 1920px) {
+
+}
+
+@media(min-width: 2560px) {
+    
+}
