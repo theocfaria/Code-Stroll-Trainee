@@ -97,7 +97,7 @@ main
 
 .item-sidebar a {
   text-decoration: none;
-  color: whitesmoke;
+  color: white;
   font-weight: 600;
   transition: all 0.3s;
   display: flex; 
