@@ -136,7 +136,7 @@ img#logo {
 
 #x:hover {
     transform: scale(1.05);
-    color: #6a085a;
+    color:rgba(202, 23, 42, 0.85);
 }
 
 @media (min-width: 320px) {
