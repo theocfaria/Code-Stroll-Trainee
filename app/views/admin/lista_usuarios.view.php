@@ -46,66 +46,108 @@
           <tbody>
             <?php foreach ($users as $user): ?>
             <tr>
-                        <td class="teste3 teste4"><?= $user->id ?></td>
-                        <td class="teste4"><?= $user->name ?></td>
-                        <td class="teste4"><?= $user->email ?></td>
-                        <td class="teste4"><?= $user->password ?></td>
-                        <td class="acoes">
-                            <button type="button" class="btn-primary"
-                                onclick="abrirModalVisualizar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')">
-                                <i class="bi bi-eye"></i>
-                            </button>
-                            <button type="button" class="btn-primary"
-                                type="button"
-                                class="btn-primary"
-                                data-id="<?= $user->id ?>"
-                                data-title="<?= htmlspecialchars($user->name, ENT_QUOTES) ?>"
-                                data-author="<?= htmlspecialchars($user->email, ENT_QUOTES) ?>"
-                                data-date="<?= $user->password ?>"
-                                onclick="abrirModalEditarComData(this)"
-                                >
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $user->id ?>', '<?= $user->name ?>')" >
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
+                <td class="teste3 teste4"><?= $user->id ?></td>
+                <td class="teste4"><?= $user->name ?></td>
+                <td class="teste4"><?= $user->email ?></td>
+                <td class="acoes">
+                    <button type="button" class="btn-primary"
+                        onclick="abrirModalVisualizar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                    <button type="submit" class="btn-primary"
+                        data-id="<?= $user->id ?>"
+                        data-name="<?= $user->name ?>"
+                        data-email="<?= $user->email ?>"
+                        data-password="<?= $user->password ?>"
+                        onclick="abrirModalEditar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')"
+                        >
+                        <i class="bi bi-pencil"></i>
+                    </button>
+                    <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $user->id ?>', '<?= $user->name ?>')" >
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
             <?php endforeach; ?> 
           </tbody>
         </table>
         <div class="foot">
-          <button class="botao_foot1">
-            <i class="bi bi-arrow-left-circle"></i>
-          </button>
+            <button class="botao_foot1"><i class="bi bi-arrow-left-circle"></i></button>
 
-          <button class="botao_foot pagina-ativa">1</button>
-          <button class="botao_foot">2</button>
-          <button class="botao_foot">3</button>
-          <button class="botao_foot">4</button>
+            <button class="botao_foot pagina-ativa">1</button>
+            <button class="botao_foot">2</button>
+            <button class="botao_foot">3</button>
+            <button class="botao_foot">4</button>
 
-          <button class="botao_foot1">
-            <i class="bi bi-arrow-right-circle"></i>
-          </button>
+            <button class="botao_foot1"><i class="bi bi-arrow-right-circle"></i></button>
         </div>
+
+       <!--- <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                </?php $tempSearch = isset($busca) && $busca !== '' ? '&busca='. urlencode($busca) : ""; ?>
+
+
+                <li class="page-item setas</?= $page == 1 ?'disabled' : '' ?>" id="setas">
+                    <a class="page-link" href="?pagina=</?= max(1,$page-1) ?></?= $tempSearch ?> "><i class="bi bi-arrow-left-circle"></i></a>
+                </li>
+
+                <li class="page-item </?= $page == 1 ?'active' : '' ?>">
+                    <a class="page-link" href="?pagina=</?= 1 ?></?= $tempSearch ?>">1</a>
+                </li>
+
+                </*?php 
+                    $maxBotoes = 5;
+
+                    $inicio = max(1, $page - (int)floor($maxBotoes/2));
+
+                    $fim = min($total, $inicio + $maxBotoes - 1);
+
+                    if($fim - $inicio + 1 < $maxBotoes)
+                    {
+                        $inicio = max(1, $fim-$maxBotoes+1);
+                    }
+
+                ?>
+
+                </*?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
+
+                    <li class="page-item pagina-ativa</*?= $i == $page ? 'active' : '' ?>">
+                        <a class="page-link" href="?pagina=</*?= $i ?>"></*?= $i ?></*?= $tempSearch ?></a>
+                    </li>
+
+                </?php endfor; ?>
+
+                <li class="page-item </*?= $page == $total ?'active' : '' ?>">
+                    <a class="page-link" href="?pagina=</*?= $total ?></*?= $tempSearch ?>"></*?= $total ?></a>
+                </li>
+
+                <li class="page-item setas</*?= $page == $total ?'disabled' : '' ?>" id="setas">
+                    <a class="page-link" href="?pagina=</*?= min($total, $page + 1) ?></*?= $tempSearch ?>"><i class="bi bi-arrow-right-circle"></i></a>
+                </li>
+            </ul>
+        </nav>-->
       </div>
     </div>
+    
     <?php foreach ($users as $user): ?>
     <div id="modal-delete">
       <h3 id="delete-modal-title">Excluir Usuário</h3>
       <p id="delete-modal-text">Tem certeza que deseja excluir este usuário?</p>
 
       <div class="modal-buttons">
-        <button type="button" id="btn-submit-excluir" class="btn-excluir">
-          Excluir
-        </button>
-        <button
-          type="button"
-          class="btn-cancelar"
-          onclick="fecharModal('modal-delete')"
-        >
-          Cancelar
-        </button>
+        <form action="/crudUsers/delete" method="POST">
+          <input type="hidden" name="id" id="delete-id"> 
+          <button type="submit" id="btn-submit-excluir" class="btn-excluir">
+            Excluir
+          </button>
+          <button
+            type="button"
+            class="btn-cancelar"
+            onclick="fecharModal('modal-delete')"
+          >
+            Cancelar
+          </button>
+        </form>
       </div>
     </div>
 
@@ -125,109 +167,100 @@
       </button>
     </div>
 
+    <div id="modal-editar">
+  <h3>Editar Usuário</h3>
+  
+  <form class="modal-form" method="POST" action="/crudUsers/edit" onsubmit="return validarFormularioEditar(event)">
+    
+    <input type="hidden" name="id" id="editar-id">
+
+    <div class="form-group">
+      <label for="editar-nome">Nome:</label>
+      <input type="text" id="editar-nome" name="name" value="<?= $user->name?>" required />
+    </div>
+
+    <div class="form-group">
+      <label for="editar-email">Email:</label>
+      <input type="email" id="editar-email" name="email" value="<?= $user->email ?>" required />
+    </div>
+
+    <div class="form-group">
+      <label for="editar-senha">Senha:</label>
+      <div class="input-wrapper">
+        <input type="password" id="editar-senha" name="password" value="<?= $user->password?>" placeholder="****** " />
+        <i class="bi bi-eye-fill toggle-senha" id="toggle-editar-senha"></i>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="editar-confirmar-senha">Confirmar Senha:</label>
+      <div class="input-wrapper">
+        <input type="password" id="editar-confirmar-senha" value="<?= $user->password ?>" placeholder="******" />
+        <i class="bi bi-eye-fill toggle-senha" id="toggle-editar-confirmar"></i>
+      </div>
+    </div>
+
+    <p id="modal-editar-erro" class="modal-erro"></p>
+
+    <div class="modal-buttons">
+      <button type="submit" id="btn-submit-editar" class="btn-salvar">
+        Salvar
+      </button>
+      <button type="button" class="btn-cancelar" onclick="fecharModal('modal-editar')">
+        Cancelar
+      </button>
+    </div>
+
+  </form> </div>
+      <p id="modal-editar-erro" class="modal-erro"></p>
+
+      
+    <?php endforeach; ?>
+      </div>
+    </div>
+
     <div id="modal-criar">
       <h3>Criar Novo Usuário</h3>
-      <form class="modal-form">
+      <form class="modal-form" method="POST" action="/crudUsers/create">
         <div class="form-group">
           <label for="criar-nome">Nome:</label>
-          <input type="text" id="criar-nome" required />
+          <input type="text" id="criar-nome" name="name" required />
         </div>
         <div class="form-group">
           <label for="criar-email">Email:</label>
-          <input type="email" id="criar-email" required />
+          <input type="email" id="criar-email" name="email" required />
         </div>
 
         <div class="form-group">
           <label for="criar-senha">Senha:</label>
           <div class="input-wrapper">
-            <input type="password" id="criar-senha" required />
+            <input type="password" id="criar-senha" name="password" required />
             <i class="bi bi-eye-fill toggle-senha" id="toggle-criar-senha"></i>
           </div>
         </div>
         <div class="form-group">
           <label for="criar-confirmar-senha">Confirmar Senha:</label>
           <div class="input-wrapper">
-            <input type="password" id="criar-confirmar-senha" required />
+            <input type="password" id="criar-confirmar-senha" name="password" required />
             <i
               class="bi bi-eye-fill toggle-senha"
               id="toggle-criar-confirmar"
             ></i>
           </div>
         </div>
-      </form>
+      
 
       <p id="modal-criar-erro" class="modal-erro"></p>
 
       <div class="modal-buttons">
-        <button type="button" id="btn-submit-criar" class="btn-salvar">
+        <button type="submit" id="btn-submit-criar" class="btn-salvar">
           Criar
         </button>
+        </form>
         <button
           type="button"
           class="btn-cancelar"
           onclick="fecharModal('modal-criar')"
-        >
-          Cancelar
-        </button>
-      </div>
-    </div>
-
-    <div id="modal-editar">
-      <h3>Editar Usuário</h3>
-      <form class="modal-form">
-        <div class="form-group">
-          <label for="editar-nome">Nome:</label>
-          <input
-            type="text"
-            id="editar-nome"
-            value= <?= $users->name ?>
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="editar-email">Email:</label>
-          <input
-            type="email"
-            id="editar-email"
-            value=<?= $users->email ?>
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="editar-senha">Senha:</label>
-          <div class="input-wrapper">
-            <input type="password" id="editar-senha" placeholder="****** " />
-            <i class="bi bi-eye-fill toggle-senha" id="toggle-editar-senha"></i>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="editar-confirmar-senha">Confirmar Senha:</label>
-          <div class="input-wrapper">
-            <input
-              type="password"
-              id="editar-confirmar-senha"
-              placeholder="******"
-            />
-            <i
-              class="bi bi-eye-fill toggle-senha"
-              id="toggle-editar-confirmar"
-            ></i>
-          </div>
-        </div>
-      </form>
-      <?php endforeach; ?>
-      <p id="modal-editar-erro" class="modal-erro"></p>
-      <div class="modal-buttons">
-        <button type="button" id="btn-submit-editar" class="btn-salvar">
-          Salvar
-        </button>
-        <button
-          type="button"
-          class="btn-cancelar"
-          onclick="fecharModal('modal-editar')"
         >
           Cancelar
         </button>
