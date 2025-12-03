@@ -120,10 +120,6 @@ class QueryBuilder
 
     public function populaBanco($table,$size)
     {
-        /* <td class="teste3 teste4"><?= $post->id ?></td>
-                        <td class="teste4"><?= $post->title ?></td>
-                        <td class="teste4"><?= $post->author ?></td>
-                        <td class="teste4"><?= $post->created_at ?></td>*/
         for($i = 0; $i<=$size; $i++)
             {
                 $title = "Titulo {$i}";

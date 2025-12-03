@@ -90,12 +90,15 @@
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
+                    <?php $tempSearch = isset($busca) && $busca !== '' ? '&busca='. urlencode($busca) : ""; ?>
+
+
                     <li class="page-item setas<?= $page == 1 ?'disabled' : '' ?>" id="setas">
-                        <a class="page-link" href="?pagina=<?= max(1,$page-1) ?>"><i class="bi bi-arrow-left-circle"></i></a>
+                        <a class="page-link" href="?pagina=<?= max(1,$page-1) ?><?= $tempSearch ?> "><i class="bi bi-arrow-left-circle"></i></a>
                     </li>
 
                     <li class="page-item <?= $page == 1 ?'active' : '' ?>">
-                        <a class="page-link" href="?pagina=<?= 1 ?>">1</a>
+                        <a class="page-link" href="?pagina=<?= 1 ?><?= $tempSearch ?>">1</a>
                     </li>
 
                     <?php 
@@ -114,18 +117,18 @@
 
                     <?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
 
-                        <li class="page-item pagina-ativa<?= $i ==$page ? 'active' : '' ?>">
-                            <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?></a>
+                        <li class="page-item pagina-ativa<?= $i == $page ? 'active' : '' ?>">
+                            <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?><?= $tempSearch ?></a>
                         </li>
 
                     <?php endfor; ?>
 
                     <li class="page-item <?= $page == $total ?'active' : '' ?>">
-                        <a class="page-link" href="?pagina=<?= $total ?>"><?= $total ?></a>
+                        <a class="page-link" href="?pagina=<?= $total ?><?= $tempSearch ?>"><?= $total ?></a>
                     </li>
 
                     <li class="page-item setas<?= $page == $total ?'disabled' : '' ?>" id="setas">
-                        <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?>"><i class="bi bi-arrow-right-circle"></i></a>
+                        <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?><?= $tempSearch ?>"><i class="bi bi-arrow-right-circle"></i></a>
                     </li>
                 </ul>
             </nav>
