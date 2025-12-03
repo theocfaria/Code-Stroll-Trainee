@@ -157,7 +157,142 @@ body{
 
 
 @media(min-width: 320px) {
-  
+    .pagina{
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        width: 100%;
+    }
+
+    .introducao{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .img_logo{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #primary_img{
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .sobre_nos{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    #txt_sn{
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .txt{
+        padding: 0px 10px;
+    }
+
+    .texto{
+        margin: 0;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .mvv{
+        width: 100vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        padding: 8px 0px;
+    }
+
+    .missao{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+    }
+
+    .visao{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+    }
+
+    .valores{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+    }
+
+    .bi{
+        font-size: 12px;
+        color: white;
+    }
+
+    .li{
+        font-size: 20px;
+        color: rgb(129, 68, 185);
+    }
+
+    .title{
+        font-size: 18px;
+    }
+
+    .cards{
+        display: flex;
+        width: 80vw;
+        height: auto;
+        padding: 10px 0px;
+        justify-content: space-between;
+    }
+
+    .cards:hover{
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    .botao{
+        background: rgb(129, 68, 185);
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 100%;
+    }
+
+    .juncao_texto{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+    
 }
 
 @media(min-width: 375px) {
@@ -177,7 +312,162 @@ body{
 }
 
 @media(min-width: 1440px) {
+body{
+    margin: 0;
+    background: white;
+}
 
+.pagina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    width: 100%;
+}
+
+.introducao{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+}
+
+.img_logo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+#primary_img{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+    border: none;
+    border-radius: 8px;
+}
+
+.sobre_nos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#txt_sn{
+    padding: 10px 60px;
+    text-align: center;
+}
+
+.txt{
+    padding: 0px 40px;
+}
+
+.texto{
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+.mvv{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    background: rgb(129, 68, 185);
+    padding: 20px 0px;
+}
+
+.missao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    border: 1px;
+    border-radius: 8px;
+}
+
+.visao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    border: 1px;
+    border-radius: 8px;
+}
+
+.valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    border: 1px;
+    border-radius: 8px;
+}
+
+.bi{
+    font-size: 30px;
+    color: white;
+}
+
+.li{
+    font-size: 40px;
+    color: rgb(129, 68, 185);
+}
+
+.title{
+    font-size: 30px;
+}
+
+.cards{
+    display: flex;
+    width: 30vw;
+    height: 65vh;
+    padding: 30px 0px;
+    justify-content: space-between;
+}
+
+.cards:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.botao{
+    background: rgb(129, 68, 185);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+}
+
+.juncao_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
 }
 
 @media(min-width: 1920px) {
