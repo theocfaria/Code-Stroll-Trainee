@@ -46,27 +46,27 @@
           <tbody>
             <?php foreach ($users as $user): ?>
             <tr>
-                        <td class="teste3 teste4"><?= $users->id ?></td>
-                        <td class="teste4"><?= $users->name ?></td>
-                        <td class="teste4"><?= $users->email ?></td>
-                        <td class="teste4"><?= $users->password ?></td>
+                        <td class="teste3 teste4"><?= $user->id ?></td>
+                        <td class="teste4"><?= $user->name ?></td>
+                        <td class="teste4"><?= $user->email ?></td>
+                        <td class="teste4"><?= $user->password ?></td>
                         <td class="acoes">
                             <button type="button" class="btn-primary"
-                                onclick="abrirModalVisualizar('<?= $users->id ?>', '<?= $users->name ?>', '<?= $users->email ?>', '<?= $users->password ?>')">
+                                onclick="abrirModalVisualizar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')">
                                 <i class="bi bi-eye"></i>
                             </button>
                             <button type="button" class="btn-primary"
                                 type="button"
                                 class="btn-primary"
-                                data-id="<?= $users->id ?>"
-                                data-title="<?= htmlspecialchars($users->name, ENT_QUOTES) ?>"
-                                data-author="<?= htmlspecialchars($users->email, ENT_QUOTES) ?>"
-                                data-date="<?= $users->password ?>"
+                                data-id="<?= $user->id ?>"
+                                data-title="<?= htmlspecialchars($user->name, ENT_QUOTES) ?>"
+                                data-author="<?= htmlspecialchars($user->email, ENT_QUOTES) ?>"
+                                data-date="<?= $user->password ?>"
                                 onclick="abrirModalEditarComData(this)"
                                 >
                                 <i class="bi bi-pencil"></i>
                             </button>
-                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $users->id ?>', '<?= $users->name ?>')" >
+                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $user->id ?>', '<?= $user->name ?>')" >
                                 <i class="bi bi-trash"></i>
                             </button>
                         </td>
