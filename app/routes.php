@@ -10,3 +10,5 @@ $router->get('crudPosts', 'PostsController@index');
 $router->post('crudPosts/create', 'PostsController@store');
 $router->post('crudPosts/edit', 'PostsController@edit');
 $router->post('crudPosts/delete', 'PostsController@delete');
+
+$router->get('posts/search', 'PostsController@search');

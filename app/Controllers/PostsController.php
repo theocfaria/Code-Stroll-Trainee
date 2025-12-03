@@ -108,6 +108,49 @@ class PostsController
         header('Location: /crudPosts');
     }
 
+    public function search()
+    {
+        $busca = isset($_GET['busca']) ? trim($_GET['busca']): '';
+
+        $page = 1;
+
+        if(isset($_GET['pagina']) && !empty($_GET['pagina']))
+        {
+            $page = intval($_GET['pagina']);
+
+            if($page <=0)
+            {
+                return redirect('site/crudPosts');
+            }
+        }
+
+        $itemsPagina = 6;
+
+        $inicio = $itemsPagina * $page - $itemsPagina;
+
+        if($busca === '')
+        {
+            $linhas = App::get('database')->countAll('posts');
+            if($inicio > $linhas)
+            {
+                return redirect('site/crudPosts');
+            }
+            $posts = App::get('database')->selectAll('posts', $inicio, $itemsPagina);
+        }
+        else
+        {
+            $linhas = App::get('database')->countFromSearch('posts', $busca);
+            if($inicio > $linhas)
+            {
+                return redirect('site/crudPosts');
+            }
+            $posts = App::get('database')->searchFromDB($busca,$inicio,$itemsPagina);
+        }
+        $total = ceil($linhas/$itemsPagina);
+
+        return view('admin/tabela_posts', compact('posts', 'page', 'total', 'busca'));
+    }
+
 }
 
     

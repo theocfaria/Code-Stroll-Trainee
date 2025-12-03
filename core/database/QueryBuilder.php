@@ -139,4 +139,33 @@ class QueryBuilder
                 ]);
             }
     }
+
+    public function countFromSearch($table, $busca)
+    {
+        $sql = "SELECT COUNT(*) as total_ocorr FROM $table WHERE title LIKE :busca or author LIKE :busca";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':busca', "%$busca");
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result['total_ocorr'];
+    }
+
+    public function searchFromDB($search, $inicio, $itemsPagina)
+    {
+        $string_busca = "%$search%";
+
+        $sql = "SELECT * FROM posts WHERE title LIKE :string_busca or author LIKE :string_busca LIMIT :inicio, :fim";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->bindValue(':string_busca', $string_busca, PDO::PARAM_STR);
+        $stmt->bindValue(':inicio', (int)$inicio, PDO::PARAM_INT);
+        $stmt->bindValue(':fim', (int)$itemsPagina, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 }

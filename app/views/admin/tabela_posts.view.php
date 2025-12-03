@@ -22,12 +22,17 @@
     </div>
 
     <div class="conteudo">
-        <div class="barra_pesquisa">
+        <!--<div class="barra_pesquisa">
             <button id="pesquisa">
                 <p>PESQUISAR</p>
                 <i class="bi bi-search"></i>
             </button>
-        </div>
+        </div>!-->
+
+        <form method="GET" action="/posts/search" id="pesquisa">
+            <input type="text" name="busca" placeholder="Buscar post">
+        </form>
+
         <div class="tabela">
             <table>
                 <thead>
