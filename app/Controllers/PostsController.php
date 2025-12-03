@@ -24,7 +24,7 @@ class PostsController
             }
         }
 
-        $itemsPagina = 6;
+        $itemsPagina = 8;
 
         $inicio = $itemsPagina * $page - $itemsPagina;
 
@@ -124,7 +124,7 @@ class PostsController
             }
         }
 
-        $itemsPagina = 6;
+        $itemsPagina = 8;
 
         $inicio = $itemsPagina * $page - $itemsPagina;
 
@@ -147,6 +147,7 @@ class PostsController
             $posts = App::get('database')->searchFromDB($busca,$inicio,$itemsPagina);
         }
         $total = ceil($linhas/$itemsPagina);
+
 
         return view('admin/tabela_posts', compact('posts', 'page', 'total', 'busca'));
     }
