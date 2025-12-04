@@ -3,12 +3,29 @@ body{
     background: white;
 }
 
+/*  background-image: linear-gradient(to right,
+        rgba(142, 93, 233, 0.7) 0%,
+        #b392f0 35%,
+        rgba(204, 122, 0, 0.7) 65%,
+        #cc7a00 100%);
+            
+            
+    background-image: linear-gradient(
+        rgba(247, 59, 78, 0.6) 70%, 
+        rgba(249, 117, 131, 0.6) 100%);
+    */
+
 .pagina{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: auto;
     width: 100%;
+    background: linear-gradient(to right,
+        rgba(142, 93, 233, 0.7) 0%,
+        #b392f0 35%,
+        rgba(204, 122, 0, 0.7) 65%,
+        #cc7a00 100%);
 }
 
 .introducao{
@@ -68,6 +85,7 @@ body{
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     text-align: center;
+    color: white;
 }
 
 .mvv{
@@ -78,7 +96,6 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 30px;
-    background: rgb(129, 68, 185);
     padding: 20px 0px;
 }
 
@@ -124,6 +141,7 @@ body{
 
 .title{
     font-size: 30px;
+    color: rgba(247, 59, 78, 0.6);
 }
 
 .cards{
@@ -132,6 +150,9 @@ body{
     height: 65vh;
     padding: 30px 0px;
     justify-content: space-between;
+    background: linear-gradient(
+        rgba(247, 59, 78, 0.6) 70%, 
+        rgba(249, 117, 131, 0.6) 100%);
 }
 
 .cards:hover{
@@ -370,7 +391,7 @@ body{
 
 #txt_sn{
     padding: 10px 60px;
-    text-align: center;
+    text-align: justify;
 }
 
 .txt{
@@ -392,7 +413,6 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 30px;
-    background: rgb(129, 68, 185);
     padding: 20px 0px;
 }
 
@@ -437,7 +457,7 @@ body{
 }
 
 .title{
-    font-size: 30px;
+    font-size: 48px;
 }
 
 .cards{
@@ -446,6 +466,9 @@ body{
     height: 65vh;
     padding: 30px 0px;
     justify-content: space-between;
+    background: linear-gradient(
+        rgba(247, 59, 78, 0.6) 70%, 
+        rgba(249, 117, 131, 0.6) 100%);
 }
 
 .cards:hover{
