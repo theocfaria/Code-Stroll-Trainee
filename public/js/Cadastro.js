@@ -48,22 +48,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (nome.length < 3) {
-        alert("Erro: O nome precisa ter no mínimo 3 caracteres!");
+        alert("Erro: o nome precisa ter no mínimo 3 caracteres!");
         return;
       }
 
       if (!email.includes("@") || !email.includes(".")) {
-        alert("Erro: E-mail inválido!");
+        alert("Erro: e-mail inválido!");
         return;
       }
 
       if (senha.length < 6) {
-        alert("Erro: A senha precisa ter no mínimo 6 caracteres!");
+        alert("Erro: a senha precisa ter no mínimo 6 caracteres!");
         return;
       }
 
       if (senha !== confirmaSenha) {
-        alert("Erro: As senhas não coincidem!");
+        alert("Erro: as senhas não coincidem!");
         return;
       }
 
@@ -72,20 +72,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const letterRegex = /[a-zA-Z]/;
 
       if (!specialCharRegex.test(senha)) {
-        alert("Erro: A senha precisa de ao menos um caractere especial!");
+        alert("Erro: a senha precisa de ao menos um caractere especial!");
         return;
       }
       if (!numberRegex.test(senha)) {
-        alert("Erro: A senha precisa de ao menos um número!");
+        alert("Erro: a senha precisa de ao menos um número!");
         return;
       }
       if (!letterRegex.test(senha)) {
-        alert("Erro: A senha precisa de ao menos uma letra!");
+        alert("Erro: a senha precisa de ao menos uma letra!");
         return;
       }
 
       console.log("Cadastro Validado!");
-      alert("Cadastro realizado com sucesso! (Simulação)");
+      alert("Cadastro realizado com sucesso!");
     });
   }
 });
