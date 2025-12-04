@@ -50,7 +50,7 @@
                     <button type="submit" id="entrar">Entrar</button>
                 </div>
                 <div class="container-cadastro">
-                    <p id="texto-cadastro">Não possui conta? <a href="cadastro.html" id="link-cadastro">Cadastre-se!</a></p>
+                    <p id="texto-cadastro">Não possui conta? <a href="cadastro" id="link-cadastro">Cadastre-se!</a></p>
                 </div>
 
             </form>

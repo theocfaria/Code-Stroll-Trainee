@@ -10,6 +10,7 @@ $router->post('login', 'Login_DashboardController@efetuarLogin');
 $router->post('logout', 'Login_DashboardController@logout');
 $router->get('crudUsers', 'Login_DashboardController@redirecionaTabela'); 
 $router->get('crudPosts', 'Login_DashboardController@redirecionaTabela'); 
+$router->get('cadastro', 'CadastroController@index'); 
 
 $router->get('crudPosts', 'PostsController@index');
 $router->post('crudPosts/create', 'PostsController@store');
