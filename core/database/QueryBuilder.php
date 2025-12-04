@@ -28,12 +28,31 @@ class QueryBuilder
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
-    //função criar
+
+    public function verificaLogin($email, $senha)
+    {
+        $sql = 'SELECT * FROM users WHERE email = :email AND password = :password';
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha
+            ]);
+
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+            return $user;
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
     public function insert($table, $parameters)
     {
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
@@ -56,14 +75,14 @@ class QueryBuilder
     //função editar
     public function update($table, $id, $parameters)
     {
-        $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
+        $sql = sprintf('UPDATE %s SET %s WHERE id = :id',
         $table,
         implode(', ', array_map(function($param){
             return $param . ' = :' .$param;
         },
-        array_keys($parameters))),
-        $id
+        array_keys($parameters)))
     );
+        $parameters['id'] = $id;
 
     try {
             $stmt = $this->pdo->prepare($sql);
@@ -75,6 +94,29 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    //função editar
+    // public function update($table, $id, $parameters)
+    // {
+    //     $sql = sprintf('UPDATE %s SET %s WHERE id = %s',
+    //     $table,
+    //     implode(', ', array_map(function($param){
+    //         return $param . ' = :' .$param;
+    //     },
+    //     array_keys($parameters))),
+    //     $id
+    // );
+
+    // try {
+    //         $stmt = $this->pdo->prepare($sql);
+    //         $stmt->execute($parameters);
+
+    //         return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+    //     } catch (Exception $e) {
+    //         die($e->getMessage());
+    //     }
+    // }
     
 
     public function delete($table, $id)
@@ -90,7 +132,7 @@ class QueryBuilder
         }
     }
 
-     public function selectOne($table, $id)
+    public function selectOne($table, $id)
     {
         $sql = sprintf('SELECT * FROM %s WHERE id=:id LIMIT 1', $table);
 
@@ -118,7 +160,7 @@ class QueryBuilder
         }
     }
 
-    public function populaBanco($table,$size)
+    public function populaBancoPost($table,$size)
     {
         for($i = 0; $i<=$size; $i++)
             {

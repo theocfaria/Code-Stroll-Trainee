@@ -5,7 +5,8 @@
 }
 
 body {
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden; 
 }
 
 #container {
@@ -39,55 +40,45 @@ body {
 a#usuarios,
 a#posts {
     border-radius: 40px;
-    width: 40%;
-    height: 100%;
+    width: 30%;
+    height: 75%;
 
     text-decoration: none;
-    color: whitesmoke;
     cursor: pointer;
     font-family: "JetBrains Mono", monospace;
-    font-size: 30px;
-    color: #040000;
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: 700;
 
-    background-image: linear-gradient(#f73b4e 70%, #f97583 100%);
-    opacity: 0.6;
+    background-image: linear-gradient(
+        rgba(247, 59, 78, 0.6) 70%, 
+        rgba(249, 117, 131, 0.6) 100%
+    );
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 
     transition: transform 0.3s ease;
 }
 
-i.bi.bi-person-fill-gear {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 30px;
-
-    height: 100%;
-    gap: 30px;
-
-}
-
+i.bi.bi-person-fill-gear,
 i.bi.bi-table {
     border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 30px;
-
+    justify-content: center;
+    padding: 0; 
     height: 100%;
-    gap: 30px;
-
+    gap: 10px; 
 }
 
-i.bi.bi-person-fill-gear::before {
-    font-size: 160px;
-}
-
+i.bi.bi-person-fill-gear::before,
 i.bi.bi-table::before {
-    font-size: 140px;
+    font-size: 80px;
 }
 
 #links a:hover {
-    transform: scale(1.005);
+    transform: scale(1.05);
 }
 
 #contem-logout {
@@ -109,35 +100,79 @@ i.bi.bi-table::before {
     padding: 10px 30px;
 
     font-size: 30px;
-    color: #040000;
-    opacity: 0.6;
+    color: whitesmoke;
+    font-weight: 600;
+    
     font-family: 'JetBrains Mono', monospace;
 
     background-image: linear-gradient(#f73b4e 70%, #f97583 100%);
+    
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+
     transition: transform 0.3s ease;
 }
 
 #logout:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     #container {
         gap: 20px;
-        padding: 0px;
+        padding: 20px 0px;
     }
 
     #links {
         flex-direction: column;
-        height: 60%;
+        height: auto;
         width: 100%;
-        gap: 20px
+        gap: 30px
     }
 
     a#usuarios,
     a#posts {
-        font-size: 16px;
-        width: 70%;
+        font-size: 17.5px;
+        width: 75%;
+        height: 165px;
+        padding-top: 5px;
+    }
+
+    i.bi.bi-person-fill-gear,
+    i.bi.bi-table {
+        height: 100%;
+        padding: 0px; 
+        gap: 30px;    
+        justify-content: center;
+    }
+
+    i.bi.bi-person-fill-gear::before,
+    i.bi.bi-table::before {
+        font-size: 80px; 
+    }
+
+    #logout{
+        font-size: 25px;
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    #container {
+        gap: 20px;
+        padding: 20px 0px;
+    }
+
+    #links {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        gap: 30px
+    }
+
+    a#usuarios,
+    a#posts {
+        font-size: 17.5px;
+        width: 65%;
     }
 
     i.bi.bi-person-fill-gear {
@@ -155,7 +190,7 @@ i.bi.bi-table::before {
     }
 
     i.bi.bi-table::before {
-        font-size: 90px;
+        font-size: 100px;
     }
 
 }
@@ -174,42 +209,45 @@ i.bi.bi-table::before {
 
 @media(min-width: 768px) and (max-width: 1023px) {
     #container {
-        gap: 20px;
-        padding: 0px;
+        gap: 60px;
+        padding: 50px 0px;
     }
 
     #links {
-        height: 50%;
-        flex-direction: row;
-        width: 90%;
-        gap: 50px
+        height: auto; 
+        flex-direction: row; 
+        width: 95%; 
+        gap: 30px; 
     }
 
     a#usuarios,
     a#posts {
-        font-size: 22px;
+        font-size: 25px;
+        width: 45%; 
+        height: 250px; 
+        padding-top: 40px; 
     }
 
-    i.bi.bi-person-fill-gear {
-        height: 100%;
-        padding: 0px;
-        gap: 40px
-    }
-
+    i.bi.bi-person-fill-gear,
     i.bi.bi-table {
         height: 100%;
-        padding: 30px 0px;
-        gap: 30px;
+        padding: 0px;
+        gap: 40px; 
+        justify-content: center; 
+        align-items: center;
     }
 
-    i.bi.bi-person-fill-gear::before {
-        font-size: 200px;
-    }
-
+    i.bi.bi-person-fill-gear::before,
     i.bi.bi-table::before {
-        font-size: 180px;
+        font-size: 110px; 
+    }
+    
+    #logout {
+        font-size: 35px;
+        padding: 15px 40px;
     }
 }
+
 @media(min-width: 1024px) and (max-width: 1439px) {
     #container{
         padding: 0px;
@@ -223,53 +261,50 @@ i.bi.bi-table::before {
     a#posts {
         font-size: 30px;
     }
-    i.bi.bi-person-fill-gear::before {
-        font-size: 300px;
+
+    i.bi.bi-person-fill-gear::before,
+    i.bi.bi-table::before {
+        font-size: 130px;
     }
 
-    i.bi.bi-table::before {
-        font-size: 260px;
-    }
-      i.bi.bi-table {
-        padding-top: 52px;
-        gap: 33px;
-    }
+    i.bi.bi-table,
     i.bi.bi-person-fill-gear {
-        gap: 43px;
+        padding-top: 0;
+        gap: 30px;   
     }
 
     #logout {
-        font-size: 50px;
+        font-size: 40px;
+        padding: 16px 35px;
     }
 }
+
 @media(min-width: 1440px) and (max-width: 2559px) {
-     #container{
+    #container {
         padding: 150px 0px;
-     }
+    }
+
     a#usuarios,
     a#posts {
         font-size: 45px;
     }
-    i.bi.bi-person-fill-gear::before {
-        font-size: 350px;
+
+    i.bi.bi-person-fill-gear::before,
+    i.bi.bi-table::before {
+        font-size: 160px;
     }
 
-    i.bi.bi-table::before {
-        font-size: 300px;
-    }
-      i.bi.bi-table {
-        padding-top: 52px;
-        gap: 43px;
-    }
+    i.bi.bi-table,
     i.bi.bi-person-fill-gear {
-        gap: 43px;
+        padding-top: 0; 
+        gap: 40px;     
     }
-     #logout {
+
+    #logout {
         font-size: 60px;
     }
-    
-
 }
+
 @media(min-width: 2560px){
      #container{
         padding: 300px 0px;
@@ -284,7 +319,7 @@ i.bi.bi-table::before {
     }
 
     i.bi.bi-table::before {
-        font-size: 500px;
+        font-size: 550px;
     }
       i.bi.bi-table {
         padding-top: 80px;
