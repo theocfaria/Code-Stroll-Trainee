@@ -165,6 +165,8 @@ button#entrar {
 
     p#cadastro {
         font-size: 35px;
+        margin-top: 10px; 
+        margin-bottom: 20px;
     }
 
     .container-input {
