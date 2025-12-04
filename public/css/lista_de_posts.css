@@ -93,8 +93,6 @@ body::before {
 }
 
 .search input{
-    width: 400px;
-    height: 45px;
     width: 100%;
     height: 100%;
     text-align: left; 
@@ -108,7 +106,7 @@ body::before {
     color: #F5F5F5;
     padding-left: 15px;
     outline: none;
-
+    
 }
 
 .search input::placeholder {
@@ -131,7 +129,6 @@ body::before {
     font-weight: 400;
     text-align: center;
     margin-bottom: 30px;
-    font-size:xx-large;
     font-size: 60px;
     color: #F73B4E;
     text-shadow: 2px 2px 4px #F95062;
@@ -304,11 +301,11 @@ body::before {
         text-align: left;
     }
 
-
+    
 }
 
 @media (max-width: 768px) {
-
+    
     .conteudo{
         padding: 20px;
     }
@@ -335,7 +332,7 @@ body::before {
     .paginacao .extra{
         display: none;
     }
-
+    
 } 
 
 @media (max-width: 1024px) {
@@ -447,7 +444,7 @@ body::before {
     .paginacao #atual {
         font-size: xx-large;
     }
-
+    
     .paginacao p{
         font-size: xx-large;
     }
@@ -455,4 +452,5 @@ body::before {
     .paginacao .passa_pag .material-icons{
         font-size: 50px;
     }
+
 }

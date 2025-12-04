@@ -423,55 +423,65 @@ td {
     padding: 10px;
 }
 
-.foot {
+.pagination {
     display: flex;
+    gap: 8px;
+    justify-content: center;
     width: 100%;
+}
+
+.page-link{
+
+    text-decoration: none !important;
+}
+
+.setas{
+    background: transparent;
+}
+
+.pagination li {
+    list-style: none;
+}
+
+.page-item .page-link {
+    background: #ffffff;
+    width: 38px;
+    height: 38px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-}
-
-.botao_foot {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: none;
     border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    font-weight: 600;
+    border: 2px solid rgba(0,0,0,0.1);
+    color: #444;
+    transition: 0.25s ease;
 }
 
-.botao_foot:hover {
-    transform: scale(1.11);
-}
-
-.botao_foot1 {
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.page-item.active .page-link,
+.pagina-ativaactive .page-link { 
+    background: linear-gradient(180deg,#ffce52,#ff9900);
+    border-color: transparent;
     border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.botao_foot1:hover {
-    transform: scale(1.1);
-}
-
-.pagina-ativa {
-    background: linear-gradient(180deg, #ffd370, #ff9800);
-    color: #000;
+    color: black;
     font-weight: 700;
 }
 
-.pagina-ativa:hover {
-    transform: none;
-    cursor: default;
+.page-item:not(.active):hover .page-link {
+    transform: scale(1.08);
+    border-color: rgba(0,0,0,0.25);
 }
+
+.bi{
+    font-size: 1.5rem;
+}
+
+
+#setas .page-link{
+    background: transparent;
+    border: none;
+    color: black;
+}
+
 
 /* Responsividade */
 

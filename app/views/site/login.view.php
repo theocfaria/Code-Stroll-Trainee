@@ -18,25 +18,40 @@
 
 <body>
     <div id="container">
-
         <div id="Retangulo">
             <div id="xis">
                 <a id="x" href="navbar.html"><i class="bi bi-x"></i></a>
             </div>
             <img src="../../../public/assets/logotipo.png" alt="Logotipo" id="logo">
             <p id="login">Login</p>
-            <div class="container-input">
-                <input type="text" placeholder="E-mail:" id="email">
-                <div class="container-senha">
-                    <input type="password" placeholder="Senha:" id="senha">
-                    <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
-                </div>
-            </div>
-            <div class="container-entrar">
-                <button id="entrar">Entrar</button>
-            </div>
-        </div>
+            <form action="/login" method="POST">
+                <div class="mensagem-erro">
+        <p>
+            <?php
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
 
+                if(isset($_SESSION['mensagem-erro'])){
+                    echo $_SESSION['mensagem-erro'];
+                    unset($_SESSION['mensagem-erro']);
+                }
+            ?>
+        </p>
+    </div>
+                <div class="container-input">
+                    <input type="text" name="email" placeholder="E-mail:" id="email" required>
+                    <div class="container-senha">
+                        <input type="password" name="senha" placeholder="Senha:" id="senha" required>
+                        <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
+                    </div>
+                </div>
+                <div class="container-entrar">
+                    <button type="submit" id="entrar">Entrar</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 <script src="../../../public/js/login.js"></script>
+</html>

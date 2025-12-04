@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id'])){
+        header("Location: /login");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="PT-BR">
 
@@ -18,12 +26,15 @@
 <body>
     <div id="container">
         <div id="links">
-            <a href="link-lista-de-usuarios" id="usuarios"><i class="bi bi-table"> Tabela de usuários </i></a>
-            <a href="link-lista-de-posts" id="posts"><i class="bi bi-person-fill-gear"> Tabela de posts </i></a>
+            <a href="link-lista-de-usuarios" id="usuarios"><i class="bi bi-person-fill-gear"> Tabela de Usuários </i></a>
+            <a href="link-lista-de-posts" id="posts"><i class="bi bi-table "> Tabela de Posts </i></a>
         </div>
+        
         <div id="contem-logout">
-            <button id="logout">Logout</button>
-        </div>
+            <form action="/logout" method="POST">
+                <button id="logout" type="submit">Logout</button>
+            </form>
+            </div>
     </div>
 
 </body>
