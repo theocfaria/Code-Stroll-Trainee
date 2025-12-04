@@ -10,7 +10,6 @@ body {
     background-size: cover;
     font-family: 'silkscreen', sans-serif;
     color: black;
-
 }
 
 #container {
@@ -90,7 +89,11 @@ input#email {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 10px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+form {
+    padding-bottom: 15px; 
 }
 
 #entrar {
@@ -130,13 +133,32 @@ input#email {
 img#logo {
     width: 150px;
     position: absolute;
-    left: 35%;
+    left: 38%;
     top: -75px;
 }
 
 #x:hover {
     transform: scale(1.05);
     color:rgba(202, 23, 42, 0.85);
+}
+
+.container-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; 
+    font-family: "JetBrains Mono", monospace; 
+}
+
+#link-cadastro {
+    color: black; 
+    text-decoration: underline; 
+}
+
+.container-cadastro p {
+    color: black; 
+    font-size: 17px; 
+    margin: 0; 
 }
 
 @media (min-width: 320px) {
@@ -185,6 +207,10 @@ img#logo {
         font-size: 16px;
     }
 
+    .container-cadastro p {
+        font-size: 12px;
+    }
+
 }@media (min-width: 425px) {
     #Retangulo {
         width: 80%;
@@ -227,6 +253,10 @@ img#logo {
     }
     #entrar{
         font-size: 16px;
+    }
+
+    .container-cadastro p {
+        font-size: 13px;
     }
 
 }
@@ -276,6 +306,10 @@ img#logo {
         font-size: 18px;
     }
 
+    .container-cadastro p {
+        font-size: 15px;
+    }
+
 }
 @media (min-width: 1024px) {
     #Retangulo {
@@ -285,7 +319,7 @@ img#logo {
     img#logo {
         width: 130px;
         position: absolute;
-        right: 80%;
+        left: 42%;
         top: -65px;
     }
 
@@ -323,6 +357,10 @@ img#logo {
     }
     #entrar{
         font-size: 22px;
+    }
+
+    .container-cadastro p {
+        font-size: 17px;
     }
 
 }
@@ -373,6 +411,10 @@ img#logo {
         font-size: 30px;
     }
 
+    .container-cadastro p {
+        font-size: 22px;
+    }
+
 }
 @media (min-width: 2560px) {
     #Retangulo {
@@ -419,6 +461,10 @@ img#logo {
     }
     #entrar{
         font-size: 50px;
+    }
+
+    .container-cadastro p {
+        font-size: 26px;
     }
 
     .mensagem-erro p {

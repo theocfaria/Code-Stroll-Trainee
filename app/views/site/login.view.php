@@ -26,19 +26,19 @@
             <p id="login">Login</p>
             <form action="/login" method="POST">
                 <div class="mensagem-erro">
-        <p>
-            <?php
-                if (session_status() === PHP_SESSION_NONE) {
-                    session_start();
-                }
+                    <p>
+                        <?php
+                        if (session_status() === PHP_SESSION_NONE) {
+                            session_start();
+                        }
 
-                if(isset($_SESSION['mensagem-erro'])){
-                    echo $_SESSION['mensagem-erro'];
-                    unset($_SESSION['mensagem-erro']);
-                }
-            ?>
-        </p>
-    </div>
+                        if (isset($_SESSION['mensagem-erro'])) {
+                            echo $_SESSION['mensagem-erro'];
+                            unset($_SESSION['mensagem-erro']);
+                        }
+                        ?>
+                    </p>
+                </div>
                 <div class="container-input">
                     <input type="text" name="email" placeholder="E-mail:" id="email" required>
                     <div class="container-senha">
@@ -49,9 +49,14 @@
                 <div class="container-entrar">
                     <button type="submit" id="entrar">Entrar</button>
                 </div>
+                <div class="container-cadastro">
+                    <p>Não possui conta? <a href="cadastro.html" id="link-cadastro">Cadastre-se</a></p>
+                </div>
+
             </form>
         </div>
     </div>
 </body>
 <script src="../../../public/js/login.js"></script>
+
 </html>
