@@ -10,11 +10,12 @@ $router->post('crudPosts/edit', 'PostsController@edit');
 $router->post('crudPosts/delete', 'PostsController@delete');
 
 $router->get('posts/search', 'PostsController@search');
-$router->get('login', 'Controller@exibirLogin');
-$router->get('dashboard', 'Controller@exibirDashboard');
-$router->post('login', 'Controller@efetuarLogin');
-$router->post('logout', 'Controller@logout');
-$router->get('lista_usuarios', 'lista@');  //PENDENTE
+$router->get('login', 'Login_DashboardController@exibirLogin');
+$router->get('dashboard', 'Login_DashboardController@exibirDashboard');
+$router->post('login', 'Login_DashboardController@efetuarLogin');
+$router->post('logout', 'Login_DashboardController@logout');
+$router->get('lista_usuarios', 'Login_DashboardController@redirecionaTabela'); 
+$router->get('tabela_posts', 'Login_DashboardController@redirecionaTabela');   
 
 $router->get('crudUsers', 'UsersController@index');
 $router->post('crudUsers/create', 'UsersController@store');
