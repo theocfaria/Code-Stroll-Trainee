@@ -76,8 +76,12 @@ input#email {
 
 #olhoIcon {
     position: absolute;
-    right: 110px;
+    top: 50%;                 
+    transform: translateY(-50%); 
+    right: 20%;              
     font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .container-entrar {
@@ -118,6 +122,11 @@ input#email {
     font-size: 35px;
 }
 
+#x {
+    color: #555555; 
+    text-decoration: none; 
+}
+
 img#logo {
     width: 150px;
     position: absolute;
@@ -127,7 +136,7 @@ img#logo {
 
 #x:hover {
     transform: scale(1.05);
-    color: #6a085a;
+    color:rgba(202, 23, 42, 0.85);
 }
 
 @media (min-width: 320px) {
@@ -164,9 +173,10 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 35px;
-        font-size: 12px;
+        right: 10%;     
+        font-size: 16px;
     }
+    
     button#entrar{
         height: 30px;
         padding: 5px 15px;
@@ -208,8 +218,8 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 45px;
-        font-size: 14px;
+        right: 10%;
+        font-size: 16px;
     }
     button#entrar{
         height: 40px;
@@ -254,9 +264,10 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 73px;
-        font-size: 16px;
+        right: 14%;
+        font-size: 18px;
     }
+    
     button#entrar{
         height: 40px;
         padding: 5px 15px;
@@ -300,8 +311,8 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 93px;
-        font-size: 18px;
+        right: 14%;
+        font-size: 20px;
     }
     .container-input{
         font-size: 20px;
@@ -349,7 +360,6 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 130px;
         font-size: 22px;
     }
     .container-input{
@@ -399,7 +409,6 @@ img#logo {
     }
 
     #olhoIcon {
-        right: 200px;
         font-size: 44px;
     }
     button#entrar{
@@ -411,5 +420,12 @@ img#logo {
     #entrar{
         font-size: 50px;
     }
+
+    .mensagem-erro p {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 }

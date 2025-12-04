@@ -28,13 +28,32 @@ class QueryBuilder
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
-    //função criar
-    public function insert($table, $parameters)
+
+    public function verificaLogin($email, $senha)
+    {
+        $sql = 'SELECT * FROM users WHERE email = :email AND password = :password';
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'email' => $email,
+                'password' => $senha
+            ]);
+
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+            return $user;
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+       public function insert($table, $parameters)
     {
         $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
         $table,
@@ -164,5 +183,4 @@ class QueryBuilder
 
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
-
 }
