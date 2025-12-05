@@ -332,6 +332,13 @@ img#logo {
         top: -65px;
     }
 
+    #texto-cadastro {
+    width: 94%; 
+    text-align: left; 
+    font-size: 16px; 
+    font-family: "JetBrains Mono", monospace;
+}
+
     .bi-x {
         font-size: 30px;
     }
