@@ -21,11 +21,10 @@ body {
 }
 
 #Retangulo {
-    width: 50%;
+    width: 50%; 
     height: fit-content;
-    max-width: 2000px;
+    max-width: 650px; 
     min-width: 110px;
-    /*aspect-ratio: 2/1;*/
     background-color: #d6d5d5;
     border-radius: 50px;
     position: relative;
@@ -178,7 +177,7 @@ button#entrar {
     input#nome {
         width: 85%;
         height: 30px;
-        font-size: 16px;
+        font-size: 15px;
         padding: 10px 10px;
     }
 
@@ -186,7 +185,7 @@ button#entrar {
     input#confirmaSenha {
         width: 100%;
         height: 30px;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         padding: 10px 10px;
     }
@@ -241,7 +240,7 @@ button#entrar {
     input#senha,
     input#confirmaSenha {
         width: 100%;
-        height: 50px;
+        height: 40px;
         font-size: 18px;
         font-weight: 400;
         padding: 20px 10px;
@@ -297,7 +296,7 @@ button#entrar {
     input#senha,
     input#confirmaSenha {
         width: 100%;
-        height: 50px;
+        height: 40px;
         font-size: 18px;
         font-weight: 400;
         padding: 20px 10px;
@@ -417,8 +416,8 @@ button#entrar {
     input#senha,
     input#confirmaSenha {
         width: 100%;
-        height: 50px;
-        font-size: 18px;
+        height: 60px;
+        font-size: 22px;
         font-weight: 400;
         padding: 20px 10px;
     }
@@ -480,7 +479,7 @@ button#entrar {
     input#senha,
     input#confirmaSenha {
         width: 100%;
-        height: 50px;
+        height: 100px;
         font-size: 18px;
         font-weight: 400;
         padding: 20px 10px;
