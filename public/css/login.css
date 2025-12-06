@@ -21,14 +21,14 @@ body {
 }
 
 #Retangulo {
-    width: 60%;
-    height: fit-content;
-    max-width: 2000px;
-    min-width: 150px;
-    aspect-ratio: 2/1;
+    width: 50%;         
+    height: fit-content; 
+    max-width: 650px;   
+    min-width: 110px;
     background-color: #D6D5D5;
     border-radius: 50px;
     position: relative;
+    padding-bottom: 5px;
 }
 
 p#login {
@@ -146,7 +146,7 @@ img#logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5px; 
+    margin-top: 30px; 
     font-family: "JetBrains Mono", monospace; 
 }
 
@@ -198,7 +198,7 @@ img#logo {
     input#senha,
     input#email {
         width: 85%;
-        height: 30px;
+        height: 35px;
         font-size: 16px;
         padding: 10px 10px;
     }
@@ -209,7 +209,7 @@ img#logo {
     }
     
     button#entrar{
-        height: 30px;
+        height: 38px;
         padding: 5px 15px;
     }
     #entrar{
@@ -257,11 +257,11 @@ img#logo {
         font-size: 16px;
     }
     button#entrar{
-        height: 40px;
+        height: 45px;
         padding: 5px 15px;
     }
     #entrar{
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .container-cadastro p {
@@ -308,7 +308,7 @@ img#logo {
     }
     
     button#entrar{
-        height: 40px;
+        height: 45px;
         padding: 5px 15px;
     }
     #entrar{
@@ -424,7 +424,7 @@ img#logo {
         padding: 5px 20px;
     }
     #entrar{
-        font-size: 30px;
+        font-size: 26px;
     }
 
     .container-cadastro p {
