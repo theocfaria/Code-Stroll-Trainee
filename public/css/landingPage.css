@@ -33,6 +33,7 @@ main {
   background: linear-gradient(
     to bottom,
     #f73b46,
+    #832424,
     #832424  /* #812e2e    #881b1b   */
   ); 
 
@@ -46,9 +47,10 @@ main {
 }
 
 #titulo-pagina {
-  font-size: 48px;
+  font-size: 80px;
   font-weight: 800;
   margin-bottom: 50px;
+  color: rgb(255, 175, 175);
 }
 
 #texto-introducao {
@@ -74,11 +76,11 @@ main {
 }
 
 .titulo-secao {
-  color: #f97583;
+  color: #ffffff;
   font-size: 40px;
   font-weight: 800;
   text-align: center;
-  animation: pulse-color 3s ease-in-out infinite; 
+  /* animation: pulse-color 3s ease-in-out infinite;  */
 }
 
 .post-card {
@@ -236,17 +238,20 @@ main {
 }
 
 .bloco-pequeno {
-  background-color: #1f1f1f93;
+  background: linear-gradient(
+    rgba(247, 59, 78, 0.6) 70%, 
+    rgba(249, 117, 131, 0.6) 100%
+);
   border-radius: 10px;
   padding: 20px;
   display: flex;
   align-items: center;
   gap: 20px;
-  flex: 1;
   max-width: 100%;
   margin-left: 0;
   transition: all 0.3s ease;
   text-decoration: none;
+  height: max-content;
 }
 
 .bloco-icone {
@@ -635,7 +640,7 @@ main {
     padding: 60px 60px 30px 60px;
   }
   #titulo-pagina {
-    font-size: 32px;
+    font-size: 48px;
   }
   #texto-introducao {
     font-size: 25px;
