@@ -1,6 +1,5 @@
 body{
-    margin: 0;
-    background: white;
+    margin: 0; 
 }
 
 .pagina{
@@ -9,6 +8,12 @@ body{
     align-items: center;
     width: auto;
     width: 100%;
+    background: linear-gradient(
+    to bottom,
+    #f73b46,
+    #832424,
+    #832424  /* #812e2e    #881b1b   */
+     );
 }
 
 .introducao{
@@ -19,6 +24,7 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 40px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6))    
 }
 
 .img_logo{
@@ -56,7 +62,7 @@ body{
 
 #txt_sn{
     padding: 10px 60px;
-    text-align: center;
+    text-align: justify;
 }
 
 .txt{
@@ -68,6 +74,7 @@ body{
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     text-align: center;
+    color: white;
 }
 
 .mvv{
@@ -78,7 +85,6 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 30px;
-    background: rgb(129, 68, 185);
     padding: 20px 0px;
 }
 
@@ -119,11 +125,16 @@ body{
 
 .li{
     font-size: 40px;
-    color: rgb(129, 68, 185);
+    color: rgb(255, 175, 175);
 }
 
 .title{
     font-size: 30px;
+    color: rgb(255, 175, 175);
+}
+
+#txt_sn .title {
+    font-style: italic;
 }
 
 .cards{
@@ -132,6 +143,11 @@ body{
     height: 65vh;
     padding: 30px 0px;
     justify-content: space-between;
+     background: linear-gradient(
+            rgba(142, 93, 233, 0.3) 0%,
+            #b392f0 35%,
+            rgba(204, 122, 0, 0.3) 65%,
+            #cc7a00 100%);
 }
 
 .cards:hover{
@@ -140,7 +156,7 @@ body{
 }
 
 .botao{
-    background: rgb(129, 68, 185);
+    /* background: rgb(255, 175, 175); rgb(129, 68, 185); */
     width: 50px;
     height: 50px;
     border: none;
@@ -157,7 +173,7 @@ body{
 
 
 @media(min-width: 320px) {
-    .pagina{
+    /* .pagina{
         flex-direction: column;
         align-items: center;
         width: auto;
@@ -253,12 +269,10 @@ body{
 
     .bi{
         font-size: 12px;
-        color: white;
     }
 
     .li{
         font-size: 20px;
-        color: rgb(129, 68, 185);
     }
 
     .title{
@@ -279,7 +293,6 @@ body{
     }
 
     .botao{
-        background: rgb(129, 68, 185);
         width: 30px;
         height: 30px;
         border: none;
@@ -291,7 +304,7 @@ body{
         align-items: center;
         justify-content: space-between;
         gap: 30px;
-    }
+    } */
     
 }
 
@@ -312,9 +325,8 @@ body{
 }
 
 @media(min-width: 1440px) {
-body{
+/* body{
     margin: 0;
-    background: white;
 }
 
 .pagina{
@@ -392,7 +404,6 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 30px;
-    background: rgb(129, 68, 185);
     padding: 20px 0px;
 }
 
@@ -401,7 +412,6 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background: white;
     border: 1px;
     border-radius: 8px;
 }
@@ -411,7 +421,6 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background: white;
     border: 1px;
     border-radius: 8px;
 }
@@ -421,19 +430,16 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background: white;
     border: 1px;
     border-radius: 8px;
 }
 
 .bi{
     font-size: 30px;
-    color: white;
 }
 
 .li{
     font-size: 40px;
-    color: rgb(129, 68, 185);
 }
 
 .title{
@@ -454,7 +460,6 @@ body{
 }
 
 .botao{
-    background: rgb(129, 68, 185);
     width: 50px;
     height: 50px;
     border: none;
@@ -467,7 +472,7 @@ body{
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-}
+} */
 }
 
 @media(min-width: 1920px) {
