@@ -6,6 +6,7 @@ use App\Core\Router;
 
 $router->get('login', 'Login_DashboardController@exibirLogin');
 $router->get('dashboard', 'Login_DashboardController@exibirDashboard');
+$router->get('sidebar', 'SidebarController@exibirSidebar');  //última que criei
 $router->post('login', 'Login_DashboardController@efetuarLogin');
 $router->post('logout', 'Login_DashboardController@logout');
 $router->get('crudUsers', 'Login_DashboardController@redirecionaTabela'); 
