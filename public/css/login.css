@@ -148,12 +148,18 @@ img#logo {
     justify-content: center;
     align-items: center;
     margin-top: 30px; 
+    font-weight: 400;
     font-family: "JetBrains Mono", monospace; 
 }
 
 #link-cadastro {
     color: black; 
-    text-decoration: underline; 
+    text-decoration: none; 
+    font-weight: 650;
+}
+
+#link-cadastro:hover {
+    text-decoration: underline;
 }
 
 .container-cadastro p {
