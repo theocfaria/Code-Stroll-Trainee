@@ -165,7 +165,7 @@ main {
   background-color: #f73b4e;
   color: #ffffff;
   padding: 15px 20px;
-  border-radius: 15px;
+  border-radius: 16px;
   text-decoration: none;
   font-size: 32px;
   font-weight: 700;
@@ -461,7 +461,7 @@ main {
   }
 
   #titulo-pagina {
-    font-size: 28px;
+    font-size: 30px;
   }
   #texto-introducao {
     font-size: 18px;
@@ -601,7 +601,7 @@ main {
   }
 
   #titulo-pagina {
-    font-size: 32px;
+    font-size: 38px;
     text-align: left;
   }
 
