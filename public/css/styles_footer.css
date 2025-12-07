@@ -8,7 +8,7 @@ body {
 }
 
 .footer{
-    background-color: black;
+    background-color: #1f1f1f;
     width: 100%;
     height: auto;
     padding: 20px;
@@ -76,6 +76,13 @@ body {
     justify-content: center;
 }
 
+.texto_contato {
+    font-size: 12px;
+    height: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
 @media(min-width: 320px) {
     .conteudo {
         flex-direction: column;
@@ -122,7 +129,6 @@ body {
 
     .texto_contato {
         font-size: 12px;
-        height: auto;
     }
 }
 
