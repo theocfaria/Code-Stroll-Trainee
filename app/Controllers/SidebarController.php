@@ -6,6 +6,14 @@ use App\Core\App;
 use Exception;
 
 
-class SidebarController {
-    
+class SidebarController 
+{
 }
+        
+ 
+
+/*
+public function exibirSidebar()
+        
+    //return view('views/admin/sidebar')
+    */
