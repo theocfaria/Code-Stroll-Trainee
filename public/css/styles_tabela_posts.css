@@ -339,16 +339,36 @@ body {
     justify-content: center;
 }
 
-#pesquisa {
+#pesquisa{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    
+}
+
+#pesquisa-dentro{
+    display: flex;
+    justify-content: left;
     border: none;
-    border-radius: 12px;
-    width: 300px;
-    font-weight: 600;
-    padding: 8px 15px;
+    border: 1px;
+    border-radius: 100px;
+    gap: 10px;
+    background: rgb(231, 231, 231);
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.bi-search{
+    color: #F73B4E;
+    
+}
+
+#pesquisa input::placeholder {
+    color: #F73B4E;
+    opacity: 0.8; 
 }
 
 #pesquisa p {
@@ -472,7 +492,9 @@ td {
 }
 
 .bi{
-    font-size: 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 

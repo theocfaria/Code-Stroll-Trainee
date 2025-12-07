@@ -30,7 +30,10 @@
         </div>!-->
 
         <form method="GET" action="/posts/search" id="pesquisa">
-            <input type="text" name="busca" placeholder="Buscar post">
+            <button id="pesquisa-dentro">
+            <i class="bi bi-search"></i>
+            <input type="text" name="busca" placeholder="Buscar post" >
+            </button>
         </form>
 
         <div class="tabela">
