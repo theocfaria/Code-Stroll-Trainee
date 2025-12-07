@@ -258,18 +258,23 @@ main {
   font-size: 40px;
   width: 60px;
   flex-shrink: 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .bloco-texto {
   display: flex;
   flex-direction: column;
+  margin-bottom: 6px; 
 }
 
 .bloco-titulo {
   font-size: 22px;
   font-weight: 800;
   color: #f73b46;
+  margin-bottom: 4px;
 }
 
 .bloco-descricao {
@@ -741,4 +746,13 @@ main {
     padding: 20px 30px;
     font-size: 36px;
   }
+}
+
+
+/* testar centralização 
+.bloco-pequeno * {
+    border: 1px solid lime;
+}
+.bloco-icone {
+    background: rgba(255, 0, 0, 0.3);
 }
