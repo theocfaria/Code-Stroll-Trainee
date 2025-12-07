@@ -27,7 +27,7 @@
         <img src="../../../public/assets/logotipo.png" alt="Logotipo 2">
       </div>
 
-      <input type="text" id="barra-pesquisa" placeholder="Pesquisar">
+      <input type="text" id="barra-pesquisa" placeholder="Pesquisar post">
       <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>
         <div id="link">
           <a href="link-home" id="home">Home</a>
