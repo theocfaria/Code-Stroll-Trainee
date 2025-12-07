@@ -4,14 +4,12 @@
 }
 
 body {
-    display: flex;
-    height: 100vh;
-    align-items: end;
+    height: auto;
 }
 
 .footer{
     background-color: black;
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 20px;
 }
@@ -79,10 +77,6 @@ body {
 }
 
 @media(min-width: 320px) {
-    body {
-        width: 100vw;
-    }
-
     .conteudo {
         flex-direction: column;
         align-items: center;
@@ -128,6 +122,7 @@ body {
 
     .texto_contato {
         font-size: 12px;
+        height: auto;
     }
 }
 

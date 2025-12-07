@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Controllers;
-use App\Controllers\ExampleController;
+//namespace App\Controllers;
+//use App\Controllers\ExampleController;
 use App\Core\Router;
 
 $router->get('crudPosts', 'PostsController@index');
@@ -21,3 +21,5 @@ $router->post('crudUsers/create', 'UsersController@store');
 $router->post('crudUsers/edit', 'UsersController@edit');
 $router->post('crudUsers/delete', 'UsersController@delete');
 $router->get('crudUsers/search', 'UsersController@search');
+
+$router->get('', 'LandingPageController@index');

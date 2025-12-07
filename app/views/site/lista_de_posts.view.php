@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lista de Posts</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../public/css/lista_de_posts.css" /> 
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Principais Notícias</h1>       
+        
+        <div class = "search">
+            <button class = "pesquisar"> <i class="material-icons">search</i> </button>
+            
+            <input type="search" placeholder="Pesquisar" >
+        </div>
+
+        <div class = "posts">
+            
+            <div class = "post">
+                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                
+                <div class = "info">
+                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="autor">Jane Doe</p>
+                    <p class="publicacao">Publicado em 09/09/1999</p>
+                </div>
+            
+                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
+            </div>
+
+            <div class = "post">
+                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                
+                <div class = "info">
+                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="autor">Jane Doe</p>
+                    <p class="publicacao">Publicado em 09/09/1999</p>
+                </div>
+            
+                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
+            </div>
+
+            <div class = "post">
+                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                
+                <div class = "info">
+                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="autor">Jane Doe</p>
+                    <p class="publicacao">Publicado em 09/09/1999</p>
+                </div>
+            
+                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
+            </div>
+
+            <div class = "post">
+                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                
+                <div class = "info">
+                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="autor">Jane Doe</p>
+                    <p class="publicacao">Publicado em 09/09/1999</p>
+                </div>
+            
+                <p class = "resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
+            </div>
+
+            <div class = "post">
+                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                
+                <div class = "info">
+                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="autor">Jane Doe</p>
+                    <p class="publicacao">Publicado em 09/09/1999</p>
+                </div>
+            
+                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
+            </div>
+
+            <div class = "post">
+                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                
+                <div class = "info">
+                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="autor">Jane Doe</p>
+                    <p class="publicacao">Publicado em 09/09/1999</p>
+                </div>
+            
+                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui.</p>
+            </div>
+        </div>
+
+        <div class = "paginacao">
+                <a href="#" class="passa_pag"><i class="material-icons">arrow_back</i> <p>Anterior</p> </a>
+                <a href="#" id="atual">1</a>
+                <a href="#">2</a>
+                <a href="#" class="extra">3</a>
+                <a href="#">...</a>
+                <a href="#" class="extra">67</a>
+                <a href="#">68</a>
+                <a href="#">69</a>
+                <a href="#" class="passa_pag"> <p>Próximo</p> <i class="material-icons">arrow_forward</i></a>
+            </div>
+
+    </div>
+
+</body>
+</html>
