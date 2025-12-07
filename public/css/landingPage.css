@@ -599,6 +599,15 @@ main {
     flex-direction: column;
     gap: 20px;
     width: auto;
+
+   .bloco-descricao {
+    font-size: 17px;
+  }
+
+  .bloco-titulo {
+    font-size: 22px;
+  }
+
   }
   #texto-introducao {
     text-align: left;
