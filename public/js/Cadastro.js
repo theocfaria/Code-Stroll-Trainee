@@ -13,52 +13,57 @@ function alternaOlho() {
   }
 }
 
-function definirDataAtual() {
-  const campoData = document.getElementById("data");
+function alternaOlhoConfirma() {
+  const inputConfirma = document.getElementById("confirmaSenha");
+  const icone = document.getElementById("olhoIconConfirma");
 
-  if (campoData) {
-    const hoje = new Date();
-    const ano = hoje.getFullYear();
-    const mes = String(hoje.getMonth() + 1).padStart(2, "0");
-    const dia = String(hoje.getDate()).padStart(2, "0");
-    const dataFormatada = `${ano}-${mes}-${dia}`;
-    campoData.value = dataFormatada;
+  if (inputConfirma.type === "password") {
+    inputConfirma.type = "text";
+    icone.classList.remove("bi-eye-slash");
+    icone.classList.add("bi-eye");
+  } else {
+    inputConfirma.type = "password";
+    icone.classList.remove("bi-eye");
+    icone.classList.add("bi-eye-slash");
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  definirDataAtual();
   const btnEntrar = document.getElementById("entrar");
   const inputNome = document.getElementById("nome");
-  const inputSobrenome = document.getElementById("sobrenome");
   const inputEmail = document.getElementById("email");
   const inputSenha = document.getElementById("senha");
-  const inputData = document.getElementById("data");
+  const inputConfirmaSenha = document.getElementById("confirmaSenha");
 
   if (btnEntrar) {
     btnEntrar.addEventListener("click", (e) => {
       const nome = inputNome.value.trim();
-      const sobrenome = inputSobrenome.value.trim();
       const email = inputEmail.value.trim();
       const senha = inputSenha.value;
-      const data = inputData.value;
-      if (!nome || !sobrenome || !email || !senha || !data) {
+      const confirmaSenha = inputConfirmaSenha.value;
+
+      if (!nome || !email || !senha || !confirmaSenha) {
         alert("Todos os campos são obrigatórios!");
         return;
       }
 
       if (nome.length < 3) {
-        alert("Erro: O nome precisa ter no mínimo 3 caracteres!");
+        alert("Erro: o nome precisa ter no mínimo 3 caracteres!");
         return;
       }
 
       if (!email.includes("@") || !email.includes(".")) {
-        alert("Erro: E-mail inválido!");
+        alert("Erro: e-mail inválido!");
         return;
       }
 
       if (senha.length < 6) {
-        alert("Erro: A senha precisa ter no mínimo 6 caracteres!");
+        alert("Erro: a senha precisa ter no mínimo 6 caracteres!");
+        return;
+      }
+
+      if (senha !== confirmaSenha) {
+        alert("Erro: as senhas não coincidem!");
         return;
       }
 
@@ -67,20 +72,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const letterRegex = /[a-zA-Z]/;
 
       if (!specialCharRegex.test(senha)) {
-        alert("Erro: A senha precisa de ao menos um caractere especial!");
+        alert("Erro: a senha precisa de ao menos um caractere especial!");
         return;
       }
       if (!numberRegex.test(senha)) {
-        alert("Erro: A senha precisa de ao menos um número!");
+        alert("Erro: a senha precisa de ao menos um número!");
         return;
       }
       if (!letterRegex.test(senha)) {
-        alert("Erro: A senha precisa de ao menos uma letra!");
+        alert("Erro: a senha precisa de ao menos uma letra!");
         return;
       }
 
       console.log("Cadastro Validado!");
-      alert("Cadastro realizado com sucesso! (Simulação)");
+      alert("Cadastro realizado com sucesso!");
     });
   }
 });

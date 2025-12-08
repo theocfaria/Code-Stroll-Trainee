@@ -10,7 +10,6 @@ body {
     background-size: cover;
     font-family: 'silkscreen', sans-serif;
     color: black;
-
 }
 
 #container {
@@ -22,14 +21,14 @@ body {
 }
 
 #Retangulo {
-    width: 60%;
-    height: fit-content;
-    max-width: 2000px;
-    min-width: 150px;
-    aspect-ratio: 2/1;
+    width: 50%;         
+    height: fit-content; 
+    max-width: 650px;   
+    min-width: 110px;
     background-color: #D6D5D5;
     border-radius: 50px;
     position: relative;
+    padding-bottom: 5px;
 }
 
 p#login {
@@ -90,13 +89,18 @@ input#email {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 10px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+form {
+    padding-bottom: 15px; 
 }
 
 #entrar {
     border: none;
     width: fit-content;
     height: fit-content;
+    font-weight: 600;
     background-color: rgba(202, 23, 42, 0.85);
     border-radius: 30px;
     font-family: 'Mono JetBrains', monospace;
@@ -130,7 +134,7 @@ input#email {
 img#logo {
     width: 150px;
     position: absolute;
-    left: 35%;
+    left: 38%;
     top: -75px;
 }
 
@@ -138,6 +142,40 @@ img#logo {
     transform: scale(1.05);
     color:rgba(202, 23, 42, 0.85);
 }
+
+.container-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+    font-weight: 400;
+    font-family: "JetBrains Mono", monospace; 
+}
+
+#link-cadastro {
+    color: black; 
+    text-decoration: none; 
+    font-weight: 650;
+}
+
+#link-cadastro:hover {
+    text-decoration: underline;
+}
+
+.container-cadastro p {
+    color: black; 
+    font-size: 17px; 
+    margin: 0; 
+}
+
+/*
+#texto-cadastro {
+    width: 94%; 
+    text-align: left; 
+    font-size: 16px; 
+    font-family: "JetBrains Mono", monospace;
+}
+*/
 
 @media (min-width: 320px) {
     #Retangulo {
@@ -167,7 +205,7 @@ img#logo {
     input#senha,
     input#email {
         width: 85%;
-        height: 30px;
+        height: 35px;
         font-size: 16px;
         padding: 10px 10px;
     }
@@ -178,11 +216,15 @@ img#logo {
     }
     
     button#entrar{
-        height: 30px;
+        height: 38px;
         padding: 5px 15px;
     }
     #entrar{
         font-size: 16px;
+    }
+
+    .container-cadastro p {
+        font-size: 12px;
     }
 
 }@media (min-width: 425px) {
@@ -222,11 +264,15 @@ img#logo {
         font-size: 16px;
     }
     button#entrar{
-        height: 40px;
+        height: 45px;
         padding: 5px 15px;
     }
     #entrar{
-        font-size: 16px;
+        font-size: 17px;
+    }
+
+    .container-cadastro p {
+        font-size: 13px;
     }
 
 }
@@ -269,11 +315,15 @@ img#logo {
     }
     
     button#entrar{
-        height: 40px;
+        height: 45px;
         padding: 5px 15px;
     }
     #entrar{
         font-size: 18px;
+    }
+
+    .container-cadastro p {
+        font-size: 15px;
     }
 
 }
@@ -285,9 +335,16 @@ img#logo {
     img#logo {
         width: 130px;
         position: absolute;
-        right: 80%;
+        left: 42%;
         top: -65px;
     }
+
+    #texto-cadastro {
+    width: 94%; 
+    text-align: left; 
+    font-size: 16px; 
+    font-family: "JetBrains Mono", monospace;
+}
 
     .bi-x {
         font-size: 30px;
@@ -323,6 +380,10 @@ img#logo {
     }
     #entrar{
         font-size: 22px;
+    }
+
+    .container-cadastro p {
+        font-size: 16px;
     }
 
 }
@@ -370,7 +431,11 @@ img#logo {
         padding: 5px 20px;
     }
     #entrar{
-        font-size: 30px;
+        font-size: 26px;
+    }
+
+    .container-cadastro p {
+        font-size: 22px;
     }
 
 }
@@ -419,6 +484,10 @@ img#logo {
     }
     #entrar{
         font-size: 50px;
+    }
+
+    .container-cadastro p {
+        font-size: 26px;
     }
 
     .mensagem-erro p {

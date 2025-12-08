@@ -21,21 +21,29 @@
 
         <div id="Retangulo">
             <div id="xis">
-                <a id="x" href="navbar.html"><i class="bi bi-x"></i></a>
+                <a id="x" href="/"><i class="bi bi-x"></i></a>
             </div>
             <p id="cadastro">Cadastro</p>
             <div class="container-input">
                 <input type="text" placeholder="Nome:" id="nome" required>
-                <input type="text" placeholder="Sobrenome:" id="sobrenome"  required>
+                
                 <input type="text" placeholder="E-mail:" id="email" required>
+                
                 <div class="container-senha">
                     <input type="password" placeholder="Senha:" id="senha" required>
                     <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
                 </div>
-                <input type="date" placeholder="Data de nascimento" id="data">
+
+                <div class="container-senha">
+                    <input type="password" placeholder="Confirmar Senha:" id="confirmaSenha" required>
+                    <i class="bi bi-eye-slash" id="olhoIconConfirma" onclick="alternaOlhoConfirma()"></i>
+                </div>
             </div>
             <div class="container-entrar">
-                <button id="entrar">Criar</button>
+                <a href="/login">
+                    <button href= "" id="entrar">Criar</button>
+                </a>
+                
             </div>
         </div>
 

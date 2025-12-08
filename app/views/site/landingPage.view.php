@@ -151,7 +151,7 @@
           <div class="nav-arrow arrow-right" id="seta-direita">&#10095</div>
         </div>
       </div> 
-      <a href="#" class="bot-ver-todos">Ver todos os posts</a>
+      <a href="lista-de-posts" class="bot-ver-todos">Ver todos os posts</a>
 
     </section>
   </main>

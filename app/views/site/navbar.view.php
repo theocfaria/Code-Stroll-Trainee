@@ -30,7 +30,11 @@
         
       </div>
 
-      <input type="text" id="barra-pesquisa" placeholder="Pesquisar post">
+      <button class= "botao_pesquisa">
+        <input type="text" id="barra-pesquisa" placeholder="Pesquisar post">
+        <i class="bi-search"></i>
+      </button>
+      
       <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>
         <div id="link">
           <a href="/" id="home">Home</a>

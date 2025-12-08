@@ -13,7 +13,7 @@
 <body>
     <?php require __DIR__ . '/navbar.view.php'; ?>
     <div class="conteudo">
-        <h1>Principais Notícias</h1>       
+        <h1>Principais Postagens</h1>       
 
         <div class = "posts">
             
