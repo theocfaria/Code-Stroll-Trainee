@@ -20,7 +20,7 @@
     <div id="container">
         <div id="Retangulo">
             <div id="xis">
-                <a id="x" href="navbar.html"><i class="bi bi-x"></i></a>
+                <a id="x" href="/"><i class="bi bi-x"></i></a>
             </div>
             <img src="../../../public/assets/logotipo.png" alt="Logotipo" id="logo">
             <p id="login">Login</p>

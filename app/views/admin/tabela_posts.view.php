@@ -4,8 +4,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -14,28 +13,19 @@
 </head>
 
 <body>
-    <div id="tela"></div>
-
+    <?php require __DIR__ . '/sidebar.view.php'; ?>
     <div class="navbar">
         <p id="texto_post">TABELA DE POSTS</p>
         <button id="criar" onclick="abrirModal('modal-criar')"><i class="bi bi-plus-lg"></i></button>
     </div>
 
     <div class="conteudo">
-        <!--<div class="barra_pesquisa">
-            <button id="pesquisa">
-                <p>PESQUISAR</p>
-                <i class="bi bi-search"></i>
-            </button>
-        </div>!-->
-
         <form method="GET" action="/posts/search" id="pesquisa">
             <button id="pesquisa-dentro">
             <i class="bi bi-search"></i>
             <input type="text" name="busca" placeholder="Buscar post" >
             </button>
         </form>
-
         <div class="tabela">
             <table>
                 <thead>
@@ -80,17 +70,6 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
-            <!--<div class="foot">
-                <button class="botao_foot1"><i class="bi bi-arrow-left-circle"></i></button>
-
-                <button class="botao_foot pagina-ativa">1</button>
-                <button class="botao_foot">2</button>
-                <button class="botao_foot">3</button>
-                <button class="botao_foot">4</button> aqqqqqqqqq
-
-                <button class="botao_foot1"><i class="bi bi-arrow-right-circle"></i></button>
-            </div>!-->
-
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <?php $tempSearch = isset($busca) && $busca !== '' ? '&busca='. urlencode($busca) : ""; ?>

@@ -19,12 +19,10 @@
 
 body{
     font-family: 'JetBrains Mono', monospace;
-    background-color: #1f1f1f;
     z-index: -1;
     background: none;
     overflow-x: hidden;
-    background-image: url('../../public/assets/img_de_fundo_code_stroll_escura.jpg');
-    opacity: 0.8;
+    background: url('../../public/assets/img_de_fundo_code_stroll_escura.jpg') center/cover no-repeat;
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-position: center; /* Centraliza a imagem */
     padding: 0px;
@@ -40,12 +38,15 @@ body::before {
     opacity: 1; /* controla só a opacidade do fundo */
     background-color: #1f1f1f; /* cor de fundo para quando a imagem não carregar */
     z-index: -1; /* fica atrás de todo o conteúdo */
+    display: flex;
+    flex-direction: row;
 }
 
 .conteudo{
     margin: 0 auto;
     justify-content: center;
-    padding: 0px 60px
+    padding: 0px 60px;
+    background: url('../../public/assets/img_de_fundo_code_stroll_escura.jpg') center/cover no-repeat;
 }
 
 .conteudo .search {
@@ -254,6 +255,10 @@ body::before {
     pointer-events: none;
 }
 
+h1{
+    padding-top: 2%;
+}
+
 /*Responsividade 320, 425, 768, 1024, 1440, 1920, 2560*/
 /**/
 @media (max-width:320px) {
@@ -454,3 +459,7 @@ body::before {
     }
 
 }
+
+/*
+overflow: hidden;
+text-overflow: ellipsis;*/

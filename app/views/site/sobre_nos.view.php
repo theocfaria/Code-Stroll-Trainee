@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
+    <?php require __DIR__ . '/navbar.view.php'; ?>
     <div class ="pagina">
         <div class="introducao">
             <div class="sobre_nos">
@@ -59,6 +60,6 @@
             </div>
         </div>
     </div>
-    
+<?php require __DIR__ . '/footer.view.php'; ?>
 </body>
 </html>

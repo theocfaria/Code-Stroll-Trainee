@@ -16,7 +16,7 @@
 
 <body>
     <div class="footer">
-    <div class="conteudo">
+    <div class="conteudo_foot">
 
         <div class="redes_sociais">
             <div class="texto_redes">

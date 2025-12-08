@@ -156,6 +156,7 @@
     </section>
   </main>
   <script src="/public/js/landing-page.js"></script>
+  <?php require __DIR__ . '/footer.view.php'; ?>
 </body>
-<?php require __DIR__ . '/footer.view.php'; ?>
+
 </html>

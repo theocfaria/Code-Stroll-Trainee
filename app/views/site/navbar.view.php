@@ -13,27 +13,30 @@
 <body>
   <div id="botoes-telefone">
     <div class="links-telefone">
-          <a href="link-home" id="home">Home</a>
-          <a href="link-sobre-nós" id="sobre-nos">Sobre nós</a>
-          <a href="link-publicaões" id="publicacoes">Publicações</a>
-          <a href="link-do-login" id="login">Login</a>
+          <a href="/" id="home">Home</a>
+          <a href="sobre-nos" id="sobre-nos">Sobre nós</a>
+          <a href="lista-de-posts" id="publicacoes">Publicações</a>
+          <a href="login" id="login">Login</a>
     </div>
     <i class="bi bi-x" id="icon" onclick="fechaMenu('botoes-telefone', 'barra')"></i>
     </div>
     
     <div id="barra">
       <div class="logotipo"> 
-        <img src="../../../public/assets/Logo.png" alt="Logotipo">   
-        <img src="../../../public/assets/logotipo.png" alt="Logotipo 2">
+        <a href="/">
+          <img src="../../../public/assets/Logo.png" alt="Logotipo">   
+          <img src="../../../public/assets/logotipo.png" alt="Logotipo 2">
+        </a>
+        
       </div>
 
       <input type="text" id="barra-pesquisa" placeholder="Pesquisar post">
       <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>
         <div id="link">
-          <a href="link-home" id="home">Home</a>
-          <a href="link-sobre-nós" id="sobre-nos">Sobre nós</a>
-          <a href="link-publicaões" id="publicacoes">Publicações</a>
-          <a href="link-do-login" id="login">Login</a>
+          <a href="/" id="home">Home</a>
+          <a href="sobre-nos" id="sobre-nos">Sobre nós</a>
+          <a href="lista-de-posts" id="publicacoes">Publicações</a>
+          <a href="login" id="login">Login</a>
         </div>
     </div>
   <script src="../../../public/js/script.js"></script>

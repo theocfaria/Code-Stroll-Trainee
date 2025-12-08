@@ -11,14 +11,9 @@
     <link rel="stylesheet" href="../../../public/css/lista_de_posts.css" /> 
 </head>
 <body>
+    <?php require __DIR__ . '/navbar.view.php'; ?>
     <div class="conteudo">
         <h1>Principais Notícias</h1>       
-        
-        <div class = "search">
-            <button class = "pesquisar"> <i class="material-icons">search</i> </button>
-            
-            <input type="search" placeholder="Pesquisar" >
-        </div>
 
         <div class = "posts">
             
@@ -26,7 +21,7 @@
                 <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
                 
                 <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
+                    <p class="titulo_post"><strong>Título do Post 1Título do Post 1Título do Post 1Título do Post 1Título do Post 1</strong></p>
                     <p class="autor">Jane Doe</p>
                     <p class="publicacao">Publicado em 09/09/1999</p>
                 </div>
@@ -108,6 +103,6 @@
             </div>
 
     </div>
-
+<?php require __DIR__ . '/footer.view.php'; ?>
 </body>
 </html>

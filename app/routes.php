@@ -23,3 +23,7 @@ $router->post('crudUsers/delete', 'UsersController@delete');
 $router->get('crudUsers/search', 'UsersController@search');
 
 $router->get('', 'LandingPageController@index');
+
+$router->get('sobre-nos', 'SobreNosController@index');
+
+$router->get('lista-de-posts', 'Lista_de_PostsController@index');
