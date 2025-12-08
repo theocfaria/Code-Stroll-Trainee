@@ -26,8 +26,16 @@
 <body>
     <div id="container">
         <div id="links">
-            <a href="crudUsers" id="usuarios"><i class="bi bi-person-fill-gear"> Tabela de Usuários </i></a>
-            <a href="crudPosts" id="posts"><i class="bi bi-table "> Tabela de Posts </i></a>
+            <a href="crudUsers" id="usuarios">
+                <i class="bi bi-person-fill-gear"> 
+                    <p class="texto">Tabela de Usuários</p>
+                </i>
+            </a>
+            <a href="crudPosts" id="posts">
+                <i class="bi bi-table ">
+                     <p class="texto">Tabela de Posts </p>
+                </i>
+            </a>
         </div>
         
         <div id="contem-logout">
