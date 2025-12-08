@@ -59,6 +59,7 @@ main {
 
 .bloco-pequeno .bloco-titulo {
     color: rgb(255, 175, 175);
+    font-size: 23px;
 }
 
 .bloco-pequeno .bloco-texto {
