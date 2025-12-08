@@ -217,7 +217,7 @@ body {
         padding: 8px 15px;
     }
 
-    .botao_pesquisa {
+   .botao_pesquisa {
     display: flex;
     justify-content: space-between;
     border: 2px solid #F73B4E;
