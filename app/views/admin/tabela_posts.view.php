@@ -13,17 +13,19 @@
 </head>
 
 <body>
+    
     <?php require __DIR__ . '/sidebar.view.php'; ?>
+    <div class="pagina_toda">
     <div class="navbar">
         <p id="texto_post">TABELA DE POSTS</p>
-        <button id="criar" onclick="abrirModal('modal-criar')"><i class="bi bi-plus-lg"></i></button>
+        <button id="criar" onclick="abrirModal('modal-criar')"><i class="bi-plus-lg"></i></button>
     </div>
 
     <div class="conteudo">
         <form method="GET" action="/posts/search" id="pesquisa">
             <button id="pesquisa-dentro">
-            <i class="bi bi-search"></i>
             <input type="text" name="busca" placeholder="Buscar post" >
+            <i class="bi bi-search"></i>
             </button>
         </form>
         <div class="tabela">
@@ -76,7 +78,7 @@
 
 
                     <li class="page-item setas<?= $page == 1 ?'disabled' : '' ?>" id="setas">
-                        <a class="page-link" href="?pagina=<?= max(1,$page-1) ?><?= $tempSearch ?> "><i class="bi bi-arrow-left-circle"></i></a>
+                        <a class="page-link" href="?pagina=<?= max(1,$page-1) ?><?= $tempSearch ?> "><i class="setas_pag bi-arrow-left-circle"></i></a>
                     </li>
 
                     <li class="page-item <?= $page == 1 ?'active' : '' ?>">
@@ -110,7 +112,7 @@
                     </li>
 
                     <li class="page-item setas<?= $page == $total ?'disabled' : '' ?>" id="setas">
-                        <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?><?= $tempSearch ?>"><i class="bi bi-arrow-right-circle"></i></a>
+                        <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?><?= $tempSearch ?>"><i class="setas_pag bi-arrow-right-circle"></i></a>
                     </li>
                 </ul>
             </nav>
@@ -225,6 +227,7 @@
             </div>
         </form>
         <p id="modal-criar-erro" class="modal-erro"></p>
+    </div>
     </div>
 </body>
 

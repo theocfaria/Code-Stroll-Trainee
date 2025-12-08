@@ -6,9 +6,15 @@
 body {
     margin: 0;
     padding: 0;
+    gap: 80px;
+}
+
+.pagina_toda{
     display: flex;
-    gap: 20px;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 4%;
 }
 
 #tela {
@@ -250,7 +256,7 @@ body {
     background: linear-gradient(90deg, #b392f099, #ff980080);
     display: flex;
     justify-content: space-between;
-    padding: 0px 150px;
+    padding: 40px 80px;
     align-items: center;
     font-weight: 700;
 }
@@ -279,6 +285,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, opacity 0.2s ease;
+    padding: 0px 10px;
 }
 
 #criar:hover {
@@ -306,12 +313,8 @@ body {
     font-size: 20px;
 }
 
-.bi-arrow-left-circle {
-    font-size: 24px;
-}
-
-.bi-arrow-right-circle {
-    font-size: 24px;
+.setas_pag{
+    font-size: 28px;
 }
 
 .btn-primary {
@@ -342,7 +345,7 @@ body {
 #pesquisa{
     display: flex;
     justify-content: center;
-    
+    padding-top: 2%;
 }
 
 #pesquisa-dentro{
@@ -359,11 +362,16 @@ input{
     width: 100%;
     background: transparent;
     border: none;
+    padding: 2% 4%;
 }
 
 .bi-search{
     color: #F73B4E;
-    
+    padding-right: 2%;
+}
+
+.bi-plus-lg{
+    font-size: 30px;
 }
 
 #pesquisa input::placeholder {
@@ -513,10 +521,6 @@ td {
         font-size: 26px;
     }
 
-    .navbar {
-        padding: 0 100px;
-    }
-
     .tabela {
         width: 90%;
     }
@@ -535,10 +539,6 @@ td {
 @media (max-width: 2559px) {
     * {
         font-size: 21px;
-    }
-
-    .navbar {
-        padding: 0 100px;
     }
 
     .tabela {
@@ -561,10 +561,6 @@ td {
         font-size: 19px;
     }
 
-    .navbar {
-        padding: 0 100px;
-    }
-
     .tabela {
         width: 90%;
     }
@@ -585,10 +581,6 @@ td {
         font-size: 17px;
     }
 
-    .navbar {
-        padding: 0 100px;
-    }
-
     .tabela {
         width: 90%;
     }
@@ -607,10 +599,6 @@ td {
 @media (max-width: 1023px) {
     * {
         font-size: 16px;
-    }
-
-    .navbar {
-        padding: 0 40px;
     }
 
     #pesquisa p {

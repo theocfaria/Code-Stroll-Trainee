@@ -7,10 +7,10 @@ use Exception;
 
 class Login_DashboardController
 {
-    public function redirecionaTabela()
-    {
-        return view('admin/tabela_posts', compact('posts'));
-    }
+    // public function redirecionaTabela()
+    // {
+    //     return view('admin/tabela_posts', compact('posts'));
+    // }
 
     public function exibirLogin()
     {

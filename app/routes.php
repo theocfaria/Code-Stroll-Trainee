@@ -16,8 +16,6 @@ $router->get('dashboard', 'Login_DashboardController@exibirDashboard');
 $router->get('sidebar', 'SidebarController@exibirSidebar');  //Ãºltima que criei
 $router->post('login', 'Login_DashboardController@efetuarLogin');
 $router->post('logout', 'Login_DashboardController@logout');
-$router->get('crudUsers', 'Login_DashboardController@redirecionaTabela'); 
-$router->get('crudPosts', 'Login_DashboardController@redirecionaTabela'); 
 
 //tabela usuarios
 $router->get('crudUsers', 'UsersController@index');
