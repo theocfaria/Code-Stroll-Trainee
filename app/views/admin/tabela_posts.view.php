@@ -22,7 +22,7 @@
     </div>
 
     <div class="conteudo">
-        <form method="GET" action="/posts/search" id="pesquisa">
+        <form method="GET" action="/crudPosts/search" id="pesquisa">
             <button id="pesquisa-dentro">
             <input type="text" name="busca" placeholder="Buscar post" >
             <i class="bi bi-search"></i>

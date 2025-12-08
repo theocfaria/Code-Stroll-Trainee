@@ -9,6 +9,7 @@ $router->get('crudPosts', 'PostsController@index');
 $router->post('crudPosts/create', 'PostsController@store');
 $router->post('crudPosts/edit', 'PostsController@edit');
 $router->post('crudPosts/delete', 'PostsController@delete');
+$router->get('crudPosts/search', 'PostsController@search');
 
 //login
 $router->get('login', 'Login_DashboardController@exibirLogin');

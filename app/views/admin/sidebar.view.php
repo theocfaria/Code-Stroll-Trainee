@@ -20,25 +20,25 @@
         <nav class="content-sidebar">
           <ul>
             <li class="item-sidebar">
-              <a href="#">
+              <a href="/">
                 <i class="fa-solid fa-house"></i>
                 <span class="item-description">Página inicial</span>
               </a>
             </li>
             <li class="item-sidebar active">
-              <a href="#">
+              <a href="/dashboard">
                 <i class="fa-solid fa-chart-column"></i>
                 <span class="item-description">Dashboard</span>
               </a>
             </li>
             <li class="item-sidebar">
-              <a href="#">
+              <a href="/lista-de-posts">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <span class="item-description">Publicações</span>
               </a>
             </li>
             <li class="item-sidebar">
-              <a href="#">
+              <a href="/crudUsers">
                 <i class="fa-solid fa-user-pen"></i>
                 <span class="item-description">Úsuários</span>
               </a>
@@ -48,10 +48,12 @@
       </div>
 
       <div class="logout-sidebar">
-        <button type="button" id="button-logout">
+        <form action="/logout" method="POST">
+          <button type="submit" id="button-logout">
           <i class="fa-solid fa-right-from-bracket" id="icon-logout"></i>
           <span class="item-description">Logout</span>
-        </button>
+          </button>
+        </form>  
       </div>
     </aside>
   </body>
