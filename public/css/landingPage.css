@@ -647,14 +647,14 @@ main {
   }
 }
 
-/* 7°: VERSÃO DESKTOP 1440px a 1919px */
+/* 7°: VERSÃO Notebook 1440px a 1919px */
 
 @media (min-width: 1440px) {
   .introducao-lp {
     padding: 60px 60px 30px 60px;
   }
   #titulo-pagina {
-    font-size: 48px;
+    font-size: 42px;
   }
   #texto-introducao {
     font-size: 25px;

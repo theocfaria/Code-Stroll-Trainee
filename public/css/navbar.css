@@ -96,7 +96,6 @@ body {
     justify-content: center;
     font-family: 'jetbrains mono', monospace;
     color: #F73B4E;
-    font-size: 18px;
 }
 #link {
     font-family: 'jetbrains mono', monospace;
@@ -152,9 +151,7 @@ body {
     #input barra-pesquisa {
         font-size: 10px;
     }
-    #barra-pesquisa::placeholder {
-        font-size: 14px;
-    }
+    
     #link{
         display: none;
     }
@@ -189,9 +186,7 @@ body {
     #barra-pesquisa {
         padding: 5px 10px;
     }
-    #barra-pesquisa::placeholder {
-        font-size: 18px;
-    }
+    
     .logotipo img:nth-child(1) {
         display: block;
         width: 180px;
@@ -207,20 +202,28 @@ body {
         margin: 0px 0px 0px 0px;
     }   
 }
+
 @media (min-width: 1440px){
     #barra-pesquisa {
         padding: 10px 15px;
+        font-size: 24px;
         border-radius: 25px;
         background-size: 25px 25px;
-    }
-    #barra-pesquisa::placeholder {
-        font-size: 26px;
     }
     
     #home, #publicacoes, #sobre-nos, #login {
         font-size: 26px;
         padding: 8px 15px;
     }
+
+    .botao_pesquisa {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #F73B4E;
+    border-radius: 100px;
+    width: 100%;       
+    max-width: 350px; 
+}
 }
 @media (min-width: 1920px){
     #barra-pesquisa {
@@ -228,9 +231,7 @@ body {
         border-radius: 30px;
         background-size: 30px 30px;
     }
-    #barra-pesquisa::placeholder {
-        font-size: 32px;
-    }
+   
     
     #home, #publicacoes, #sobre-nos, #login {
         font-size: 32px;
@@ -245,9 +246,7 @@ body {
         background-size: 45px 45px;
         background-position: right 25px center;
     }
-    #barra-pesquisa::placeholder {
-        font-size: 40px;
-    }
+   
     .logotipo img:nth-child(1) {
         height: 200px;
         width: 350px;
