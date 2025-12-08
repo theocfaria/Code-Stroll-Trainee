@@ -78,6 +78,7 @@ body {
     background: transparent;
     justify-content: center;
     align-items: center;
+    color: #F73B4E;
 }
 
 .botao_pesquisa{
@@ -125,7 +126,7 @@ body {
     cursor: pointer;
 }
 
-.bi-search{
+.bi-search {
     font-size: 30px;
     color: #F73B4E;
     display: flex;

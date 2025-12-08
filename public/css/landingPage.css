@@ -599,7 +599,7 @@ main {
     flex-direction: column;
     gap: 20px;
     width: auto;
-
+  }
    .bloco-descricao {
     font-size: 17px;
   }
@@ -645,7 +645,7 @@ main {
     padding: 13px 8px;
     font-size: 20px;
   }
-}
+
 
 /* 7°: VERSÃO Notebook 1440px a 1919px */
 
@@ -658,6 +658,14 @@ main {
   }
   #texto-introducao {
     font-size: 25px;
+  }
+
+  .bloco-descricao {
+     font-size: 18px;
+  }
+
+  .bloco-titulo {
+     font-size: 23px;
   }
 
   .posts-recentes {
