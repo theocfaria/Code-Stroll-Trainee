@@ -1,9 +1,14 @@
-body{
+body {
     margin: 0;
-    background: white;
+    background: linear-gradient(to bottom,
+            #f73b46,
+            #832424,
+            #832424
+            /* #812e2e    #881b1b   */
+        );
 }
 
-.pagina{
+.pagina {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +16,7 @@ body{
     width: 100%;
 }
 
-.introducao{
+.introducao {
     width: auto;
     height: auto;
     display: flex;
@@ -19,9 +24,11 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 40px;
+    background: url(../assets/fundo-vermelho.jpg);
+    background-size: cover;
 }
 
-.img_logo{
+.img_logo {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -30,13 +37,13 @@ body{
     align-items: center;
 }
 
-.logos{
+.logos-sn {
     display: flex;
     flex-direction: row;
     gap: 60px;
 }
 
-#primary_img{
+#primary_img {
     width: 70%;
     height: 100%;
     display: flex;
@@ -45,7 +52,7 @@ body{
     border-radius: 8px;
 }
 
-.sobre_nos{
+.sobre_nos {
     width: 100%;
     height: auto;
     display: flex;
@@ -54,23 +61,25 @@ body{
     gap: 10px;
 }
 
-#txt_sn{
+#txt_sn {
     padding: 10px 60px;
     text-align: center;
+    font-style: italic;
 }
 
-.txt{
+.txt {
     padding: 0px 40px;
 }
 
-.texto{
+.texto {
     margin: 0;
     font-family: "JetBrains Mono", monospace;
     font-size: 20px;
     text-align: center;
+    color: white;
 }
 
-.mvv{
+.mvv {
     width: 100vw;
     height: auto;
     display: flex;
@@ -78,11 +87,11 @@ body{
     align-items: center;
     flex-direction: row;
     gap: 30px;
-    background: rgb(129, 68, 185);
-    padding: 20px 0px;
+    background: transparent;
+    padding: 4% 0px;
 }
 
-.missao{
+.missao {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +101,7 @@ body{
     border-radius: 8px;
 }
 
-.visao{
+.visao {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,7 +111,7 @@ body{
     border-radius: 8px;
 }
 
-.valores{
+.valores {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,42 +121,52 @@ body{
     border-radius: 8px;
 }
 
-.bi{
-    font-size: 30px;
-    color: white;
+.bi-sn {
+        font-size: 30px;
+        color: white;
+    }
+
+    .li-sn {
+        font-size: 40px;
+        color: white;
+    }
+
+.title {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 800;
 }
 
-.li{
-    font-size: 40px;
-    color: rgb(129, 68, 185);
+.title-mmv {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 800;
 }
 
-.title{
-    font-size: 30px;
-}
-
-.cards{
+.cards {
     display: flex;
     width: 30vw;
-    height: 65vh;
+    height: fit-content;
     padding: 30px 0px;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: #832424;
 }
 
-.cards:hover{
+.cards:hover {
     transform: scale(1.05);
     transition: 0.5s;
 }
 
-.botao{
-    background: rgb(129, 68, 185);
-    width: 50px;
-    height: 50px;
+.botao {
+    background: #F97583;
+    width: 6vw;
+    height: 9vh;
     border: none;
     border-radius: 100%;
 }
 
-.juncao_texto{
+.juncao_texto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,323 +176,323 @@ body{
 
 
 @media(min-width: 320px) {
-    .pagina{
+    .introducao {
         flex-direction: column;
-        align-items: center;
-        width: auto;
+        gap: 40px;
+    }
+
+    #primary_img {
         width: 100%;
     }
 
-    .introducao{
-        width: auto;
-        height: auto;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        gap: 10px;
+    .logos-sn{
+        gap: 30px;
     }
 
-    .img_logo{
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
+    #txt_sn {
+        padding: 0;
     }
 
-    .logos{
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    #primary_img{
-        width: 80%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 4px;
-    }
-
-    .sobre_nos{
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
-
-    #txt_sn{
-        padding: 5px 15px;
-        text-align: center;
-    }
-
-    .txt{
+    .txt {
         padding: 0px 10px;
     }
 
-    .texto{
+    .texto {
+        font-size: 14px;
+    }
+
+    .mvv {
+        flex-direction: column;
+        gap: 20px;
+        padding: 8% 0px;
+    }
+
+    .bi-sn {
+        font-size: 24px;
+    }
+
+    .li-sn {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .title-mvv {
+        font-size: 24px;
+    }
+
+    .cards {
+        width: 80%;
+        padding: 20px 0px;
+        gap: 30px;
+    }
+
+    .botao {
+        width: 40px;
+        height: 40px;
+    }
+
+    .juncao_texto {
+        gap: 16px;
+    }
+
+}
+
+@media(min-width: 375px) {}
+
+@media(min-width: 425px) {
+    .txt {
+        padding: 0px 20px;
+    }
+
+     .texto {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .title-mvv {
+        font-size: 28px;
+    }
+
+    .botao {
+        width: 48px;
+        height: 48px;
+    }
+
+    .bi-sn {
+        font-size: 30px;
+    }
+
+    .li-sn {
+        font-size: 36px;
+    }
+}
+
+@media(min-width: 768px) {
+    #primary_img {
+        width: 80%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .introducao {
+        flex-direction: row;
+    }
+
+    .logos-sn{
+        gap: 40px;
+    }
+
+    .mvv {
+        flex-direction: row;
+        gap: 30px;
+        padding: 4% 4%;
+    }
+
+    .txt {
+        padding: 0px 20px;
+    }
+
+    .texto {
+        font-size: 16px;
+    }
+
+    .bi-sn {
+        font-size: 24px;
+    }
+
+    .li-sn {
+        font-size: 36px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .title-mvv {
+        font-size: 28px;
+    }
+
+    .cards {
+        width: 80%;
+        padding: 20px 0px;
+        gap: 30px;
+    }
+
+    .botao {
+        width: 40px;
+        height: 40px;
+    }
+
+    .juncao_texto {
+        gap: 16px;
+    }
+}
+
+@media(min-width: 1440px) {
+    body {
         margin: 0;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 12px;
+        background: white;
+    }
+
+    .pagina {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        width: 100%;
+    }
+
+    .introducao {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .img_logo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    #primary_img {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        object-fit: cover;
+        border: none;
+        border-radius: 8px;
+    }
+
+    .sobre_nos {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #txt_sn {
+        padding: 10px 60px;
         text-align: center;
     }
 
-    .mvv{
+    .txt {
+        padding: 0px 40px;
+    }
+
+    .texto {
+        margin: 0;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mvv {
         width: 100vw;
         height: auto;
+        display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         gap: 30px;
-        padding: 8px 0px;
+        background: rgb(129, 68, 185);
+        padding: 20px 0px;
     }
 
-    .missao{
+    .missao {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        border-radius: 4px;
+        gap: 30px;
+        background: white;
+        border: 1px;
+        border-radius: 8px;
     }
 
-    .visao{
+    .visao {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        border-radius: 4px;
+        gap: 30px;
+        background: white;
+        border: 1px;
+        border-radius: 8px;
     }
 
-    .valores{
+    .valores {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        border-radius: 4px;
+        gap: 30px;
+        background: white;
+        border: 1px;
+        border-radius: 8px;
     }
 
-    .bi{
-        font-size: 12px;
+    .bi {
+        font-size: 30px;
         color: white;
     }
 
-    .li{
-        font-size: 20px;
+    .li {
+        font-size: 40px;
         color: rgb(129, 68, 185);
     }
 
-    .title{
-        font-size: 18px;
+    .title {
+        font-size: 30px;
     }
 
-    .cards{
+    .cards {
         display: flex;
-        width: 80vw;
-        height: 45vh;
-        padding: 10px 0px;
+        width: 30vw;
+        height: 65vh;
+        padding: 30px 0px;
         justify-content: space-between;
     }
 
-    .cards:hover{
+    .cards:hover {
         transform: scale(1.05);
         transition: 0.5s;
     }
 
-    .botao{
+    .botao {
         background: rgb(129, 68, 185);
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         border: none;
         border-radius: 100%;
     }
 
-    .juncao_texto{
+    .juncao_texto {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         gap: 30px;
     }
-    
 }
 
-@media(min-width: 375px) {
-   
-}
+@media(min-width: 1920px) {}
 
-@media(min-width: 425px) {
-
-}
-
-@media(min-width: 768px) {
-
-}
-
-@media(min-width: 1024px) {
-
-}
-
-@media(min-width: 1440px) {
-body{
-    margin: 0;
-    background: white;
-}
-
-.pagina{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    width: 100%;
-}
-
-.introducao{
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 40px;
-}
-
-.img_logo{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-}
-
-.logos{
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-}
-
-#primary_img{
-    width: 70%;
-    height: 100%;
-    display: flex;
-    object-fit: cover;
-    border: none;
-    border-radius: 8px;
-}
-
-.sobre_nos{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-#txt_sn{
-    padding: 10px 60px;
-    text-align: center;
-}
-
-.txt{
-    padding: 0px 40px;
-}
-
-.texto{
-    margin: 0;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
-    text-align: center;
-}
-
-.mvv{
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 30px;
-    background: rgb(129, 68, 185);
-    padding: 20px 0px;
-}
-
-.missao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    border: 1px;
-    border-radius: 8px;
-}
-
-.visao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    border: 1px;
-    border-radius: 8px;
-}
-
-.valores{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    border: 1px;
-    border-radius: 8px;
-}
-
-.bi{
-    font-size: 30px;
-    color: white;
-}
-
-.li{
-    font-size: 40px;
-    color: rgb(129, 68, 185);
-}
-
-.title{
-    font-size: 30px;
-}
-
-.cards{
-    display: flex;
-    width: 30vw;
-    height: 65vh;
-    padding: 30px 0px;
-    justify-content: space-between;
-}
-
-.cards:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-}
-
-.botao{
-    background: rgb(129, 68, 185);
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 100%;
-}
-
-.juncao_texto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-}
-
-@media(min-width: 1920px) {
-
-}
-
-@media(min-width: 2560px) {
-    
-}
+@media(min-width: 2560px) {}
