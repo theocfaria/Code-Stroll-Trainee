@@ -96,9 +96,8 @@
                 <a href="#">2</a>
                 <a href="#" class="extra">3</a>
                 <a href="#">...</a>
-                <a href="#" class="extra">67</a>
+                 <a href="#" class="extra">67</a>
                 <a href="#">68</a>
-                <a href="#">69</a>
                 <a href="#" class="passa_pag"> <p>Próximo</p> <i class="material-icons">arrow_forward</i></a>
             </div>
 
