@@ -72,7 +72,7 @@ main {
 }
 
 #secao-posts {
-  scroll-margin-top: -30px;
+  scroll-margin-top: -35px;
 }
 
 .titulo-secao {
@@ -639,7 +639,7 @@ main {
   }
   .post-descricao,
   .post-autor {
-    font-size: 14px;
+    font-size: 15px;
   }
   .bot-ver-todos {
     padding: 13px 8px;
