@@ -26,13 +26,18 @@
             <p id="cadastro">Cadastro</p>
             <div class="container-input">
                 <input type="text" placeholder="Nome:" id="nome" required>
-                <input type="text" placeholder="Sobrenome:" id="sobrenome"  required>
+                
                 <input type="text" placeholder="E-mail:" id="email" required>
+                
                 <div class="container-senha">
                     <input type="password" placeholder="Senha:" id="senha" required>
                     <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
                 </div>
-                <input type="date" placeholder="Data de nascimento" id="data">
+
+                <div class="container-senha">
+                    <input type="password" placeholder="Confirmar Senha:" id="confirmaSenha" required>
+                    <i class="bi bi-eye-slash" id="olhoIconConfirma" onclick="alternaOlhoConfirma()"></i>
+                </div>
             </div>
             <div class="container-entrar">
                 <button id="entrar">Criar</button>
