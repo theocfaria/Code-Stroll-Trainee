@@ -37,7 +37,7 @@ class PostsController
 
         $total = ceil($linhas/$itemsPagina);
 
-        $posts = App::get('database') -> selectAll('posts', $inicio, $itemsPagina);
+        $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
 
         return view('admin/tabela_posts', compact('posts', 'page', 'total')); // pode dar merda aqui na passagem de mais variaveis
     }
@@ -52,7 +52,7 @@ class PostsController
         $parameters = [
         'title' => $_POST['title'],
         'content' => $_POST['content'],
-        'author' => 1, // arrumar
+        'author' => $_POST['author'],
         'created_at' => $_POST['created_at'],
         'image' => $caminho_da_imagem,
         ];
@@ -135,7 +135,7 @@ class PostsController
             {
                 return redirect('site/crudPosts');
             }
-            $posts = App::get('database')->selectAll('posts', $inicio, $itemsPagina);
+            $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
         }
         else
         {

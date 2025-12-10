@@ -44,11 +44,11 @@
                     <tr>
                         <td class="teste3 teste4"><?= $post->id ?></td>
                         <td class="teste4"><?= $post->title ?></td>
-                        <td class="teste4"><?= $post->author ?></td>
+                        <td class="teste4"><?= $post->autor_nome ?></td>
                         <td class="teste4"><?= $post->created_at ?></td>
                         <td class="acoes">
                             <button type="button" class="btn-primary"
-                                onclick="abrirModalVisualizar('<?= $post->id ?>', '<?= $post->title ?>', '<?= $post->author ?>', '<?= $post->created_at ?>', '<?= $post->image ?>', '<?= $post->content ?>')">
+                                onclick="abrirModalVisualizar('<?= $post->id ?>', '<?= $post->title ?>', '<?= $post->autor_nome ?>', '<?= $post->created_at ?>', '<?= $post->image ?>', '<?= $post->content ?>')">
                                 <i class="bi bi-eye"></i>
                             </button>
                             <button type="button" class="btn-primary"
@@ -56,7 +56,7 @@
                                 class="btn-primary"
                                 data-id="<?= $post->id ?>"
                                 data-title="<?= htmlspecialchars($post->title, ENT_QUOTES) ?>"
-                                data-author="<?= htmlspecialchars($post->author, ENT_QUOTES) ?>"
+                                data-author="<?= htmlspecialchars($post->autor_nome, ENT_QUOTES) ?>"
                                 data-date="<?= $post->created_at ?>"
                                 data-image="<?= htmlspecialchars($post->image, ENT_QUOTES) ?>"
                                 data-content="<?= htmlspecialchars($post->content, ENT_QUOTES) ?>"
@@ -170,7 +170,7 @@
 
                 <div class="form-group">
                     <label for="editar-autor">Autor:</label>
-                    <input type="text" id="editar-autor" name="author" value=<?= $post->author ?> required readonly />
+                    <input type="text" id="editar-autor" name="author" value=<?= $post->autor_nome ?> required readonly />
                 </div>
                 <div class="form-group">
                     <label for="editar-data">Data:</label>
