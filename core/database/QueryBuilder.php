@@ -167,7 +167,7 @@ class QueryBuilder
                 $title = "Titulo {$i}";
                 $content = "Descrição {$i}";
                 $author = 1;
-                $created_at = "23-11-2025";
+                $created_at = "2025-11-16";
                 
                 $this->insert($table, [
                     'title' => $title,

@@ -10,7 +10,7 @@ class PostsController
     public function index()
     {
 
-        //App::get('database')->populaBanco('posts', 100);
+        //App::get('database')->populaBancoPost('posts', 100);
 
         $page = 1;
 

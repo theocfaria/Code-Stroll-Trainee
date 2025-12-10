@@ -16,81 +16,67 @@
         <h1>Principais Postagens</h1>       
 
         <div class = "posts">
-            
+            <?php if(empty($posts)): ?>
+                <p>Nenhum post encontrado.</p>
+            <?php else: ?>
+            <?php foreach($posts as $post): ?>            
             <div class = "post">
-                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
+                <img class="imagem" src="<?= $post->image ?>" alt="/public/assets/comp3.jpeg">
                 
                 <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1Título do Post 1Título do Post 1Título do Post 1Título do Post 1</strong></p>
-                    <p class="autor">Jane Doe</p>
-                    <p class="publicacao">Publicado em 09/09/1999</p>
+                    <p class="titulo_post"><strong><?= $post->title  ?></strong></p>
+                    <p class="autor"><?= $post->author ?></p>
+                    <p class="publicacao">Publicado em <?= $post->created_at ?></p>
                 </div>
             
-                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
+                <p class="resumo"><?= $post->content ?></p>
             </div>
-
-            <div class = "post">
-                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
-                
-                <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
-                    <p class="autor">Jane Doe</p>
-                    <p class="publicacao">Publicado em 09/09/1999</p>
-                </div>
-            
-                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
-            </div>
-
-            <div class = "post">
-                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
-                
-                <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
-                    <p class="autor">Jane Doe</p>
-                    <p class="publicacao">Publicado em 09/09/1999</p>
-                </div>
-            
-                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
-            </div>
-
-            <div class = "post">
-                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
-                
-                <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
-                    <p class="autor">Jane Doe</p>
-                    <p class="publicacao">Publicado em 09/09/1999</p>
-                </div>
-            
-                <p class = "resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
-            </div>
-
-            <div class = "post">
-                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
-                
-                <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
-                    <p class="autor">Jane Doe</p>
-                    <p class="publicacao">Publicado em 09/09/1999</p>
-                </div>
-            
-                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui,</p>
-            </div>
-
-            <div class = "post">
-                <img class="imagem" src="../../../public/assets/imagemteste.jpg" alt="Imagem do Post 1">
-                
-                <div class = "info">
-                    <p class="titulo_post"><strong>Título do Post 1</strong></p>
-                    <p class="autor">Jane Doe</p>
-                    <p class="publicacao">Publicado em 09/09/1999</p>
-                </div>
-            
-                <p class="resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisi libero, sollicitudin sed tellus id, mattis commodo dolor. Donec luctus vitae sem in porta. Morbi aliquam condimentum metus, vitae interdum dui ultricies non. Aliquam erat volutpat. Nulla facilisi. Aenean euismod, libero et fringilla blandit, urna risus posuere dui.</p>
-            </div>
+            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
+        
+        <div class="paginacao">
+            <?php if ($page > 1): ?>
+                <a href="?pagina=<?= $page - 1 ?>" class="passa_pag">
+                    <i class="material-icons">arrow_back</i> <p>Anterior</p>
+                </a>
+            <?php endif; ?>
 
-        <div class = "paginacao">
+            <a href="?pagina=1" class="<?= $page == 1 ? 'atual' : '' ?>">1</a>
+
+            <?php for ($i = $page; $i < $page + 3 && $i <= $total; $i++): ?>
+            <a href="?pagina=<?= $i ?>" class="<?= $i == $page ? 'atual' : '' ?>">
+                <?= $i ?>
+            </a>
+            <?php endfor; ?>
+            <?php if ($page + 3 < $total): ?>
+                <a href="#">...</a>
+            <?php endif; ?>
+
+            <!-- Última página -->
+            <?php if ($page + 3 < $total): ?>
+                <a href="?pagina=<?= $total ?>">
+                    <?= $total ?>
+                </a>
+            <?php endif; ?>
+            
+
+            
+            
+            <!-- Campo para digitar uma página específica     (FAZER MODAL DEPOIS)
+            <form method="GET" action="" class="form-paginacao">
+                <input type="number" name="pagina" min="1" max="<?= $total ?>" placeholder="Ir para..." required>
+                <button type="submit">Ir</button>
+            </form>-->
+
+            <!-- Botão para a próxima página -->
+            <?php if ($page < $total): ?>
+                <a href="?pagina=<?= $page + 1 ?>" class="passa_pag">
+                    <p>Próximo</p> <i class="material-icons">arrow_forward</i>
+                </a>
+            <?php endif; ?>
+        </div>
+        <!--<div class = "paginacao">
                 <a href="#" class="passa_pag"><i class="material-icons">arrow_back</i> <p>Anterior</p> </a>
                 <a href="#" id="atual">1</a>
                 <a href="#">2</a>
@@ -99,7 +85,7 @@
                  <a href="#" class="extra">67</a>
                 <a href="#">68</a>
                 <a href="#" class="passa_pag"> <p>Próximo</p> <i class="material-icons">arrow_forward</i></a>
-            </div>
+            </div>-->
 
     </div>
 <?php require __DIR__ . '/footer.view.php'; ?>
