@@ -153,14 +153,17 @@ img#logo {
 }
 
 #link-cadastro {
-    color: black; 
-    text-decoration: none; 
+    color: black;
+    text-decoration: none;
     font-weight: 650;
+    transition: color 0.2s ease; /* Deixa a mudança de cor suave */
 }
 
 #link-cadastro:hover {
-    text-decoration: underline;
+    text-decoration: underline;      /* Mantém o sublinhado */
+    color: rgba(202, 23, 42, 0.85);  /* Muda para o vermelho do botão */
 }
+
 
 .container-cadastro p {
     color: black; 
