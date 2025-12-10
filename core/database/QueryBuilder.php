@@ -206,4 +206,20 @@ class QueryBuilder
 
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
+
+    public function selectPostsAutores($begin, $rows)
+    {
+        $sql = "SELECT posts.*, users.name AS autor_nome
+                FROM posts
+                JOIN users ON users.id = posts.author
+                LIMIT :begin, :rows";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':begin', (int)$begin, PDO::PARAM_INT);
+        $stmt->bindValue(':rows', (int)$rows, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
 }
