@@ -7,8 +7,15 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 20px;
-  flex-direction: column;
+  gap: 60px;
+  flex-direction: row;
+}
+
+.pagina_toda{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 #tela {
@@ -172,9 +179,9 @@ body {
   background: linear-gradient(90deg, #b392f099, #ff980080);
   display: flex;
   justify-content: space-between;
-  padding: 0px 150px;
   align-items: center;
   font-weight: 700;
+  padding: 20px 40px;
 }
 
 #imagem_logo {
@@ -213,7 +220,9 @@ body {
   font-size: 40px;
 }
 
-.bi-search {
+.bi-search{
+  color: #F73B4E;
+  padding-right: 2%;
   font-size: 22px;
 }
 
@@ -265,14 +274,30 @@ body {
 
 #pesquisa {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border: none;
-  border-radius: 12px;
-  width: 300px;
-  font-weight: 600;
-  padding: 8px 15px;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+#pesquisa-dentro{
+    display: flex;
+    justify-content: left;
+    border: none;
+    border: 1px;
+    border-radius: 100px;
+    gap: 10px;
+    background: rgb(231, 231, 231);
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 2% 4%;
+}
+
+#pesquisa input::placeholder {
+    color: #F73B4E;
+    opacity: 0.8; 
 }
 
 #pesquisa p {
@@ -391,9 +416,6 @@ td {
   * {
     font-size: 26px;
   }
-  .navbar {
-    padding: 0 100px;
-  }
   .tabela {
     width: 90%;
   }
@@ -410,9 +432,6 @@ td {
 @media (max-width: 2559px) {
   * {
     font-size: 21px;
-  }
-  .navbar {
-    padding: 0 100px;
   }
   .tabela {
     width: 90%;
@@ -432,9 +451,6 @@ td {
   * {
     font-size: 19px;
   }
-  .navbar {
-    padding: 0 100px;
-  }
   .tabela {
     width: 90%;
   }
@@ -452,9 +468,6 @@ td {
   * {
     font-size: 17px;
   }
-  .navbar {
-    padding: 0 100px;
-  }
   .tabela {
     width: 90%;
   }
@@ -471,9 +484,6 @@ td {
 @media (max-width: 1023px) {
   * {
     font-size: 16px;
-  }
-  .navbar {
-    padding: 0 40px;
   }
   #pesquisa p {
     font-size: 15px;

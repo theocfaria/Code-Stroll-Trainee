@@ -9,7 +9,7 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tabela de Usuários</title>
     <link rel="stylesheet" href="../../../public/css/lista_usuarios.css" />
     <link
       rel="stylesheet"
@@ -18,7 +18,8 @@
   </head>
 
   <body>
-    <div id="tela"></div>
+    <?php require __DIR__ . '/sidebar.view.php'; ?>
+    <div class="pagina_toda">
     <div class="navbar">
       <p id="texto_post">PÁGINA DE USUÁRIOS</p>
       <button id="criar" onclick="abrirModal('modal-criar')">
@@ -26,12 +27,12 @@
       </button>
     </div>
     <div class="conteudo">
-      <div class="barra_pesquisa">
-        <button id="pesquisa">
-          <p>PESQUISAR</p>
-          <i class="bi bi-search"></i>
-        </button>
-      </div>
+      <form method="GET" action="/crudPosts/search" id="pesquisa">
+            <button id="pesquisa-dentro">
+            <input type="text" name="busca" placeholder="Buscar post" >
+            <i class="bi bi-search"></i>
+            </button>
+        </form>
       <div class="tabela">
         <table>
           <thead>
@@ -265,6 +266,7 @@
           Cancelar
         </button>
       </div>
+    </div>
     </div>
   </body>
   <script src="../../../public/js/tabela_usuarios.js"></script>
