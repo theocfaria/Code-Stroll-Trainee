@@ -21,7 +21,7 @@
 
         <div id="Retangulo">
             <div id="xis">
-                <a id="x" href="navbar.html"><i class="bi bi-x"></i></a>
+                <a id="x" href="/"><i class="bi bi-x"></i></a>
             </div>
             <p id="cadastro">Cadastro</p>
             <div class="container-input">
