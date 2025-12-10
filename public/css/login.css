@@ -156,12 +156,12 @@ img#logo {
     color: black;
     text-decoration: none;
     font-weight: 650;
-    transition: color 0.2s ease; /* Deixa a mudança de cor suave */
+    transition: color 0.2s ease; 
 }
 
 #link-cadastro:hover {
-    text-decoration: underline;      /* Mantém o sublinhado */
-    color: rgba(202, 23, 42, 0.85);  /* Muda para o vermelho do botão */
+    text-decoration: underline;    
+    color: rgba(202, 23, 42, 0.85);  
 }
 
 
