@@ -27,35 +27,23 @@
                     <i class="bi-sn bi-cpu li-sn"></i>
                 </div>  
             </div>
-            
         </div>
         <div class="mvv">
             <div class="missao cards">
-                <div class="juncao_texto">
                     <p class="texto-sn title-mvv">Missão</p>
                     <p class="texto-sn txt">Nossa missão é democratizar o aprendizado em programação, oferecendo conteúdo de qualidade, exemplos práticos, tutoriais completos e soluções de problemas reais. Buscamos inspirar e capacitar pessoas a dominarem tecnologias modernas, desenvolvendo confiança e autonomia no processo de aprendizagem.</p>
-                </div>
-                
                 <button class="botao">
                     <i class="bi-sn bi-bullseye"></i>
                 </button>
-                
             </div>
             <div class="visao cards">
-                <div class="juncao_texto">
                     <p class="texto-sn title-mvv">Visão</p>
                     <p class="texto-sn txt">Nossa visão é ser reconhecido como um dos principais pontos de referência para quem busca aprender programação de forma clara, eficiente e atualizada, construindo uma comunidade forte, colaborativa e engajada que acompanhe o avanço constante da tecnologia.</p>
-                </div>
-
-                <button class="botao"><i class="bi-sn bi-eye"></i></button>
-                
+                <button class="botao"><i class="bi-sn bi-eye"></i></button>   
             </div>
             <div class="valores cards">
-                <div class="juncao_texto">
                     <p class="texto-sn title-mvv">Valores</p>
                     <p class="texto-sn txt">Nossos valores incluem clareza e simplicidade na comunicação, transparência em tudo o que fazemos, busca constante por atualização, incentivo à colaboração, compromisso com a qualidade dos conteúdos e paixão genuína por tecnologia.</p>
-                </div>
-                
                 <button class="botao"><i class="bi-sn bi-person-hearts"></i></button>
             </div>
         </div>
