@@ -24,7 +24,7 @@ body {
     flex-direction: row;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url(../assets/fundo-vermelho.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/fundo-vermelho.jpg);
     background-size: cover;
 }
 
@@ -122,14 +122,14 @@ body {
 }
 
 .bi-sn {
-        font-size: 30px;
-        color: white;
-    }
+    font-size: 30px;
+    color: white;
+}
 
-    .li-sn {
-        font-size: 40px;
-        color: white;
-    }
+.li-sn {
+    font-size: 40px;
+    color: white;
+}
 
 .title {
     font-size: 36px;
@@ -146,7 +146,7 @@ body {
 .cards {
     display: flex;
     width: 30vw;
-    height: 36vh;
+    height: auto;
     padding: 30px 0px;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.3);
@@ -185,7 +185,7 @@ body {
         width: 100%;
     }
 
-    .logos-sn{
+    .logos-sn {
         gap: 30px;
     }
 
@@ -225,6 +225,7 @@ body {
 
     .cards {
         width: 80%;
+        height: 380px;
         padding: 20px 0px;
         gap: 30px;
     }
@@ -240,16 +241,14 @@ body {
 
 }
 
-@media(min-width: 375px) {
-    
-}
+@media(min-width: 375px) {}
 
 @media(min-width: 425px) {
     .txt {
         padding: 0px 20px;
     }
 
-     .texto {
+    .texto {
         font-size: 16px;
     }
 
@@ -261,7 +260,7 @@ body {
         font-size: 28px;
     }
 
-    .cards{
+    .cards {
         height: 40vh;
     }
 
@@ -277,11 +276,19 @@ body {
     .li-sn {
         font-size: 36px;
     }
+
+    .cards {
+        height: 420px;
+    }
 }
 
 @media(min-width: 768px) {
     #primary_img {
         width: 80%;
+    }
+
+    .cards {
+        height: 300px;
     }
 }
 
@@ -290,7 +297,7 @@ body {
         flex-direction: row;
     }
 
-    .logos-sn{
+    .logos-sn {
         gap: 40px;
     }
 
@@ -309,7 +316,7 @@ body {
     }
 
     .bi-sn {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .li-sn {
@@ -326,13 +333,14 @@ body {
 
     .cards {
         width: 80%;
+        height: 460px;
         padding: 20px 0px;
         gap: 30px;
     }
 
     .botao {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
 
     .juncao_texto {
@@ -341,6 +349,10 @@ body {
 }
 
 @media(min-width: 1440px) {
+    .introducao {
+        padding: 80px 60px 100px 60px;
+    }
+
     .texto {
         font-size: 20px;
     }
@@ -352,8 +364,49 @@ body {
     .title-mvv {
         font-size: 36px;
     }
+
+    .cards{
+        height: 520px;
+    }
 }
 
-@media(min-width: 1920px) {}
+@media(min-width: 1920px) {
+    .introducao {
+        padding: 80px 60px 100px 60px;
+    }
+
+    .texto {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 56px;
+    }
+
+    .title-mvv {
+        font-size: 42px;
+    }
+
+    .cards{
+        height: 580px;
+    }
+
+    .bi-sn {
+        font-size: 40px;
+    }
+
+    .li-sn {
+        font-size: 50px;
+    }
+
+    .botao {
+        width: 70px;
+        height: 70px;
+    }
+
+    .juncao_texto {
+        gap: 20px;
+    }
+}
 
 @media(min-width: 2560px) {}
