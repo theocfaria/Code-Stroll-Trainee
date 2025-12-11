@@ -39,6 +39,7 @@
                         ?>
                     </p>
                 </div>
+
                 <div class="container-input">
                     <input type="text" name="email" placeholder="E-mail:" id="email" required>
                     <div class="container-senha">
@@ -46,11 +47,13 @@
                         <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
                     </div>
                 </div>
-                <div class="container-entrar">
-                    <button type="submit" id="entrar">Entrar</button>
-                </div>
+
                 <div class="container-cadastro">
                     <p id="texto-cadastro">Não possui conta? <a href="cadastro" id="link-cadastro">Cadastre-se!</a></p>
+                </div>
+
+                <div class="container-entrar">
+                    <button type="submit" id="entrar">Entrar</button>
                 </div>
 
             </form>
