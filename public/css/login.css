@@ -148,7 +148,7 @@ img#logo {
     justify-content: center; 
     align-items: center;
     width: 100%;            
-    margin: 20px 0 10px 0;   
+    margin: 22px 0 10px 0;   
     text-align: center;     
 }
 
@@ -169,6 +169,7 @@ img#logo {
     color: black; 
     font-size: 17px; 
     margin: 0; 
+    font-family: "JetBrains Mono", monospace; 
 }
 
 /*
@@ -219,7 +220,7 @@ img#logo {
     }
     
     button#entrar{
-        height: 38px;
+        height: 36px;
         padding: 5px 15px;
     }
     #entrar{
