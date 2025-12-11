@@ -154,16 +154,16 @@ img#logo {
 
 #link-cadastro {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;    
     font-weight: 650;
-    transition: color 0.2s ease; 
+    display: inline-block;        
+    transition: all 0.2s ease;    
 }
 
 #link-cadastro:hover {
-    text-decoration: underline;    
-    color: rgba(202, 23, 42, 0.85);  
+    color: rgba(202, 23, 42, 0.85); 
+    transform: scale(1.03);          
 }
-
 
 .container-cadastro p {
     color: black; 
