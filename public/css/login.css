@@ -210,6 +210,57 @@ img#logo {
     input#email {
         width: 85%;
         height: 35px;
+        font-size: 15px;
+        padding: 10px 10px;
+    }
+
+    #olhoIcon {
+        right: 10%;     
+        font-size: 16px;
+    }
+    
+    button#entrar{
+        height: 36px;
+        padding: 5px 15px;
+    }
+    #entrar{
+        font-size: 16px;
+    }
+
+    .container-cadastro p {
+        font-size: 13px;
+    }
+ }   
+
+    @media (min-width: 375px) {
+    #Retangulo {
+        width: 90%;
+    }
+
+    img#logo {
+        width: 90px;
+        position: absolute;
+        left: 37%;
+        top: -35px;
+    }
+
+    .bi-x {
+        font-size: 25px;
+    }
+
+    p#login {
+        font-size: 35px;
+    }
+
+    .container-input {
+        width: 100%;
+        gap: 20px;
+    }
+
+    input#senha,
+    input#email {
+        width: 85%;
+        height: 35px;
         font-size: 16px;
         padding: 10px 10px;
     }
@@ -228,8 +279,10 @@ img#logo {
     }
 
     .container-cadastro p {
-        font-size: 12px;
+        font-size: 14px;
     }
+
+    
 
 }@media (min-width: 425px) {
     #Retangulo {
@@ -276,7 +329,7 @@ img#logo {
     }
 
     .container-cadastro p {
-        font-size: 13px;
+        font-size: 14.5px;
     }
 
 }
@@ -339,7 +392,7 @@ img#logo {
     img#logo {
         width: 130px;
         position: absolute;
-        left: 42%;
+        left: 40%;
         top: -65px;
     }
 
@@ -399,7 +452,7 @@ img#logo {
     img#logo {
         width: 150px;
         position: absolute;
-        left: 43%;
+        left: 38.5%;
         top: -75px;
     }
 
@@ -451,7 +504,7 @@ img#logo {
     img#logo {
         width: 250px;
         position: absolute;
-        left: 41%;
+        left: 30%;
         top: -125px;
     }
 
@@ -501,4 +554,24 @@ img#logo {
     margin-bottom: 10px;
 }
 
+}
+
+
+/*visualizar centralizaçáo da logo
+
+#Retangulo::after {
+    content: "";
+    position: absolute;
+    top: -100px;       
+    bottom: 0;      
+    left: 50%;         
+    width: 1px;        
+    background-color: red;
+    z-index: 9999;
+}
+
+
+#logo {
+    outline: 2px solid #00ff00;
+    background-color: rgba(0, 255, 0, 0.3);
 }
