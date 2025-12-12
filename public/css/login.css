@@ -181,6 +181,26 @@ img#logo {
 }
 */
 
+.mensagem-erro {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 15px;     
+}
+
+.mensagem-erro p {
+    color: #ca172a;          
+    font-family: "JetBrains Mono", monospace;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;     
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.1); 
+    border-radius: 5px;
+    width: fit-content;    
+}
+
 @media (min-width: 320px) {
     #Retangulo {
         width: 90%;

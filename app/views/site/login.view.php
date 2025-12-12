@@ -26,18 +26,17 @@
             <p id="login">Login</p>
             <form action="/login" method="POST">
                 <div class="mensagem-erro">
-                    <p>
-                        <?php
-                        if (session_status() === PHP_SESSION_NONE) {
-                            session_start();
-                        }
+                    <?php
+                    if (session_status() === PHP_SESSION_NONE) {
+                        session_start();
+                    }
 
-                        if (isset($_SESSION['mensagem-erro'])) {
-                            echo $_SESSION['mensagem-erro'];
-                            unset($_SESSION['mensagem-erro']);
-                        }
-                        ?>
-                    </p>
+
+                    if (isset($_SESSION['mensagem-erro']) && !empty($_SESSION['mensagem-erro'])) {
+                        echo '<p>' . $_SESSION['mensagem-erro'] . '</p>';
+                        unset($_SESSION['mensagem-erro']);
+                    }
+                    ?>
                 </div>
 
                 <div class="container-input">
