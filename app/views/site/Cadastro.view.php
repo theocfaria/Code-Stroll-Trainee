@@ -25,12 +25,12 @@
             </div>
             <p id="cadastro">Cadastro</p>
             <div class="container-input">
-                <input type="text" placeholder="Nome:" id="nome" required>
+                <input type="text" placeholder="Nome:" id="nome" name="name" required>
                 
-                <input type="text" placeholder="E-mail:" id="email" required>
+                <input type="text" placeholder="E-mail:" id="email" name="email" required>
                 
                 <div class="container-senha">
-                    <input type="password" placeholder="Senha:" id="senha" required>
+                    <input type="password" placeholder="Senha:" id="senha" name="password" required>
                     <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
                 </div>
 
@@ -40,7 +40,10 @@
                 </div>
             </div>
             <div class="container-entrar">
-                <button id="entrar">Criar</button>
+                <a href="/login"> <!-- definir condição para ser direcionado para o login se o usuario foi criado !-->
+                    <button id="entrar">Criar</button>
+                </a>
+                
             </div>
         </div>
 

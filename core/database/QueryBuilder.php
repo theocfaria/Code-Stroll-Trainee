@@ -140,6 +140,8 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(['id' => $id]);
 
+            return $stmt->fetch(PDO::FETCH_OBJ);
+
         } catch (Exception $e) {
             die($e->getMessage());
         }
