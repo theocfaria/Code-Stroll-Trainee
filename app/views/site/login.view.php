@@ -26,19 +26,19 @@
             <p id="login">Login</p>
             <form action="/login" method="POST">
                 <div class="mensagem-erro">
-                    <p>
-                        <?php
-                        if (session_status() === PHP_SESSION_NONE) {
-                            session_start();
-                        }
+                    <?php
+                    if (session_status() === PHP_SESSION_NONE) {
+                        session_start();
+                    }
 
-                        if (isset($_SESSION['mensagem-erro'])) {
-                            echo $_SESSION['mensagem-erro'];
-                            unset($_SESSION['mensagem-erro']);
-                        }
-                        ?>
-                    </p>
+
+                    if (isset($_SESSION['mensagem-erro']) && !empty($_SESSION['mensagem-erro'])) {
+                        echo '<p>' . $_SESSION['mensagem-erro'] . '</p>';
+                        unset($_SESSION['mensagem-erro']);
+                    }
+                    ?>
                 </div>
+
                 <div class="container-input">
                     <input type="text" name="email" placeholder="E-mail:" id="email" required>
                     <div class="container-senha">
@@ -46,11 +46,13 @@
                         <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
                     </div>
                 </div>
-                <div class="container-entrar">
-                    <button type="submit" id="entrar">Entrar</button>
-                </div>
+
                 <div class="container-cadastro">
                     <p id="texto-cadastro">Não possui conta? <a href="cadastro" id="link-cadastro">Cadastre-se!</a></p>
+                </div>
+
+                <div class="container-entrar">
+                    <button type="submit" id="entrar">Entrar</button>
                 </div>
 
             </form>
