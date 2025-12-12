@@ -249,7 +249,7 @@ body::before {
     transform: scale(1.05);
 }
 
-.paginacao #atual {
+.paginacao .atual {
     color: #f5f5f5;
     background-color: #F73B4E;
     pointer-events: none;

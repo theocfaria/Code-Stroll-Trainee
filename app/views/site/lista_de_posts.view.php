@@ -21,7 +21,7 @@
             <?php else: ?>
             <?php foreach($posts as $post): ?>            
             <div class = "post">
-                <img class="imagem" src="<?= $post->image ?>" alt="/public/assets/comp3.jpeg">
+                <img class="imagem" src="<?= $post->image ?>" alt="Imagem do post">
                 
                 <div class = "info">
                     <p class="titulo_post"><strong><?= $post->title  ?></strong></p>
@@ -36,19 +36,24 @@
         </div>
         
         <div class="paginacao">
-            <?php if ($page > 1): ?>
+            <?php if ($page >= 2): ?>
                 <a href="?pagina=<?= $page - 1 ?>" class="passa_pag">
                     <i class="material-icons">arrow_back</i> <p>Anterior</p>
                 </a>
             <?php endif; ?>
 
-            <a href="?pagina=1" class="<?= $page == 1 ? 'atual' : '' ?>">1</a>
+            <?php if ($page > 1): ?>
+                <a href="?pagina=<?= 1 ?>">
+                    1
+                </a>
+            <?php endif; ?>
 
             <?php for ($i = $page; $i < $page + 3 && $i <= $total; $i++): ?>
             <a href="?pagina=<?= $i ?>" class="<?= $i == $page ? 'atual' : '' ?>">
                 <?= $i ?>
             </a>
             <?php endfor; ?>
+
             <?php if ($page + 3 < $total): ?>
                 <a href="#">...</a>
             <?php endif; ?>
@@ -76,16 +81,6 @@
                 </a>
             <?php endif; ?>
         </div>
-        <!--<div class = "paginacao">
-                <a href="#" class="passa_pag"><i class="material-icons">arrow_back</i> <p>Anterior</p> </a>
-                <a href="#" id="atual">1</a>
-                <a href="#">2</a>
-                <a href="#" class="extra">3</a>
-                <a href="#">...</a>
-                 <a href="#" class="extra">67</a>
-                <a href="#">68</a>
-                <a href="#" class="passa_pag"> <p>Próximo</p> <i class="material-icons">arrow_forward</i></a>
-            </div>-->
 
     </div>
 <?php require __DIR__ . '/footer.view.php'; ?>
