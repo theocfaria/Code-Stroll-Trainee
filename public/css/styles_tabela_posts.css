@@ -41,7 +41,7 @@ body {
     border-radius: 30px;
     padding: 25px;
     font-family: "JetBrains Mono", monospace;
-    background: linear-gradient(90deg, #b392f0, #ff9800);
+    background: linear-gradient(90deg, #b392f0, color-mix(in srgb, #ff9800 40%, #B392F0 60%));
     z-index: 100;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -94,7 +94,7 @@ body {
     border-radius: 30px;
     padding: 25px;
     font-family: "JetBrains Mono", monospace;
-    background: linear-gradient(90deg, #b392f0, #ff9800);
+    background: linear-gradient(90deg, #b392f0, color-mix(in srgb, #ff9800 40%, #B392F0 60%));
     z-index: 100;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -148,7 +148,7 @@ body {
     border-radius: 30px;
     padding: 25px;
     font-family: "JetBrains Mono", monospace;
-    background: linear-gradient(90deg, #b392f0, #ff9800);
+    background: linear-gradient(90deg, #b392f0, color-mix(in srgb, #ff9800 40%, #B392F0 60%));
     z-index: 100;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     /* Para permitir scroll em telas pequenas */
@@ -252,7 +252,7 @@ body {
 
 .navbar {
     /* Gradiente padronizado (Roxo -> Laranja) */
-    background: linear-gradient(90deg, #b392f099, #ff980080);
+    background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%), #b392f099);
     display: flex;
     justify-content: space-between;
     padding: 40px 80px;
@@ -279,7 +279,7 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: #b392f0;
+    background: color-mix(in srgb, #ff9800 40%, #B392F0 60%);
     position: relative;
     align-items: center;
     justify-content: center;
@@ -383,7 +383,7 @@ input{
 }
 
 .tabela {
-    background: linear-gradient(90deg, #b392f099, #ff980080);
+    background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%), #b392f099);
     border-radius: 10px;
     padding: 8px;
     margin: auto;
@@ -400,7 +400,7 @@ table {
 }
 
 thead tr {
-    background: linear-gradient(90deg, #8e5de999, #cc7a0099);
+    background: linear-gradient(90deg, #8e5de999, color-mix(in srgb, #ff9800 40%, #B392F0 60%));
     color: #000;
     text-align: center;
     font-weight: bold;
