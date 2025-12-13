@@ -34,7 +34,7 @@ public function index()
 
     $total = ceil($linhas / $itemsPagina);
 
-    $posts = App::get('database')->selectAll('posts', $inicio, $itemsPagina);
+    $posts = App::get('database')->selectPostsAutores('posts', $inicio, $itemsPagina);
 
     // Retorne a view correta
     return view('site/lista_de_posts', compact('posts', 'page', 'total'));

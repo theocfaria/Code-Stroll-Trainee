@@ -36,3 +36,6 @@ $router->get('lista-de-posts', 'Lista_de_PostsController@index');
 
 //cadastro
 $router->get('cadastro', 'CadastroController@index');
+
+//post individual
+$router->get('post', 'PVIController@index');

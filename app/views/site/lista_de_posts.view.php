@@ -19,18 +19,18 @@
             <?php if(empty($posts)): ?>
                 <p>Nenhum post encontrado.</p>
             <?php else: ?>
-            <?php foreach($posts as $post): ?>            
-            <div class = "post">
+            <?php foreach($posts as $post): ?>
+            <a href="post"><div class = "post">
                 <img class="imagem" src="<?= $post->image ?>" alt="Imagem do post">
                 
                 <div class = "info">
                     <p class="titulo_post"><strong><?= $post->title  ?></strong></p>
-                    <p class="autor"><?= $post->author ?></p>
+                    <p class="autor"><?= $post->autor_nome ?></p>
                     <p class="publicacao">Publicado em <?= $post->created_at ?></p>
                 </div>
             
                 <p class="resumo"><?= $post->content ?></p>
-            </div>
+            </div></a>
             <?php endforeach; ?>
             <?php endif; ?>
         </div>
