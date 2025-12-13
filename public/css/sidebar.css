@@ -55,21 +55,20 @@ main
 }
 
 #perfil-sidebar img {
-  /* border-radius: 50%; */
   object-fit: contain;
   height: 9rem;
   width: 9rem;
+  margin-right: 2rem; 
 }
 
 .toggle-sidebar {
- cursor: pointer;
- transition: all 0.5s ease;
- position: absolute;
- top: 3.15rem; 
- left: 100%; 
- color: color-mix(in srgb, #ff9800 40%, #B392F0 60%);
- font-size: 1.7rem;
- margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 4.5rem; 
+  right: 1rem;      
+  color: #edebee;  
+  font-size: 1.7rem;
 }
 
 .toggle-sidebar:hover {
@@ -190,10 +189,13 @@ transform: scale(1.05);
 }
 
 .closed-sidebar .toggle-sidebar {
-  transform: rotate(180deg);
-  position: static; 
+  position: absolute; 
+  top: 4.3rem; 
+  left: 50%; 
+  right: auto; 
+  transform: translateX(-50%) rotate(180deg);
+  margin: 0; 
   color: #edebee;
-  margin-left: 0;
 }
 
 /* RESPONSIVIDADE */
