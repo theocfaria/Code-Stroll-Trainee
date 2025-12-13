@@ -176,7 +176,7 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(90deg, #b392f099, #ff980080);
+  background: linear-gradient(deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%),#b392f0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,18 +197,18 @@ body {
 }
 
 #criar {
-  width: auto;
-  height: 20%;
-  display: flex;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #b392f0;
-
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+    width: auto;
+    height: 20%;
+    display: flex;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: color-mix(in srgb, #ff9800 40%, #B392F0 60%);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    padding: 0px 10px;
 }
 
 #criar:hover {
@@ -305,7 +305,7 @@ input{
 }
 
 .tabela {
-  background: linear-gradient(90deg, #b392f099, #ff980080);
+  background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%),#b392f0);
   border-radius: 10px;
   padding: 8px;
   margin: auto;
@@ -322,7 +322,7 @@ table {
 }
 
 thead tr {
-  background: linear-gradient(90deg, #8e5de999, #cc7a0099);
+  background: linear-gradient(90deg, #8e5de999, color-mix(in srgb, #ff9800 40%, #B392F0 60%));
   color: #000;
   text-align: center;
   font-weight: bold;
@@ -537,6 +537,10 @@ td {
   background: linear-gradient(90deg, #b392f0, #ff9800);
   z-index: 100;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#criar:hover {
+    transform: scale(1.1);
 }
 
 #modal-criar h3,
