@@ -181,33 +181,32 @@ class QueryBuilder
     }
 
     public function countFromSearch($table, $busca)
-    {
-        $sql = "SELECT COUNT(*) as total_ocorr FROM $table WHERE title LIKE :busca or author LIKE :busca";
+{
+    $sql = "SELECT count(*) FROM {$table} WHERE title LIKE :busca";
 
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue(':busca', "%$busca");
-        $stmt->execute();
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':busca', "%{$busca}%"); 
+    $stmt->execute();
 
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $stmt->fetchColumn();
+}
 
-        return $result['total_ocorr'];
-    }
+    public function searchFromDB($busca, $begin, $rows)
+{
+    $sql = "SELECT posts.*, users.name AS autor_nome  
+            FROM posts
+            JOIN users ON users.id = posts.author     
+            WHERE posts.title LIKE :busca             
+            LIMIT :begin, :rows";
 
-    public function searchFromDB($search, $inicio, $itemsPagina)
-    {
-        $string_busca = "%$search%";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':busca', "%{$busca}%");
+    $stmt->bindValue(':begin', (int)$begin, PDO::PARAM_INT);
+    $stmt->bindValue(':rows', (int)$rows, PDO::PARAM_INT);
+    $stmt->execute();
 
-        $sql = "SELECT * FROM posts WHERE title LIKE :string_busca or author LIKE :string_busca LIMIT :inicio, :fim";
-
-        $stmt = $this->pdo->prepare($sql);
-
-        $stmt->bindValue(':string_busca', $string_busca, PDO::PARAM_STR);
-        $stmt->bindValue(':inicio', (int)$inicio, PDO::PARAM_INT);
-        $stmt->bindValue(':fim', (int)$itemsPagina, PDO::PARAM_INT);
-        $stmt->execute();
-
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
-    }
+    return $stmt->fetchAll(PDO::FETCH_OBJ);
+}
 
     public function selectPostsAutores($begin, $rows)
     {

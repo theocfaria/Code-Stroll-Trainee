@@ -23,8 +23,9 @@
 
     <div class="conteudo">
         <form method="GET" action="/crudPosts/search" id="pesquisa">
+            <input type="text" name="busca" placeholder="Buscar post" > <!-- arrumar aq e no css !-->
             <button id="pesquisa-dentro">
-            <input type="text" name="busca" placeholder="Buscar post" >
+            
             <i class="bi bi-search"></i>
             </button>
         </form>
@@ -102,7 +103,7 @@
                     <?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
 
                         <li class="page-item pagina-ativa<?= $i == $page ? 'active' : '' ?>">
-                            <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?><?= $tempSearch ?></a>
+                            <a class="page-link" href="?pagina=<?= $i ?> <?= $tempSearch ?>"><?= $i ?></a>
                         </li>
 
                     <?php endfor; ?>
