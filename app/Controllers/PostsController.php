@@ -39,7 +39,7 @@ class PostsController
 
         $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
 
-        return view('admin/tabela_posts', compact('posts', 'page', 'total')); // pode dar merda aqui na passagem de mais variaveis
+        return view('admin/tabela_posts', compact('posts', 'page', 'total'));
     }
 
     public function store()
@@ -84,7 +84,7 @@ class PostsController
         $parameters = [
         'title' => $_POST['title'],
         'content' => $_POST['content'],
-        'author' => $_POST['author'],
+        //'author' => $_POST['author'],
         'created_at' => $_POST['created_at'],
         'image' => $caminho_da_imagem,
         ];

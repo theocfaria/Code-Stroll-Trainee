@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Post individual</title>
     <link rel="stylesheet" href="../../../public/css/styles_post_individual.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -20,41 +20,28 @@
 </head>
 
 <body>
-
+    <?php require __DIR__ . '/navbar.view.php'; ?>
     <div class="conteudo">
         <div class="hero_section">
             <div class="titulo_post">
-                <p>Título</p>
+                <h1><?= htmlspecialchars($posts[0]->title) ?></h1>
             </div>
             <div class="autor_datapub">
-                <p>Autor</p>
-                <p>Data Publicação</p>
+                <p><?= $postID[0]->name ?></p>
+                <p><?= $posts[0]->created_at ?></p>
             </div>
 
 
             <div class="imagem">
-                <img src="../../../public/assets/teste.webp" alt="" id="main_imagem">
-
+                <img src="<?= $posts[0]->image ?>" alt="Imagem do post" id="#imagem-principal">
             </div>
         </div>
 
         <div class="descricao">
             <p>
-                Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for
-                previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder
-                text commonly used in the graphic, print, and publishing industries for previewing layouts and visual
-                mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
-                for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder
-                text commonly used in the graphic, print, and publishing industries for previewing layouts and visual
-                mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
-                for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic,
-                print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder
-                text commonly used in the graphic.
+                <?= $posts[0]->content ?>
             </p>
         </div>
-
         <div class="mais_recentes">
             <div class="texto_maisrecentes">
                 <p>Mais Recentes</p>
@@ -128,7 +115,7 @@
         </div>
     </div>
 
-
+<?php require __DIR__ . '/footer.view.php'; ?>
 </body>
 
 </html>

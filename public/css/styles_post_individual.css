@@ -1,7 +1,6 @@
 body {
     background: url(../assets/PVI.png) no-repeat top center/cover;
-    display: flex;
-    margin: auto;
+    margin: 0;
     gap: 20px;
 }
 
@@ -11,6 +10,7 @@ body {
     height: 100%;
     margin: 0px;
     flex-direction: column;
+    padding: 40px 80px 40px 80px;
     gap: 30px;
 }
 
@@ -51,7 +51,7 @@ body {
     align-self: center;
 }
 
-#main_imagem {
+#imagem-principal {
     width: 100%;
     height: 100%;
     border: 1px solid;
@@ -168,11 +168,6 @@ p {
 
 
 @media(min-width: 320px) {
-    body {
-        padding: 10px 20px 20px 20px;
-        /* topo, esquerda, baixo, direita */
-    }
-
     .autor_datapub {
         font-size: 14px;
     }
@@ -231,11 +226,6 @@ p {
 }
 
 @media(min-width: 375px) {
-    body {
-        padding: 12px 24px 24px 24px;
-        /* topo, esquerda, baixo, direita */
-    }
-
     .autor_datapub {
         font-size: 14px;
     }
@@ -292,11 +282,6 @@ p {
 }
 
 @media(min-width: 425px) {
-    body {
-        padding: 16px 30px 30px 30px;
-        /* topo, esquerda, baixo, direita */
-    }
-
     .autor_datapub {
         font-size: 14px;
     }
@@ -347,12 +332,7 @@ p {
 }
 
 @media(min-width: 768px) {
-    body {
-        padding: 20px 40px 40px 40px;
-        /* topo, esquerda, baixo, direita */
-    }
-
-    #main_imagem {
+    #imagem-principal {
         width: 80vw;
     }
 
@@ -411,12 +391,7 @@ p {
 }
 
 @media(min-width: 1024px) {
-    body {
-        padding: 20px 50px 40px 50px;
-        /* topo, esquerda, baixo, direita */
-    }
-
-    #main_imagem {
+    #imagem-principal {
         width: 60vw;
     }
 
@@ -475,12 +450,7 @@ p {
 }
 
 @media(min-width: 1440px) {
-    body {
-        padding: 20px 50px 40px 50px;
-        /* topo, esquerda, baixo, direita */
-    }
-
-    #main_imagem {
+    #imagem-principal {
         width: 60vw;
     }
 
@@ -536,16 +506,11 @@ p {
 }
 
 @media(min-width: 1920px) {
-    body {
-        padding: 40px 120px 80px 120px;
-        /* topo, esquerda, baixo, direita */
-    }
-
     .hero_section {
         gap: 20px;
     }
 
-    #main_imagem {
+    #imagem-principal {
         width: 50vw;
     }
 
@@ -602,16 +567,11 @@ p {
 }
 
 @media(min-width: 2560px) {
-    body {
-        padding: 60px 120px 80px 120px;
-        /* topo, esquerda, baixo, direita */
-    }
-
     .hero_section {
         gap: 30px;
     }
 
-    #main_imagem {
+    #imagem-principal {
         width: 50vw;
     }
 

@@ -223,4 +223,33 @@ class QueryBuilder
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function selectPostsAutoresPVI()
+    {
+        $sql = "SELECT posts.*, users.name AS autor_nome
+                FROM posts
+                JOIN users ON users.id = posts.author";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([]);
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+    }
+
+    public function FindByID($table, $id){
+        $sql = "SELECT * FROM {$table} WHERE ID = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([]);
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+    }
+
 }
