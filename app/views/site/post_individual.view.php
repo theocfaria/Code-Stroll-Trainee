@@ -106,12 +106,14 @@
             </div>
         </div>
         <div class="voltar_posts">
+            <a href="/lista-de-posts">
             <button class="botao">
                 <i class="bi bi-arrow-left"></i>
                 <div class="texto_botao">
-                    Voltar a lista de posts
+                    <p>Voltar a lista de posts</p>
                 </div>
             </button>
+            </a>
         </div>
     </div>
 
