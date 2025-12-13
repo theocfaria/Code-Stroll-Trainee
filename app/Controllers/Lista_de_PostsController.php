@@ -13,28 +13,55 @@ class Lista_de_PostsController
     }*/
 public function index()
 {
+    // $page = 1;
+
+    // if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
+    //     $page = intval($_GET['pagina']);
+
+    //     if ($page <= 0) {
+    //         $page = 1;
+    //     }
+    // }
+
+    // $itemsPagina = 5;
+    // $inicio = $itemsPagina * $page - $itemsPagina;
+
+    // $linhas = App::get('database')->countAll('posts');
+
+    // if ($inicio > $linhas) {
+    //     $page = 1;
+    // }
+
+    // $total = ceil($linhas / $itemsPagina);
+
+    // $posts = App::get('database')->selectPostsAutores('posts', $inicio, $itemsPagina);
+
     $page = 1;
 
-    if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
-        $page = intval($_GET['pagina']);
+        if(isset($_GET['pagina']) && !empty($_GET['pagina']))
+        {
+            $page = intval($_GET['pagina']);
 
-        if ($page <= 0) {
+            if($page <=0)
+            {
+                $page = 1;
+            }
+        }
+
+        $itemsPagina = 5;
+
+        $inicio = $itemsPagina * $page - $itemsPagina;
+
+        $linhas = App::get('database')->countAll('posts');
+
+        if($inicio > $linhas)
+        {
             $page = 1;
         }
-    }
 
-    $itemsPagina = 5;
-    $inicio = $itemsPagina * $page - $itemsPagina;
+        $total = ceil($linhas/$itemsPagina);
 
-    $linhas = App::get('database')->countAll('posts');
-
-    if ($inicio > $linhas) {
-        $page = 1;
-    }
-
-    $total = ceil($linhas / $itemsPagina);
-
-    $posts = App::get('database')->selectPostsAutores('posts', $inicio, $itemsPagina);
+        $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
 
     // Retorne a view correta
     return view('site/lista_de_posts', compact('posts', 'page', 'total'));
