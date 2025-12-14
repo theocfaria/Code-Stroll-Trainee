@@ -7,23 +7,41 @@ use Exception;
 
 class NavbarController
 {
-    public function redireciona_listaposts()
+    public function search()
     {
-        return view('site/lista_de_posts');
-    }
+        $busca = isset($_GET['busca']) ? trim($_GET['busca']) : '';
 
-    public function redireciona_sobrenos()
-    {
-        return view('site/sobre_nos');
-    }
+        $page = 1;
 
-    public function redireciona_login()
-    {
-        return view('site/login');
-    }
+        if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
+            $page = intval($_GET['pagina']);
 
-    public function redireciona_lp()
-    {
-        return view('site/landingPage');
+            if ($page <= 0) {
+                return redirect('/lista-de-posts'); 
+            }
+        }
+
+        $itemsPagina = 5;
+        $inicio = $itemsPagina * $page - $itemsPagina;
+
+        if ($busca === '') {
+            $linhas = App::get('database')->countAll('posts');
+            
+            if ($inicio > $linhas && $linhas > 0) {
+                return redirect('/lista-de-posts');
+            }
+            $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
+        } else {
+            $linhas = App::get('database')->countFromSearch('posts', $busca);
+            
+            if ($inicio > $linhas && $linhas > 0) {
+                return redirect('/lista-de-posts');
+            }
+            $posts = App::get('database')->searchFromDB($busca, $inicio, $itemsPagina);
+        }
+        
+        $total = ($linhas > 0) ? ceil($linhas / $itemsPagina) : 1;
+
+        return view('site/lista-de-posts', compact('posts', 'page', 'total', 'busca'));
     }
 }

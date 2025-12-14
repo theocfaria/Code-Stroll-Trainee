@@ -14,8 +14,11 @@
 
 <body>
     <?php require __DIR__ . '/navbar.view.php'; ?>
+    
     <div class="conteudo">
-        <h1>Principais Postagens</h1>
+        <h1>
+            <?= $busca ? 'Resultados para: "' . htmlspecialchars($busca) . '"' : 'Principais Postagens' ?>
+        </h1>
 
         <div class="posts">
             <?php if (empty($posts)): ?>
@@ -41,20 +44,20 @@
 
         <div class="paginacao">
             <?php if ($page >= 2): ?>
-                <a href="?pagina=<?= $page - 1 ?>" class="passa_pag">
+                <a href="?pagina=<?= $page - 1 ?>&busca=<?= urlencode($busca) ?>" class="passa_pag">
                     <i class="material-icons">arrow_back</i>
                     <p>Anterior</p>
                 </a>
             <?php endif; ?>
 
             <?php if ($page > 1): ?>
-                <a href="?pagina=<?= 1 ?>">
+                <a href="?pagina=1&busca=<?= urlencode($busca) ?>">
                     1
                 </a>
             <?php endif; ?>
 
             <?php for ($i = $page; $i < $page + 3 && $i <= $total; $i++): ?>
-                <a href="?pagina=<?= $i ?>" class="<?= $i == $page ? 'atual' : '' ?>">
+                <a href="?pagina=<?= $i ?>&busca=<?= urlencode($busca) ?>" class="<?= $i == $page ? 'atual' : '' ?>">
                     <?= $i ?>
                 </a>
             <?php endfor; ?>
@@ -63,25 +66,14 @@
                 <a href="#">...</a>
             <?php endif; ?>
 
-            <!-- Última página -->
             <?php if ($page + 3 < $total): ?>
-                <a href="?pagina=<?= $total ?>">
+                <a href="?pagina=<?= $total ?>&busca=<?= urlencode($busca) ?>">
                     <?= $total ?>
                 </a>
             <?php endif; ?>
 
-
-
-
-            <!-- Campo para digitar uma página específica     (FAZER MODAL DEPOIS)
-            <form method="GET" action="" class="form-paginacao">
-                <input type="number" name="pagina" min="1" max="" placeholder="Ir para..." required>
-                <button type="submit">Ir</button>
-            </form>-->
-
-            <!-- Botão para a próxima página -->
             <?php if ($page < $total): ?>
-                <a href="?pagina=<?= $page + 1 ?>" class="passa_pag">
+                <a href="?pagina=<?= $page + 1 ?>&busca=<?= urlencode($busca) ?>" class="passa_pag">
                     <p>Próximo</p> <i class="material-icons">arrow_forward</i>
                 </a>
             <?php endif; ?>
@@ -90,5 +82,4 @@
     </div>
     <?php require __DIR__ . '/footer.view.php'; ?>
 </body>
-
 </html>
