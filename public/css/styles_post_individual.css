@@ -34,6 +34,7 @@ a{
     height: auto;
     margin: auto;
     justify-content: center;
+    text-align: center;
     font-family: "Silkscreen", sans-serif;
     font-size: 52px;
     color: #C2A9EF;
@@ -186,6 +187,7 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -232,7 +234,6 @@ p {
         flex-direction: column;
         gap: 8px;
         padding: 10px;
-        width: 100%;
     }
 
     .botao {
@@ -354,6 +355,9 @@ p {
         border-radius: 8px;
     }
 
+    .conteudo{
+        padding: 15px 30px;
+    }
 }
 
 @media(min-width: 768px) {
@@ -413,6 +417,9 @@ p {
         gap: 30px;
     }
 
+    .conteudo{
+        padding: 20px 40px;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -472,6 +479,10 @@ p {
     .bi-arrow-left{
         font-size: 24px;
     }
+
+    .conteudo{
+        padding: 25px 50px;
+    }
 }
 
 @media(min-width: 1440px) {
@@ -519,7 +530,7 @@ p {
     }
 
     .botao {
-        width: 25vw;
+        width: 30vw;
         height: 50px;
         background: #F73B4E;
         font-size: 20px;
@@ -528,6 +539,9 @@ p {
         gap: 30px;
     }
 
+    .conteudo{
+        padding: 30px 60px;
+    }
 }
 
 @media(min-width: 1920px) {
@@ -589,6 +603,9 @@ p {
         font-size: 30px;
     }
 
+    .conteudo{
+        padding: 40px 80px;
+    }
 }
 
 @media(min-width: 2560px) {

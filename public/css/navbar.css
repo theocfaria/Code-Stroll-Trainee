@@ -43,14 +43,14 @@ body {
     align-items: center;
     background-color: #1f1f1f;
     width: 100%;
-    height: fit-content;
-    padding: 10px 20px 10px 10px;
+    height: 15vh;
+    padding: 10px 30px 10px 10px;
 }
 .logotipo {
     width: fit-content;
     margin: 0px 0px;
-    padding: 10px 10px;
     margin-left: 0px ;
+    padding-left: 20px;
 }
 .logotipo img:nth-child(1) {
     height: 80px;
@@ -84,8 +84,9 @@ body {
 .botao_pesquisa{
     display: flex;
     justify-content: space-between;
-    border: 2px solid #F73B4E;
-    border-radius: 100px;
+    height: auto;
+    /* border: 2px solid #F73B4E;
+    border-radius: 100px; */
 }
 
 #barra-pesquisa:focus {
@@ -133,6 +134,16 @@ body {
     align-items: center;
     padding-right: 2%;
     cursor: pointer;
+}
+
+.search{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #F73B4E;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
 }
 
 @media (min-width: 320px){
@@ -220,8 +231,8 @@ body {
    .botao_pesquisa {
     display: flex;
     justify-content: space-between;
-    border: 2px solid #F73B4E;
-    border-radius: 100px;
+    /* border: 2px solid #F73B4E;
+    border-radius: 100px; */
     width: 100%;       
     max-width: 350px; 
 }
