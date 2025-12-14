@@ -10,7 +10,7 @@ body {
 }
 
 #container {
-    opacity: 0.8;
+    opacity: 1.0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -20,12 +20,7 @@ body {
     gap: 100px;
     padding: 150px;
 
-    background: linear-gradient(
-    to bottom,
-    #f73b46,
-    #832424,
-    #832424  /* #812e2e    #881b1b   */
-  ); 
+    background: url('../../public/assets/fundo-black.jpg') center/cover no-repeat;
 }
 
 #links {
@@ -43,7 +38,6 @@ a#posts {
     border-radius: 40px;
     width: 30%;
     height: 75%;
-
     text-decoration: none;
     cursor: pointer;
     font-family: "JetBrains Mono", monospace;
