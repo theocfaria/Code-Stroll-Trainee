@@ -20,11 +20,12 @@ body {
     gap: 100px;
     padding: 150px;
 
-    background-image: linear-gradient(to right,
-            rgba(142, 93, 233, 0.7) 0%,
-            #b392f0 35%,
-            rgba(204, 122, 0, 0.7) 65%,
-            #cc7a00 100%);
+    background: linear-gradient(
+    to bottom,
+    #f73b46,
+    #832424,
+    #832424  /* #812e2e    #881b1b   */
+  ); 
 }
 
 #links {
