@@ -8,7 +8,9 @@ use Exception;
 class LandingPageController
 {
     public function index(){
-        return view('site/landingPage');
+        $posts = App::get('database')->selectPostsRecentes(8);
+
+        return view('site/landingPage', compact('posts'));
     }
     
 }

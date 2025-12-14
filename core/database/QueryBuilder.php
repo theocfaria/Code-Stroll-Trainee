@@ -236,4 +236,23 @@ class QueryBuilder
             }
     }
 
+    public function selectPostsRecentes($limit)
+    {
+        $sql = "SELECT posts.*, users.name AS autor_nome 
+                FROM posts 
+                JOIN users ON users.id = posts.author 
+                ORDER BY posts.created_at DESC 
+                LIMIT :limit";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->bindValue(':limit', (int)$limit, PDO::PARAM_INT);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 }
