@@ -78,10 +78,11 @@ body {
 
 .texto_contato {
     font-size: 12px;
-    height: fit-content;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    }
+    height: fit-content; 
+    overflow-wrap: break-word;  
+    word-break: break-word;    
+    max-width: 100%; 
+}
 
 @media(min-width: 320px) {
     .conteudo_foot {
@@ -196,10 +197,11 @@ body {
         height: 80px;
     }
 
-    .contato{
-        width: 180px;
-        text-align: end;
-    }
+    .contato {
+    /* width: 180px;*/
+    width: fit-content; 
+    text-align: end;
+}
 
     .titulo_contato {
         font-size: 20px;
@@ -321,9 +323,10 @@ body {
         gap: 30px;
     }
 
-    .contato{
-        width: 330px;
-    }
+    .contato {
+    /* width: 330px;*/
+    width: fit-content;
+}
 
      .logos {
         gap: 30px;
