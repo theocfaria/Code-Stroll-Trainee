@@ -32,7 +32,7 @@
               </a>
             </li>
             <li class="item-sidebar">
-              <a href="/lista-de-posts">
+              <a href="/crudPosts">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <span class="item-description">Publicações</span>
               </a>

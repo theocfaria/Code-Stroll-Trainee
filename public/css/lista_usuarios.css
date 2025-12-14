@@ -208,12 +208,8 @@ body {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, opacity 0.2s ease;
-    padding: 0px 10px;
-}
-
-#criar:hover {
-  transform: scale(1.1);
-  opacity: 0.95;
+    padding: 5px 10px;
+    margin-right: 5px;
 }
 
 .bi-plus-lg {
@@ -719,4 +715,9 @@ td {
 
 .input-wrapper {
   position: relative;
+}
+
+
+#criar .bi-plus-lg {
+    font-size: 30px; 
 }

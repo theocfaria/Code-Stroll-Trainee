@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <main> </main>
     <div class="footer">
     <div class="conteudo_foot">
 
@@ -23,10 +24,21 @@
                 <p>Redes Sociais</p>
             </div>
             <div class="logos">
+                <a href="https://www.instagram.com/codejr/" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/company/codejr/" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-linkedin"></i>
+                </a>
+
+                <a href="https://www.facebook.com/codeempresajunior/" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-facebook"></i>
-                <i class="bi bi-twitter-x"></i>
+                </a>
+
+                <a href="https://linktr.ee/codejr/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-link"></i>
+                </a>
             </div>
         </div>
         <div class="logo_blog">
