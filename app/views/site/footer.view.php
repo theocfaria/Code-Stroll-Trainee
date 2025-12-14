@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <main> </main>
     <div class="footer">
     <div class="conteudo_foot">
 
