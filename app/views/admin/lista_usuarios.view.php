@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link rel="icon" href="../../../public/assets/logoD.png" type="image/png">
   </head>
 
   <body>
@@ -92,7 +93,6 @@
             <ul class="pagination">
                 <?php $tempSearch = isset($busca) && $busca !== '' ? '&busca='. urlencode($busca) : ""; ?>
 
-
                 <li class="page-item setas<?= $page == 1 ?'disabled' : '' ?>" id="setas">
                     <a class="page-link" href="?pagina=<?= max(1,$page-1) ?><?= $tempSearch ?> "><i class="bi bi-arrow-left-circle"></i></a>
                 </li>
@@ -115,18 +115,20 @@
 
                 ?>
 
-                <?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
+                <?php for($i = $inicio + 1; $i <= $fim; $i++): ?>
 
                     <li class="page-item pagina-ativa<?= $i == $page ? 'active' : '' ?>">
-                        <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?><?= $tempSearch ?></a>
+                        <a class="page-link" href="?pagina=<?= $i ?><?= $tempSearch ?>"><?= $i ?></a>
                     </li>
 
                 <?php endfor; ?>
-
+                
+                <?php if($fim < $total): ?>
                 <li class="page-item <?= $page == $total ?'active' : '' ?>">
                     <a class="page-link" href="?pagina=<?= $total ?><?= $tempSearch ?>"><?= $total ?></a>
                 </li>
-
+                <?php endif; ?>
+ 
                 <li class="page-item setas<?= $page == $total ?'disabled' : '' ?>" id="setas">
                     <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?><?= $tempSearch ?>"><i class="bi bi-arrow-right-circle"></i></a>
                 </li>

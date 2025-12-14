@@ -208,12 +208,8 @@ body {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, opacity 0.2s ease;
-    padding: 0px 10px;
-}
-
-#criar:hover {
-  transform: scale(1.1);
-  opacity: 0.95;
+    padding: 5px 10px;
+    margin-right: 5px;
 }
 
 .bi-plus-lg {
@@ -637,10 +633,12 @@ td {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.8);
   font-family: "JetBrains Mono", monospace;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
   padding-right: 50px;
   box-sizing: border-box;
+  color: #333;
+  font-weight: 600;
 }
 
 .modal-buttons {
@@ -695,7 +693,7 @@ td {
 .toggle-senha {
   position: absolute;
   right: 15px;
-  top: 50%;
+  top: 70%; 
   transform: translateY(-50%);
   cursor: pointer;
   color: #333;
@@ -707,16 +705,20 @@ td {
 }
 
 #toggle-view-senha {
-  position: center;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative; 
+  display: inline-block;
+  margin-left: 2px; 
+  vertical-align: middle; 
   cursor: pointer;
   color: #333;
   font-size: 20px;
-  margin-left: 3px;
 }
 
-.input-wrapper {
-  position: relative;
+
+#criar .bi-plus-lg {
+    font-size: 30px; 
+}
+
+.pagination .bi {
+    font-size: 28px; 
 }

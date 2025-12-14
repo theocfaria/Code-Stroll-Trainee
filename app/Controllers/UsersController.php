@@ -44,7 +44,6 @@ class UsersController{
     public function store()
     {
         $parameters = [
-        'id' => 1,
         'name' => $_POST['name'],
         'email' => $_POST['email'],
         'password' => $_POST['password'],
@@ -59,7 +58,6 @@ class UsersController{
     {
         $id = $_POST['id'];
         $parameters = [
-        'id' => 1,
         'name' => $_POST['name'],
         'email' => $_POST['email'],
         'password' => $_POST['password'],
@@ -94,7 +92,7 @@ class UsersController{
 
         $itemsPagina = 6;
 
-        $inicio = $itemsPagina * $page - $itemsPagina;
+        $inicio = $itemsPagina * ($page - 1);
 
         if($busca === '')
         {
@@ -112,6 +110,7 @@ class UsersController{
             {
                 return redirect('site/crudUsers');
             }
+            $users = App::get('database')->searchFromDBUsers($busca, $inicio, $itemsPagina);
         }
         $total = ceil($linhas/$itemsPagina);
 

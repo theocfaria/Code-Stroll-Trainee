@@ -202,7 +202,7 @@ input{
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     font-family: "JetBrains Mono", monospace;
-    font-size: 16px;
+    font-size: 18px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -262,13 +262,12 @@ input{
 }
 
 .navbar {
-    /* Gradiente padronizado (Roxo -> Laranja) */
-    background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%),#b392f0);
+    background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%), #b392f0);
     display: flex;
     justify-content: space-between;
-    padding: 40px 80px;
-    align-items: center;
+    align-items: center; 
     font-weight: 700;
+    padding: 20px 40px;
 }
 
 #imagem_logo {
@@ -296,6 +295,7 @@ input{
     justify-content: center;
     transition: transform 0.2s ease, opacity 0.2s ease;
     padding: 0px 10px;
+    margin-right: 5px;
 }
 
 #criar:hover {
@@ -519,6 +519,10 @@ td {
     background: transparent;
     border: none;
     color: black;
+}
+
+#criar .bi-plus-lg {
+    font-size: 30px; 
 }
 
 
