@@ -23,6 +23,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link rel="icon" href="../../../public/assets/logoD.png" type="image/png">
   </head>
 
   <body>
