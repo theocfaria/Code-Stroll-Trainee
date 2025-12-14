@@ -29,7 +29,7 @@
     <?php require __DIR__ . '/sidebar.view.php'; ?>
     <div class="pagina_toda">
     <div class="navbar">
-      <p id="texto_post">PÁGINA DE USUÁRIOS</p>
+      <p id="texto_post">TABELA DE USUÁRIOS</p>
       <button id="criar" onclick="abrirModal('modal-criar')">
         <i class="bi bi-plus-lg"></i>
       </button>

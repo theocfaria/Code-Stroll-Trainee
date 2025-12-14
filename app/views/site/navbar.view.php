@@ -43,7 +43,7 @@
     <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>
     <div id="link">
       <a href="/" id="home">Home</a>
-      <a href="sobre-nos" id="sobre-nos">Sobre nós</a>
+      <a href="sobre-nos" id="sobre-nos">Sobre Nós</a>
       <a href="lista-de-posts" id="publicacoes">Publicações</a>
       <a href="login" id="login">Login</a>
     </div>
