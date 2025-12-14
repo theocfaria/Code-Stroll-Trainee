@@ -32,11 +32,12 @@
     </div>
 
     <form action="/lista-de-posts" method="GET" class="botao_pesquisa">
-      <input type="text" name="busca" value="<?= htmlspecialchars($busca ?? '') ?>" id="barra-pesquisa" placeholder="Pesquisar post">
-
-      <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
-        <i class="bi-search"></i>
-      </button>
+      <div class="search">
+        <input type="text" name="busca" value="<?= htmlspecialchars($busca ?? '') ?>" id="barra-pesquisa" placeholder="Pesquisar post">
+        <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer; padding-right: 10px">
+          <i class="bi-search"></i>
+        </button>
+      </div>
     </form>
 
     <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>

@@ -18,7 +18,7 @@
     <div class="conteudo">
         <div class="hero_section">
             <div class="titulo_post">
-                <h1><?= htmlspecialchars($posts[0]->title) ?></h1>
+                <p><?= htmlspecialchars($posts[0]->title) ?></p>
             </div>
             <div class="autor_datapub">
                 <div class="name"><p><?= htmlspecialchars($postID[0]->name) ?></p></div>
@@ -87,6 +87,7 @@
                 <div class="texto_botao">
                     <p>Voltar a lista de posts</p>
                 </div>
+                <div style="width: 1px;"> </div>
             </button>
             </a>
         </div>

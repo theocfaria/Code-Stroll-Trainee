@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/lista_de_posts.css" />
+    <link rel="icon" href="../../../public/assets/logoD.png" type="image/png">
 </head>
 
 <body>
