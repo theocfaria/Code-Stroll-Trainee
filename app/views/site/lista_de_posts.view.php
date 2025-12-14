@@ -20,9 +20,9 @@
             <?= $busca ? 'Resultados para: "' . htmlspecialchars($busca) . '"' : 'Principais Postagens' ?>
         </h1>
 
-        <div class="posts">
-            <?php if (empty($posts)): ?>
-                <p>Nenhum post encontrado.</p>
+        <div class = "posts">
+            <?php if(empty($posts)): ?>
+                <p class="msg_erro">Nenhum post encontrado.</p>
             <?php else: ?>
                 <?php foreach ($posts as $post): ?>
                     <a href="post?id=<?= $post->id ?>">

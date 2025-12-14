@@ -9,10 +9,8 @@ class UsersController{
 
     public function index()
     {
-        //App::get('database')->populaBanco('users',50);
+        //App::get('database')->populaBancoUser('users',50);
         $users = App::get('database')->selectAll('users');
-
-        return view('admin/lista_usuarios', compact('users'));
 
         $page = 1;
 
@@ -100,21 +98,20 @@ class UsersController{
 
         if($busca === '')
         {
-            $linhas = App::get('database')->countAll('posts');
+            $linhas = App::get('database')->countAll('users');
             if($inicio > $linhas)
             {
                 return redirect('site/crudUsers');
             }
-            $posts = App::get('database')->selectAll('users', $inicio, $itemsPagina);
+            $users = App::get('database')->selectAll('users', $inicio, $itemsPagina);
         }
         else
         {
-            $linhas = App::get('database')->countFromSearch('users', $busca);
+            $linhas = App::get('database')->countFromSearchUsers('users', $busca);
             if($inicio > $linhas)
             {
                 return redirect('site/crudUsers');
             }
-            $users = App::get('database')->searchFromDB($busca,$inicio,$itemsPagina);
         }
         $total = ceil($linhas/$itemsPagina);
 

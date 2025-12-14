@@ -168,7 +168,7 @@ class QueryBuilder
             {
                 $title = "Titulo {$i}";
                 $content = "Descrição {$i}";
-                $author = 1;
+                $author = "Nome{$i}";
                 $created_at = "2025-11-16";
                 
                 $this->insert($table, [
@@ -180,10 +180,37 @@ class QueryBuilder
             }
     }
 
+    public function populaBancoUser($table,$size)
+    {
+        for($i = 0; $i<=$size; $i++)
+            {
+                $name = "Nome{$i}";
+                $email = "nome{$i}@email.com";
+                $password = "Nome{$i}/user";
+            
+                $this->insert($table, [
+                    'name' => $name,
+                    'email' => $email,
+                    'password' => $password
+                ]);
+            }
+    }
+
+
     public function countFromSearch($table, $busca)
 {
     $sql = "SELECT count(*) FROM {$table} WHERE title LIKE :busca";
 
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':busca', "%{$busca}%"); 
+    $stmt->execute();
+
+    return $stmt->fetchColumn();
+}
+
+    public function countFromSearchUsers($table, $busca)
+{
+    $sql = "SELECT count(*) FROM {$table} WHERE name LIKE :busca";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':busca', "%{$busca}%"); 
     $stmt->execute();

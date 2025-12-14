@@ -35,12 +35,13 @@
       </button>
     </div>
     <div class="conteudo">
-      <form method="GET" action="/crudPosts/search" id="pesquisa">
-            <button id="pesquisa-dentro">
-            <input type="text" name="busca" placeholder="Buscar post" >
-            <i class="bi bi-search"></i>
-            </button>
-        </form>
+      <form method="GET" action="/crudUsers/search" id="pesquisa">   
+            <div id="pesquisa-dentro">
+                <input type="text" name="busca" placeholder="Buscar usuário" > <!-- arrumar aq e no css !-->
+                <button id="pesquisa-dentro" class="lupa"><i class="bi bi-search"></i></button>
+            </div>
+      </form>
+      
       <div class="tabela">
         <table>
           <thead>
@@ -53,58 +54,54 @@
           </thead>
 
           <tbody>
-            <?php foreach ($users as $user): ?>
-            <tr>
-                <td class="teste3 teste4"><?= $user->id ?></td>
-                <td class="teste4"><?= $user->name ?></td>
-                <td class="teste4"><?= $user->email ?></td>
-                <td class="acoes">
-                    <button type="button" class="btn-primary"
-                        onclick="abrirModalVisualizar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')">
-                        <i class="bi bi-eye"></i>
-                    </button>
-                    <button type="submit" class="btn-primary"
-                        data-id="<?= $user->id ?>"
-                        data-name="<?= $user->name ?>"
-                        data-email="<?= $user->email ?>"
-                        data-password="<?= $user->password ?>"
-                        onclick="abrirModalEditar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')"
-                        >
-                        <i class="bi bi-pencil"></i>
-                    </button>
-                    <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $user->id ?>', '<?= $user->name ?>')" >
-                        <i class="bi bi-trash"></i>
-                    </button>
-                </td>
-            </tr>
-            <?php endforeach; ?> 
+            <?php if (!empty($users)): ?>
+                <?php foreach ($users as $user): ?>
+                    <tr>
+                        <td class="teste3 teste4"><?= $user->id ?></td>
+                        <td class="teste4"><?= $user->name ?></td>
+                        <td class="teste4"><?= $user->email ?></td>
+                        <td class="acoes">
+                            <button type="button" class="btn-primary"
+                                onclick="abrirModalVisualizar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button type="submit" class="btn-primary"
+                                data-id="<?= $user->id ?>"
+                                data-name="<?= $user->name ?>"
+                                data-email="<?= $user->email ?>"
+                                data-password="<?= $user->password ?>"
+                                onclick="abrirModalEditar('<?= $user->id ?>', '<?= $user->name ?>', '<?= $user->email ?>', '<?= $user->password ?>')"
+                                >
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button type="button" class="btn-primary" onclick="abrirModalExcluir('<?= $user->id ?>', '<?= $user->name ?>')" >
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="5">Nenhum usuário encontrado.</td>
+                </tr>
+            <?php endif; ?> 
           </tbody>
         </table>
-        <div class="foot">
-            <button class="botao_foot1"><i class="bi bi-arrow-left-circle"></i></button>
 
-            <button class="botao_foot pagina-ativa">1</button>
-            <button class="botao_foot">2</button>
-            <button class="botao_foot">3</button>
-            <button class="botao_foot">4</button>
-
-            <button class="botao_foot1"><i class="bi bi-arrow-right-circle"></i></button>
-        </div>
-
-       <!--- <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation example">
             <ul class="pagination">
-                </?php $tempSearch = isset($busca) && $busca !== '' ? '&busca='. urlencode($busca) : ""; ?>
+                <?php $tempSearch = isset($busca) && $busca !== '' ? '&busca='. urlencode($busca) : ""; ?>
 
 
-                <li class="page-item setas</?= $page == 1 ?'disabled' : '' ?>" id="setas">
-                    <a class="page-link" href="?pagina=</?= max(1,$page-1) ?></?= $tempSearch ?> "><i class="bi bi-arrow-left-circle"></i></a>
+                <li class="page-item setas<?= $page == 1 ?'disabled' : '' ?>" id="setas">
+                    <a class="page-link" href="?pagina=<?= max(1,$page-1) ?><?= $tempSearch ?> "><i class="bi bi-arrow-left-circle"></i></a>
                 </li>
 
-                <li class="page-item </?= $page == 1 ?'active' : '' ?>">
-                    <a class="page-link" href="?pagina=</?= 1 ?></?= $tempSearch ?>">1</a>
+                <li class="page-item <?= $page == 1 ?'active' : '' ?>">
+                    <a class="page-link" href="?pagina=<?= 1 ?><?= $tempSearch ?>">1</a>
                 </li>
 
-                </*?php 
+                <?php 
                     $maxBotoes = 5;
 
                     $inicio = max(1, $page - (int)floor($maxBotoes/2));
@@ -118,27 +115,26 @@
 
                 ?>
 
-                </*?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
+                <?php for($i = $inicio + 1; $i <= $fim-1; $i++): ?>
 
-                    <li class="page-item pagina-ativa</*?= $i == $page ? 'active' : '' ?>">
-                        <a class="page-link" href="?pagina=</*?= $i ?>"></*?= $i ?></*?= $tempSearch ?></a>
+                    <li class="page-item pagina-ativa<?= $i == $page ? 'active' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?><?= $tempSearch ?></a>
                     </li>
 
-                </?php endfor; ?>
+                <?php endfor; ?>
 
-                <li class="page-item </*?= $page == $total ?'active' : '' ?>">
-                    <a class="page-link" href="?pagina=</*?= $total ?></*?= $tempSearch ?>"></*?= $total ?></a>
+                <li class="page-item <?= $page == $total ?'active' : '' ?>">
+                    <a class="page-link" href="?pagina=<?= $total ?><?= $tempSearch ?>"><?= $total ?></a>
                 </li>
 
-                <li class="page-item setas</*?= $page == $total ?'disabled' : '' ?>" id="setas">
-                    <a class="page-link" href="?pagina=</*?= min($total, $page + 1) ?></*?= $tempSearch ?>"><i class="bi bi-arrow-right-circle"></i></a>
+                <li class="page-item setas<?= $page == $total ?'disabled' : '' ?>" id="setas">
+                    <a class="page-link" href="?pagina=<?= min($total, $page + 1) ?><?= $tempSearch ?>"><i class="bi bi-arrow-right-circle"></i></a>
                 </li>
             </ul>
-        </nav>-->
+        </nav>
       </div>
     </div>
-    
-    <?php foreach ($users as $user): ?>
+  
     <div id="modal-delete">
       <h3 id="delete-modal-title">Excluir Usuário</h3>
       <p id="delete-modal-text">Tem certeza que deseja excluir este usuário?</p>
@@ -223,8 +219,6 @@
   </form> </div>
       <p id="modal-editar-erro" class="modal-erro"></p>
 
-      
-    <?php endforeach; ?>
       </div>
     </div>
 
