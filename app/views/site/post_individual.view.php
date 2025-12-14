@@ -85,7 +85,7 @@
             <button class="botao">
                 <i class="bi bi-arrow-left"></i>
                 <div class="texto_botao">
-                    <p>Voltar a lista de posts</p>
+                    <p>Voltar à Lista de Posts</p>
                 </div>
             </button>
             </a>
