@@ -27,7 +27,7 @@
 
             <div class="imagem">
                 <?php if(!empty($posts[0]->image)): ?>
-                    <img src="<?= htmlspecialchars($posts[0]->image) ?>" alt="Imagem do post" id="#imagem-principal">
+                    <img src="<?= htmlspecialchars($posts[0]->image) ?>" alt="Imagem do post" id="imagem-principal">
                 <?php endif; ?>
             </div>
         </div>
