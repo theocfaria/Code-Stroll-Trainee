@@ -703,18 +703,13 @@ td {
 }
 
 #toggle-view-senha {
-  position: center;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative; 
+  display: inline-block;
+  margin-left: 2px; 
+  vertical-align: middle; 
   cursor: pointer;
   color: #333;
   font-size: 20px;
-  margin-left: 3px;
-}
-
-.input-wrapper {
-  position: relative;
 }
 
 
