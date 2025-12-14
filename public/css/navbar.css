@@ -217,11 +217,10 @@ body {
 
 @media (min-width: 1440px){
     #barra-pesquisa {
-        padding: 10px 15px;
-        font-size: 24px;
-        border-radius: 25px;
-        background-size: 25px 25px;
+        padding: 5px 10px;
+        font-size: 23px;
     }
+    
     
     #home, #publicacoes, #sobre-nos, #login {
         font-size: 26px;
@@ -240,8 +239,10 @@ body {
 @media (min-width: 1920px){
     #barra-pesquisa {
         padding: 5px 10px;
+        font-size: 26px;
     }
    
+
     #home, #publicacoes, #sobre-nos, #login {
         font-size: 32px;
         padding: 10px 20px;
