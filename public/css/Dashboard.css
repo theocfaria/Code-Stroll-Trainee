@@ -10,7 +10,7 @@ body {
 }
 
 #container {
-    opacity: 0.8;
+    opacity: 1.0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -20,11 +20,7 @@ body {
     gap: 100px;
     padding: 150px;
 
-    background-image: linear-gradient(to right,
-            rgba(142, 93, 233, 0.7) 0%,
-            #b392f0 35%,
-            rgba(204, 122, 0, 0.7) 65%,
-            #cc7a00 100%);
+    background: url('../../public/assets/fundo-black.jpg') center/cover no-repeat;
 }
 
 #links {
@@ -42,7 +38,6 @@ a#posts {
     border-radius: 40px;
     width: 30%;
     height: 75%;
-
     text-decoration: none;
     cursor: pointer;
     font-family: "JetBrains Mono", monospace;
@@ -51,8 +46,8 @@ a#posts {
     font-weight: 700;
 
     background-image: linear-gradient(
-        rgba(247, 59, 78, 0.6) 70%, 
-        rgba(249, 117, 131, 0.6) 100%
+        rgba(247, 59, 78, 0.8) 70%, 
+        rgba(249, 117, 131, 0.8) 100%
     );
 
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);

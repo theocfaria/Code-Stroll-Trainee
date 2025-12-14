@@ -34,8 +34,8 @@
         </div>
         <div class="contato">
             <p class="titulo_contato">Contato</p>
-            <p class="texto_contato">(32)9 9999-9999</p>
-            <p class="texto_contato">marcos@email.com</p>
+            <p class="texto_contato">(31)99716-7273</p>
+            <p class="texto_contato">letiacostaaa10@gmail.com</p>
         </div>
     </div>
     <div class="assinatura_final">
