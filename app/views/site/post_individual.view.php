@@ -21,8 +21,8 @@
                 <h1><?= htmlspecialchars($posts[0]->title) ?></h1>
             </div>
             <div class="autor_datapub">
-                <p><?= htmlspecialchars($postID[0]->name) ?></p>
-                <p><?= date('d/m/Y', strtotime($posts[0]->created_at)) ?></p>
+                <div class="name"><p><?= htmlspecialchars($postID[0]->name) ?></p></div>
+                <div class="date"><p><?= date('d/m/Y', strtotime($posts[0]->created_at)) ?></p></div>
             </div>
 
             <div class="imagem">
@@ -44,7 +44,7 @@
 
             <?php if (!empty($recentPosts)): ?>
                 <?php foreach ($recentPosts as $recent): ?>
-                    
+                    <div class="card-wrapper">
                     <a href="/post?id=<?= $recent->id ?>" class="card-link-wrapper">
                         <div class="cards">
                             <div class="imagem_card">
@@ -66,12 +66,13 @@
                                 
                                 <div class="juncao_texto descricao_card">
                                     <p>
-                                        <?= htmlspecialchars(substr($recent->content, 0, 80)) . (strlen($recent->content) > 80 ? '...' : '') ?>
+                                        <?= htmlspecialchars(substr($recent->content, 0, 160)) . (strlen($recent->content) > 160 ? '...' : '') ?>
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </a>
+                    </div>
 
                 <?php endforeach; ?>
             <?php else: ?>

@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    gap: 80px;
+    gap: 0px;
 }
 
 .pagina_toda{
@@ -14,6 +14,17 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
+}
+
+input{
+    outline: none;
+}
+
+.lupa{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding-right: 10px;
 }
 
 #tela {

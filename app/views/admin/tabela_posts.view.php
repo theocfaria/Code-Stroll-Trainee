@@ -31,11 +31,11 @@
 
     <div class="conteudo">
         <form method="GET" action="/crudPosts/search" id="pesquisa">
-            <input type="text" name="busca" placeholder="Buscar post" > <!-- arrumar aq e no css !-->
-            <button id="pesquisa-dentro">
             
-            <i class="bi bi-search"></i>
-            </button>
+            <div id="pesquisa-dentro">
+                <input type="text" name="busca" placeholder="Buscar post" > <!-- arrumar aq e no css !-->
+                <button id="pesquisa-dentro" class="lupa"><i class="bi bi-search"></i></button>
+            </div>
         </form>
         <div class="tabela">
             <table>

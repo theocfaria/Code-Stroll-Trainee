@@ -48,6 +48,17 @@ a{
     text-shadow: 2px 2px 4px#FFD970;
 }
 
+.name{
+    display: flex;
+    text-align: left;
+}
+
+.date{
+    display: flex;
+    text-align: end;
+    width: 100%;
+}
+
 .imagem {
     display: flex;
     width: auto;
@@ -103,6 +114,10 @@ a{
     border-radius: 8px;
 }
 
+.card-wrapper{
+    width: 100%;
+}
+
 .imagem_card {
     display: flex;
     width: fit-content;
@@ -117,7 +132,7 @@ a{
 
 .texto_card {
     display: flex;
-    width: auto;
+    width: 100%;
     height: auto;
     flex-direction: column;
     gap: 12px;
@@ -146,10 +161,12 @@ a{
 .descricao_card {
     display: flex;
     color: #F1F1F1;
+    width: 100%;
 }
 
 p {
     margin: 0;
+    width: 100%;
 }
 
 .voltar_posts {
@@ -214,8 +231,8 @@ p {
     .cards {
         flex-direction: column;
         gap: 8px;
-        width: fit-content;
-        padding: 10px
+        padding: 10px;
+        width: 100%;
     }
 
     .botao {
@@ -227,6 +244,10 @@ p {
         border-radius: 8px;
         gap: 20px;
         padding: 10px;
+    }
+
+    .conteudo{
+        padding: 10px 20px;
     }
 }
 
@@ -272,7 +293,6 @@ p {
     .cards {
         flex-direction: column;
         gap: 16px;
-        width: fit-content;
         padding: 10px
     }
 

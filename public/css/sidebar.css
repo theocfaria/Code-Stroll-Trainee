@@ -12,6 +12,7 @@ body {
   background-color: whitesmoke;
   /*background-color: #edebee;*/
   font-family: "Poppins", sans-serif;
+  gap: 0px;
 }
 
 main 
@@ -32,7 +33,7 @@ main
   justify-content: space-between;
   align-items: flex-start;
   padding: 1.5rem 0.8rem;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 0px 8px 0;
   color: #edebee;
   width: 11.5rem;
 }
