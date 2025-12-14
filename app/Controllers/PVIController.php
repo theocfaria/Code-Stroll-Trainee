@@ -9,30 +9,26 @@ class PVIController
 {
     public function index()
     {
-        $id = $_GET['id'];
-        //var_dump($id);
-        //exit();
-
-        if(!$id){
-            redirect('');
+        if (!isset($_GET['id'])) {
+            return redirect('');
         }
+
+        $id = $_GET['id'];
 
         $PVI = App::get('database')->FindByID('posts', $id);
         
-
         if(!$PVI){
             redirect('');
         }
 
         $AUTOR = App::get('database')->FindByID('users', $PVI[0]->author);
 
+        $postsRecentes = App::get('database')->selectPostsRecentes(3);
+
         return view('site/post_individual', [
             'posts' => $PVI,
-            'postID' => $AUTOR
-
+            'postID' => $AUTOR,
+            'recentPosts' => $postsRecentes
         ]);
     }
-
 }
-
-    
