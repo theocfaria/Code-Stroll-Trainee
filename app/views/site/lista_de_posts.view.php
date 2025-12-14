@@ -15,14 +15,14 @@
 
 <body>
     <?php require __DIR__ . '/navbar.view.php'; ?>
-    
+
     <div class="conteudo">
         <h1>
             <?= $busca ? 'Resultados para: "' . htmlspecialchars($busca) . '"' : 'Principais Postagens' ?>
         </h1>
 
-        <div class = "posts">
-            <?php if(empty($posts)): ?>
+        <div class="posts">
+            <?php if (empty($posts)): ?>
                 <p class="msg_erro">Nenhum post encontrado.</p>
             <?php else: ?>
                 <?php foreach ($posts as $post): ?>
@@ -57,15 +57,19 @@
                 </a>
             <?php endif; ?>
 
+            <?php for ($i = $page - 2; $i < $page && $i >= 1; $i++): ?>
+                <?php if ($i != 1): ?>
+                    <a href="?pagina=<?= $i ?>&busca=<?= urlencode($busca) ?>" class="<?= $i == $page ? 'atual' : '' ?>">
+                        <?= $i ?>
+                    </a>
+                <?php endif; ?>
+            <?php endfor; ?>
+
             <?php for ($i = $page; $i < $page + 3 && $i <= $total; $i++): ?>
                 <a href="?pagina=<?= $i ?>&busca=<?= urlencode($busca) ?>" class="<?= $i == $page ? 'atual' : '' ?>">
                     <?= $i ?>
                 </a>
             <?php endfor; ?>
-
-            <?php if ($page + 3 < $total): ?>
-                <a href="#">...</a>
-            <?php endif; ?>
 
             <?php if ($page + 3 < $total): ?>
                 <a href="?pagina=<?= $total ?>&busca=<?= urlencode($busca) ?>">
@@ -83,4 +87,5 @@
     </div>
     <?php require __DIR__ . '/footer.view.php'; ?>
 </body>
+
 </html>
