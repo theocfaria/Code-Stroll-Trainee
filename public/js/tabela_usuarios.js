@@ -12,12 +12,12 @@ let senhaOriginalVisu = "";
 // FUNÇÕES DE MODAL E UTILITÁRIOS
 // ==========================================
 function abrirModal(idModal) {
-    document.getElementById("tela").style.display = "block";
+    document.querySelector(".pagina_toda").style.display = "block";
     document.getElementById(idModal).style.display = "flex";
 }
 
 function fecharModal(idModal) {
-    document.getElementById("tela").style.display = "none";
+    document.querySelector(".pagina_toda").style.display = "block";
     document.getElementById(idModal).style.display = "none";
 }
 

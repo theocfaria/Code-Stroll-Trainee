@@ -218,7 +218,7 @@ class QueryBuilder
     return $stmt->fetchColumn();
 }
 
-    public function searchFromDB($busca, $begin, $rows)
+public function searchFromDB($busca, $begin, $rows)
 {
     $sql = "SELECT posts.*, users.name AS autor_nome  
             FROM posts
@@ -234,6 +234,18 @@ class QueryBuilder
 
     return $stmt->fetchAll(PDO::FETCH_OBJ);
 }
+
+public function searchFromDBUsers($busca, $begin, $rows){
+        $sql = "SELECT * FROM users WHERE name LIKE :busca LIMIT :begin, :rows";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':busca', "%{$busca}%");
+        $stmt->bindValue(':begin', (int)$begin, PDO::PARAM_INT);
+        $stmt->bindValue(':rows', (int)$rows, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 
     public function selectPostsAutores($begin, $rows)
     {
