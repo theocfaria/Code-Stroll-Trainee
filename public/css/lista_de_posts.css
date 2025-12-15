@@ -331,6 +331,20 @@ h1{
         height: 75px;
     }
 
+.post .info {
+    width: auto;
+    height: auto;
+}
+
+.post .imagem {
+    width: 300px;       
+    height: 300px;      
+    object-fit: cover;  
+    flex-shrink: 0;    
+    margin: 10px;
+    border-radius: 10px;
+}
+
     .post{
         width: 2440px;
         height: 300px;
