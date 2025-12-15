@@ -7,24 +7,23 @@ use Exception;
 
 class Login_DashboardController
 {
-    // public function redirecionaTabela()
-    // {
-    //     return view('admin/tabela_posts', compact('posts'));
-    // }
-
     public function exibirLogin()
     {
         session_start();
-
         if (isset($_SESSION['id'])) {
-            header('Location: /dashboard');
+            $this->redirecionarUsuario($_SESSION['email']);
         }
-
         return view('site/login');
     }
 
     public function exibirDashboard()
     {
+        if (session_status() === PHP_SESSION_NONE) session_start();
+
+        if (!isset($_SESSION['email']) || $_SESSION['email'] !== 'admin@admin.com') {
+            header('Location: /crudPosts');
+            exit;
+        }
 
         return view('admin/dashboard');
     }
@@ -39,13 +38,26 @@ class Login_DashboardController
         if ($user != false) {
             session_start();
             $_SESSION['id'] = $user->id;
-            header(header: 'Location: /dashboard');
+            $_SESSION['email'] = $user->email;
+            $_SESSION['name'] = $user->name;
+
+            $this->redirecionarUsuario($user->email);
             exit;
         } else {
             session_start();
             $_SESSION['mensagem-erro'] = "Usuário e/ou senha incorretos";
             header(header: 'Location: /login');
         }
+    }
+
+    private function redirecionarUsuario($email)
+    {
+        if ($email === 'admin@admin.com') {
+            header('Location: /dashboard');
+        } else {
+            header('Location: /crudPosts');
+        }
+        exit;
     }
 
     public function logout(): void

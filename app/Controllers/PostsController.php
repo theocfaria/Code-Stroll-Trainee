@@ -9,149 +9,90 @@ class PostsController
 {
     public function index()
     {
+        if (session_status() === PHP_SESSION_NONE) session_start();
 
-        //App::get('database')->populaBancoPost('posts', 100);
+        if (!isset($_SESSION['id'])) {
+            header('Location: /login');
+            exit;
+        }
+
+        $isAdmin = ($_SESSION['email'] === 'admin@admin.com');
+        $userId = $_SESSION['id'];
 
         $page = 1;
-
-        if(isset($_GET['pagina']) && !empty($_GET['pagina']))
-        {
+        if (isset($_GET['pagina']) && !empty($_GET['pagina'])) {
             $page = intval($_GET['pagina']);
-
-            if($page <=0)
-            {
-                $page = 1;
-            }
+            if ($page <= 0) $page = 1;
         }
 
         $itemsPagina = 6;
-
         $inicio = $itemsPagina * $page - $itemsPagina;
 
-        $linhas = App::get('database')->countAll('posts');
-
-        if($inicio > $linhas)
-        {
-            $page = 1;
+        if ($isAdmin) {
+            $linhas = App::get('database')->countAll('posts');
+        } else {
+            $linhas = App::get('database')->countPostsByAuthor('posts', $userId);
         }
 
-        $total = ceil($linhas/$itemsPagina);
+        if ($inicio > $linhas && $linhas > 0) {
+            $page = 1;
+            $inicio = 0;
+        }
 
-        $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
+        $total = ceil($linhas / $itemsPagina);
+
+        if ($isAdmin) {
+            $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
+        } else {
+            $posts = App::get('database')->selectPostsByAuthorId($userId, $inicio, $itemsPagina);
+        }
 
         return view('admin/tabela_posts', compact('posts', 'page', 'total'));
     }
 
     public function store()
     {
+        session_start();
+
         $temporario = $_FILES['image']['tmp_name'];
         $nome_imagem = sha1(uniqid($_FILES['image']['name'], true)) . "." . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
         $caminho_da_imagem = "public/assets/" . $nome_imagem;
         move_uploaded_file($temporario, $caminho_da_imagem);
 
-        $parameters = [
-        'title' => $_POST['title'],
-        'content' => $_POST['content'],
-        'author' => $_POST['author'],
-        'created_at' => $_POST['created_at'],
-        'image' => $caminho_da_imagem,
-        ];
-
-        App::get('database') -> insert('posts', $parameters);
-
-        header('Location: /crudPosts');
-    }
-
-    public function edit()
-    {
-        $id = $_POST['id'];
-        $post = App::get('database')->selectOne('posts', $id);
-        $caminho_da_imagem = $post->image;
-
-        if(isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK)
-        {
-            $temporario = $_FILES['image']['tmp_name'];
-            $nome_imagem = sha1(uniqid($_FILES['image']['name'], true)) . "." . pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
-            $caminho_da_imagem = "public/assets/" . $nome_imagem;
-            move_uploaded_file($temporario, $caminho_da_imagem);
-
-            if($post && !empty($post->image) && file_exists($post->image))
-                {
-                    unlink($post->image);
-                }
-        }
+        $authorId = $_SESSION['id'];
 
         $parameters = [
-        'title' => $_POST['title'],
-        'content' => $_POST['content'],
-        //'author' => $_POST['author'],
-        'created_at' => $_POST['created_at'],
-        'image' => $caminho_da_imagem,
+            'title' => $_POST['title'],
+            'content' => $_POST['content'],
+            'author' => $authorId,
+            'created_at' => $_POST['created_at'],
+            'image' => $caminho_da_imagem,
         ];
 
-        App::get('database') -> update('posts', $id, $parameters);
+        App::get('database')->insert('posts', $parameters);
+
         header('Location: /crudPosts');
     }
 
     public function delete()
     {
+        session_start();
         $id = $_POST['id'];
+
         $post = App::get('database')->selectOne('posts', $id);
+
+        if ($_SESSION['email'] !== 'admin@admin.com' && $post->author != $_SESSION['id']) {
+            header('Location: /crudPosts');
+            exit;
+        }
+
         $caminho_da_imagem = $post->image;
 
-        if(file_exists($caminho_da_imagem))
-        {
+        if (file_exists($caminho_da_imagem)) {
             unlink($caminho_da_imagem);
         }
 
-        App::get('database') -> delete('posts', $id);
+        App::get('database')->delete('posts', $id);
         header('Location: /crudPosts');
     }
-
-    public function search()
-    {
-        $busca = isset($_GET['busca']) ? trim($_GET['busca']): '';
-
-        $page = 1;
-
-        if(isset($_GET['pagina']) && !empty($_GET['pagina']))
-        {
-            $page = intval($_GET['pagina']);
-
-            if($page <=0)
-            {
-                return redirect('site/crudPosts');
-            }
-        }
-
-        $itemsPagina = 6;
-
-        $inicio = $itemsPagina * $page - $itemsPagina;
-
-        if($busca === '')
-        {
-            $linhas = App::get('database')->countAll('posts');
-            if($inicio > $linhas)
-            {
-                return redirect('site/crudPosts');
-            }
-            $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
-        }
-        else
-        {
-            $linhas = App::get('database')->countFromSearch('posts', $busca);
-            if($inicio > $linhas)
-            {
-                return redirect('site/crudPosts');
-            }
-            $posts = App::get('database')->searchFromDB($busca,$inicio,$itemsPagina);
-        }
-        $total = ceil($linhas/$itemsPagina);
-
-
-        return view('admin/tabela_posts', compact('posts', 'page', 'total', 'busca'));
-    }
-
 }
-
-    

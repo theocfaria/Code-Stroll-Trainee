@@ -1,8 +1,11 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!isset($_SESSION['id'])) {
     header("Location: /login");
+    exit;
 }
 ?>
 
@@ -34,7 +37,7 @@ if (!isset($_SESSION['id'])) {
             <form method="GET" action="/crudPosts/search" id="pesquisa">
 
                 <div id="pesquisa-dentro">
-                    <input type="text" name="busca" placeholder="Buscar post"> <!-- arrumar aq e no css !-->
+                    <input type="text" name="busca" placeholder="Buscar post">
                     <button id="pesquisa-dentro" class="lupa"><i class="bi bi-search"></i></button>
                 </div>
             </form>
@@ -219,7 +222,7 @@ if (!isset($_SESSION['id'])) {
 
                 <div class="form-group">
                     <label for="criar-autor">Autor:</label>
-                    <input type="text" id="criar-autor" name="author" value="1" required />
+                    <input type="text" id="criar-autor" name="author_visual" value="<?= $_SESSION['name'] ?>" readonly style="background-color: #e9ecef;" />
                 </div>
 
                 <div class="form-group">

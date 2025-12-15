@@ -18,9 +18,8 @@ class QueryBuilder
     {
         $sql = "select * from {$table}";
 
-        if($begin >= 0 && $rows >0)
-        {
-            $sql .=" LIMIT {$begin} , {$rows} ";
+        if ($begin >= 0 && $rows > 0) {
+            $sql .= " LIMIT {$begin} , {$rows} ";
         }
 
         try {
@@ -47,7 +46,6 @@ class QueryBuilder
             $user = $stmt->fetch(PDO::FETCH_OBJ);
 
             return $user;
-            
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -55,41 +53,42 @@ class QueryBuilder
 
     public function insert($table, $parameters)
     {
-        $sql = sprintf('INSERT INTO %s (%s) VALUES (:%s)',
-        $table,
-        implode(', ', array_keys($parameters)),
-        implode(', :', array_keys($parameters)),
-    );
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (:%s)',
+            $table,
+            implode(', ', array_keys($parameters)),
+            implode(', :', array_keys($parameters)),
+        );
 
-    try {
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
-
     }
     //função editar
     public function update($table, $id, $parameters)
     {
-        $sql = sprintf('UPDATE %s SET %s WHERE id = :id',
-        $table,
-        implode(', ', array_map(function($param){
-            return $param . ' = :' .$param;
-        },
-        array_keys($parameters)))
-    );
+        $sql = sprintf(
+            'UPDATE %s SET %s WHERE id = :id',
+            $table,
+            implode(', ', array_map(
+                function ($param) {
+                    return $param . ' = :' . $param;
+                },
+                array_keys($parameters)
+            ))
+        );
         $parameters['id'] = $id;
 
-    try {
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -117,7 +116,7 @@ class QueryBuilder
     //         die($e->getMessage());
     //     }
     // }
-    
+
 
     public function delete($table, $id)
     {
@@ -126,7 +125,6 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(compact('id'));
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -141,7 +139,6 @@ class QueryBuilder
             $stmt->execute(['id' => $id]);
 
             return $stmt->fetch(PDO::FETCH_OBJ);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -156,86 +153,84 @@ class QueryBuilder
             $stmt->execute([]);
 
             return intval($stmt->fetch(PDO::FETCH_NUM)[0]);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-    public function populaBancoPost($table,$size)
+    public function populaBancoPost($table, $size)
     {
-        for($i = 0; $i<=$size; $i++)
-            {
-                $title = "Titulo {$i}";
-                $content = "Descrição {$i}";
-                $author = "Nome{$i}";
-                $created_at = "2025-11-16";
-                
-                $this->insert($table, [
-                    'title' => $title,
-                    'content' => $content,
-                    'author' => $author,
-                    'created_at' => $created_at,
-                ]);
-            }
+        for ($i = 0; $i <= $size; $i++) {
+            $title = "Titulo {$i}";
+            $content = "Descrição {$i}";
+            $author = "Nome{$i}";
+            $created_at = "2025-11-16";
+
+            $this->insert($table, [
+                'title' => $title,
+                'content' => $content,
+                'author' => $author,
+                'created_at' => $created_at,
+            ]);
+        }
     }
 
-    public function populaBancoUser($table,$size)
+    public function populaBancoUser($table, $size)
     {
-        for($i = 0; $i<=$size; $i++)
-            {
-                $name = "Nome{$i}";
-                $email = "nome{$i}@email.com";
-                $password = "Nome{$i}/user";
-            
-                $this->insert($table, [
-                    'name' => $name,
-                    'email' => $email,
-                    'password' => $password
-                ]);
-            }
+        for ($i = 0; $i <= $size; $i++) {
+            $name = "Nome{$i}";
+            $email = "nome{$i}@email.com";
+            $password = "Nome{$i}/user";
+
+            $this->insert($table, [
+                'name' => $name,
+                'email' => $email,
+                'password' => $password
+            ]);
+        }
     }
 
 
     public function countFromSearch($table, $busca)
-{
-    $sql = "SELECT count(*) FROM {$table} WHERE title LIKE :busca";
+    {
+        $sql = "SELECT count(*) FROM {$table} WHERE title LIKE :busca";
 
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':busca', "%{$busca}%"); 
-    $stmt->execute();
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':busca', "%{$busca}%");
+        $stmt->execute();
 
-    return $stmt->fetchColumn();
-}
+        return $stmt->fetchColumn();
+    }
 
     public function countFromSearchUsers($table, $busca)
-{
-    $sql = "SELECT count(*) FROM {$table} WHERE name LIKE :busca";
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':busca', "%{$busca}%"); 
-    $stmt->execute();
+    {
+        $sql = "SELECT count(*) FROM {$table} WHERE name LIKE :busca";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':busca', "%{$busca}%");
+        $stmt->execute();
 
-    return $stmt->fetchColumn();
-}
+        return $stmt->fetchColumn();
+    }
 
-public function searchFromDB($busca, $begin, $rows)
-{
-    $sql = "SELECT posts.*, users.name AS autor_nome  
+    public function searchFromDB($busca, $begin, $rows)
+    {
+        $sql = "SELECT posts.*, users.name AS autor_nome  
             FROM posts
             JOIN users ON users.id = posts.author     
             WHERE posts.title LIKE :busca             
             LIMIT :begin, :rows";
 
-    $stmt = $this->pdo->prepare($sql);
-    $stmt->bindValue(':busca', "%{$busca}%");
-    $stmt->bindValue(':begin', (int)$begin, PDO::PARAM_INT);
-    $stmt->bindValue(':rows', (int)$rows, PDO::PARAM_INT);
-    $stmt->execute();
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':busca', "%{$busca}%");
+        $stmt->bindValue(':begin', (int)$begin, PDO::PARAM_INT);
+        $stmt->bindValue(':rows', (int)$rows, PDO::PARAM_INT);
+        $stmt->execute();
 
-    return $stmt->fetchAll(PDO::FETCH_OBJ);
-}
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
 
-public function searchFromDBUsers($busca, $begin, $rows){
+    public function searchFromDBUsers($busca, $begin, $rows)
+    {
         $sql = "SELECT * FROM users WHERE name LIKE :busca LIMIT :begin, :rows";
 
         $stmt = $this->pdo->prepare($sql);
@@ -262,7 +257,8 @@ public function searchFromDBUsers($busca, $begin, $rows){
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function FindByID($table, $id){
+    public function FindByID($table, $id)
+    {
         $sql = "SELECT * FROM {$table} WHERE ID = {$id}";
 
         try {
@@ -270,9 +266,9 @@ public function searchFromDBUsers($busca, $begin, $rows){
             $stmt->execute([]);
 
             return $stmt->fetchAll(PDO::FETCH_OBJ);
-            } catch (Exception $e) {
-                die($e->getMessage());
-            }
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function selectPostsRecentes($limit)
@@ -294,4 +290,55 @@ public function searchFromDBUsers($busca, $begin, $rows){
         }
     }
 
+    public function countPostsByAuthor($table, $authorId)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table} WHERE author = :authorId";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['authorId' => $authorId]);
+            return intval($stmt->fetchColumn());
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function selectPostsByAuthorId($authorId, $begin, $rows)
+    {
+        $sql = "SELECT posts.*, users.name AS autor_nome
+            FROM posts
+            JOIN users ON users.id = posts.author
+            WHERE posts.author = :authorId
+            LIMIT :begin, :rows";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':authorId', $authorId, \PDO::PARAM_INT);
+        $stmt->bindValue(':begin', (int)$begin, \PDO::PARAM_INT);
+        $stmt->bindValue(':rows', (int)$rows, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+    }
+
+    public function getAllPostsByAuthor($authorId)
+    {
+        $sql = "SELECT * FROM posts WHERE author = :authorId";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['authorId' => $authorId]);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function deleteWhere($table, $column, $value)
+    {
+        $sql = "DELETE FROM {$table} WHERE {$column} = :val";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['val' => $value]);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
