@@ -525,6 +525,26 @@ td {
     font-size: 30px; 
 }
 
+.botao-upload-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px dashed #8e5de9; 
+    border-radius: 10px;
+    width: 100%;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.botao-upload-custom:hover {
+    background-color: #fff;
+    transform: scale(1.02);
+}
 
 /* Responsividade */
 

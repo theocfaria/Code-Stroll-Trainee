@@ -107,7 +107,158 @@ main {
     text-align: center;
 }
 
-
+@media (min-width: 320px) and (max-width: 767px){
 .bot-ver-todos {
-    padding: 15px 16px;
+    display: block; 
+    width: 100%;   
+    max-width: 200px; 
+    margin: 30px auto 0 auto; 
+    border-radius: 22px;
+    padding: 14px 8px; 
+    font-size: 16px !important; 
+    text-align: center;
+}
+}
+
+@media (max-width: 767px) {
+  .introducao-lp {
+    flex-direction: column; 
+    padding: 30px 20px !important; 
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    gap: 30px;
+  }
+
+  
+  .intro-esquerda {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  #titulo-pagina {
+    font-size: 32px !important; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center !important;
+  }
+
+  #texto-introducao {
+    font-size: 16px !important;
+    text-align: center !important;
+    line-height: 1.5;
+  }
+
+  .intro-direita {
+    display: flex !important; 
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .bloco-pequeno {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px;
+    flex-direction: row; 
+    align-items: center;
+  }
+
+  .bloco-icone {
+    font-size: 24px;
+    width: 40px;
+  }
+
+  .bloco-titulo {
+    font-size: 16px;
+  }
+
+  .bloco-descricao {
+    font-size: 13px;
+  }
+
+
+  .posts-recentes {
+    padding: 30px 15px;
+  }
+
+  .titulo-secao {
+    font-size: 24px !important;
+    margin-bottom: 20px;
+  }
+
+
+  .slider {
+    width: 100%;
+    overflow: visible; 
+  }
+
+  .slider-conteudo {
+    display: flex !important;
+    flex-direction: column !important; 
+    width: 100% !important;
+    gap: 30px; 
+    overflow-x: visible !important;
+    padding: 0;
+  }
+
+  .post-card {
+    width: 100% !important;
+    min-width: unset !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+  }
+
+  .post-card:nth-child(n + 6) {
+    display: flex !important;
+  }
+
+
+  .nav-arrow {
+    display: none !important;
+  }
+  
+  .posts-recentes {
+    padding: 30px 20px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .bot-ver-todos {
+    display: block;
+    width: fit-content;   
+    max-width: unset;      
+    margin: 40px auto 0 auto; 
+    
+    padding: 16px 20px;   
+    font-size: 20px !important; 
+    border-radius: 30px;  
+  }
+}
+
+@media (min-width: 1024px) {
+  .bot-ver-todos {
+    padding: 18px 25px;   
+    font-size: 22px !important;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bot-ver-todos {
+    padding: 20px 22px;
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .bot-ver-todos {
+    padding: 25px 25px;
+    font-size: 27px !important;
+    margin-top: 70px;
+  }
 }
