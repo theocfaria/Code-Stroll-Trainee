@@ -48,7 +48,21 @@
       <a href="login" id="login"><p class="navegacao-navbar">Login</p></a>
     </div>
   </div>
+
   <script src="../../../public/js/script.js"></script>
+
+  <script>
+    function ajustarPlaceholder() {
+      const input = document.getElementById('barra-pesquisa');
+      if (window.innerWidth <= 768) { 
+        input.placeholder = 'Pesquisar';
+      } else {
+        input.placeholder = 'Pesquisar post';
+      }
+    }
+    window.addEventListener('load', ajustarPlaceholder);
+    window.addEventListener('resize', ajustarPlaceholder);
+  </script>
 </body>
 
 </html>
