@@ -190,13 +190,19 @@ if (!isset($_SESSION['id'])) {
                     </div>
                     <div class="form-group">
                         <label>Imagem atual:</label>
-                        <img id="preview-imagem" src="<?= $post->image ?>"
-                            style="max-width:100%; height: auto;">
+                        <img id="preview-imagem" src="" style="max-width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px;">
 
-                        <label for="editar-imagem-nova">Escolher nova imagem:</label>
-                        <input type="file" id="editar-imagem-nova" accept="image/*" name="image">
+                        <label>Trocar imagem (opcional):</label>
 
-                        <input type="hidden" id="editar-imagem-atual" name="imagem_atual" value="<?= $post->image ?>">
+                        <input type="file" id="editar-imagem-nova" accept="image/*" name="image" style="display: none;">
+
+                        <label for="editar-imagem-nova" class="botao-upload-custom">
+                            <i class="bi bi-arrow-repeat"></i> Escolher nova imagem
+                        </label>
+
+                        <span id="nome-arquivo-editar" style="font-size: 0.8rem; margin-top: 5px; color: #555;">Manter imagem atual</span>
+
+                        <input type="hidden" id="editar-imagem-atual" name="imagem_atual">
                     </div>
                     <p id="modal-editar-erro" class="modal-erro"></p>
                     <div class="modal-buttons">

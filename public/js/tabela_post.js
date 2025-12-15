@@ -92,6 +92,13 @@ function abrirModalEditar(id, titulo, autor, data, imagem, descricao) {
 
     document.getElementById('editar-imagem-nova').value = "";
 
+    const textoEditar = document.getElementById('nome-arquivo-editar');
+    if (textoEditar) {
+        textoEditar.textContent = "Manter imagem atual";
+        textoEditar.style.fontWeight = "normal";
+        textoEditar.style.color = "#555";
+    }
+
     abrirModal('modal-editar');
 }
 
@@ -230,6 +237,23 @@ if (inputImagem && textoArquivo) {
         } else {
             textoArquivo.textContent = "Nenhum arquivo selecionado";
             textoArquivo.style.fontWeight = "normal";
+        }
+    });
+}
+
+const inputEditar = document.getElementById('editar-imagem-nova');
+const textoEditar = document.getElementById('nome-arquivo-editar');
+
+if (inputEditar && textoEditar) {
+    inputEditar.addEventListener('change', function() {
+        if (this.files && this.files.length > 0) {
+            textoEditar.textContent = this.files[0].name;
+            textoEditar.style.color = "#000";
+            textoEditar.style.fontWeight = "bold";
+        } else {
+            textoEditar.textContent = "Manter imagem atual";
+            textoEditar.style.color = "#555";
+            textoEditar.style.fontWeight = "normal";
         }
     });
 }
