@@ -123,7 +123,7 @@ main {
 @media (max-width: 767px) {
   .introducao-lp {
     flex-direction: column; 
-    padding: 30px 20px !important; 
+    padding: 30px 40px !important; 
     height: auto;
     min-height: 100vh;
     background-size: cover;
@@ -145,9 +145,13 @@ main {
     text-align: center !important;
   }
 
+  
   #texto-introducao {
     font-size: 16px !important;
-    text-align: center !important;
+    
+    /* Mudei de center para left */
+    text-align: left !important; 
+    
     line-height: 1.5;
   }
 
@@ -159,12 +163,14 @@ main {
   }
 
   .bloco-pequeno {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 15px;
+    width: fit-content !important; 
+    max-width: 90%; 
+    margin: 0 auto; 
+    padding: 15px 20px; 
+    display: flex;
     flex-direction: row; 
     align-items: center;
+    gap: 20px;
   }
 
   .bloco-icone {
@@ -188,6 +194,9 @@ main {
   .titulo-secao {
     font-size: 24px !important;
     margin-bottom: 20px;
+    padding: 0 30px !important; 
+    
+    width: 100%;
   }
 
 
@@ -205,11 +214,10 @@ main {
     padding: 0;
   }
 
-  .post-card {
+ .post-card {
     width: 100% !important;
-    min-width: unset !important;
     margin: 0 !important;
-    flex-shrink: 0;
+    border-radius: 0; 
   }
 
   .post-card:nth-child(n + 6) {
@@ -222,7 +230,7 @@ main {
   }
   
   .posts-recentes {
-    padding: 30px 20px;
+    padding: 30px 5px !important; 
     width: 100%;
   }
 }

@@ -332,7 +332,7 @@ h1{
 }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
     .conteudo h1{
         font-size: 80px;
     }
