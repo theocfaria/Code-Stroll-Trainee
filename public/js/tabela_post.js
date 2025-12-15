@@ -218,3 +218,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const inputImagem = document.getElementById('criar-imagem');
+const textoArquivo = document.getElementById('nome-arquivo-texto');
+
+if (inputImagem && textoArquivo) {
+    inputImagem.addEventListener('change', function() {
+        if (this.files && this.files.length > 0) {
+            textoArquivo.textContent = this.files[0].name;
+            textoArquivo.style.fontWeight = "bold";
+        } else {
+            textoArquivo.textContent = "Nenhum arquivo selecionado";
+            textoArquivo.style.fontWeight = "normal";
+        }
+    });
+}

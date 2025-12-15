@@ -227,8 +227,15 @@ if (!isset($_SESSION['id'])) {
                     <input type="date" id="criar-data" name="created_at" required readonly />
                 </div>
                 <div class="form-group">
-                    <label for="criar-imagem">Imagem:</label>
-                    <input type="file" id="criar-imagem" accept="image/*" name="image" required />
+                    <label>Imagem:</label>
+
+                    <input type="file" id="criar-imagem" accept="image/*" name="image" required style="display: none;" />
+
+                    <label for="criar-imagem" class="botao-upload-custom">
+                        <i class="bi bi-cloud-arrow-up-fill"></i> Escolher imagem
+                    </label>
+
+                    <span id="nome-arquivo-texto" style="font-size: 0.8rem; margin-top: 5px; color: #333;">Nenhum arquivo selecionado</span>
                 </div>
                 <div class="modal-buttons">
                     <button type="submit" id="btn-submit-criar" class="btn-salvar">Criar</button>
