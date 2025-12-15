@@ -15,10 +15,10 @@
 <body>
   <div id="botoes-telefone">
     <div class="links-telefone">
-      <a href="/" id="home">Home</a>
-      <a href="sobre-nos" id="sobre-nos">Sobre nós</a>
-      <a href="lista-de-posts" id="publicacoes">Publicações</a>
-      <a href="login" id="login">Login</a>
+      <a href="/" id="home"><p class="navegacao-navbar">Home</p></a>
+      <a href="sobre-nos" id="sobre-nos"><p class="navegacao-navbar">Sobre nós</p></a>
+      <a href="lista-de-posts" id="publicacoes"><p class="navegacao-navbar">Publicações</p></a>
+      <a href="login" id="login"><p class="navegacao-navbar">Login</p></a>
     </div>
     <i class="bi bi-x" id="icon" onclick="fechaMenu('botoes-telefone', 'barra')"></i>
   </div>
@@ -34,7 +34,7 @@
     <form action="/lista-de-posts" method="GET" class="botao_pesquisa">
       <div class="search">
         <input type="text" name="busca" value="<?= htmlspecialchars($busca ?? '') ?>" id="barra-pesquisa" placeholder="Pesquisar post">
-        <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer; padding-right: 10px">
+        <button type="submit" class="btn-pesquisa">
           <i class="bi-search"></i>
         </button>
       </div>
@@ -42,10 +42,10 @@
 
     <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>
     <div id="link">
-      <a href="/" id="home">Home</a>
-      <a href="sobre-nos" id="sobre-nos">Sobre Nós</a>
-      <a href="lista-de-posts" id="publicacoes">Publicações</a>
-      <a href="login" id="login">Login</a>
+      <a href="/" id="home"><p class="navegacao-navbar">Home</p></a>
+      <a href="sobre-nos" id="sobre-nos"><p class="navegacao-navbar">Sobre nós</p></a>
+      <a href="lista-de-posts" id="publicacoes"><p class="navegacao-navbar">Publicações</p></a>
+      <a href="login" id="login"><p class="navegacao-navbar">Login</p></a>
     </div>
   </div>
   <script src="../../../public/js/script.js"></script>

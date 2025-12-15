@@ -146,6 +146,14 @@ body {
     text-align: center;
 }
 
+.btn-pesquisa{
+        background: none; 
+        border: none; 
+        padding: 0; 
+        cursor: pointer; 
+        padding-right: 10px
+    }
+
 @media (min-width: 320px){
     .logotipo img:nth-child(1) {
         display: none;
@@ -159,6 +167,7 @@ body {
         background-size: 15px 15px;
         padding: 0px 10px 4px;
         background-position: right 10px center;
+        font-size: 16px;
     }
     #input barra-pesquisa {
         font-size: 10px;
@@ -166,6 +175,28 @@ body {
     
     #link{
         display: none;
+    }
+
+    .search{
+        display: flex;
+        align-items: center;
+        height: 40px;
+    }
+
+    #barra{
+        padding: 5px;
+    }
+
+    .logotipo{
+        padding: 0;
+    }
+
+    .btn-pesquisa{
+        padding-right: 5px
+    }
+
+    .bi-search{
+        font-size: 20px;
     }
 
 }
@@ -212,7 +243,15 @@ body {
     #link{
         display: flex;
         margin: 0px 0px 0px 0px;
-    }   
+    }
+    
+    .navegacao-navbar{
+        font-size: 16px;
+    }
+
+    #barra{
+        padding-right: 30px;
+    }
 }
 
 @media (min-width: 1440px){
@@ -235,6 +274,10 @@ body {
     width: 100%;       
     max-width: 350px; 
 }
+
+.navegacao-navbar{
+        font-size: 22px;
+    }
 }
 @media (min-width: 1920px){
     #barra-pesquisa {
@@ -246,6 +289,10 @@ body {
     #home, #publicacoes, #sobre-nos, #login {
         font-size: 32px;
         padding: 10px 20px;
+    }
+
+    .navegacao-navbar{
+        font-size: 24px;
     }
 }
 @media (min-width: 2560px){
