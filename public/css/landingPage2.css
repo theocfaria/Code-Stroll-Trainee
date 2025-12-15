@@ -107,9 +107,17 @@ main {
     text-align: center;
 }
 
-
+@media (min-width: 320px) and (max-width: 767px){
 .bot-ver-todos {
-    padding: 15px 16px;
+    display: block; 
+    width: 100%;   
+    max-width: 200px; 
+    margin: 30px auto 0 auto; 
+    border-radius: 22px;
+    padding: 14px 8px; 
+    font-size: 16px !important; 
+    text-align: center;
+}
 }
 
 @media (max-width: 767px) {
@@ -216,5 +224,41 @@ main {
   .posts-recentes {
     padding: 30px 20px;
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .bot-ver-todos {
+    display: block;
+    width: fit-content;   
+    max-width: unset;      
+    margin: 40px auto 0 auto; 
+    
+    padding: 16px 20px;   
+    font-size: 20px !important; 
+    border-radius: 30px;  
+  }
+}
+
+@media (min-width: 1024px) {
+  .bot-ver-todos {
+    padding: 18px 25px;   
+    font-size: 22px !important;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .bot-ver-todos {
+    padding: 20px 22px;
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .bot-ver-todos {
+    padding: 25px 25px;
+    font-size: 27px !important;
+    margin-top: 70px;
   }
 }
