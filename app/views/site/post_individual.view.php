@@ -22,12 +22,16 @@
                 <p><?= htmlspecialchars($posts[0]->title) ?></p>
             </div>
             <div class="autor_datapub">
-                <div class="name"><p><?= htmlspecialchars($postID[0]->name) ?></p></div>
-                <div class="date"><p><?= date('d/m/Y', strtotime($posts[0]->created_at)) ?></p></div>
+                <div class="name">
+                    <p><?= htmlspecialchars($postID[0]->name) ?></p>
+                </div>
+                <div class="date">
+                    <p><?= date('d/m/Y', strtotime($posts[0]->created_at)) ?></p>
+                </div>
             </div>
 
             <div class="imagem">
-                <?php if(!empty($posts[0]->image)): ?>
+                <?php if (!empty($posts[0]->image)): ?>
                     <img src="<?= htmlspecialchars($posts[0]->image) ?>" alt="Imagem do post" id="imagem-principal">
                 <?php endif; ?>
             </div>
@@ -46,33 +50,33 @@
             <?php if (!empty($recentPosts)): ?>
                 <?php foreach ($recentPosts as $recent): ?>
                     <div class="card-wrapper">
-                    <a href="/post?id=<?= $recent->id ?>" class="card-link-wrapper">
-                        <div class="cards">
-                            <div class="imagem_card">
-                                <?php 
-                                    $imgSidebar = !empty($recent->image) ? $recent->image : '../../../public/assets/logo_code-removebg-preview.png'; 
-                                ?>
-                                <img src="<?= htmlspecialchars($imgSidebar) ?>" alt="Imagem card" id="second_imagem">
-                            </div>
+                        <a href="/post?id=<?= $recent->id ?>" class="card-link-wrapper">
+                            <div class="cards">
+                                <div class="imagem_card">
+                                    <?php
+                                    $imgSidebar = !empty($recent->image) ? $recent->image : '../../../public/assets/logo_code-removebg-preview.png';
+                                    ?>
+                                    <img src="<?= htmlspecialchars($imgSidebar) ?>" alt="Imagem card" id="second_imagem">
+                                </div>
 
-                            <div class="texto_card">
-                                <div class="titulo_texto_card">
-                                    <p><?= htmlspecialchars($recent->title) ?></p>
-                                </div>
-                                
-                                <div class="juncao_texto autor_datapub_card">
-                                    <p><?= htmlspecialchars($recent->autor_nome) ?></p>
-                                    <p><?= date('d/m/Y', strtotime($recent->created_at)) ?></p>
-                                </div>
-                                
-                                <div class="juncao_texto descricao_card">
-                                    <p>
-                                        <?= htmlspecialchars(substr($recent->content, 0, 160)) . (strlen($recent->content) > 160 ? '...' : '') ?>
-                                    </p>
+                                <div class="texto_card">
+                                    <div class="titulo_texto_card">
+                                        <p><?= htmlspecialchars($recent->title) ?></p>
+                                    </div>
+
+                                    <div class="juncao_texto autor_datapub_card">
+                                        <p><?= htmlspecialchars($recent->autor_nome) ?></p>
+                                        <p><?= date('d/m/Y', strtotime($recent->created_at)) ?></p>
+                                    </div>
+
+                                    <div class="juncao_texto descricao_card">
+                                        <p>
+                                            <?= htmlspecialchars(substr($recent->content, 0, 160)) . (strlen($recent->content) > 160 ? '...' : '') ?>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
 
                 <?php endforeach; ?>
@@ -83,18 +87,18 @@
         </div>
         <div class="voltar_posts">
             <a href="/lista-de-posts">
-            <button class="botao">
-                <i class="bi bi-arrow-left"></i>
-                <div class="texto_botao">
-                    <p>Voltar à Lista de Posts</p>
-                </div>
-                <div style="width: 1px;"> </div>
-            </button>
+                <button class="botao">
+                    <i class="bi bi-arrow-left"></i>
+                    <div class="texto_botao">
+                        <p>Voltar à Lista de Posts</p>
+                    </div>
+                    <div style="width: 1px;"> </div>
+                </button>
             </a>
         </div>
     </div>
 
-<?php require __DIR__ . '/footer.view.php'; ?>
+    <?php require __DIR__ . '/footer.view.php'; ?>
 </body>
 
 </html>

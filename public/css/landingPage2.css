@@ -9,12 +9,12 @@ html {
 }
 
 body {
-   background: linear-gradient(
+  background: linear-gradient(
     to bottom,
     #f73b46,
     #832424,
-    #832424  /* #812e2e    #881b1b   */
-  ); 
+    #832424 /* #812e2e    #881b1b   */
+  );
   color: white;
   height: 100%;
   max-width: 100vw;
@@ -28,110 +28,108 @@ main {
 }
 
 .introducao-lp {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.75)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)),
     url("/public/assets/exemplo_sobrenos.jpg") no-repeat top center/100% 100%;
 
-    padding: 56px 72px;
+  padding: 56px 72px;
 }
 
 .intro-direita {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .intro-esquerda #titulo-pagina {
-    font-style: italic;
+  font-style: italic;
 }
 
 .intro-esquerda #texto-introducao {
-    font-size: 19px;
-    font-style: italic;
+  font-size: 19px;
+  font-style: italic;
 }
 
 .bloco-pequeno {
-    display: flex;
-    align-items: flex-start;
-    max-width: 100%;
-    height: 100%;
-    margin: 0;
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .bloco-pequeno .bloco-titulo {
-    color: rgb(255, 175, 175);
+  color: rgb(255, 175, 175);
 }
 
 .bloco-pequeno .bloco-texto {
-    display: flex;
-    height: 100%;
-    gap: 10%;
+  display: flex;
+  height: 100%;
+  gap: 10%;
 }
 
 .bloco-pequeno .bloco-icone {
-    display: flex;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
-
 
 .titulo-secao {
-    color: rgb(255, 175, 175);
-    font-style: italic;
-    font-size: 40px;
-    font-weight: 800;
-    text-align: center;
-    /* animation: pulse-color 3s ease-in-out infinite;  */
+  color: rgb(255, 175, 175);
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  /* animation: pulse-color 3s ease-in-out infinite;  */
 }
 
-
 .posts-recentes .post-card {
-    display: flex;
-    align-items: flex-start;
-    padding: 16px 20px 20px 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    box-shadow: #832424;
-    gap: 0.7rem;
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 20px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  box-shadow: #832424;
+  gap: 0.7rem;
 }
 
 .posts-recentes .post-card .post-titulo {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .posts-recentes .post-card .post-descricao {
-    text-align: justify;
+  text-align: justify;
 }
 
 .posts-recentes .post-card .post-autor {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-.bot-ver-todos {
-    display: block; 
-    width: 100%;   
-    max-width: 200px; 
-    margin: 30px auto 0 auto; 
+@media (min-width: 320px) and (max-width: 767px) {
+  .bot-ver-todos {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 30px auto 0 auto;
     border-radius: 22px;
-    padding: 14px 8px; 
-    font-size: 16px !important; 
+    padding: 14px 8px;
+    font-size: 16px !important;
     text-align: center;
-}
+  }
 }
 
 @media (max-width: 767px) {
   /* --- SEÇÃO SUPERIOR (INTRODUÇÃO) --- */
   .introducao-lp {
-    flex-direction: column; 
-    padding: 30px 40px !important; 
+    flex-direction: column;
+    padding: 30px 40px !important;
     height: auto;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     gap: 30px;
   }
-  
+
   .intro-esquerda {
     width: 100%;
     margin-top: 0;
@@ -139,32 +137,32 @@ main {
   }
 
   #titulo-pagina {
-    font-size: 32px !important; 
+    font-size: 32px !important;
     margin-bottom: 20px;
     line-height: 1.2;
     text-align: center !important;
   }
-  
+
   #texto-introducao {
     font-size: 16px !important;
-    text-align: left !important; 
+    text-align: left !important;
     line-height: 1.5;
   }
 
   .intro-direita {
-    display: flex !important; 
+    display: flex !important;
     flex-direction: column;
     width: 100%;
     gap: 15px;
   }
 
   .bloco-pequeno {
-    width: fit-content !important; 
-    max-width: 90%; 
-    margin: 0 auto; 
-    padding: 15px 20px; 
+    width: fit-content !important;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 15px 20px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     gap: 20px;
   }
@@ -185,36 +183,36 @@ main {
   .titulo-secao {
     font-size: 24px !important;
     margin-bottom: 20px;
-    padding: 0 30px !important; 
+    padding: 0 30px !important;
     width: 100%;
   }
 
   /* --- MUDANÇA PRINCIPAL AQUI (POSTS) --- */
-  
+
   .posts-recentes {
     /* Padding lateral zerado (0) para permitir largura total */
-    padding: 30px 0 !important; 
+    padding: 30px 0 !important;
     width: 100%;
   }
 
   .slider {
     width: 100%;
-    overflow: visible; 
+    overflow: visible;
   }
 
   .slider-conteudo {
     display: flex !important;
-    flex-direction: column !important; 
+    flex-direction: column !important;
     width: 100% !important;
-    gap: 30px; 
+    gap: 30px;
     overflow-x: visible !important;
     padding: 0;
   }
 
   .post-card {
-    width: 100% !important; 
+    width: 100% !important;
     margin: 0 !important;
-    border-radius: 0; 
+    border-radius: 0;
   }
 
   .post-card:nth-child(n + 6) {
@@ -229,19 +227,19 @@ main {
 @media (min-width: 768px) {
   .bot-ver-todos {
     display: block;
-    width: fit-content;   
-    max-width: unset;      
-    margin: 40px auto 0 auto; 
-    
-    padding: 16px 20px;   
-    font-size: 20px !important; 
-    border-radius: 30px;  
+    width: fit-content;
+    max-width: unset;
+    margin: 40px auto 0 auto;
+
+    padding: 16px 20px;
+    font-size: 20px !important;
+    border-radius: 30px;
   }
 }
 
 @media (min-width: 1024px) {
   .bot-ver-todos {
-    padding: 18px 25px;   
+    padding: 18px 25px;
     font-size: 22px !important;
     margin-top: 50px;
   }

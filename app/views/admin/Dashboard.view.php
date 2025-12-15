@@ -1,7 +1,7 @@
 <?php
-    if(!isset($_SESSION['id'])){
-        header("Location: /login");
-    }
+if (!isset($_SESSION['id'])) {
+    header("Location: /login");
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,22 +26,22 @@
     <div id="container">
         <div id="links">
             <a href="crudUsers" id="usuarios">
-                <i class="bi bi-person-fill-gear"> 
+                <i class="bi bi-person-fill-gear">
                     <p class="texto">Tabela de Usuários</p>
                 </i>
             </a>
             <a href="crudPosts" id="posts">
                 <i class="bi bi-table ">
-                     <p class="texto">Tabela de Posts </p>
+                    <p class="texto">Tabela de Posts </p>
                 </i>
             </a>
         </div>
-        
+
         <div id="contem-logout">
             <form action="/logout" method="POST">
                 <button id="logout" type="submit">Logout</button>
             </form>
-            </div>
+        </div>
     </div>
 
 </body>

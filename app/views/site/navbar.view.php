@@ -15,10 +15,18 @@
 <body>
   <div id="botoes-telefone">
     <div class="links-telefone">
-      <a href="/" id="home"><p class="navegacao-navbar">Home</p></a>
-      <a href="sobre-nos" id="sobre-nos"><p class="navegacao-navbar">Sobre nós</p></a>
-      <a href="lista-de-posts" id="publicacoes"><p class="navegacao-navbar">Publicações</p></a>
-      <a href="login" id="login"><p class="navegacao-navbar">Login</p></a>
+      <a href="/" id="home">
+        <p class="navegacao-navbar">Home</p>
+      </a>
+      <a href="sobre-nos" id="sobre-nos">
+        <p class="navegacao-navbar">Sobre nós</p>
+      </a>
+      <a href="lista-de-posts" id="publicacoes">
+        <p class="navegacao-navbar">Publicações</p>
+      </a>
+      <a href="login" id="login">
+        <p class="navegacao-navbar">Login</p>
+      </a>
     </div>
     <i class="bi bi-x" id="icon" onclick="fechaMenu('botoes-telefone', 'barra')"></i>
   </div>
@@ -42,10 +50,18 @@
 
     <i class="bi bi-list" id="hamburguericon" onclick="abrirMenu('botoes-telefone', 'barra')"></i>
     <div id="link">
-      <a href="/" id="home"><p class="navegacao-navbar">Home</p></a>
-      <a href="sobre-nos" id="sobre-nos"><p class="navegacao-navbar">Sobre nós</p></a>
-      <a href="lista-de-posts" id="publicacoes"><p class="navegacao-navbar">Publicações</p></a>
-      <a href="login" id="login"><p class="navegacao-navbar">Login</p></a>
+      <a href="/" id="home">
+        <p class="navegacao-navbar">Home</p>
+      </a>
+      <a href="sobre-nos" id="sobre-nos">
+        <p class="navegacao-navbar">Sobre nós</p>
+      </a>
+      <a href="lista-de-posts" id="publicacoes">
+        <p class="navegacao-navbar">Publicações</p>
+      </a>
+      <a href="login" id="login">
+        <p class="navegacao-navbar">Login</p>
+      </a>
     </div>
   </div>
 
@@ -54,7 +70,7 @@
   <script>
     function ajustarPlaceholder() {
       const input = document.getElementById('barra-pesquisa');
-      if (window.innerWidth <= 768) { 
+      if (window.innerWidth <= 768) {
         input.placeholder = 'Pesquisar';
       } else {
         input.placeholder = 'Pesquisar post';

@@ -17,42 +17,42 @@
 <body>
     <main> </main>
     <div class="footer">
-    <div class="conteudo_foot">
+        <div class="conteudo_foot">
 
-        <div class="redes_sociais">
-            <div class="texto_redes">
-                <p>Redes Sociais</p>
+            <div class="redes_sociais">
+                <div class="texto_redes">
+                    <p>Redes Sociais</p>
+                </div>
+                <div class="logos">
+                    <a href="https://www.instagram.com/codejr/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/codejr/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/codeempresajunior/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="https://linktr.ee/codejr/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-link"></i>
+                    </a>
+                </div>
             </div>
-            <div class="logos">
-                <a href="https://www.instagram.com/codejr/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-instagram"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/company/codejr/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-linkedin"></i>
-                </a>
-
-                <a href="https://www.facebook.com/codeempresajunior/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-facebook"></i>
-                </a>
-
-                <a href="https://linktr.ee/codejr/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-link"></i>
-                </a>
+            <div class="logo_blog">
+                <img src="../../../public/assets/logo_blog.png" alt="" id="main_imagem">
+            </div>
+            <div class="contato">
+                <p class="titulo_contato">Contato</p>
+                <p class="texto_contato">(31)99716-7273</p>
+                <p class="texto_contato">letiacostaaa10@gmail.com</p>
             </div>
         </div>
-        <div class="logo_blog">
-            <img src="../../../public/assets/logo_blog.png" alt="" id="main_imagem">
+        <div class="assinatura_final">
+            <p class="assinatura">Code Jr. © 2025 Todos os direitos reservados.</p>
         </div>
-        <div class="contato">
-            <p class="titulo_contato">Contato</p>
-            <p class="texto_contato">(31)99716-7273</p>
-            <p class="texto_contato">letiacostaaa10@gmail.com</p>
-        </div>
-    </div>
-    <div class="assinatura_final">
-        <p class="assinatura">Code Jr. © 2025 Todos os direitos reservados.</p>
-    </div>
     </div>
 </body>
 

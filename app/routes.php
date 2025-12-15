@@ -14,7 +14,7 @@ $router->get('crudPosts/search', 'PostsController@search');
 //login
 $router->get('login', 'Login_DashboardController@exibirLogin');
 $router->get('dashboard', 'Login_DashboardController@exibirDashboard');
-$router->get('sidebar', 'SidebarController@exibirSidebar');  
+$router->get('sidebar', 'SidebarController@exibirSidebar');
 $router->post('login', 'Login_DashboardController@efetuarLogin');
 $router->post('logout', 'Login_DashboardController@logout');
 
@@ -36,7 +36,7 @@ $router->get('lista-de-posts', 'Lista_de_PostsController@index');
 
 //cadastro
 $router->get('cadastro', 'CadastroController@index');
-$router->post('cadastro/store', 'CadastroController@store'); 
+$router->post('cadastro/store', 'CadastroController@store');
 
 //post individual
 $router->get('post', 'PVIController@index');

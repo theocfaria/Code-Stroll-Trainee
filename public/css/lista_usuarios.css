@@ -11,11 +11,11 @@ body {
   flex-direction: row;
 }
 
-.pagina_toda{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+.pagina_toda {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 #tela {
@@ -176,7 +176,11 @@ body {
 }
 
 .navbar {
-  background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%),#b392f0);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, #ff9800 40%, #b392f0 60%),
+    #b392f0
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,27 +201,27 @@ body {
 }
 
 #criar {
-    width: auto;
-    height: 20%;
-    display: flex;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: color-mix(in srgb, #ff9800 40%, #B392F0 60%);
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    padding: 5px 10px;
-    margin-right: 5px;
+  width: auto;
+  height: 20%;
+  display: flex;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: color-mix(in srgb, #ff9800 40%, #b392f0 60%);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  padding: 5px 10px;
+  margin-right: 5px;
 }
 
 .bi-plus-lg {
   font-size: 40px;
 }
 
-.bi-search{
-  color: #F73B4E;
+.bi-search {
+  color: #f73b4e;
   padding-right: 2%;
   font-size: 22px;
 }
@@ -263,37 +267,37 @@ body {
 }
 
 .barra_pesquisa {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-#pesquisa{
-    display: flex;
-    justify-content: center;
-    padding-top: 2%;
+#pesquisa {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
 }
 
-#pesquisa-dentro{
-    display: flex;
-    justify-content: left;
-    border: none;
-    border: 1px;
-    border-radius: 100px;
-    gap: 10px;
-    background: rgb(231, 231, 231);
+#pesquisa-dentro {
+  display: flex;
+  justify-content: left;
+  border: none;
+  border: 1px;
+  border-radius: 100px;
+  gap: 10px;
+  background: rgb(231, 231, 231);
 }
 
-input{
-    width: 100%;
-    background: transparent;
-    border: none;
-    padding: 2% 4%;
-    color: #F73B4E;
+input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 2% 4%;
+  color: #f73b4e;
 }
 
 #pesquisa input::placeholder {
-    color: #F73B4E;
-    opacity: 0.8; 
+  color: #f73b4e;
+  opacity: 0.8;
 }
 
 #pesquisa p {
@@ -301,7 +305,11 @@ input{
 }
 
 .tabela {
-  background: linear-gradient(90deg, color-mix(in srgb, #ff9800 40%, #B392F0 60%),#b392f0);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, #ff9800 40%, #b392f0 60%),
+    #b392f0
+  );
   border-radius: 10px;
   padding: 8px;
   margin: auto;
@@ -318,7 +326,11 @@ table {
 }
 
 thead tr {
-  background: linear-gradient(90deg, #8e5de999, color-mix(in srgb, #ff9800 40%, #B392F0 60%));
+  background: linear-gradient(
+    90deg,
+    #8e5de999,
+    color-mix(in srgb, #ff9800 40%, #b392f0 60%)
+  );
   color: #000;
   text-align: center;
   font-weight: bold;
@@ -408,64 +420,62 @@ td {
 }
 
 .pagination {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
 }
 
-.page-link{
-
-    text-decoration: none !important;
+.page-link {
+  text-decoration: none !important;
 }
 
-.setas{
-    background: transparent;
+.setas {
+  background: transparent;
 }
 
 .pagination li {
-    list-style: none;
+  list-style: none;
 }
 
 .page-item .page-link {
-    background: #ffffff;
-    width: 38px;
-    height: 38px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-weight: 600;
-    border: 2px solid rgba(0,0,0,0.1);
-    color: #444;
-    transition: 0.25s ease;
+  background: #ffffff;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: #444;
+  transition: 0.25s ease;
 }
 
 .page-item.active .page-link,
-.pagina-ativaactive .page-link { 
-    background: linear-gradient(180deg,#ffce52,#ff9900);
-    border-color: transparent;
-    border: none;
-    color: black;
-    font-weight: 700;
+.pagina-ativaactive .page-link {
+  background: linear-gradient(180deg, #ffce52, #ff9900);
+  border-color: transparent;
+  border: none;
+  color: black;
+  font-weight: 700;
 }
 
 .page-item:not(.active):hover .page-link {
-    transform: scale(1.08);
-    border-color: rgba(0,0,0,0.25);
+  transform: scale(1.08);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
-.bi{
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
+.bi {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
 }
 
-
-#setas .page-link{
-    background: transparent;
-    border: none;
-    color: black;
+#setas .page-link {
+  background: transparent;
+  border: none;
+  color: black;
 }
 
 /* Telas enormes (2560px+) */
@@ -597,7 +607,7 @@ td {
 }
 
 #criar:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 #modal-criar h3,
@@ -693,7 +703,7 @@ td {
 .toggle-senha {
   position: absolute;
   right: 15px;
-  top: 70%; 
+  top: 70%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #333;
@@ -705,20 +715,19 @@ td {
 }
 
 #toggle-view-senha {
-  position: relative; 
+  position: relative;
   display: inline-block;
-  margin-left: 2px; 
-  vertical-align: middle; 
+  margin-left: 2px;
+  vertical-align: middle;
   cursor: pointer;
   color: #333;
   font-size: 20px;
 }
 
-
 #criar .bi-plus-lg {
-    font-size: 30px; 
+  font-size: 30px;
 }
 
 .pagination .bi {
-    font-size: 28px; 
+  font-size: 28px;
 }

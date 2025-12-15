@@ -1,394 +1,396 @@
 body {
-    margin: 0;
-    background: linear-gradient(to bottom,
-            #f73b46,
-            #832424,
-            #832424
-            /* #812e2e    #881b1b   */
-        );
-    overflow-x: hidden;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #f73b46,
+    #832424,
+    #832424 /* #812e2e    #881b1b   */
+  );
+  overflow-x: hidden;
 }
 
 .pagina {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
 }
 
 .introducao {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 40px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../assets/fundo-vermelho.jpg);
-    background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url(../assets/fundo-vermelho.jpg);
+  background-size: cover;
 }
 
 .img_logo {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .logos-sn {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
 }
 
 #primary_img {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    object-fit: cover;
-    border: none;
-    border-radius: 8px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+  border: none;
+  border-radius: 8px;
 }
 
 .sobre_nos {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 #txt_sn {
-    padding: 10px 60px;
-    text-align: center;
-    font-style: italic;
+  padding: 10px 60px;
+  text-align: center;
+  font-style: italic;
 }
 
 .txt {
-    padding: 0px 40px;
+  padding: 0px 40px;
 }
 
 .texto-sn {
-    margin: 0;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 20px;
-    text-align: center;
-    color: white;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  text-align: center;
+  color: white;
 }
 
 .mvv {
-    width: 100vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 30px;
-    background: transparent;
-    padding: 4% 0px;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  background: transparent;
+  padding: 4% 0px;
 }
 
 .missao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    border: 1px;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: white;
+  border: 1px;
+  border-radius: 8px;
 }
 
 .visao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    border: 1px;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: white;
+  border: 1px;
+  border-radius: 8px;
 }
 
 .valores {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    border: 1px;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: white;
+  border: 1px;
+  border-radius: 8px;
 }
 
 .bi-sn {
-    font-size: 30px;
-    color: white;
+  font-size: 30px;
+  color: white;
 }
 
 .li-sn {
-    font-size: 40px;
-    color: white;
+  font-size: 40px;
+  color: white;
 }
 
 .title {
-    font-size: 36px;
-    font-style: italic;
-    font-weight: 800;
-    color: rgb(255, 175, 175);
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  color: rgb(255, 175, 175);
 }
 
 .title-mmv {
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 800;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 800;
 }
 
 .cards {
-    display: flex;
-    width: 30vw;
-    height: auto;
-    padding-bottom: 30px;
-    padding-top: 60px;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: #832424;
+  display: flex;
+  width: 30vw;
+  height: auto;
+  padding-bottom: 30px;
+  padding-top: 60px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: #832424;
 }
 
 .cards:hover {
-    transform: scale(1.05);
-    transition: 0.5s;
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .botao {
-    background: #F97583;
-    width: 6vw;
-    height: 9vh;
-    border: none;
-    border-radius: 100%;
+  background: #f97583;
+  width: 6vw;
+  height: 9vh;
+  border: none;
+  border-radius: 100%;
 }
 
+@media (min-width: 320px) {
+  .introducao {
+    flex-direction: column;
+    gap: 40px;
+  }
 
-@media(min-width: 320px) {
-    .introducao {
-        flex-direction: column;
-        gap: 40px;
-    }
+  #primary_img {
+    width: 100%;
+  }
 
-    #primary_img {
-        width: 100%;
-    }
+  .logos-sn {
+    gap: 30px;
+  }
 
-    .logos-sn {
-        gap: 30px;
-    }
+  #txt_sn {
+    padding: 0;
+  }
 
-    #txt_sn {
-        padding: 0;
-    }
+  .txt {
+    padding: 0px 10px;
+  }
 
-    .txt {
-        padding: 0px 10px;
-    }
+  .texto-sn {
+    font-size: 14px;
+  }
 
-    .texto-sn {
-        font-size: 14px;
-    }
+  .mvv {
+    flex-direction: column;
+    gap: 20px;
+    padding: 8% 0px;
+  }
 
-    .mvv {
-        flex-direction: column;
-        gap: 20px;
-        padding: 8% 0px;
-    }
+  .bi-sn {
+    font-size: 24px;
+  }
 
-    .bi-sn {
-        font-size: 24px;
-    }
+  .li-sn {
+    font-size: 30px;
+  }
 
-    .li-sn {
-        font-size: 30px;
-    }
+  .title {
+    font-size: 32px;
+  }
 
-    .title {
-        font-size: 32px;
-    }
+  .title-mvv {
+    font-size: 24px;
+    color: rgb(255, 175, 175);
+  }
 
-    .title-mvv {
-        font-size: 24px;
-        color: rgb(255, 175, 175);
-    }
+  .cards {
+    width: 80%;
+    height: 400px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    gap: 30px;
+  }
 
-    .cards {
-        width: 80%;
-        height: 400px;
-        padding-bottom: 20px;
-        padding-top: 40px;
-        gap: 30px;
-    }
-
-    .botao {
-        width: 40px;
-        height: 40px;
-    }
+  .botao {
+    width: 40px;
+    height: 40px;
+  }
 }
 
-@media(min-width: 375px) {}
-
-@media(min-width: 425px) {
-    .txt {
-        padding: 0px 20px;
-    }
-
-    .texto-sn {
-        font-size: 16px;
-    }
-
-    .title {
-        font-size: 36px;
-    }
-
-    .title-mvv {
-        font-size: 28px;
-    }
-
-    .cards {
-        height: 40vh;
-    }
-
-    .botao {
-        width: 48px;
-        height: 48px;
-    }
-
-    .bi-sn {
-        font-size: 30px;
-    }
-
-    .li-sn {
-        font-size: 36px;
-    }
-
-    .cards {
-        height: 420px;
-    }
+@media (min-width: 375px) {
 }
 
-@media(min-width: 768px) {
-    #primary_img {
-        width: 80%;
-    }
+@media (min-width: 425px) {
+  .txt {
+    padding: 0px 20px;
+  }
 
-    .cards {
-        height: 300px;
-    }
+  .texto-sn {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .title-mvv {
+    font-size: 28px;
+  }
+
+  .cards {
+    height: 40vh;
+  }
+
+  .botao {
+    width: 48px;
+    height: 48px;
+  }
+
+  .bi-sn {
+    font-size: 30px;
+  }
+
+  .li-sn {
+    font-size: 36px;
+  }
+
+  .cards {
+    height: 420px;
+  }
 }
 
-@media(min-width: 1024px) {
-    .introducao {
-        flex-direction: row;
-    }
+@media (min-width: 768px) {
+  #primary_img {
+    width: 80%;
+  }
 
-    .logos-sn {
-        gap: 40px;
-    }
-
-    .mvv {
-        flex-direction: row;
-        gap: 30px;
-        padding: 4% 4%;
-    }
-
-    .txt {
-        padding: 0px 20px;
-    }
-
-    .texto-sn {
-        font-size: 16px;
-    }
-
-    .bi-sn {
-        font-size: 30px;
-    }
-
-    .li-sn {
-        font-size: 36px;
-    }
-
-    .title {
-        font-size: 36px;
-    }
-
-    .title-mvv {
-        font-size: 28px;
-    }
-
-    .cards {
-        width: 80%;
-        height: 460px;
-        gap: 30px;
-    }
-
-    .botao {
-        width: 50px;
-        height: 50px;
-    }
+  .cards {
+    height: 300px;
+  }
 }
 
-@media(min-width: 1440px) {
-    .introducao {
-        padding: 80px 60px 100px 60px;
-    }
+@media (min-width: 1024px) {
+  .introducao {
+    flex-direction: row;
+  }
 
-    .texto-sn {
-        font-size: 20px;
-    }
+  .logos-sn {
+    gap: 40px;
+  }
 
-    .title {
-        font-size: 48px;
-    }
+  .mvv {
+    flex-direction: row;
+    gap: 30px;
+    padding: 4% 4%;
+  }
 
-    .title-mvv {
-        font-size: 36px;
-    }
+  .txt {
+    padding: 0px 20px;
+  }
 
-    .cards{
-        height: 520px;
-    }
+  .texto-sn {
+    font-size: 16px;
+  }
+
+  .bi-sn {
+    font-size: 30px;
+  }
+
+  .li-sn {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .title-mvv {
+    font-size: 28px;
+  }
+
+  .cards {
+    width: 80%;
+    height: 460px;
+    gap: 30px;
+  }
+
+  .botao {
+    width: 50px;
+    height: 50px;
+  }
 }
 
-@media(min-width: 1920px) {
-    .introducao {
-        padding: 80px 60px 100px 60px;
-    }
+@media (min-width: 1440px) {
+  .introducao {
+    padding: 80px 60px 100px 60px;
+  }
 
-    .texto-sn {
-        font-size: 24px;
-    }
+  .texto-sn {
+    font-size: 20px;
+  }
 
-    .title {
-        font-size: 56px;
-    }
+  .title {
+    font-size: 48px;
+  }
 
-    .title-mvv {
-        font-size: 42px;
-    }
+  .title-mvv {
+    font-size: 36px;
+  }
 
-    .cards{
-        height: 580px;
-    }
-
-    .bi-sn {
-        font-size: 40px;
-    }
-
-    .li-sn {
-        font-size: 50px;
-    }
-
-    .botao {
-        width: 70px;
-        height: 70px;
-    }
+  .cards {
+    height: 520px;
+  }
 }
 
-@media(min-width: 2560px) {}
+@media (min-width: 1920px) {
+  .introducao {
+    padding: 80px 60px 100px 60px;
+  }
+
+  .texto-sn {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .title-mvv {
+    font-size: 42px;
+  }
+
+  .cards {
+    height: 580px;
+  }
+
+  .bi-sn {
+    font-size: 40px;
+  }
+
+  .li-sn {
+    font-size: 50px;
+  }
+
+  .botao {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 2560px) {
+}

@@ -16,8 +16,8 @@ class PVIController
         $id = $_GET['id'];
 
         $PVI = App::get('database')->FindByID('posts', $id);
-        
-        if(!$PVI){
+
+        if (!$PVI) {
             redirect('');
         }
 

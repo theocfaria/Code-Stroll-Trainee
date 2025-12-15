@@ -15,16 +15,15 @@ body {
   gap: 0px;
 }
 
-main 
-{
-    padding: 3rem;
-    /* color: white; */
+main {
+  padding: 3rem;
+  /* color: white; */
 }
 
 .sidebar {
   /*background-color: color-mix(in srgb, #ff9800, #B392F0); */
   /* background-color: color-mix(in srgb, #ff9800 60%, #B392F0 40%); */
-   background-color: color-mix(in srgb, #ff9800 40%, #B392F0 60%); 
+  background-color: color-mix(in srgb, #ff9800 40%, #b392f0 60%);
   /* background: linear-gradient(90deg, #ff9800,#B392F0); */
   min-height: 100svh;
   position: relative;
@@ -59,16 +58,16 @@ main
   object-fit: contain;
   height: 9rem;
   width: 9rem;
-  margin-right: 2rem; 
+  margin-right: 2rem;
 }
 
 .toggle-sidebar {
   cursor: pointer;
   transition: all 0.5s ease;
   position: absolute;
-  top: 4.5rem; 
-  right: 1rem;      
-  color: #edebee;  
+  top: 4.5rem;
+  right: 1rem;
+  color: #edebee;
   font-size: 1.7rem;
 }
 
@@ -101,18 +100,18 @@ main
   color: white;
   font-weight: 600;
   transition: all 0.3s;
-  display: flex; 
-  align-items: center; 
-  gap: 0.5rem; 
-  border-radius: 8px; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  justify-content: center;
   padding: 0.8rem 0.2rem;
-  width: 100%; 
+  width: 100%;
 }
 
 .item-sidebar a:hover {
-background-color: #ec0f0f6b;
-transform: scale(1.05);     
+  background-color: #ec0f0f6b;
+  transform: scale(1.05);
 }
 
 .item-description {
@@ -145,18 +144,18 @@ transform: scale(1.05);
 }
 
 .logout-sidebar {
- width: 92%; 
- display: flex;
- justify-content: center;
+  width: 92%;
+  display: flex;
+  justify-content: center;
 }
 
 #button-logout:hover {
-  background-color: #8e5de9; 
-  color: whitesmoke;   
+  background-color: #8e5de9;
+  color: whitesmoke;
 }
 
 .closed-sidebar {
-  width: 4rem; 
+  width: 4rem;
 }
 
 .closed-sidebar .top-sidebar {
@@ -181,9 +180,9 @@ transform: scale(1.05);
 .closed-sidebar .item-sidebar a {
   display: flex;
   justify-content: center;
-  
-  padding: 0.8rem 0.5rem; 
-  gap: 0; 
+
+  padding: 0.8rem 0.5rem;
+  gap: 0;
 }
 
 .closed-sidebar #button-logout .item-description {
@@ -191,12 +190,12 @@ transform: scale(1.05);
 }
 
 .closed-sidebar .toggle-sidebar {
-  position: absolute; 
-  top: 4.3rem; 
-  left: 50%; 
-  right: auto; 
+  position: absolute;
+  top: 4.3rem;
+  left: 50%;
+  right: auto;
   transform: translateX(-50%) rotate(180deg);
-  margin: 0; 
+  margin: 0;
   color: #edebee;
 }
 
@@ -204,52 +203,50 @@ transform: scale(1.05);
 
 /* 1°: Base Mobile (0px - 424px) */
 html {
-  font-size: 15px; 
+  font-size: 15px;
 }
 
 /* 2° Mobile maior (425px a 767px) */
 @media (min-width: 425px) {
   html {
-    font-size: 16px; 
+    font-size: 16px;
   }
 }
 
 /* 3°: Tablets (768px - 1023px) */
 @media (min-width: 768px) {
   html {
-    font-size: 17px; 
+    font-size: 17px;
   }
 }
 
 /* 4°: Notebook (1024px a 1439px) */
 @media (min-width: 1024px) {
   html {
-    font-size: 17px; 
+    font-size: 17px;
   }
-  #button-logout, 
+  #button-logout,
   #button-logout .item-description {
-      font-size: 1rem; 
+    font-size: 1rem;
   }
   .content-sidebar ul {
-    gap: 0.7rem; 
+    gap: 0.7rem;
   }
 }
 
 /* 5°: Desktop (1440px a 2559px) */
 @media (min-width: 1440px) {
   html {
-    font-size: 19px; 
+    font-size: 19px;
   }
 }
-
 
 /* 6°: Telas enormes (2560px e acima) */
 @media (min-width: 2560px) {
   html {
-    font-size: 30px; 
+    font-size: 30px;
   }
 }
-
 
 /* esconder ícones em telas de até 767px quando a sidebar tiver aberta 
 @media (max-width: 767px) {
@@ -259,4 +256,3 @@ html {
 }
 
 */
-

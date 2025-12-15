@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>My Simple Page</title>
 </head>
+
 <body>
     <header>
         <h1>Welcome to My Simple Page</h1>
@@ -23,4 +25,5 @@
         <p>&copy; 2023 My Simple Page</p>
     </footer>
 </body>
+
 </html>

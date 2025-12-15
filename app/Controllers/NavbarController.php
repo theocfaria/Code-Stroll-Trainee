@@ -17,7 +17,7 @@ class NavbarController
             $page = intval($_GET['pagina']);
 
             if ($page <= 0) {
-                return redirect('/lista-de-posts'); 
+                return redirect('/lista-de-posts');
             }
         }
 
@@ -26,20 +26,20 @@ class NavbarController
 
         if ($busca === '') {
             $linhas = App::get('database')->countAll('posts');
-            
+
             if ($inicio > $linhas && $linhas > 0) {
                 return redirect('/lista-de-posts');
             }
             $posts = App::get('database')->selectPostsAutores($inicio, $itemsPagina);
         } else {
             $linhas = App::get('database')->countFromSearch('posts', $busca);
-            
+
             if ($inicio > $linhas && $linhas > 0) {
                 return redirect('/lista-de-posts');
             }
             $posts = App::get('database')->searchFromDB($busca, $inicio, $itemsPagina);
         }
-        
+
         $total = ($linhas > 0) ? ceil($linhas / $itemsPagina) : 1;
 
         return view('site/lista-de-posts', compact('posts', 'page', 'total', 'busca'));

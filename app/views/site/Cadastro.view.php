@@ -25,14 +25,14 @@
                 <a id="x" href="/login"><i class="bi bi-x"></i></a>
             </div>
             <p id="cadastro">Cadastro</p>
-            
-            <form action="/cadastro/store" method="POST"> 
-                
+
+            <form action="/cadastro/store" method="POST">
+
                 <div class="container-input">
                     <input type="text" placeholder="Nome:" id="nome" name="name" required>
-                    
+
                     <input type="text" placeholder="E-mail:" id="email" name="email" required>
-                    
+
                     <div class="container-senha">
                         <input type="password" placeholder="Senha:" id="senha" name="password" required>
                         <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
@@ -49,7 +49,7 @@
                 </div>
 
             </form>
-            </div>
+        </div>
 
     </div>
 </body>
