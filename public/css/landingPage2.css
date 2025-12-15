@@ -121,6 +121,7 @@ main {
 }
 
 @media (max-width: 767px) {
+  /* --- SEÇÃO SUPERIOR (INTRODUÇÃO) --- */
   .introducao-lp {
     flex-direction: column; 
     padding: 30px 40px !important; 
@@ -130,7 +131,6 @@ main {
     background-position: center;
     gap: 30px;
   }
-
   
   .intro-esquerda {
     width: 100%;
@@ -144,14 +144,10 @@ main {
     line-height: 1.2;
     text-align: center !important;
   }
-
   
   #texto-introducao {
     font-size: 16px !important;
-    
-    /* Mudei de center para left */
     text-align: left !important; 
-    
     line-height: 1.5;
   }
 
@@ -186,19 +182,20 @@ main {
     font-size: 13px;
   }
 
-
-  .posts-recentes {
-    padding: 30px 15px;
-  }
-
   .titulo-secao {
     font-size: 24px !important;
     margin-bottom: 20px;
     padding: 0 30px !important; 
-    
     width: 100%;
   }
 
+  /* --- MUDANÇA PRINCIPAL AQUI (POSTS) --- */
+  
+  .posts-recentes {
+    /* Padding lateral zerado (0) para permitir largura total */
+    padding: 30px 0 !important; 
+    width: 100%;
+  }
 
   .slider {
     width: 100%;
@@ -214,8 +211,8 @@ main {
     padding: 0;
   }
 
- .post-card {
-    width: 100% !important;
+  .post-card {
+    width: 100% !important; 
     margin: 0 !important;
     border-radius: 0; 
   }
@@ -224,14 +221,8 @@ main {
     display: flex !important;
   }
 
-
   .nav-arrow {
     display: none !important;
-  }
-  
-  .posts-recentes {
-    padding: 30px 5px !important; 
-    width: 100%;
   }
 }
 
