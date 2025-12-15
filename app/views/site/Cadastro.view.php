@@ -25,28 +25,31 @@
                 <a id="x" href="/login"><i class="bi bi-x"></i></a>
             </div>
             <p id="cadastro">Cadastro</p>
-            <div class="container-input">
-                <input type="text" placeholder="Nome:" id="nome" name="name" required>
+            
+            <form action="/cadastro/store" method="POST"> 
                 
-                <input type="text" placeholder="E-mail:" id="email" name="email" required>
-                
-                <div class="container-senha">
-                    <input type="password" placeholder="Senha:" id="senha" name="password" required>
-                    <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
+                <div class="container-input">
+                    <input type="text" placeholder="Nome:" id="nome" name="name" required>
+                    
+                    <input type="text" placeholder="E-mail:" id="email" name="email" required>
+                    
+                    <div class="container-senha">
+                        <input type="password" placeholder="Senha:" id="senha" name="password" required>
+                        <i class="bi bi-eye-slash" id="olhoIcon" onclick="alternaOlho()"></i>
+                    </div>
+
+                    <div class="container-senha">
+                        <input type="password" placeholder="Confirmar Senha:" id="confirmaSenha" name="confirm-password" required>
+                        <i class="bi bi-eye-slash" id="olhoIconConfirma" onclick="alternaOlhoConfirma()"></i>
+                    </div>
                 </div>
 
-                <div class="container-senha">
-                    <input type="password" placeholder="Confirmar Senha:" id="confirmaSenha" required>
-                    <i class="bi bi-eye-slash" id="olhoIconConfirma" onclick="alternaOlhoConfirma()"></i>
+                <div class="container-entrar">
+                    <button type="submit" id="entrar">Criar</button>
                 </div>
+
+            </form>
             </div>
-            <div class="container-entrar">
-                <a href="/login"> <!-- definir condição para ser direcionado para o login se o usuario foi criado !-->
-                    <button id="entrar">Criar</button>
-                </a>
-                
-            </div>
-        </div>
 
     </div>
 </body>
