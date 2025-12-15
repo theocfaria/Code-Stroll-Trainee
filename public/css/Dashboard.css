@@ -279,6 +279,7 @@ i.bi.bi-table::before {
     a#usuarios,
     a#posts {
         font-size: 36px;
+          height: 320px;
     }
 
     i.bi.bi-person-fill-gear::before,
